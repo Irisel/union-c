@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
+    <title>联合金融</title>
+    <link rel="stylesheet" href="resource/css/code-index.css"/>
+    <script type="text/javascript" src="module/lib/Jser.js"></script>
+    <script type="text/javascript" src="resource/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="resource/js/weixinshare.js"></script>
+    <script type="text/javascript" src="module/lib/sea.js"></script>
+    <script type="text/javascript" src="module/lib/seajs-text.js"></script>
+    <script type="text/javascript">
+     seajs.config({
+            base: '/webapp/union/webapp/module',
+            alias: {
+                //基础库
+                'underscore': 'lib/underscore',
+                'backbone': 'lib/backbone',
+                '$': 'lib/jquery',
+                'form': 'lib/jquery.form'
+            }
+    });
+    var ST = {
+        PATH:{
+            ACTION:"http://www.lamakeji.com/api/",
+            ROOT:"/api",
+            IMAGE:"/resource/images/",
+            UPLOAD:"",
+            SHARE:"http://www.lamakeji.com/mamago/html/share/share.html",
+            AJAXIMG:"http://www.lamakeji.com/mamago/uploads/"
+        },
+        client: 'H5',
+        version: '1.0'
+    }
+    </script>
+</head>
+<body>
+    <div class="wrap js-wrapper">
+        <div id="js-wrap"></div>
+    </div>
+    <script  type="text/javascript">
+        seajs.use('app.js', function(app) {
+            app.run();
+    });
+    function hideLoad() {
+        setTimeout(function() {
+            $("#js-loading").hide();
+        }, 300);
+    };
+
+    function scrollTop() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 100)
+    };
+    function GetDateStr(AddDayCount) {
+        var dd = new Date();
+        dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期
+        var y = dd.getFullYear();
+        var m = dd.getMonth() + 1; //获取当前月份的日期
+        var d = dd.getDate();
+        return y + "-" + m + "-" + d;
+    }
+    </script>
+</body>
+</html>
