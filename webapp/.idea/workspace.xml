@@ -51,13 +51,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jser.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Jser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/lib/Jser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="0.51225203">
+            <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1440152933971" expanded="false" signature="6776:6791" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/lib/single.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.24387398">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ST.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/lib/ST.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,6 +114,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/module/view/index/index.js" />
         <option value="$PROJECT_DIR$/module/lib/Jser.js" />
+        <option value="$PROJECT_DIR$/module/lib/single.js" />
       </list>
     </option>
   </component>
@@ -432,10 +451,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/lib/Jser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="0.51225203">
+        <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1440152933971" expanded="false" signature="6776:6791" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/lib/ST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/lib/single.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.24387398">
+          <folding />
         </state>
       </provider>
     </entry>
