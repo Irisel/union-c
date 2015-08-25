@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" name="Default" comment="" />
-    <ignored path="webapp.iws" />
+    <list default="true" id="497093d9-e1a9-4a1e-98dd-0342ec6f0474" name="Default" comment="" />
+    <ignored path="union-c.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440245270561" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/go/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176535058" ignored="false" />
-    <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176055960" ignored="false" />
-    <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440245467594" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/go/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176495467" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/add/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440178940401" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/add/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440179031775" ignored="false" />
+    <file path="/Dummy.txt" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440482585781" ignored="false" />
+    <file path="$PROJECT_DIR$/../../lamakeji-live/webapp/resource/css/code-index.css" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440245989192" ignored="false" />
+    <file path="/code-index.css" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440245969822" ignored="false" />
+    <file path="/code-index.scss" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440500508152" ignored="false" />
+    <file path="/code-index.sass" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440246692467" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440253038452" ignored="false" />
+    <file path="/index.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440426148124" ignored="false" />
+    <file path="/app.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440253035033" ignored="false" />
+    <file path="/slider.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440430177722" ignored="false" />
+    <file path="/index.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440429325495" ignored="false" />
+    <file path="/slider.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440426905122" ignored="false" />
+    <file path="/a.dummy" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440426559806" ignored="false" />
+    <file path="/list.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440435084491" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,68 +32,98 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="webapp" />
+    <favorites_list name="union-c" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="46" selection-start="1947" selection-end="1947" vertical-scroll-proportion="-18.321428">
+            <state line="75" column="31" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="code-index.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="9" selection-start="2430" selection-end="2430" vertical-scroll-proportion="0.40625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="code-index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/css/code-index.css">
+        <entry file="file://$PROJECT_DIR$/webapp/resource/css/code-index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="245" column="32" selection-start="5912" selection-end="5912" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1440500933193" expanded="true" signature="1892:2143" placeholder="{...}" />
+                <marker date="1440500933193" expanded="true" signature="2812:3023" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/lib/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="3" selection-start="84393" selection-end="84393" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/view/index/index.js">
+      <file leaf-file-name="zepto.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/lib/zepto.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="31" selection-start="608" selection-end="608" vertical-scroll-proportion="0.4235706">
+            <state line="4" column="3" selection-start="32260" selection-end="32260" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/lib/single.js">
+      <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ST.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/lib/ST.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="14" column="18" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/index/index.html">
+        <entry file="file://$PROJECT_DIR$/webapp/tpl/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="27" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.3571428">
+            <state line="3" column="12" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/app.js">
+        <entry file="file://$PROJECT_DIR$/webapp/module/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="42" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0">
+            <state line="17" column="30" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/view/index/view/slider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/slider.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,16 +136,29 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resource/css/code-index.css" />
-        <option value="$PROJECT_DIR$/tpl/index/index.html" />
-        <option value="$PROJECT_DIR$/module/app.js" />
-        <option value="$PROJECT_DIR$/module/lib/Jser.js" />
-        <option value="$PROJECT_DIR$/module/lib/single.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/module/view/index/index.js" />
+        <option value="$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.sass" />
+        <option value="$PROJECT_DIR$/webapp/resource/sass-gulp/code.index.scss" />
+        <option value="$PROJECT_DIR$/webapp/module/lib/Jser.js" />
+        <option value="$PROJECT_DIR$/webapp/module/app.js" />
+        <option value="$PROJECT_DIR$/webapp/index.html" />
+        <option value="$PROJECT_DIR$/webapp/resource/css/code-index.css" />
+        <option value="$PROJECT_DIR$/webapp/tpl/index/view/slider.html" />
+        <option value="$PROJECT_DIR$/webapp/tpl/index/index.html" />
+        <option value="$PROJECT_DIR$/webapp/module/view/index/view/slider.js" />
+        <option value="$PROJECT_DIR$/webapp/module/view/index/index.js" />
+        <option value="$PROJECT_DIR$/webapp/tpl/index/view/list.html" />
+        <option value="$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss" />
       </list>
     </option>
   </component>
@@ -144,19 +193,32 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
@@ -165,8 +227,12 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
@@ -183,8 +249,122 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass-gulp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
@@ -197,8 +377,12 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
@@ -219,8 +403,12 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="union-c" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
@@ -235,13 +423,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lamakeji-live/webapp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\resource\images" />
+      <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\tpl\index" />
+      <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\module\view\index" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="Nosetests">
@@ -253,7 +471,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="webapp" />
+      <module name="union-c" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -275,7 +493,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="webapp" />
+      <module name="union-c" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -291,9 +509,9 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" name="Default" comment="" />
-      <created>1440137595256</created>
-      <updated>1440137595256</updated>
+      <changelist id="497093d9-e1a9-4a1e-98dd-0342ec6f0474" name="Default" comment="" />
+      <created>1440245539749</created>
+      <updated>1440245539749</updated>
     </task>
     <servers />
   </component>
@@ -381,110 +599,119 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/lib/ST.js">
+    <entry file="file://$PROJECT_DIR$/webapp/module/lib/Jser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/lib/Jser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="0.0">
+        <state line="84" column="0" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1440152933971" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1440247062011" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/app.js">
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="42" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0">
+        <state line="6" column="6" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/common.css">
+    <entry file="file://$PROJECT_DIR$/webapp/module/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/data/index.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/data/shangpin.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/data/wode.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/code-index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="17" column="30" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/lib/ST.js">
+    <entry file="file://$PROJECT_DIR$/webapp/resource/images/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/module/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="17" column="30" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/lib/single.js">
+    <entry file="file://$PROJECT_DIR$/webapp/module/lib/Jser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/lib/Jser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="43" selection-start="9406" selection-end="9406" vertical-scroll-proportion="6.2742124">
+        <state line="86" column="65" selection-start="2825" selection-end="2825" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1440152933971" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1440247062011" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/app.js">
+    <entry file="file://$PROJECT_DIR$/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="42" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0">
+        <state line="75" column="31" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/index.html">
+    <entry file="file://$PROJECT_DIR$/webapp/module/view/index/view/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.3571428">
+        <state line="15" column="31" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="46" selection-start="1947" selection-end="1947" vertical-scroll-proportion="-18.321428">
+        <state line="1" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/index/index.js">
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="608" selection-end="608" vertical-scroll-proportion="0.4235706">
+        <state line="3" column="12" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/module/view/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="31" selection-start="975" selection-end="986" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/module/lib/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="84393" selection-end="84393" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/module/lib/zepto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="32260" selection-end="32260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/resource/css/code-index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="32" selection-start="5912" selection-end="5912" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1440500933193" expanded="true" signature="1892:2143" placeholder="{...}" />
+            <marker date="1440500933193" expanded="true" signature="2812:3023" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="9" selection-start="2430" selection-end="2430" vertical-scroll-proportion="0.40625">
           <folding />
         </state>
       </provider>

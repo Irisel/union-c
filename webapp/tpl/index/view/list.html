@@ -1,0 +1,22 @@
+<%_.each(data,function(item){%>
+<li>
+	<a href="#">
+        <div class="index-inner">
+            <div class="side">
+                <div class="triangle"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">
+                    <span><%=item.name%></span>
+                </div>
+                <div class="content-desc">
+                    <p><%=item.description%></p>
+                </div>
+            </div>
+            <div class="more">
+                <span>查看详情</span>
+            </div>
+        </div>
+	</a>
+</li>
+<%})%>

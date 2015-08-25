@@ -1,0 +1,264 @@
+@charset "UTF-8";
+* {
+  /*启用盒模型*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%;
+  /*禁止当手机由竖屏转向横屏的时内容中的文字自动调整大小*/
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /*Mobile上点击链接高亮的时候设置颜色为透明*/
+  -webkit-tap-highlight-color: transparent;
+  /*在IE10之上版本，不允许默认的touch行为*/
+  -ms-touch-action: none; }
+
+body {
+  height: 100%;
+  /*手机字体*/
+  font-family: DroidSansFallback,"Helvetica Neue",Helvetica,STHeiTi,sans-serif; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+a {
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: none;
+  outline: 0 none;
+  outline-style: none; }
+  a:active, a:hover {
+    outline: 0; }
+
+em {
+  font-style: normal; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+ul, ol {
+  list-style-type: none; }
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+textarea {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  padding: 0; }
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  border-top: 1px solid #dddddd; }
+  .nav li {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    height: 100%; }
+    .nav li a, .nav li a:visited, .nav li a:active {
+      color: #535353;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 14px 14px;
+      border-right: 1px solid #dddddd; }
+      .nav li a i, .nav li a:visited i, .nav li a:active i {
+        background: url(../images/minify/icon.png) 0 center no-repeat;
+        position: absolute;
+        left: 12px;
+        top: 15px;
+        display: block;
+        height: 16px;
+        background-size: auto 16px; }
+      .nav li a i.icon-index, .nav li a:visited i.icon-index, .nav li a:active i.icon-index {
+        width: 16px;
+        background-position: 0 0; }
+      .nav li a i.icon-crowd, .nav li a:visited i.icon-crowd, .nav li a:active i.icon-crowd {
+        width: 16px;
+        background-position: -16px 0; }
+      .nav li a i.icon-account, .nav li a:visited i.icon-account, .nav li a:active i.icon-account {
+        width: 16px;
+        background-position: -32px 0; }
+      .nav li a span, .nav li a:visited span, .nav li a:active span {
+        display: block;
+        float: right;
+        font-size: 0.9em;
+        line-height: 21px; }
+  .nav li.on a {
+    color: #ff6c00; }
+    .nav li.on a i {
+      position: absolute;
+      left: 12px;
+      top: 15px;
+      display: block;
+      height: 16px;
+      background-size: auto 16px;
+      background: url(../images/minify/icon-selected.png) 0 center no-repeat; }
+    .nav li.on a i.icon-index {
+      width: 16px;
+      background-position: 0 0; }
+    .nav li.on a i.icon-crowd {
+      width: 16px;
+      background-position: -16px 0; }
+    .nav li.on a i.icon-account {
+      width: 16px;
+      background-position: -32px 0; }
+
+.wrap {
+  width: 100%;
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  position: relative; }
+  .wrap #js-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 50px; }
+    .wrap #js-wrap section {
+      height: 100%; }
+      .wrap #js-wrap section .index-wrapper {
+        position: absolute;
+        top: 0;
+        background-color: #f6f6f6;
+        width: 100%; }
+
+.slider-box {
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative; }
+  .slider-box .slider-list {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0; }
+    .slider-box .slider-list li {
+      width: 100%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      position: relative;
+      left: 0;
+      top: 0; }
+    .slider-box .slider-list a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    .slider-box .slider-list img {
+      width: 100%;
+      height: 100%; }
+
+.index-list {
+  padding: 15px 10px 50px;
+  width: 100%; }
+  .index-list li {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 12px; }
+    .index-list li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #d3d3d3; }
+      .index-list li a .index-inner {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        padding-left: 30px;
+        padding-right: 77px; }
+        .index-list li a .index-inner .side {
+          position: absolute;
+          left: 0;
+          height: 100%;
+          width: 10px;
+          background-color: #f29c9f; }
+          .index-list li a .index-inner .side .triangle {
+            background: #f29c9f;
+            width: 0px;
+            height: 0px;
+            position: relative;
+            overflow: hidden;
+            right: -10px;
+            top: 20px;
+            margin-bottom: 10px;
+            border-top: 10px solid #ffffff;
+            border-left: 10px solid #f29c9f;
+            border-bottom: 10px solid #ffffff; }
+        .index-list li a .index-inner .content {
+          width: 100%;
+          height: 100%;
+          padding-top: 21px; }
+          .index-list li a .index-inner .content .content-title {
+            height: 19px;
+            width: 100%;
+            color: #f29c9f; }
+          .index-list li a .index-inner .content .content-desc {
+            width: 100%; }
+            .index-list li a .index-inner .content .content-desc p {
+              font-size: 1em;
+              line-height: 18px;
+              overflow: hidden;
+              color: #999999;
+              width: 100%;
+              word-wrap: break-word; }
+        .index-list li a .index-inner .more {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 67px;
+          background-color: #fbdfe0; }
+          .index-list li a .index-inner .more span {
+            line-height: 100px;
+            text-align: center;
+            color: #f29c9f;
+            font-size: 14px;
+            width: 100%;
+            display: block; }

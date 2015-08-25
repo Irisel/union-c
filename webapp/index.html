@@ -41,6 +41,26 @@
 <body>
     <div class="wrap js-wrapper">
         <div id="js-wrap"></div>
+        <ul class="nav flex-equal vishide" id="js-navs">
+            <li>
+                <a href="#index/index">
+                    <i class="nav-icon icon-index"></i>
+                    <span class="nav-txt">联合理财</span>
+                </a>
+            </li>
+            <li>
+                <a href="#crowdfunding/index">
+                    <i class="nav-icon icon-crowd"></i>
+                    <span class="nav-txt">联合众筹</span>
+                </a>
+            </li>
+            <li>
+                <a href="#account/index">
+                    <i class="nav-icon icon-account"></i>
+                    <span class="nav-txt">我的账户</span>
+                </a>
+            </li>
+        </ul>
     </div>
     <script  type="text/javascript">
         seajs.use('app.js', function(app) {
@@ -57,6 +77,13 @@
             window.scrollTo(0, 0);
         }, 100)
     };
+
+    function windowSize(){
+        return {
+            width: (window.innerWidth > 0) ? window.innerWidth : screen.width,
+            height: (window.innerHeight > 0) ? window.innerHeight : screen.height
+        }
+    }
     function GetDateStr(AddDayCount) {
         var dd = new Date();
         dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期

@@ -2,12 +2,23 @@ define(function(require, exports) {
     var B = require('backbone');
     //导航菜单视图
     var navView = B.View.extend({
+        el: $("#js-navs"),
+        map: {
+            "index": 0,
+            "crowdfunding": 1,
+            "account": 2
+        },
         initialize: function() {
-
+            var t = this;
+            t.navs = this.$el.find("li");
         },
         initNav: function(m) {
-
-
+            var t = this;
+            var idx = t.map[m];
+            if(idx!=undefined)
+            t.navs.each(function(i, v) {
+                $(this).toggleClass("on", i == idx);
+            });
         },
 
         bindEvent: function() {
@@ -30,12 +41,15 @@ define(function(require, exports) {
         },
         /*初始化,预留做登录用户检测*/
         initialize: function() {
+            this.nav = new navView();
         },
         index: function() {
             this.loadmodel('index', 'index');
         },
         //按照module/action(/conditions) 格式
         loadmodel: function(md, ac, con) {
+            var t = this;
+            t.nav.initNav(md);
             if (!ac) ac = "index";
             //动态创建元素
             var el = B.$("#" + md + "_" + ac),

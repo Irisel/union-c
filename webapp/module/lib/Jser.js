@@ -78,7 +78,7 @@ window.Jser = {
                         s = 0;
                     }
 
-                    if (s == 0 || mock) {
+                    if (s == 0) {
                         flag = true;
                     } else {
                         if (j.msg) {
