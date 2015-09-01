@@ -26,13 +26,9 @@ define('base/model', '', function(require) {
         fetchData: function() {
             var t = this;
             if (this.get("action").indexOf(".json") == -1) {
-                this.url = (this.attributes.extra_url?this.attributes.extra_url:ST.PATH.ACTION) + this.get("action");
+                this.url = ST.PATH.ACTION + this.get("action");
             } else {
                 this.url = this.get("action");
-            }
-            // 搜索很特殊
-            if (this.get("action").indexOf("product/productListForPname") != -1 && this.get("pars")["pageNo"]) {
-                this.url += "?pageNo=" + this.get("pars")["pageNo"]
             }
             t.fetch({
                 cache: true,

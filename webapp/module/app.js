@@ -15,10 +15,14 @@ define(function(require, exports) {
         initNav: function(m) {
             var t = this;
             var idx = t.map[m];
-            if(idx!=undefined)
-            t.navs.each(function(i, v) {
-                $(this).toggleClass("on", i == idx);
-            });
+            if(idx!=undefined){
+                t.navs.each(function(i, v) {
+                    $(this).toggleClass("on", i == idx);
+                });
+                t.$el.show();
+            }  else {
+                t.$el.hide();
+            }
         },
 
         bindEvent: function() {
