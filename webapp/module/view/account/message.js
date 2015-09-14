@@ -1,8 +1,7 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-
-	var H = require('text!../../../tpl/financial/order.html');
+	var H = require('text!../../../tpl/account/message.html');
 	var model = new M({
 		pars: {
 
@@ -12,7 +11,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            "click .js-submit": "submit"
+
 		},
 		initialize: function() {
 			var t = this;
@@ -30,11 +29,6 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
-        submit: function(){
-            Jser.alert("投资成功", function() {
-                    window.location.hash = "#account/invest";
-            });
-        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

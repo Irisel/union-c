@@ -1,4 +1,5 @@
 window.Jser = {
+    _guid: 1,
     /**
     获取唯一GUID
     * @return {Number} 返回唯一GUID
@@ -25,6 +26,9 @@ window.Jser = {
             }
         }
     },
+    getGUID: function() {
+        return Jser._guid++;
+    },
     log: function(str) {
 //        window.console && window.console.log(str);
     },
@@ -43,7 +47,7 @@ window.Jser = {
         } else {
             _data = data;
         }
-        isload && $("#js-loading").show();;
+        isload && $("#js-loading").show();
 
         $("body").queue(function() {
             $.ajax({
