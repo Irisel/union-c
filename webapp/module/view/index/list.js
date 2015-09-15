@@ -12,7 +12,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-product": "product",
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -30,6 +31,14 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
+        product: function(e){
+            var t = this;
+            t.$el.find('.index-products-list li.on').removeClass('on');
+            $(e.currentTarget).addClass('on');
+        },
+        back: function(){
+          window.location.href="#financial/index";
+        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

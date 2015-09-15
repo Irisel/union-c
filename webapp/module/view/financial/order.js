@@ -12,7 +12,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            "click .js-submit": "submit"
+            "click .js-submit": "submit",
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -27,6 +28,9 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
+        back: function(){
+          window.location.href="#financial/index";
+        },
 		bindEvent: function() {
 
 		},

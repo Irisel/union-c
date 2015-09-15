@@ -11,7 +11,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -25,7 +25,11 @@ define('', '', function(require) {
 				data = {};
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            Jser.loadimages(t.$el);
 		},
+        back: function(){
+          window.location.href="#crowdfunding/index";
+        },
 		bindEvent: function() {
 
 		},

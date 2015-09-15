@@ -4,14 +4,14 @@ define('', '', function(require) {
 	var H = require('text!../../../tpl/funding/index.html');
 	var model = new M({
 		pars: {
-
+            "click .js-back": "back"
 		}
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -26,6 +26,9 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
+        back: function(){
+          window.location.href="#crowdfunding/index";
+        },
 		bindEvent: function() {
 
 		},

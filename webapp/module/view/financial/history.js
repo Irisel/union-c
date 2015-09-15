@@ -12,7 +12,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -30,6 +30,9 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
+        back: function(){
+          window.location.href="#financial/index";
+        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));
