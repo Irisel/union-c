@@ -332,7 +332,7 @@ textarea{
   line-height: 40px;
   color: #ffffff;
   overflow: hidden;
-  font-size: 17px;
+  font-size: 21px;
 }
 
 %white-link{
@@ -720,6 +720,12 @@ textarea{
       }
       .circle {
         background-color: #80c26a;
+        div{
+            width:100%;
+            height:100%;
+            background:url(../images/minify/recharge.png) center center no-repeat;
+            background-size:contain;
+        }
       }
     }
   }
@@ -869,6 +875,7 @@ textarea{
           position:absolute;
           bottom:0;
           width:100%;
+          font-size: 1em;
           height: 84px;
           .detail-title{
               height:31px;
@@ -899,6 +906,7 @@ textarea{
                 span{
                   height:25px;
                   line-height:25px;
+                  font-size:1em;
                   width:100%;
                   display: block;
                 }
@@ -934,6 +942,7 @@ textarea{
       img{
         width:100%;
         height:100%;
+        display:block;
       }
   }
   .funding-index-detail{
@@ -1097,36 +1106,51 @@ textarea{
           height:30px;
           display: inline-block;
           text-align: center;
+          i{
+              height: 100%;
+              width: 100%;
+              display: block;
+              &.minus{
+                background: url(../images/minify/minus.png) center center no-repeat;
+                background-size: contain;
+              }
+              &.plus{
+                background: url(../images/minify/plus.png) center center no-repeat;
+                background-size: contain;
+              }
+          }
           &:nth-child(1){
             width: 28px;
-            border: 1px solid red;
             margin-right: 1px;
             float:left;
+            background-color: #eeeeee;
           }
           &:nth-child(2){
             width:66px;
-            border: 1px solid red;
+            border: 1px solid #facd89;
             float: left;
           }
           &:nth-child(3){
             width: 28px;
-            border: 1px solid red;
+            border: 1px solid #facd89;
             margin-left: 1px;
             float:left;
+            padding: 3px;
           }
         }
       }
     }
   }
   .inner-input{
-    padding:0 10px;
+    padding:0 10px 0 80px;
     height:50px;
     border-bottom: 1px solid #e5e5e5;
     position: relative;
     @extend %blank-inner;
     font-size: 0.8em;
     span{
-      float:left;
+      position:absolute;
+      left:10px;
       color: #a1a1a1;
       text-align:center;
       width:80px;
@@ -1135,7 +1159,6 @@ textarea{
     input{
       line-height: 46px;
       font-size: 0.8em;
-      position: absolute;
       width: 100%;
       top:2px;
       display: inline-block;
@@ -1287,7 +1310,10 @@ textarea{
     border-radius: 40px;
     background-color: #80c26a;
     div {
-
+        width:100%;
+        height:100%;
+        background: url(../images/minify/deposit.png) center center no-repeat;
+        background-size: contain;
     }
   }
   span{
@@ -1412,16 +1438,50 @@ textarea{
   margin-bottom: 20px;
   padding: 20px 10px;
   ul {
-    width: 100%;
-    height: 16px;
     li{
       display: inline-block;
       font-size: 0.5em;
-      width: 25%;
       float: left;
-      text-align: left;
       line-height: 16px;
       height: 100%;
+    }
+    width: 100%;
+    height: 16px;
+    &.four-steps{
+      li {
+        width: 25%;
+        text-align: left;
+        &:nth-child(2){
+          text-align:center;
+        }
+        &:nth-child(3){
+          text-align:center;
+        }
+        &:nth-child(4){
+          text-align:right;
+        }
+      }
+    }
+    &.three-steps{
+      li{
+        width: 33.3%;
+        text-align: left;
+        &:nth-child(2){
+          text-align:center;
+        }
+        &:nth-child(3){
+          text-align:right;
+        }
+      }
+    }
+    &.two-steps{
+      li{
+        width: 50%;
+        text-align: left;
+        &:nth-child(2){
+          text-align:right;
+        }
+      }
     }
   }
   .out-bar{
@@ -1470,17 +1530,27 @@ textarea{
     position: relative;
     @extend %blank-inner;
     font-size: 0.8em;
+    &.lg{
+        padding-left:50px;
+    }
+    &.sg{
+        padding-left: 110px;
+    }
+    &.sl{
+        padding-left: 70px;
+    }
     span{
-      float:left;
       text-align:left;
       line-height: 50px;
+      position: absolute;
+      left: 10px;
     }
     input{
       line-height: 46px;
       font-size: 0.8em;
-      position: absolute;
+      position: relative;
       width: 100%;
-      top:2px;
+      top: 2px;
       display: inline-block;
       border: none;
       text-align: center;
@@ -1489,7 +1559,8 @@ textarea{
 }
 
 .account{
-  background-color: red;
+  background: url(../images/minify/account-bg.png) center center no-repeat;
+  background-size: cover;
   .account-header{
     background: none;
   }
@@ -1570,11 +1641,12 @@ textarea{
 }
 
 .account-options{
-  margin-top:20px;
   ul {
     width:100%;
+    height: 320px;
     li{
       display:inline-block;
+      background-color: #ffffff;
       float:left;
       width:33.3%;
       position:relative;
@@ -1589,17 +1661,47 @@ textarea{
           border-right: 1px solid #e5e5e5;
         }
         i{
-          width: 30px;
           height: 30px;
           position: absolute;
-          top: 10px;
+          top: 30px;
           left: 50%;
-          margin-left: -15px;
           background-color: #ffffff;
+          background:url(../images/minify/glyphicons.png) 0 0 no-repeat;
+          background-size:auto 30px;
+          &.invest{
+            margin-left: -11px;
+            width: 22px;
+            background-position-x: -134px;
+          }
+          &.crowdfunding{
+            margin-left: -9.5px;
+            width: 19px;
+            background-position-x: -94px;
+          }
+          &.message{
+            margin-left: -11px;
+            width: 22px;
+            background-position-x: -175px;
+          }
+          &.paper{
+            margin-left: -11px;
+            width: 22px;
+            background-position-x: -113px;
+          }
+          &.settings{
+            margin-left: -10px;
+            width: 20px;
+            background-position-x: -155px;
+          }
+          &.invite{
+            margin-left: -10px;
+            width: 20px;
+            background-position-x: -74px;
+          }      
         }
         span {
           position:relative;
-          top:35px;
+          top:55px;
           font-size:12px;
           line-height:20px;
           text-align:center;
@@ -1615,11 +1717,14 @@ textarea{
 .setting-detail{
   background-color: #ffffff;
   width:100%;
-  padding:0 10px;
-  margin-bottom:10px;
+  margin-bottom:0px;
   color: #666666;
   .inner-normal {
     @extend %blank-inner;
+    @extend %white-link;
+    color: #000000;
+    padding-left:20px;
+    display:block;
     border-bottom: 1px solid #d3d3d3;
     span{
       text-align:center;
@@ -1639,7 +1744,7 @@ textarea{
   color: #838383;
   span{
     line-height: 40px;
-    font-size: 0.6em;
+    font-size: 0.9em;
     text-indent: 8px;
     width: 100%;
     display: block;
@@ -1958,6 +2063,21 @@ textarea{
   top: 9.5px;
 }
 
+.hd-link{
+  position: absolute;
+  right: 10px;
+  font-size: 15px;
+  @extend %white-link;
+}
+
+.hd-linkgray{
+  position: absolute;
+  right: 10px;
+  font-size: 15px;
+  @extend %white-link;
+  color: #000000;
+}
+
 .hd-back{
   width: 10px;
   background-position: -73px 0;
@@ -2043,3 +2163,49 @@ textarea{
   border-left: none;
 }
 
+.union-icon{
+  background: url(../images/minify/union.png) center center no-repeat;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: contain;
+}
+
+.icon-username{
+  background: url(../images/minify/account.png) 0 0 no-repeat;
+  background-size: auto 30px;
+}
+
+.icon-passwd{
+  background: url(../images/minify/account.png) 0 0 no-repeat;
+  background-size: auto 30px;
+  background-position: -30px 0;
+}
+
+.icon-verity{
+  background: url(../images/minify/account.png) 0 0 no-repeat;
+  background-size: auto 30px;
+  background-position: -60px 0;
+}
+
+.option-section{
+  display:block;
+  width:100%;
+  padding:10px;
+  li{
+    padding:10px;
+    display:inline-block;
+    height:70px;
+    width:50%;
+    text-align: center;
+    &:nth-child(even) {
+      float:right;
+    }
+    a{
+      display:block;
+      line-height:50px;
+      font-size:1em;
+      background-color: #ffffff;
+    }
+  }
+}

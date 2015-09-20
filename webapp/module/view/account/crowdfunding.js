@@ -1,17 +1,17 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/funding/order.html');
+	var H = require('text!../../../tpl/account/crowdfunding.html');
 	var model = new M({
 		pars: {
-             "click .js-back": "back"
+
 		}
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
 		events: {
-
+			"click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -29,9 +29,9 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
-        back: function(){
-          window.location.href="#funding/index";
-        },
+		back: function(){
+			window.history.back();
+		},
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

@@ -1,10 +1,10 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/funding/order.html');
+	var H = require('text!../../../tpl/help/index.html');
 	var model = new M({
 		pars: {
-             "click .js-back": "back"
+            "click .js-back": "back"
 		}
 	});
 	var V = B.View.extend({
@@ -30,7 +30,7 @@ define('', '', function(require) {
 
 		},
         back: function(){
-          window.location.href="#funding/index";
+          window.location.href="#financial/index";
         },
 		changePars: function(pars) {
 			var t = this;

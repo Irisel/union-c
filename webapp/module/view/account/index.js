@@ -11,7 +11,9 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+			"click .js-back": "back",
+			"click .js-withdraw": "withdraw",
+			"click .js-recharge": "recharge"
 		},
 		initialize: function() {
 			var t = this;
@@ -27,7 +29,16 @@ define('', '', function(require) {
 			t.$el.show().html(html);
 		},
 		bindEvent: function() {
-
+            
+		},
+		back: function(){
+			window.history.back();
+		},
+		withdraw: function(){
+			window.location.href = "#account/withdraw"
+		},
+		recharge: function(){
+			window.location.href = "#account/recharge"
 		},
 		changePars: function(pars) {
 			var t = this;

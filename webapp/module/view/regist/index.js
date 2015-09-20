@@ -4,7 +4,7 @@ define('', '', function(require) {
 	var H = require('text!../../../tpl/regist/index.html');
 	var model = new M({
 		pars: {
-
+            "click .js-back": "back"
 		}
 	});
 	var V = B.View.extend({
@@ -29,6 +29,9 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
+        back: function(){
+          window.location.href="#financial/index";
+        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

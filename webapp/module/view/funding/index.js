@@ -17,6 +17,7 @@ define('', '', function(require) {
 			var t = this;
 //			t.listenToOnce(t.model, "change:data", function() {
 				t.render();
+				Jser.loadimages(t.$el);
 //			});
 		},
 		//待优化
