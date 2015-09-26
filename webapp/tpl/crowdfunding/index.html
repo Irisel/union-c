@@ -8,25 +8,26 @@
 	</div-->
     <div class="crowd-list">
         <ul>
+            <%_.each(list,function(item){%>
             <li class="crowd">
-                <a href="#funding/index">
+                <a href="#funding/index/id:<%=item.zc_id%>">
                     <div class="progress-block">
                         <div>
                             <div class="progress-label">
                                 <span>已完成</span>
-                                <span>35%</span>
+                                <span><%=item.zc_fee%>%</span>
                             </div>
                         </div>
                     </div>
                     <div class="detail-crowd">
                         <div class="detail-title">
-                            <span>雅诗兰黛肌透修复眼部精华爽</span>
+                            <span><%=item.zc_name%></span>
                         </div>
                         <ul>
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        230
+                                        <%=item.zc_investnum%>
                                     </span>
                                     <span>
                                         参与人数
@@ -36,7 +37,7 @@
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        230,999,000
+                                        <%=item.zc_money%>
                                     </span>
                                     <span>
                                         已筹到（元）
@@ -46,7 +47,7 @@
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        230
+                                        <%=item.zc_timelimit%>
                                     </span>
                                     <span>
                                         剩余天数
@@ -55,9 +56,10 @@
                             </li>
                         </ul>
                     </div>
-                    <img data-src="http://lama.piapiapiapia.com/webapp/union/webapp/resource/images/minify/crowdfunding01.png">
+                    <img data-src="<%=item.zc_imgurl%>">
                 </a>
             </li>
+            <%})%>
         </ul>
     </div>
 </div>

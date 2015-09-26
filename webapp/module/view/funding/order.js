@@ -4,14 +4,18 @@ define('', '', function(require) {
 	var H = require('text!../../../tpl/funding/order.html');
 	var model = new M({
 		pars: {
-             "click .js-back": "back"
+
 		}
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        order_number: 1,
 		events: {
-
+             "click .js-back": "back",
+             "click .js-minus":"minus",
+            "click .js-plus":"plus",
+            "input .js-num": "enter"
 		},
 		initialize: function() {
 			var t = this;
@@ -29,6 +33,26 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
+        plus: function(){
+            var t = this;
+            t.order_number+=1;
+            t.$el.find('.js-num').val(t.order_number);
+        },
+        minus: function(){
+            var t = this;
+            if(t.order_number)t.order_number-=1;
+            t.$el.find('.js-num').val(t.order_number);
+        },
+        enter: function(e){
+            var t = this;
+            var inputNum = $(e.currentTarget).val();
+            if(!isNaN(inputNum)){
+                if(inputNum)
+                t.order_number = inputNum;
+            }else{
+                $(e.currentTarget).val(t.order_number);
+            }
+        },
         back: function(){
           window.location.href="#funding/index";
         },

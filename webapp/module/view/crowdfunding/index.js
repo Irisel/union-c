@@ -3,9 +3,8 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/crowdfunding/index.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/zhongchou/zlist',
+        type: 'post'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,15 +14,18 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "change:data", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
-			var html = _.template(t.template, data);
+				data = t.model.toJSON();
+            data = data.data;
+            var list = {list: data.list};
+            console.log(list);
+			var html = _.template(t.template, list);
 			t.$el.show().html(html);
             Jser.loadimages(t.$el);
 		},
@@ -42,9 +44,9 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                limit: 5,
+                page: 1
 		    }
 		});
 		return new V({

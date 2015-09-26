@@ -7,8 +7,9 @@ define('', '', function(require) {
     var list_tpl = require('text!../../../tpl/index/view/list.html');
 	var model = new M({
 		pars: {
-
-		}
+            limit: 5
+		},
+        type: 'post'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -18,44 +19,33 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "change:data", function() {
 				t.render();
-//				t.listenTo(t.model, "sync", function() {
+				t.listenTo(t.model, "sync", function() {
 					t.syncRender();
-//				});
-//			});
+				});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
 				data = {};
 			var html = _.template(t.template, data);
-			t.$el.show().html(html);
+			t.$el.html(html);
 			new Slider({
 				el: t.$el.find(".js-slider-box")
 			});
+            t.$el.show()
 		},
 		syncRender: function() {
 			var t = this,
-//				data = t.model.toJSON();
-            data = {data: [
-                {
-                    name: '金房惠利',
-                    description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-                },
-                {
-                    name: '当当有礼',
-                    description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-                },
-                {
-                    name: '联农利牧',
-                    description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-                }
-            ]};
-			var _html = _.template(list_tpl, data);
+				data = t.model.toJSON();
+            data = data.data;
+            var list = {list: data.list};
+			var _html = _.template(list_tpl, list);
 			var $list = t.$el.find(".js-index-list");
 			$list.append(_html);
-//			Jser.loadimages($list);
+			Jser.loadimages($list);
 
 		},
 		bindEvent: function() {
@@ -70,10 +60,11 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
+			action: '/index/borrow',
             pars: {
-
-		    }
+                limit: 5
+		    },
+            type: 'post'
 		});
 		return new V({
 			el: $("#" + pars.model + "_" + pars.action)

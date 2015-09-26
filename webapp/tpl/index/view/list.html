@@ -1,13 +1,13 @@
-<%_.each(data,function(item){%>
+<%_.each(list,function(item){%>
 <li>
-	<a href="#financial/index">
+	<a href="#financial/index/id:<%=item.id%>">
         <div class="index-inner">
             <div class="side">
                 <div class="triangle"></div>
             </div>
             <div class="content">
                 <div class="content-title">
-                    <span><%=item.name%></span>
+                    <span><%=item.product_name%></span>
                 </div>
                 <div class="content-desc">
                     <p><%=item.description%></p>

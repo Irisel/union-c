@@ -3,34 +3,37 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var Swipe = require('plusin/swipe');
 	var H = require('text!../../../../tpl/index/view/slider.html');
-	var model = new M();
+	var model = new M(
+        {
+            action: '/index/banner'
+        }
+    );
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        pxy: 7/20,
+        ixy: 450/1900,
 		initialize: function() {
 			var t = this;
-//			if (t.model._loaded) {
-//				t.render();
-//			} else {
-//				t.listenTo(t.model, "sync", function() {
-//					t.render();
-//				});
-//			}
-            t.render();
+			if (t.model._loaded) {
+				t.render();
+			} else {
+				t.listenTo(t.model, "sync", function() {
+					t.render();
+				});
+			}
 		},
 		//待优化
 		render: function() {
-            var size = windowSize();
 			var t = this,
-//				data = t.model.toJSON();
-            data = {data: [{picture: 'http://lama.piapiapiapia.com/webapp/union/webapp/resource/images/banner.png'},
-            {picture: 'http://lama.piapiapiapia.com/webapp/union/webapp/resource/images/banner.png'}]};
+				data = t.model.toJSON();
+            var size = $.extend(windowSize(), {pxy: t.pxy,ixy: t.ixy });
 			var html = _.template(t.template, data);
 			t.$el.html(html);
-            t.$el.find('.slider-box').height(size.width * 17/32);
+            t.$el.find('.slider-box').height(size.width * 7/20);
             t.$el.show();
 			t.doSlider();
-			Jser.loadimages(t.$el);
+			Jser.loadimages(t.$el, size);
 		},
 		doSlider: function() {
 			var t=this;
@@ -47,7 +50,9 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: ''
+            pars: {
+
+            }
 		});		
 		return new V({
 			el: pars.el

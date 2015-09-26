@@ -5,25 +5,39 @@ window.Jser = {
     * @return {Number} 返回唯一GUID
     * @static
     */
-    loadimages: function(el) {
+    loadimages: function(el, size) {
         el = el || "body";
         var lazy = $(el).find("[data-src]");
         lazy.each(function(i) {
-            loadImg.call(this);
+            loadImg.apply(this, [size]);
         });
 
-        function loadImg() {
+        function loadImg(size) {
             var t = this;
             var source = t.getAttribute("data-src");
             var img = new Image();
-            img.src = source;
+            img.src = ST.PATH.IMAGE + source;
             img.onload = function() {
-                t.setAttribute("src", source);
+                t.setAttribute("src", ST.PATH.IMAGE + source);
                 $(t).removeAttr("data-src");
-            }
+                if(size){
+                    var width = Number(this.width / this.height) * size.width * size.pxy;
+                    if(size.width < width)$(t).css('left', -1 * (width * size.ixy));
+                }
+            };
             img.onerror = function() {
                 t.setAttribute("src", "resource/images/loadbanner.png")
             }
+        }
+    },
+    timestamp_format: function(timestmap){
+        var  newTime = new Date(parseInt(timestmap) * 1000);
+        return {
+            year: newTime.getFullYear(),
+            month: newTime.getMonth() + 1,
+            day: newTime.getDate(),
+            hour : newTime.getHours(),
+            min: newTime.getMinutes()
         }
     },
     getGUID: function() {

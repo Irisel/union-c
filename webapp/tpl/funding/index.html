@@ -7,31 +7,32 @@
 		正在奋力加载中
 	</div-->
     <div class="funding-index">
+        <div class="booker">
         <div class="img-box">
-            <img data-src="http://lama.piapiapiapia.com/webapp/union/webapp/resource/images/minify/funding01.png">
+            <img data-src="<%=data.zc_imgurl%>">
         </div>
         <div class="funding-index-detail">
-            <div class="inner-name">【联合福利社】简约双鱼拉丝开口戒指</div>
-            <div class="inner-name less">此项目需在2015年7月7日11:30前, 获得¥888金额才可成立</div>
+            <div class="inner-name"><%=data.zc_name%></div>
+            <div class="inner-name less">此项目需在<%=data.endtime.year%>年<%=data.endtime.month%>月<%=data.endtime.day%>日<%=data.endtime.hour%>:<%=data.endtime.min%>前, 获得¥<%=data.zc_total%>金额才可成立</div>
         </div>
         <ul class="funding-attributes">
             <li>
                 <a class="mark progress-icon">
                 </a>
                 <span>众筹进度</span>
-                <span>25.5%</span>
+                <span><%=data.progress%>%</span>
             </li>
             <li>
                 <a class="mark funding-icon">
                 </a>
                 <span>已筹到（元）</span>
-                <span>123344</span>
+                <span><%=data.zc_num%></span>
             </li>
             <li>
                 <a class="mark lastday-icon">
                 </a>
                 <span>剩余天数</span>
-                <span>31</span>
+                <span><%=data.zc_timelimit%></span>
             </li>
         </ul>
         <ul class="list-link">
@@ -41,6 +42,7 @@
         </ul>
         <div class="list-more">
             <a href="#funding/order">立即参与</a>
+        </div>
         </div>
     </div>
 </div>

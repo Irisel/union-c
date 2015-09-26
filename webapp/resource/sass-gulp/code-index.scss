@@ -87,6 +87,17 @@ textarea{
   background-size: auto 16px;
 }
 
+@mixin triangle() {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid #f29c9f;
+  border-bottom: 10px solid #ffffff;
+}
+
 .hide{
   display: none;
 }
@@ -233,11 +244,14 @@ textarea{
       display: block;
       width: 100%;
       height: 100%;
+      position:relative;
+      overflow-x:hidden;
     }
 
     img {
-      width: 100%;
+      width: auto;
       height: 100%;
+      position:absolute;
     }
   }
 }
@@ -268,17 +282,10 @@ textarea{
             width:10px;
             background-color:#f29c9f;
             .triangle{
+              @include triangle();
               background: #f29c9f;
-              width: 0px;
-              height: 0px;
-              position: relative;
-              overflow: hidden;
               right: -10px;
               top: 20px;
-              margin-bottom: 10px;
-              border-top: 10px solid #ffffff;
-              border-left: 10px solid #f29c9f;
-              border-bottom: 10px solid #ffffff;
           }
           }
           .content{
@@ -547,12 +554,15 @@ textarea{
 .list-more{
   background-color: #ff7d21;
   width:100%;
-  height:80px;
-  line-height:80px;
+  height: 2.6em;
+  line-height: 2.6em;
   a {
     @extend %white-link;
+    font-size:1em;
   }
   text-align:center;
+  position: absolute;
+  bottom: 0;
 }
 
 .order-submit{
@@ -902,7 +912,6 @@ textarea{
                 width: 100%;
                 height: 100%;
                 padding-left: 20px;
-                font-size: 0.5px;
                 span{
                   height:25px;
                   line-height:25px;
@@ -933,6 +942,11 @@ textarea{
 
 .funding-index{
   @extend %scroll-list;
+  .booker{
+    position:relative;
+    min-height: 100%;
+    padding-bottom: 40px;
+  }
   bottom:0;
   background-color:#f6f6f6;
   .img-box{
@@ -960,6 +974,7 @@ textarea{
     }
   }
   .list-link{
+    position: relative;
     li{
       border-bottom: 1px solid #dddddd;
       border-top: 1px solid #dddddd;
@@ -1003,7 +1018,7 @@ textarea{
         @extend %orange;
         display:block;
         text-align:center;
-        font-size:0.5em;
+        font-size:1em;
         line-height: 2em;
         &:first-child{
           font-size:0.8em;
@@ -1106,6 +1121,14 @@ textarea{
           height:30px;
           display: inline-block;
           text-align: center;
+          input{
+            width: 100%;
+            line-height: 30px;
+            font-size: 1em;
+            height: 100%;
+            float: left;
+            text-align: center;
+          }
           i{
               height: 100%;
               width: 100%;
@@ -1596,11 +1619,11 @@ textarea{
           float:left;
           font-size:12px;
           line-height:16px;
-          &:first-child {
+          &:nth-child(odd) {
             text-align:left;
           }
-          &:last-child{
-            text-align:right;
+          &:nth-child(even){
+            text-align:left;
           }
           span{
             &:last-child{
@@ -1974,7 +1997,7 @@ textarea{
       font-size: 1em;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -80px;
       line-height: 80px;
       color: #ffffff;
     }
@@ -2197,15 +2220,153 @@ textarea{
     display:inline-block;
     height:70px;
     width:50%;
+    float:left;
     text-align: center;
-    &:nth-child(even) {
-      float:right;
-    }
     a{
       display:block;
       line-height:50px;
       font-size:1em;
       background-color: #ffffff;
     }
+  }
+}
+
+.list-summaries{
+  ul{
+    li{
+      padding: 8px 20px;
+      border-bottom: 1px solid #d3d3d3;
+      height: 66px;
+      line-height: 40px;
+      position:relative;
+      .triangle{
+        @include triangle();
+        border-left: 10px solid #ff6c00;
+        position:absolute;
+        left:10px;
+      }
+      .summary{
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        span{
+          display: block;
+          height: 25px;
+          line-height: 25px;
+          width: 100%;
+          float: left;
+          font-size:0.5em;
+        }
+      }
+    }
+  }
+}
+
+.about-more{
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  hr{
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+    top: 30px;
+  }
+  span{
+    font-size: 1em;
+    display: block;
+    width: 6em;
+    text-align: center;
+    margin-left: -3em;
+    left: 50%;
+    position: relative;
+    height: 30px;
+    background-color: #f6f6f6;
+    top: 20px;
+  }
+}
+
+.presents{
+  background-color: #ffffff;
+  width:100%;
+  color: #666666;
+  padding:1px;
+  position:relative;
+  .inner-normal{
+    position: relative;
+    display: block;
+    height: 100%;
+    line-height: 30px;
+    font-size: 0.9em;
+    margin: 10px 10px;
+    border: 1px solid #d3d3d3;
+    .present-img{
+      width: 40%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border-right: 1px solid #e5e5e5;
+      background: url(../images/minify/presentu.png) 0 0 no-repeat;
+      background-size:100% auto;
+      span{
+        font-size: 3em;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 50%;
+        margin-left: -5%;
+        &.unused{
+          color: #fff000;
+        }
+        &.used{
+          color: #c0c0c0;
+        }
+      }
+    }
+    .present{
+      width: 60%;
+      left:40%;
+      position:relative;
+      .present-date{
+        height:1.5em;
+        line-height: 1.5em;
+        font-size: 1em;
+        text-indent: 10px;
+        margin-top: 0.4em;
+      }
+      .present-info{
+        line-height: 1.5em;
+        font-size: 1em;
+        padding-left:10px;
+      }
+      .present-title{
+        height: 2em;
+        line-height: 2em;
+        font-size: 1.6em;
+        color: #ff6c00;
+        text-indent: 10px;
+      }
+    }
+  }
+}
+
+.content{
+  background-color: #ffffff;
+  p{
+    &.first-child{
+      margin-top:10px;
+    }
+    padding: 0 20px;
+    font-size: 1em;
+    line-height: 1.5em;
+    span.bold{
+        line-height: 2em;
+        font-size: 1.1em;
+    }
+  }
+  img{
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
   }
 }

@@ -1,7 +1,7 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/settings/summary.html');
+	var H = require('text!../../../tpl/summary/index.html');
 	var model = new M({
 		pars: {
 

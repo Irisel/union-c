@@ -3,9 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/funding/index.html');
 	var model = new M({
-		pars: {
-            "click .js-back": "back"
-		}
+        action: '/zhongchou/zhongchou'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,15 +13,18 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
-				Jser.loadimages(t.$el);
-//			});
+                Jser.loadimages(t.$el);
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            var timestamp = data.data.zc_enddate;
+            data.data.endtime = Jser.timestamp_format(timestamp);
+            console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -35,16 +36,13 @@ define('', '', function(require) {
 		},
 		changePars: function(pars) {
 			var t = this;
-			var data = $.extend({}, t.model.get("pars"));
-			$.extend(data, pars);
-			t.model.set("pars", data);
+			t.model.set("pars", pars);
 		}
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                id: pars.id
 		    }
 		});
 		return new V({
