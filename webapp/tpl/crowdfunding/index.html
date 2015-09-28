@@ -10,24 +10,24 @@
         <ul>
             <%_.each(list,function(item){%>
             <li class="crowd">
-                <a href="#funding/index/id:<%=item.zc_id%>">
+                <a href="#funding/index/id:<%=item.id%>">
                     <div class="progress-block">
                         <div>
                             <div class="progress-label">
                                 <span>已完成</span>
-                                <span><%=item.zc_fee%>%</span>
+                                <span><%=item.pro%>%</span>
                             </div>
                         </div>
                     </div>
                     <div class="detail-crowd">
                         <div class="detail-title">
-                            <span><%=item.zc_name%></span>
+                            <span><%=item.name%></span>
                         </div>
                         <ul>
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        <%=item.zc_investnum%>
+                                        <%=item.num%>
                                     </span>
                                     <span>
                                         参与人数
@@ -37,7 +37,7 @@
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        <%=item.zc_money%>
+                                        <%=item.money%>
                                     </span>
                                     <span>
                                         已筹到（元）
@@ -47,7 +47,7 @@
                             <li>
                                 <div class="detail-attribute">
                                     <span>
-                                        <%=item.zc_timelimit%>
+                                        <%=item.day%>
                                     </span>
                                     <span>
                                         剩余天数
@@ -56,7 +56,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img data-src="<%=item.zc_imgurl%>">
+                    <img data-src="<%=item.img%>">
                 </a>
             </li>
             <%})%>

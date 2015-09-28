@@ -4,9 +4,7 @@ define('', '', function(require) {
 
 	var H = require('text!../../../tpl/financial/history.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/financial/record'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -16,14 +14,14 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -42,9 +40,8 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                id: pars.id
 		    }
 		});
 		return new V({

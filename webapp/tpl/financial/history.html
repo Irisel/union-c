@@ -8,15 +8,17 @@
     </div>
     <div class="list-history">
         <ul>
+            <%_.each(data,function(item){%>
             <li>
                 <div class="history">
-                    <span>康达</span>
-                    <span>2015-08-08</span>
+                    <span><%=item.name%></span>
+                    <span><%=item.date%></span>
                 </div>
                 <span class="orange amount">
-                    ¥1000000
+                    <%=item.money%>
                 </span>
             </li>
+            <%})%>
         </ul>
     </div>
 </div>

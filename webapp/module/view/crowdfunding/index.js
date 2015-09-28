@@ -23,7 +23,7 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             data = data.data;
-            var list = {list: data.list};
+            var list = {list: data.data};
             console.log(list);
 			var html = _.template(t.template, list);
 			t.$el.show().html(html);

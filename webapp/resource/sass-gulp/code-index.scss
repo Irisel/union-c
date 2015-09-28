@@ -121,7 +121,7 @@ textarea{
   width: 100%;
   height: 50px;
   background: #ffffff;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #eee;
   li {
     display: inline-block;
     width: 33.33%;
@@ -135,7 +135,7 @@ textarea{
       height: 100%;
       position: relative;
       padding: 14px 14px;
-      border-right: 1px solid #dddddd;
+      border-right: 1px solid #eee;
       i {
         background: url(../images/minify/icon.png) 0 center no-repeat;
         @include icon();
@@ -268,7 +268,7 @@ textarea{
         display: block;
         width: 100%;
         height: 100%;
-        border: 1px solid #d3d3d3;
+        border: 1px solid #eee;
         .index-inner{
           width:100%;
           position:relative;
@@ -418,7 +418,6 @@ textarea{
     top:0;
     left:0;
     height:100%;
-    width:50%;
     background-color: #e2f7b6;
   }
   .progress-rate{
@@ -451,7 +450,8 @@ textarea{
     span{
       display:block;
       width:100%;
-      line-height:20px;
+      line-height: 1.4em;
+      font-size: 1em;
     }
   }
   .withdraw-expect{
@@ -469,12 +469,12 @@ textarea{
       margin-top:10px;
       .invest-button{
         width:70px;
-        height:40px;
+        height:49.5px;
         position:absolute;
         right:0;
         top: 0;
         text-align: center;
-        line-height:40px;
+        line-height:49.5px;
         border-radius:5px;
         background-color: #ff6c00;
         color: #ffffff;
@@ -486,10 +486,10 @@ textarea{
         margin-right: 75px;
         padding-right: 20px;
         padding-left: 5px;
-        height: 38px;
-        line-height: 38px;
+        height: 47.5px;
+        line-height: 47.5px;
         position: relative;
-        border: 1px solid #f6f6f6;
+        border: 1px solid #bbb;
         border-radius: 3px;
       input {
         width: 100%;
@@ -506,10 +506,10 @@ textarea{
       .withdraw-input{
         padding-right: 20px;
         padding-left: 5px;
-        height: 38px;
-        line-height: 38px;
+        height: 47.5px;
+        line-height: 47.5px;
         position: relative;
-        border: 1px solid #f6f6f6;
+        border: 1px solid #bbb;
         border-radius: 3px;
       input {
         width: 100%;
@@ -525,7 +525,7 @@ textarea{
     }
     .invest-balance{
       margin-top:5px;
-      font-size:0.5em;
+      font-size:14px;
       a {
         color: #2caaeb;
       }
@@ -570,10 +570,10 @@ textarea{
     margin: 20px;
     text-align: center;
     background-color: #ff7d21;
-    height: 60px;
-    line-height: 60px;
+    height: 52.8px;
+    line-height: 52.8px;
     border-radius: 6px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     a {
       @extend %white-link;
     }
@@ -614,8 +614,8 @@ textarea{
 .products-list{
   width:100%;
   li {
-    border-top:1px solid #d3d3d3;
-    border-bottom:1px solid #d3d3d3;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
     .product-detail{
       padding: 5px 100px 0 10px;
       .detail-title{
@@ -643,7 +643,7 @@ textarea{
       height: 20px;
       font-size: 14px;
       line-height: 20px;
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #eee;
     }
     .product-bottom{
       height:10px;
@@ -656,9 +656,16 @@ textarea{
     height: 40px;
     line-height: 40px;
     font-size: 0.9em;
+    color: #666666;
 }
 
 .order-detail{
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+  &:first-child{
+    border-top:none;
+    border-bottom:1px solid #eee;
+  }
   background-color: #ffffff;
   width:100%;
   padding:0 10px;
@@ -668,7 +675,8 @@ textarea{
     height:50px;
     font-size:1em;
     line-height:50px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
+    color: #333333;
   }
   .inner-name{
     @extend %blank-inner;
@@ -703,20 +711,19 @@ textarea{
     height:30px;
     font-size:1em;
     line-height:30px;
-    border-bottom: 1px solid #d3d3d3;
   }
   .inner-normal{
     height: 50px;
     line-height: 50px;
     font-size: 0.9em;
     padding:0 20px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
     .circle {
       float:right;
       height:20px;
       width:20px;
       border-radius:10px;
-      border: 1px solid #d3d3d3;
+      border: 1px solid #eee;
       top: 15px;
       position: relative;
     }
@@ -745,6 +752,10 @@ textarea{
   color: #ff7d21;
 }
 
+.vishide{
+  display:none;
+}
+
 %orange{
   color: #ff7d21;
 }
@@ -752,8 +763,12 @@ textarea{
 .paragh{
   bottom: 0;
   position: absolute;
-  top: 120px;
+  top: 80px;
   width: 100%;
+  padding: 0 20px;
+  img{
+    width:100% !important;
+  }
 }
 
 %guide-li{
@@ -805,7 +820,7 @@ textarea{
   ul{
     li{
       padding: 8px 20px;
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #eee;
       height: 66px;
       line-height: 40px;
       position:relative;
@@ -819,13 +834,16 @@ textarea{
           line-height: 25px;
           width: 100%;
           float: left;
-          font-size:0.5em;
+          font-size: 0.9em;
         }
       }
       .amount{
        float: right;
        display: inline-block;
-       font-size: 1em;
+       &:first-letter{
+         font-size:1.125em;
+       }
+       font-size: 1.35em;
        height: 100%;
        line-height: 50px;
        font-weight: bold;
@@ -855,6 +873,7 @@ textarea{
         height: 100%;
         display: block;
         color: #000000;
+        padding-bottom: 84px;
         .progress-block{
           position:absolute;
           top:0;
@@ -866,16 +885,17 @@ textarea{
             .progress-label{
               position: absolute;
               top: 50%;
-              margin-top: -25px;
-              height: 50px;
-              width: 77px;
+              margin-top: -18px;
+              height: 36px;
+              width: 51px;
               background-color: #00a0ea;
               color: #ffffff;
               span {
                 display: block;
-                height: 25px;
+                height: 18px;
                 text-align: center;
-                line-height: 25px;
+                line-height: 18px;
+                font-size: 14px;
               }
             }
           }
@@ -892,9 +912,11 @@ textarea{
               width:100%;
               line-height:31px;
               span{
-                text-indent: 2em;
+                text-indent: 20px;
                 width: 100%;
                 display: block;
+                font-size: 16px;
+                color: #333;
               }
           }
           ul {
@@ -915,9 +937,16 @@ textarea{
                 span{
                   height:25px;
                   line-height:25px;
-                  font-size:1em;
                   width:100%;
                   display: block;
+                  &:first-child{
+                    color: #333;
+                    font-size:20px;
+                  }
+                  &:last-child{
+                    color: #999;
+                    font-size:11px;
+                  }
                 }
               }
               &:nth-child(1) .detail-attribute{
@@ -932,7 +961,7 @@ textarea{
         img{
             width: 100%;
             max-width: 480px;
-            max-height: 216px;
+            max-height: 260px;
             min-height: 116px;
         }
       }
@@ -952,7 +981,7 @@ textarea{
   .img-box{
     width:100%;
     max-height: 300px;
-    min-height: 200px;
+    min-height: 100px;
       img{
         width:100%;
         height:100%;
@@ -1020,11 +1049,8 @@ textarea{
         text-align:center;
         font-size:1em;
         line-height: 2em;
-        &:first-child{
-          font-size:0.8em;
-        }
         &:last-child{
-          font-size:0.5em;
+          font-size:1em;
         }
       }
     }
@@ -1073,7 +1099,7 @@ textarea{
     height:50px;
     font-size: 0.8em;
     line-height:50px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
   }
   .inner-normal{
     @extend %blank-inner;
@@ -1096,14 +1122,13 @@ textarea{
   }
   .inner-option{
     padding:10px 10px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
     @extend %blank-inner;
     font-size: 0.8em;
     height: 100px;
     position: relative;
     .option-title{
       float:left;
-      color: #a1a1a1;
       text-align:center;
     }
     .option{
@@ -1114,7 +1139,7 @@ textarea{
       top: 20px;
       font-size: 0.8em;
       .addition{
-        font-size:0.5em;
+        font-size:1.1em;
       }
       ul {
         li {
@@ -1165,7 +1190,7 @@ textarea{
     }
   }
   .inner-input{
-    padding:0 10px 0 80px;
+    padding:0 10px 0 10px;
     height:50px;
     border-bottom: 1px solid #e5e5e5;
     position: relative;
@@ -1174,8 +1199,8 @@ textarea{
     span{
       position:absolute;
       left:10px;
-      color: #a1a1a1;
-      text-align:center;
+      color: #bbb;
+      text-align: left;
       width:80px;
       line-height: 50px;
     }
@@ -1186,7 +1211,7 @@ textarea{
       top:2px;
       display: inline-block;
       border: none;
-      text-align: center;
+      text-align: left;
     }
   }
 }
@@ -1604,7 +1629,7 @@ textarea{
         .amount{
           width: 100%;
           display: block;
-          font-size: 18px;
+          font-size: 28px;
           line-height: 30px;
         }
       }
@@ -1679,9 +1704,9 @@ textarea{
         width: 100%;
         height: 120px;
         padding: 10px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid #eee;
         &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5) {
-          border-right: 1px solid #e5e5e5;
+          border-right: 1px solid #eee;
         }
         i{
           height: 30px;
@@ -1742,13 +1767,13 @@ textarea{
   width:100%;
   margin-bottom:0px;
   color: #666666;
+  padding-left: 20px;
   .inner-normal {
     @extend %blank-inner;
     @extend %white-link;
     color: #000000;
-    padding-left:20px;
     display:block;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
     span{
       text-align:center;
       &:first-child{
@@ -1772,7 +1797,7 @@ textarea{
     width: 100%;
     display: block;
   }
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #eee;
 }
 
 .label-group{
@@ -1782,7 +1807,7 @@ textarea{
   height:20px;
   width:100%;
   padding: 0 10px;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #eee;
   ul{
     height:20px;
     li{
@@ -1808,7 +1833,7 @@ textarea{
   height:60px;
   width:100%;
   padding: 10px 10px;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #eee;
   ul{
     height:40px;
     li{
@@ -1848,9 +1873,9 @@ textarea{
       display:inline-block;
       width:50%;
       height:41px;
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #eee;
       &:first-child{
-        border-right: 1px solid #d3d3d3;
+        border-right: 1px solid #eee;
       }
       a{
         font-size:16px;
@@ -1890,7 +1915,7 @@ textarea{
     line-height: 30px;
     font-size: 0.9em;
     padding:10px 20px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
     span{
       text-align: left;
       float: left;
@@ -1976,10 +2001,11 @@ textarea{
     line-height: 30px;
     font-size: 0.9em;
     padding:10px 20px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #eee;
     .message-date{
       width: 100%;
       height: 30px;
+      font-size:1em;
       span{
         &:first-child{
           float:left;
@@ -2007,7 +2033,7 @@ textarea{
       .addition{
         color: #838383;
         line-height: 16px;
-        font-size:0.5em;
+        font-size:0.8em;
       }
     }
   }
@@ -2235,7 +2261,7 @@ textarea{
   ul{
     li{
       padding: 8px 20px;
-      border-bottom: 1px solid #d3d3d3;
+      border-bottom: 1px solid #eee;
       height: 66px;
       line-height: 40px;
       position:relative;
@@ -2299,7 +2325,7 @@ textarea{
     line-height: 30px;
     font-size: 0.9em;
     margin: 10px 10px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #eee;
     .present-img{
       width: 40%;
       position: absolute;

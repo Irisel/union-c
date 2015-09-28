@@ -9,35 +9,35 @@
     <div class="funding-index">
         <div class="booker">
         <div class="img-box">
-            <img data-src="<%=data.zc_imgurl%>">
+            <img data-src="<%=data.img%>">
         </div>
         <div class="funding-index-detail">
             <div class="inner-name"><%=data.zc_name%></div>
-            <div class="inner-name less">此项目需在<%=data.endtime.year%>年<%=data.endtime.month%>月<%=data.endtime.day%>日<%=data.endtime.hour%>:<%=data.endtime.min%>前, 获得¥<%=data.zc_total%>金额才可成立</div>
+            <div class="inner-name less">此项目需在<%=data.mday%>前, 获得¥<%=data.mmoney%>金额才可成立</div>
         </div>
         <ul class="funding-attributes">
             <li>
                 <a class="mark progress-icon">
                 </a>
                 <span>众筹进度</span>
-                <span><%=data.progress%>%</span>
+                <span><%=data.pro%>%</span>
             </li>
             <li>
                 <a class="mark funding-icon">
                 </a>
                 <span>已筹到（元）</span>
-                <span><%=data.zc_num%></span>
+                <span><%=data.money%></span>
             </li>
             <li>
                 <a class="mark lastday-icon">
                 </a>
                 <span>剩余天数</span>
-                <span><%=data.zc_timelimit%></span>
+                <span><%=data.day%></span>
             </li>
         </ul>
         <ul class="list-link">
             <li>
-                <a href="#funding/detail">详细信息</a>
+                <a href="#funding/detail/id:<%=data.id%>">详细信息</a>
             </li>
         </ul>
         <div class="list-more">

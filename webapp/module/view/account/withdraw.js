@@ -3,9 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/withdraw.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/account/withdrawal'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,14 +13,15 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -38,7 +37,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

@@ -19,18 +19,24 @@
             </li>
         </ul>
     </div>
-    <div class="detail-group">
-        <ul>
-            <li>
-                <span class="tip">2015-08-08</span>
-                <span class="tip">11:30:59</span>
-            </li>
-            <li class="single">
-                <span class="orange">¥100</span>
-            </li>
-            <li class="single">
-                <span>充值成功</span>
-            </li>
-        </ul>
-    </div>
+    <ul>
+        <%_.each(data,function(item){%>
+        <li>
+            <div class="detail-group">
+                <ul>
+                    <li>
+                        <span class="tip"><%=item.ymd%></span>
+                        <span class="tip"><%=item.hms%></span>
+                    </li>
+                    <li class="single">
+                        <span class="orange"><%=item.money%></span>
+                    </li>
+                    <li class="single">
+                        <span><%=item.type%></span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <%})%>
+    </ul>
 </div>

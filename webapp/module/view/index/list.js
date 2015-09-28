@@ -1,12 +1,10 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-
+    var list_tpl = require('text!../../../tpl/index/view/more.html');
 	var H = require('text!../../../tpl/index/list.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/financial/more'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -17,9 +15,22 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "change:data", function() {
 				t.render();
-//			});
+                t.syncRender();
+                t.listenTo(t.model, "change:pars", function() {
+                    t.listenToOnce(t.model, "sync", function(){
+                        t.syncRender();
+                    });
+                })
+			});
+		},
+		syncRender: function() {
+			var t = this,
+				data = t.model.toJSON();
+            console.log(data);
+			var _html = _.template(list_tpl, data);
+			t.$el.find(".products-list").html(_html);
 		},
 		//待优化
 		render: function() {
@@ -35,6 +46,9 @@ define('', '', function(require) {
             var t = this;
             t.$el.find('.index-products-list li.on').removeClass('on');
             $(e.currentTarget).addClass('on');
+            t.model.set("pars", {
+                name_id: $(e.currentTarget).data("name")
+            });
         },
         back: function(){
           window.location.href="#financial/index";
@@ -48,9 +62,8 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                name_id: 0
 		    }
 		});
 		return new V({

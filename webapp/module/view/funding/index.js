@@ -22,8 +22,6 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            var timestamp = data.data.zc_enddate;
-            data.data.endtime = Jser.timestamp_format(timestamp);
             console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);

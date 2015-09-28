@@ -9,7 +9,7 @@
     <div class="list-topic">
         <div class="topic-benefit">
             <div class="benefit">
-                <span>10.51</span>%
+                <span><%=data.rate%></span>%
             </div>
             <div class="label">
                 <span>年化收益率</span>
@@ -26,17 +26,17 @@
     </div>
     <div class="list-detail">
         <div class="detail-title">
-            <span>【金房惠利】按揭保理002期-2</span>
+            <span><%=data.borrow_name%></span>
         </div>
         <table class="detail-table">
             <tbody>
                 <tr>
-                    <td><span>项目总额：</span>20万</td>
-                    <td><span>还款方式：</span>按月付息到期本还</td>
+                    <td><span>项目总额：</span><%=data.borrow_money%></td>
+                    <td><span>还款方式：</span><%=data.repayment%></td>
                 </tr>
                 <tr>
-                    <td><span>增新机构：</span>隆基泰和</td>
-                    <td><span>截止日期：</span>2015-08-08</td>
+                    <td><span>增新机构：</span><%=data.danbao%></td>
+                    <td><span>截止日期：</span><%=data.d_time%></td>
                 </tr>
             </tbody>
         </table>
@@ -44,7 +44,7 @@
     </div>
     <div class="list-progress">
         <div class="progress"></div>
-        <div class="progress-rate"><span>还需要金额：</span> 158,900.00元</div>
+        <div class="progress-rate"><span>还需要金额：</span> <%=data.money_dec%>元</div>
     </div>
     <div class="list-purchase bottom-fill">
         <div class="invest-expect">
@@ -59,13 +59,13 @@
                 <a href="#financial/order">投资</a>
             </div>
             <div class="invest-balance">
-                账户余额100元， <a>去充值</a>
+                账户余额<%=data.have_money%>元， <a>去充值</a>
             </div>
         </div>
     </div>
     <ul class="list-link">
         <li>
-            <a href="#financial/detail">详细信息</a><i class="btn btn-forward"></i>
+            <a href="#financial/detail/id:<%=data.borrow_id%>">详细信息</a><i class="btn btn-forward"></i>
         </li>
         <li>
             <a href="#financial/history">投资记录</a><i class="btn btn-forward"></i>
