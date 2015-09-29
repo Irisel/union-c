@@ -2,10 +2,9 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/message.html');
+    var Login = require("view/login/index");
 	var model = new M({
-		pars: {
-
-		}
+        action:'/account/msg'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,14 +14,21 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            console.log(data);
+            if(data.status == "0"){
+                new Login({
+				    el: $('.login-panel'),
+                    father:ｔ
+			    });
+            }
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.bindEvent();
@@ -180,7 +186,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

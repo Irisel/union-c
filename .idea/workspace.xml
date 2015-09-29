@@ -4,24 +4,24 @@
     <list default="true" id="497093d9-e1a9-4a1e-98dd-0342ec6f0474" name="Default" comment="" />
     <ignored path="union-c.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443444299777" ignored="false" />
+    <file path="/Dummy.txt" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443534377806" ignored="false" />
     <file path="$PROJECT_DIR$/../../lamakeji-live/webapp/resource/css/code-index.css" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440245989192" ignored="false" />
     <file path="/code-index.css" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440245969822" ignored="false" />
-    <file path="/code-index.scss" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443470213388" ignored="false" />
+    <file path="/code-index.scss" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443553351971" ignored="false" />
     <file path="/code-index.sass" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440246692467" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440253038452" ignored="false" />
-    <file path="/index.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443460335738" ignored="false" />
+    <file path="/index.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443546486389" ignored="false" />
     <file path="/app.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440511243068" ignored="false" />
     <file path="/slider.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443163055142" ignored="false" />
-    <file path="/index.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443460464219" ignored="false" />
+    <file path="/index.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443547550792" ignored="false" />
     <file path="/slider.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1440426905122" ignored="false" />
-    <file path="/a.dummy" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443465687240" ignored="false" />
+    <file path="/a.dummy" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443539973800" ignored="false" />
     <file path="/list.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443463812729" ignored="false" />
     <file path="/history.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443354473277" ignored="false" />
     <file path="/order.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443468737689" ignored="false" />
     <file path="/detail.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443339467755" ignored="false" />
     <file path="/findback.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442424376256" ignored="false" />
-    <file path="/bank.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442765364981" ignored="false" />
+    <file path="/bank.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443520892493" ignored="false" />
     <file path="/transfer.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442765354989" ignored="false" />
     <file path="/allocation.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442765338769" ignored="false" />
     <file path="/invest.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1441398134680" ignored="false" />
@@ -31,13 +31,13 @@
     <file path="/withdrawhistory.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1441396982667" ignored="false" />
     <file path="/deposit.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1441450719501" ignored="false" />
     <file path="/summary.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1441301438609" ignored="false" />
-    <file path="/message.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443019751716" ignored="false" />
+    <file path="/message.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443492146482" ignored="false" />
     <file path="/order.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442935271521" ignored="false" />
     <file path="/detail.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443449683925" ignored="false" />
     <file path="/list.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443464561159" ignored="false" />
     <file path="/crowdfunding.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1442756384946" ignored="false" />
     <file path="/aboutus.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443117856242" ignored="false" />
-    <file path="/message.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443034117495" ignored="false" />
+    <file path="/message.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443547299100" ignored="false" />
     <file path="/present.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443031117853" ignored="false" />
     <file path="/aboutus.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443118052646" ignored="false" />
     <file path="/Jser.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443297891436" ignored="false" />
@@ -46,6 +46,9 @@
     <file path="/withdraw.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443461175548" ignored="false" />
     <file path="/chargehistory.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443462302702" ignored="false" />
     <file path="/more.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443463529325" ignored="false" />
+    <file path="/agreements.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443503596307" ignored="false" />
+    <file path="/agreements.js" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443503798165" ignored="false" />
+    <file path="/pacts.html" changelist="497093d9-e1a9-4a1e-98dd-0342ec6f0474" time="1443505302667" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,65 +68,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/index/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.0357144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/module/view/index/list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="793" selection-end="793" vertical-scroll-proportion="-16.72">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="code-index.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="982" column="22" selection-start="18066" selection-end="18066" vertical-scroll-proportion="0.37171718">
+            <state line="2153" column="14" selection-start="39893" selection-end="39893" vertical-scroll-proportion="0.37171718">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/financial/order.html">
+      <file leaf-file-name="icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/resource/images/icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon-selected.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/resource/images/icon-selected.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-graph.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/resource/images/list-graph.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/view/account/message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="457" selection-end="457" vertical-scroll-proportion="-8.142858">
+            <state line="24" column="30" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/funding/order.html">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/view/login/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="40" selection-start="340" selection-end="340" vertical-scroll-proportion="-6.785714">
+            <state line="58" column="33" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recharge.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/account/recharge.html">
+      <file leaf-file-name="Jser.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/module/lib/Jser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/account/invest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="20" selection-start="789" selection-end="789" vertical-scroll-proportion="-14.25">
-              <folding />
+            <state line="172" column="17" selection-start="5378" selection-end="5378" vertical-scroll-proportion="-3.72">
+              <folding>
+                <marker date="1443297955573" expanded="false" signature="7449:7464" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,25 +130,16 @@
       <file leaf-file-name="slider.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/module/view/index/view/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="54" column="13" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-11.68">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="more.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/more.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/tpl/login/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="40" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.071429">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chargehistory.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/tpl/account/chargehistory.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="1117" selection-end="1123" vertical-scroll-proportion="-13.035714">
+            <state line="1" column="47" selection-start="89" selection-end="98" vertical-scroll-proportion="-0.35849056">
               <folding />
             </state>
           </provider>
@@ -173,21 +163,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/webapp/tpl/crowdfunding/index.html" />
-        <option value="$PROJECT_DIR$/webapp/module/view/funding/index.js" />
-        <option value="$PROJECT_DIR$/webapp/tpl/funding/index.html" />
-        <option value="$PROJECT_DIR$/webapp/module/view/funding/detail.js" />
-        <option value="$PROJECT_DIR$/webapp/tpl/funding/detail.html" />
-        <option value="$PROJECT_DIR$/webapp/tpl/financial/index.html" />
-        <option value="$PROJECT_DIR$/webapp/module/view/financial/index.js" />
-        <option value="$PROJECT_DIR$/webapp/module/view/account/withdraw.js" />
-        <option value="$PROJECT_DIR$/webapp/tpl/account/withdraw.html" />
-        <option value="$PROJECT_DIR$/webapp/module/view/account/chargehistory.js" />
         <option value="$PROJECT_DIR$/webapp/tpl/account/chargehistory.html" />
         <option value="$PROJECT_DIR$/webapp/tpl/index/view/more.html" />
         <option value="$PROJECT_DIR$/webapp/tpl/index/list.html" />
         <option value="$PROJECT_DIR$/webapp/module/view/index/list.js" />
         <option value="$PROJECT_DIR$/webapp/tpl/funding/order.html" />
+        <option value="$PROJECT_DIR$/webapp/tpl/account/message.html" />
+        <option value="$PROJECT_DIR$/webapp/tpl/summary/agreements.html" />
+        <option value="$PROJECT_DIR$/webapp/module/view/summary/agreements.js" />
+        <option value="$PROJECT_DIR$/webapp/module/view/summary/pacts.js" />
+        <option value="$PROJECT_DIR$/webapp/tpl/summary/pacts.html" />
+        <option value="$PROJECT_DIR$/webapp/tpl/verifi/bank.html" />
+        <option value="$PROJECT_DIR$/webapp/index.html" />
+        <option value="$PROJECT_DIR$/webapp/tpl/login/index.html" />
+        <option value="$PROJECT_DIR$/webapp/module/view/account/message.js" />
+        <option value="$PROJECT_DIR$/webapp/module/view/login/index.js" />
         <option value="$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss" />
       </list>
     </option>
@@ -223,7 +213,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +260,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verifi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,6 +685,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="union-c" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -854,6 +925,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -865,8 +937,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\resource\images" />
-      <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\module\view\account" />
       <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\module\view\summary" />
+      <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\module\view\account" />
       <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\tpl\summary" />
       <recent name="E:\Ubuntu-64-a-developer\union\union-c\webapp\module\view\help" />
     </key>
@@ -947,7 +1019,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41458106" sideWeight="0.6704417" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4243743" sideWeight="0.6704417" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1022,42 +1094,42 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/financial/index.html">
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/account/invest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="920" selection-end="920" vertical-scroll-proportion="-21.035715">
+        <state line="6" column="8" selection-start="218" selection-end="218" vertical-scroll-proportion="2.0357144">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/funding/detail.html">
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/regist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="884" selection-end="884" vertical-scroll-proportion="-14.714286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/funding/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="367" selection-end="367" vertical-scroll-proportion="-7.464286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/module/view/account/chargehistory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="31" vertical-scroll-proportion="-0.0">
+        <state line="36" column="0" selection-start="1100" selection-end="1186" vertical-scroll-proportion="-11.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/module/view/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="58" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/login/findback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="655" selection-end="655" vertical-scroll-proportion="-13.571428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="10" selection-start="2225" selection-end="2225" vertical-scroll-proportion="-33.392857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/module/view/summary/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1066,70 +1138,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/module/view/index/view/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="54" column="13" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-11.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/account/chargehistory.html">
+    <entry file="file://$PROJECT_DIR$/webapp/module/lib/Jser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1117" selection-end="1123" vertical-scroll-proportion="-13.035714">
+        <state line="172" column="17" selection-start="5378" selection-end="5378" vertical-scroll-proportion="-3.72">
+          <folding>
+            <marker date="1443297955573" expanded="false" signature="7449:7464" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/tpl/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="47" selection-start="89" selection-end="98" vertical-scroll-proportion="-0.35849056">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/view/more.html">
+    <entry file="file://$PROJECT_DIR$/webapp/module/view/account/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.071429">
+        <state line="24" column="30" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/index/list.html">
+    <entry file="file://$PROJECT_DIR$/webapp/module/view/login/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="120" selection-end="120" vertical-scroll-proportion="-2.0357144">
+        <state line="58" column="33" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/module/view/index/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="793" selection-end="793" vertical-scroll-proportion="-16.72">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/webapp/resource/images/list-graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/account/invest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="20" selection-start="789" selection-end="789" vertical-scroll-proportion="-14.25">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/webapp/resource/images/icon-selected.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/account/recharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/financial/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="457" selection-end="457" vertical-scroll-proportion="-8.142858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/tpl/funding/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="340" selection-end="340" vertical-scroll-proportion="-6.785714">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/webapp/resource/images/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/resource/sass-gulp/code-index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="982" column="22" selection-start="18066" selection-end="18066" vertical-scroll-proportion="0.37171718">
+        <state line="2153" column="14" selection-start="39893" selection-end="39893" vertical-scroll-proportion="0.37171718">
           <folding />
         </state>
       </provider>

@@ -1,0 +1,17 @@
+<div class="header list-header">
+    <a href="#index/index" class="hd-btn"> <i class="icon-back icon"></i></a>
+    投资合同
+</div>
+<div class="list-wrapper scroll-wrapper">
+	<!--div class="list-loading js-list-loading">
+		正在奋力加载中
+	</div-->
+    <ul class="pacts">
+    <%_.each(data,function(item){%>
+        <li>
+            <span><%=item.info%></span>
+            <img data-src="<%=item.img%>">
+        </li>
+    <%})%>
+    </ul>
+</div>

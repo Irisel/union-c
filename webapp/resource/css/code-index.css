@@ -127,10 +127,10 @@ textarea {
         background-position: 0 0; }
       .nav li a i.icon-account, .nav li a:visited i.icon-account, .nav li a:active i.icon-account {
         width: 16px;
-        background-position: -32px 0; }
+        background-position: -20px 0; }
       .nav li a i.icon-crowd, .nav li a:visited i.icon-crowd, .nav li a:active i.icon-crowd {
-        width: 16px;
-        background-position: -16px 0; }
+        width: 18px;
+        background-position: -40px 0; }
       .nav li a span, .nav li a:visited span, .nav li a:active span {
         display: block;
         float: right;
@@ -153,11 +153,12 @@ textarea {
       width: 16px;
       background-position: 0 0; }
     .nav li.on a i.icon-crowd {
-      width: 16px;
-      background-position: -16px 0; }
+      width: 18px;
+      background-position: -40px 0;
+      left: 14px; }
     .nav li.on a i.icon-account {
       width: 16px;
-      background-position: -32px 0; }
+      background-position: -20px 0; }
 
 .wrap {
   width: 100%;
@@ -288,7 +289,7 @@ textarea {
   line-height: 40px;
   color: #ffffff;
   overflow: hidden;
-  font-size: 21px; }
+  font-size: 1.2em; }
 
 .list-purchase .purchase .invest-button a, .list-link li a, .list-more a, .order-submit div a, .setting-detail .inner-normal, .list-invest .invest .invest-button a, .hd-link, .hd-linkgray {
   color: #ffffff; }
@@ -823,11 +824,11 @@ textarea {
           width: 26px;
           background-position: 0 0; }
         .funding-index .funding-attributes li .mark.funding-icon {
-          width: 36px;
-          background-position: -62px 0; }
+          width: 38px;
+          background-position: -77px 0; }
         .funding-index .funding-attributes li .mark.lastday-icon {
-          width: 36px;
-          background-position: -26px 0; }
+          width: 37px;
+          background-position: -35px 0; }
       .funding-index .funding-attributes li span {
         display: block;
         text-align: center;
@@ -958,14 +959,19 @@ textarea {
       border: none;
       text-align: left; }
 
+.no-background {
+  background: none; }
+
 .login-blank {
   margin: 20px;
   background-color: #ffffff;
   border-radius: 6px;
   position: relative; }
+  .login-blank.login-pop {
+    margin: 10px 20px 20px 20px; }
   .login-blank .login-input {
-    height: 40px;
-    line-height: 30px;
+    height: 60px;
+    line-height: 60px;
     padding-left: 40px;
     padding-right: 5px;
     position: relative; }
@@ -974,11 +980,11 @@ textarea {
       width: 30px;
       position: absolute;
       left: 5px;
-      top: 5px; }
+      top: 15px; }
     .login-blank .login-input input {
       width: 100%;
       position: relative;
-      top: 5px;
+      top: 0px;
       height: 30px;
       border: none; }
     .login-blank .login-input.width-bottom {
@@ -1012,6 +1018,10 @@ textarea {
 
 .login-submit {
   margin: 0 20px; }
+  .login-submit div {
+    height: 52.8px;
+    line-height: 52.8px;
+    font-size: 1.2em; }
 
 .purchase-submit {
   margin: 20px 20px 0; }
@@ -1247,7 +1257,7 @@ textarea {
     top: 2px;
     display: inline-block;
     border: none;
-    text-align: center; }
+    text-align: left; }
 
 .account {
   background: url(../images/minify/account-bg.png) center center no-repeat;
@@ -1336,29 +1346,29 @@ textarea {
         background: url(../images/minify/glyphicons.png) 0 0 no-repeat;
         background-size: auto 30px; }
         .account-options ul li a i.invest {
-          margin-left: -11px;
-          width: 22px;
-          background-position-x: -134px; }
+          margin-left: -11.5px;
+          width: 23px;
+          background-position-x: -167px; }
         .account-options ul li a i.crowdfunding {
-          margin-left: -9.5px;
-          width: 19px;
-          background-position-x: -94px; }
+          margin-left: -10px;
+          width: 20px;
+          background-position-x: -116px; }
         .account-options ul li a i.message {
           margin-left: -11px;
           width: 22px;
-          background-position-x: -175px; }
+          background-position-x: -220px; }
         .account-options ul li a i.paper {
           margin-left: -11px;
           width: 22px;
-          background-position-x: -113px; }
+          background-position-x: -142px; }
         .account-options ul li a i.settings {
           margin-left: -10px;
           width: 20px;
-          background-position-x: -155px; }
+          background-position-x: -194px; }
         .account-options ul li a i.invite {
           margin-left: -10px;
           width: 20px;
-          background-position-x: -74px; }
+          background-position-x: -91px; }
       .account-options ul li a span {
         position: relative;
         top: 55px;
@@ -1654,8 +1664,8 @@ textarea {
   color: #000000; }
 
 .hd-back {
-  width: 10px;
-  background-position: -73px 0; }
+  width: 9px;
+  background-position: -0px 0; }
 
 .btn {
   background: url(../images/minify/icon-btn.png) 0 center no-repeat;
@@ -1665,7 +1675,7 @@ textarea {
 
 .btn-forward {
   width: 10px;
-  background-position: -84px 0;
+  background-position: -44px 0;
   display: block;
   position: absolute;
   right: 10px;
@@ -1673,8 +1683,8 @@ textarea {
   background-size: auto 30px; }
 
 .hd-backgray {
-  width: 10px;
-  background-position: -63px 0; }
+  width: 9px;
+  background-position: -12px 0; }
 
 .pop {
   position: fixed;
@@ -1886,3 +1896,38 @@ textarea {
     width: 100%;
     height: auto;
     margin: 40px 0; }
+
+.pacts {
+  padding: 10px 10px; }
+  .pacts li span {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    line-height: 30px;
+    display: block;
+    height: 30px; }
+  .pacts li img {
+    width: 100%;
+    height: auto; }
+
+.login-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 400;
+  padding-top: 30%; }
+
+.error {
+  display: none;
+  color: red;
+  height: 30px;
+  width: 320px;
+  margin: 0 auto;
+  line-height: 30px; }
+
+.vishow {
+  display: block; }
