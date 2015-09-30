@@ -247,6 +247,8 @@ textarea {
             border-left: 10px solid #f29c9f;
             border-bottom: 10px solid #ffffff;
             background: #f29c9f;
+            border-top: 10px solid #f6f6f6;
+            border-bottom: 10px solid #f6f6f6;
             right: -10px;
             top: 20px; }
         .index-list li a .index-inner .content {
@@ -658,6 +660,8 @@ textarea {
   height: 66px;
   line-height: 40px;
   position: relative; }
+  .list-history ul li.notice {
+    border-bottom: none; }
   .list-history ul li .history {
     display: inline-block;
     position: absolute;
@@ -668,11 +672,11 @@ textarea {
       line-height: 25px;
       width: 100%;
       float: left;
-      font-size: 0.9em; }
+      font-size: 0.8em; }
   .list-history ul li .amount {
     float: right;
     display: inline-block;
-    font-size: 1.35em;
+    font-size: 1.15em;
     height: 100%;
     line-height: 50px;
     font-weight: bold; }
@@ -762,9 +766,9 @@ textarea {
                 color: #999;
                 font-size: 11px; }
           .crowd-list ul li a .detail-crowd ul li:nth-child(1) .detail-attribute {
-            border-right: 1px solid #999999; }
+            border-right: 1px solid #eee; }
           .crowd-list ul li a .detail-crowd ul li:nth-child(2) .detail-attribute {
-            border-right: 1px solid #999999; }
+            border-right: 1px solid #eee; }
     .crowd-list ul li a img {
       width: 100%;
       max-width: 480px;
@@ -984,9 +988,12 @@ textarea {
     .login-blank .login-input input {
       width: 100%;
       position: relative;
-      top: 0px;
-      height: 30px;
-      border: none; }
+      top: 3px;
+      height: 40px;
+      line-height: 40px;
+      border: none;
+      font-size: 1.2em;
+      text-indent: 5px; }
     .login-blank .login-input.width-bottom {
       border-bottom: 1px solid #e5e5e5; }
     .login-blank .login-input.validate {
@@ -996,11 +1003,11 @@ textarea {
         color: #ff7d21;
         position: absolute;
         right: 5px;
-        top: 5px;
+        top: 10px;
         font-size: 8px;
         text-align: center;
-        line-height: 30px;
-        height: 30px;
+        line-height: 40px;
+        height: 40px;
         width: 80px; }
 
 .info {
@@ -1931,3 +1938,34 @@ textarea {
 
 .vishow {
   display: block; }
+
+.login-links {
+  width: 100%;
+  padding: 10px; }
+  .login-links ul {
+    width: 100%; }
+    .login-links ul li {
+      padding: 5px 0;
+      width: 50%;
+      height: 30px;
+      float: left; }
+      .login-links ul li:first-child {
+        text-align: right; }
+        .login-links ul li:first-child a {
+          border-right: 1px solid #ffffff; }
+      .login-links ul li:last-child {
+        text-align: left; }
+      .login-links ul li a {
+        padding: 0 15px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        line-height: 20px;
+        font-size: 18px;
+        color: #ffffff; }
+        .login-links ul li a span {
+          display: block;
+          height: 100%;
+          width: 100%; }
+        .login-links ul li a:hover, .login-links ul li a:visited {
+          color: #ffffff; }

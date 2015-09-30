@@ -86,7 +86,7 @@ define(function(require, exports) {
             }
             else {
                 var result = false;
-                if (md == "go" || md == "add" || md == "forget" || md== "wode") {
+                if (md == "account" || md == "login") {
                     result = true;
                 } else {
                     $.each(App.Views[view].cj, function(i, item) {
@@ -100,7 +100,7 @@ define(function(require, exports) {
                     delete cj["model"];
                     delete cj["action"];
                     App.Views[view].cj = $.extend({}, cj);
-                    App.Views[view].changePars && App.Views[view].changePars(cj);
+                    App.Views[view].render();
                 } else {
                     App.Views[view].$el.show();
                 }

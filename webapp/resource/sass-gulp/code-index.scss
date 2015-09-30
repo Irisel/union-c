@@ -285,6 +285,8 @@ textarea{
             .triangle{
               @include triangle();
               background: #f29c9f;
+              border-top: 10px solid #f6f6f6;
+              border-bottom: 10px solid #f6f6f6;
               right: -10px;
               top: 20px;
           }
@@ -754,7 +756,7 @@ textarea{
 }
 
 .vishide{
-  display:none;
+  display: none;
 }
 
 %orange{
@@ -822,6 +824,9 @@ textarea{
     li{
       padding: 8px 20px;
       border-bottom: 1px solid #eee;
+      &.notice{
+        border-bottom:none;
+      }
       height: 66px;
       line-height: 40px;
       position:relative;
@@ -835,7 +840,7 @@ textarea{
           line-height: 25px;
           width: 100%;
           float: left;
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
       .amount{
@@ -844,7 +849,7 @@ textarea{
        &:first-letter{
          font-size:1.125em;
        }
-       font-size: 1.35em;
+       font-size: 1.15em;
        height: 100%;
        line-height: 50px;
        font-weight: bold;
@@ -951,10 +956,10 @@ textarea{
                 }
               }
               &:nth-child(1) .detail-attribute{
-                border-right:1px solid #999999;
+                border-right:1px solid #eee;
               }
               &:nth-child(2) .detail-attribute{
-                border-right:1px solid #999999;
+                border-right:1px solid #eee;
               }
             }
           }
@@ -1243,11 +1248,14 @@ textarea{
       top:15px;
     }
     input{
-      width:100%;
-      position:relative;
-      top:0px;
-      height:30px;
-      border:none;
+      width: 100%;
+      position: relative;
+      top: 3px;
+      height: 40px;
+      line-height: 40px;
+      border: none;
+      font-size: 1.2em;
+      text-indent: 5px;
     }
     &.width-bottom{
       border-bottom: 1px solid #e5e5e5;
@@ -1259,11 +1267,11 @@ textarea{
         color: #ff7d21;
         position: absolute;
         right: 5px;
-        top: 5px;
+        top: 10px;
         font-size:8px;
         text-align:center;
-        line-height:30px;
-        height:30px;
+        line-height:40px;
+        height:40px;
         width: 80px;
       }
     }
@@ -2449,4 +2457,44 @@ textarea{
 
 .vishow{
   display:block;
+}
+
+.login-links{
+  width:100%;
+  padding:10px;
+  ul{
+    width: 100%;
+    li{
+      padding:5px 0;
+      width:50%;
+      height:30px;
+      float:left;
+      &:first-child{
+        a {
+          border-right: 1px solid #ffffff;
+        }
+        text-align:right;
+      }
+      &:last-child{
+        text-align:left;
+      }
+      a{
+        padding:0 15px;
+        width:100%;
+        height:100%;
+        display:block;
+        line-height:20px;
+        font-size:18px;
+        color: #ffffff;
+        span{
+          display:block;
+          height:100%;
+          width:100%;
+        }
+        &:hover, &:visited{
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }

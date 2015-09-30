@@ -40,6 +40,16 @@ window.Jser = {
             min: newTime.getMinutes()
         }
     },
+    popstate: function(once){
+        if (window.history && window.history.pushState) {
+            $(window).on('popstate', function () {
+                $('.login-panel').hide();
+                if(once){
+                    $(window).on('popstate');
+                }
+            });
+        }
+    },
     getGUID: function() {
         return Jser._guid++;
     },

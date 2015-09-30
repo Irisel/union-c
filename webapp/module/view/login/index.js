@@ -20,8 +20,15 @@ define('', '', function(require) {
 			var t = this,
 				data = {};
 			var html = _.template(t.template, data);
-			$('.login-panel').show().html(html);
-            Jser.setItem('login-init', true);
+            t.$el.show().html(html);
+            var t1 = t.$el.find(".js-username");
+            var t2 = t.$el.find(".js-pass");
+            if(Jser.getItem("username") && Jser.getItem("password"))
+            {
+                t1.val(Jser.getItem("username"));
+                t2.val(Jser.getItem("password"));
+            }
+            Jser.popstate(true);
 		},
 		checkLogin: function() {
 			var t = this;
@@ -54,10 +61,12 @@ define('', '', function(require) {
 				});
 				Jser.getJSON(ST.PATH.ACTION + "/member/login", _locData, function(data) {
                     if(data.status == 0)Jser.error(t.$el.find(".js-error"), "*用户名不存在!");
-					Jser.setItem("username", _locData["username"]);
+					Jser.setItem("username", _locData["user_name"]);
 					Jser.setItem("password",_locData["pass"]);
-                    t.$el.hide();
-                    if(data.status == 0)window.location.reload();
+                    if(data.status == 1){
+                        t.$el.hide();
+                        window.location.reload();
+                    }
 				}, function() {
                     if(data.status == 0)Jser.error(t.$el.find(".js-error"), "*登录失败!");
 				}, "post");

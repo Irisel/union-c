@@ -7,12 +7,20 @@
 	    站内消息
     </div>
     <ul class="message-detail">
-        <li class="inner-normal">
-            <div class="message-date"><span>联合金融</span><span>2015-0808</span></div>
-            <div class="message-info"><span class="addition">您刚才修改了提现的临时账户</span></div>
-            <div class="delete js-doRemove">
-                <span>删除</span>
-            </div>
-        </li>
+        <%if(data.length){%>
+            <%_.each(data,function(item){%>
+                <li class="inner-normal">
+                    <div class="message-date"><span><%=item.title%></span><span><%=item.date%></span></div>
+                    <div class="message-info"><span class="addition"><%=item.content%></span></div>
+                    <div class="delete js-doRemove">
+                        <span>删除</span>
+                    </div>
+                </li>
+            <%})%>
+        <%}else{%>
+	        <li>
+		        <p style="text-align:center;margin-top:50px;">还没有信息。</p>
+	        </li>
+        <%}%>
     </ul>
 </div>

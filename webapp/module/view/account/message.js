@@ -22,13 +22,13 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data);
+            console.log(data, data.status == "0");
             if(data.status == "0"){
                 new Login({
-				    el: $('.login-panel'),
-                    father:ｔ
+				    el: $('.login-panel')
 			    });
             }
+            if(!data.data)data.data = [];
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.bindEvent();

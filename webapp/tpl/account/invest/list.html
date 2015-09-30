@@ -1,0 +1,19 @@
+        <ul>
+            <%if(data.length){%>
+                <%_.each(data,function(item){%>
+                    <li>
+                        <div class="history">
+                            <span><%=item.name%></span>
+                            <span><%=item.date%></span>
+                        </div>
+                        <span class="orange amount">
+                            <%=item.money%>
+                        </span>
+                    </li>
+                <%})%>
+            <%}else{%>
+	            <li class="notice">
+		            <p style="text-align:center;margin-top:50px;">还没有记录。</p>
+	            </li>
+            <%}%>
+        </ul>
