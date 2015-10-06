@@ -3,6 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/message.html');
     var Login = require("view/login/index");
+    var list_tpl = require('text!../../../tpl/account/message/list.html');
 	var model = new M({
         action:'/account/msg'
 	});
@@ -19,20 +20,41 @@ define('', '', function(require) {
 			});
 		},
 		//待优化
-		render: function() {
+		syncRender: function() {
+            console.log('syncReader');
+			var t = this;
+            var _data = { data: []};
+            Jser.getJSON(ST.PATH.ACTION + '/account/msg', {}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.checkLogin(result.status == "0");
+                var _html = _.template(list_tpl, _data);
+			    t.$el.find(".message-detail").html(_html);
+			}, function() {
+                var _html = _.template(list_tpl, _data);
+			    t.$el.find(".message-detail").html(_html);
+			});
+            t.$el.show();
+		},
+		render: function(syncData) {
 			var t = this,
-				data = t.model.toJSON();
+				data = syncData || t.model.toJSON();
             console.log(data, data.status == "0");
-            if(data.status == "0"){
-                new Login({
-				    el: $('.login-panel')
-			    });
-            }
+            t.checkLogin(data.status == "0");
             if(!data.data)data.data = [];
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.bindEvent();
 		},
+        checkLogin: function(logged, type, href){
+            if(!logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
 		bindEvent: function() {
 			var t = this;
 			var aLi = t.$el.find(".message-detail li");

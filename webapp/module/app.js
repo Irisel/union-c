@@ -86,7 +86,7 @@ define(function(require, exports) {
             }
             else {
                 var result = false;
-                if (md == "account" || md == "login") {
+                if (md == "account") {
                     result = true;
                 } else {
                     $.each(App.Views[view].cj, function(i, item) {
@@ -100,10 +100,11 @@ define(function(require, exports) {
                     delete cj["model"];
                     delete cj["action"];
                     App.Views[view].cj = $.extend({}, cj);
-                    App.Views[view].render();
+                    App.Views[view].changePars && App.Views[view].changePars(cj);
                 } else {
                     App.Views[view].$el.show();
                 }
+                App.Views[view].syncRender && App.Views[view].syncRender();
             }
         }
     });

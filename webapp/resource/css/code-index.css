@@ -555,14 +555,16 @@ textarea {
   .order-detail .inner-name {
     text-align: left;
     color: #333333; }
-  .order-detail .inner-normal span {
-    text-align: center; }
-    .order-detail .inner-normal span:first-child {
-      float: left; }
-    .order-detail .inner-normal span:last-child {
-      float: right; }
-  .order-detail .inner-normal .orange {
-    color: #ff7d21; }
+  .order-detail .inner-normal {
+    position: relative; }
+    .order-detail .inner-normal span {
+      text-align: center; }
+      .order-detail .inner-normal span:first-child {
+        float: left; }
+      .order-detail .inner-normal span:last-child {
+        float: right; }
+    .order-detail .inner-normal .orange {
+      color: #ff7d21; }
 
 .recharge-detail {
   background-color: #ffffff;
@@ -940,7 +942,7 @@ textarea {
           border: 1px solid #facd89;
           margin-left: 1px;
           float: left;
-          padding: 3px; }
+          padding: 5px; }
   .funding-order .inner-input {
     padding: 0 10px 0 10px;
     height: 50px;
@@ -962,6 +964,8 @@ textarea {
       display: inline-block;
       border: none;
       text-align: left; }
+      .funding-order .inner-input input::-webkit-input-placeholder {
+        font-size: 0.8em; }
 
 .no-background {
   background: none; }
@@ -1004,7 +1008,7 @@ textarea {
         position: absolute;
         right: 5px;
         top: 10px;
-        font-size: 8px;
+        font-size: 14px;
         text-align: center;
         line-height: 40px;
         height: 40px;
@@ -1969,3 +1973,12 @@ textarea {
           width: 100%; }
         .login-links ul li a:hover, .login-links ul li a:visited {
           color: #ffffff; }
+
+.icon-notice {
+  background: url(../images/minify/info.png) 0 center no-repeat;
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background-size: contain;
+  position: relative;
+  top: 4px; }

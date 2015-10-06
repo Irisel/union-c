@@ -22,10 +22,15 @@ define('', '', function(require) {
             var size = windowSize();
 			var t = this,
 				data = t.model.toJSON();
-
+            console.log(data);
 			var html = _.template(t.template, data);
-            t.$el.find('.list-progress .progress').width(50);
 			t.$el.html(html);
+            if(data.data && !isNaN((parseInt(data.data.b_m))) && !isNaN((parseInt(data.data.money_dec)))){
+                var b_m = parseInt(data.data.b_m);
+                var money_dec = parseInt(data.data.money_dec);
+                console.log(b_m, money_dec, (b_m - money_dec) * 100 / b_m);
+                t.$el.find('.list-progress .progress').css('width', ((b_m - money_dec) * 100 / b_m) + '%');
+            }
             t.$el.find('.list-topic').height(size.width * 199/320);
             t.$el.find('.topic-benefit').css('bottom', (size.width * 199/550) + 'px' );
             t.$el.find('.topic-period').css('bottom', (size.width * 199/3520) + 'px' );

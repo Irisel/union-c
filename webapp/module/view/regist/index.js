@@ -98,7 +98,7 @@ define('', '', function(require) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){
                         Jser.alert(result.info, function(){
-                            window.location.href="#account/index";
+                            window.history.back();
                         })
                     }
 				}, function() {

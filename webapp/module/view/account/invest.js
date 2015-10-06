@@ -28,16 +28,21 @@ define('', '', function(require) {
                 })
 			});
 		},
+        checkLogin: function(logged, type, href){
+            if(!logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
 		//待优化
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
             console.log(data, data.status == "0");
-            if(data.status == "0"){
-                new Login({
-				    el: $('.login-panel')
-			    });
-            }
+            t.checkLogin(data.status == "0");
             if(!data.data)data.data = [];
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
@@ -50,12 +55,14 @@ define('', '', function(require) {
             Jser.getJSON(ST.PATH.ACTION + t.syncaction[t.model.get("pars")["type"]], {}, function(result) {
                 if(result.status == "1")
                 _data = result;
+                t.checkLogin(result.status == "0");
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-history").html(_html);
 			}, function() {
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-history").html(_html);
 			});
+            t.$el.show();
 		},
         invest: function(e){
             var t = this;

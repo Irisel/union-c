@@ -1,0 +1,15 @@
+        <%if(data.length){%>
+            <%_.each(data,function(item){%>
+                <li class="inner-normal">
+                    <div class="message-date"><span><%=item.title%></span><span><%=item.date%></span></div>
+                    <div class="message-info"><span class="addition"><%=item.content%></span></div>
+                    <div class="delete js-doRemove">
+                        <span>删除</span>
+                    </div>
+                </li>
+            <%})%>
+        <%}else{%>
+	        <li>
+		        <p style="text-align:center;margin-top:50px;">还没有信息。</p>
+	        </li>
+        <%}%>

@@ -48,7 +48,7 @@ define('', '', function(require) {
 			return true;
 		},
 		doLogin: function() {
-			var t = this;
+			var t = this, model = t.model.toJSON();
 			if (t.checkLogin()) {
 				var _data = t.$el.find("#js-login-form").serializeArray();
 				var name, val;
@@ -65,7 +65,14 @@ define('', '', function(require) {
 					Jser.setItem("password",_locData["pass"]);
                     if(data.status == 1){
                         t.$el.hide();
-                        window.location.reload();
+                        switch(model.redirects.type){
+                            case '0':
+                                window.location.href = model.redirects.href;
+                                break;
+                            default:
+                                window.location.reload();
+                                break;
+                        }
                     }
 				}, function() {
                     if(data.status == 0)Jser.error(t.$el.find(".js-error"), "*登录失败!");
@@ -79,7 +86,10 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-
+            redirects: {
+                type: pars.type,
+                href: pars.href
+		    }
 		});
 		return new V({
 			el: pars.el

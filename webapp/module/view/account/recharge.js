@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/recharge.html');
+    var Login = require("view/login/index");
 	var model = new M({
 		pars: {
 
@@ -23,12 +24,26 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = {};
+            t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+		},
+		syncRender: function() {
+            var t = this;
+            t.render();
 		},
 		bindEvent: function() {
 
 		},
+        checkLogin: function(logged, type, href){
+            if(!logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

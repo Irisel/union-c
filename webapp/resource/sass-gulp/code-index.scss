@@ -688,6 +688,7 @@ textarea{
   }
   .inner-normal{
     @extend %blank-inner;
+    position: relative;
     span{
       text-align:center;
       &:first-child{
@@ -1189,7 +1190,7 @@ textarea{
             border: 1px solid #facd89;
             margin-left: 1px;
             float:left;
-            padding: 3px;
+            padding: 5px;
           }
         }
       }
@@ -1218,6 +1219,9 @@ textarea{
       display: inline-block;
       border: none;
       text-align: left;
+      &::-webkit-input-placeholder{
+        font-size: 0.8em;
+      }
     }
   }
 }
@@ -1268,7 +1272,7 @@ textarea{
         position: absolute;
         right: 5px;
         top: 10px;
-        font-size:8px;
+        font-size:14px;
         text-align:center;
         line-height:40px;
         height:40px;
@@ -2497,4 +2501,14 @@ textarea{
       }
     }
   }
+}
+
+.icon-notice{
+  background: url(../images/minify/info.png) 0 center no-repeat;
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background-size: contain;
+  position: relative;
+  top: 4px;
 }

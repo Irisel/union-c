@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/withdraw.html');
+    var Login = require("view/login/index");
 	var model = new M({
         action: '/account/withdrawal'
 	});
@@ -18,13 +19,36 @@ define('', '', function(require) {
 			});
 		},
 		//待优化
-		render: function() {
+		render: function(syncData) {
 			var t = this,
-				data = t.model.toJSON();
-            console.log(data);
+				data = syncData || t.model.toJSON();
+            console.log(data, data.status == "0");
+            t.checkLogin(data.status == "0");
+            if(!data.data)data.data = 0;
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
+		syncRender: function() {
+			var t = this;
+            var _data = { data: 0};
+            Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.$el.find('.js-withdrawAmount').html(_data.data);
+			}, function() {
+                t.$el.find('.js-withdrawAmount').html(_data.data);
+			});
+            t.$el.show();
+		},
+        checkLogin: function(logged, type, href){
+            if(!logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
 		bindEvent: function() {
 
 		},
