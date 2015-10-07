@@ -10,6 +10,7 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        syncloading :true,
         syncaction: {
             '0': '/account/tendbacking',
             '1': '/account/tenddone'
@@ -48,10 +49,12 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.bindEvent();
+            t.syncloading = false;
 		},
 		syncRender: function() {
             console.log('syncReader');
 			var t = this;
+            if(t.syncloading)return;
             var _data = { data: []};
             Jser.getJSON(ST.PATH.ACTION + t.syncaction[t.model.get("pars")["type"]], {}, function(result) {
                 if(result.status == "1")
@@ -59,9 +62,11 @@ define('', '', function(require) {
                 t.checkLogin(result.status == "0");
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-history").html(_html);
+                t.syncloading = false;
 			}, function() {
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-history").html(_html);
+                t.syncloading = false;
 			});
             t.$el.show();
 		},
