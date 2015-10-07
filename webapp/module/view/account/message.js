@@ -11,7 +11,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            'click .js-doRemove': 'doRemove'
+            'click .js-doRemove': 'doRemove',
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -45,6 +46,9 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.bindEvent();
+		},
+		back: function(){
+			window.history.back();
 		},
         checkLogin: function(logged, type, href){
             if(!logged){

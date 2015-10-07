@@ -33,6 +33,9 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
+		back: function(){
+			window.history.back();
+		},
         plus: function(){
             var t = this;
             t.order_number+=1;
@@ -52,9 +55,6 @@ define('', '', function(require) {
             }else{
                 $(e.currentTarget).val(t.order_number);
             }
-        },
-        back: function(){
-          window.location.href="#funding/index";
         },
 		changePars: function(pars) {
 			var t = this;

@@ -28,9 +28,9 @@ define('', '', function(require) {
                 t.$el.find('.' + item).html(data.data[item]);
             });
 		},
-        back: function(){
-          window.location.href="#funding/index";
-        },
+		back: function(){
+			window.history.back();
+		},
         guide: function(e){
             var t = this;
             t.$el.find('.guide-detail ul li.on').removeClass('on');

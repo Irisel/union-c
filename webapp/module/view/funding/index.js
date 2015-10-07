@@ -26,9 +26,9 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
-        back: function(){
-          window.location.href="#crowdfunding/index";
-        },
+		back: function(){
+			window.history.back();
+		},
 		bindEvent: function() {
 
 		},

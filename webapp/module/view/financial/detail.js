@@ -19,6 +19,9 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+ 		back: function(){
+			window.history.back();
+		},
 		//待优化
 		render: function() {
 			var t = this,
@@ -32,9 +35,6 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
-        back: function(){
-          window.location.href="#financial/index";
-        },
         guide: function(e){
             var t = this;
             t.$el.find('.guide-detail ul li.on').removeClass('on');

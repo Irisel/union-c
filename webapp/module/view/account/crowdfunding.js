@@ -15,7 +15,11 @@ define('', '', function(require) {
             '1': '/account/zc_over'
         },
 		events: {
-            "click .js-crowdfunding": "crowdfunding"
+            "click .js-crowdfunding": "crowdfunding",
+            "click .js-back": "back"
+		},
+		back: function(){
+			window.history.back();
 		},
 		initialize: function() {
 			var t = this;

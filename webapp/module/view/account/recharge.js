@@ -12,7 +12,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -34,6 +34,9 @@ define('', '', function(require) {
 		},
 		bindEvent: function() {
 
+		},
+		back: function(){
+			window.history.back();
 		},
         checkLogin: function(logged, type, href){
             if(!logged){

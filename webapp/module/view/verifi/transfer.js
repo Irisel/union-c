@@ -11,13 +11,16 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
 //			t.listenToOnce(t.model, "change:data", function() {
 				t.render();
 //			});
+		},
+		back: function(){
+			window.history.back();
 		},
 		//待优化
 		render: function() {

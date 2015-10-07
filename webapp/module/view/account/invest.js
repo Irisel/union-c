@@ -15,7 +15,8 @@ define('', '', function(require) {
             '1': '/account/tenddone'
         },
 		events: {
-            "click .js-invest": "invest"
+            "click .js-invest": "invest",
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -72,6 +73,9 @@ define('', '', function(require) {
                 type: $(e.currentTarget).data("invest")
             });
         },
+		back: function(){
+			window.history.back();
+		},
 		bindEvent: function() {
 
 		},

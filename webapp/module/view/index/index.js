@@ -15,7 +15,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -47,6 +47,9 @@ define('', '', function(require) {
 			$list.append(_html);
 			Jser.loadimages($list);
 
+		},
+		back: function(){
+			window.history.back();
 		},
 		bindEvent: function() {
 

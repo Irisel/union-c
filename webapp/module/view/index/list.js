@@ -32,6 +32,9 @@ define('', '', function(require) {
 			var _html = _.template(list_tpl, data);
 			t.$el.find(".products-list").html(_html);
 		},
+		back: function(){
+			window.history.back();
+		},
 		//待优化
 		render: function() {
 			var t = this,
@@ -49,9 +52,6 @@ define('', '', function(require) {
             t.model.set("pars", {
                 name_id: $(e.currentTarget).data("name")
             });
-        },
-        back: function(){
-          window.location.href="#financial/index";
         },
 		changePars: function(pars) {
 			var t = this;

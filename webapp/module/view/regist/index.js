@@ -82,6 +82,9 @@ define('', '', function(require) {
             }
 			return true;
 		},
+		back: function(){
+			window.history.back();
+		},
 		doRegist: function() {
 			var t = this;
 			if (t.checkLogin()) {
@@ -107,9 +110,6 @@ define('', '', function(require) {
 
 			}
 		},
-        back: function(){
-          window.location.href="#financial/index";
-        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

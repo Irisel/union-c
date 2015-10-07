@@ -11,7 +11,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -34,6 +34,9 @@ define('', '', function(require) {
 			var data = $.extend({}, t.model.get("pars"));
 			$.extend(data, pars);
 			t.model.set("pars", data);
+		},
+		back: function(){
+			window.history.back();
 		}
 	});
 	return function(pars) {

@@ -32,9 +32,9 @@ define('', '', function(require) {
             t.$el.find('.form1').show();
             t.$el.find('.form2').hide();
 		},
-        back: function(){
-          window.location.href="#financial/index";
-        },
+		back: function(){
+			window.history.back();
+		},
 		doVcode: function() {
 			var t = this;
 			var v1 = $.trim(t.$el.find(".js-tel").val());

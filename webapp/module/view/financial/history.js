@@ -18,6 +18,9 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+ 		back: function(){
+			window.history.back();
+		},
 		//待优化
 		render: function() {
 			var t = this,
@@ -28,9 +31,6 @@ define('', '', function(require) {
 		bindEvent: function() {
 
 		},
-        back: function(){
-          window.location.href="#financial/index";
-        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

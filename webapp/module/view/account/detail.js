@@ -12,7 +12,10 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
+		},
+		back: function(){
+			window.history.back();
 		},
 		initialize: function() {
 			var t = this;

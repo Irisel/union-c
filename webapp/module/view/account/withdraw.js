@@ -10,7 +10,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-
+            "click .js-back": "back"
 		},
 		initialize: function() {
 			var t = this;
@@ -27,6 +27,9 @@ define('', '', function(require) {
             if(!data.data)data.data = 0;
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+		},
+		back: function(){
+			window.history.back();
 		},
 		syncRender: function() {
 			var t = this;
