@@ -10,7 +10,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            "click .js-back": "back"
+            "click .js-back": "back",
+            "click .js-moneyWithdraw": "moneyWithdraw"
 		},
 		initialize: function() {
 			var t = this;
@@ -31,6 +32,19 @@ define('', '', function(require) {
 		back: function(){
 			window.history.back();
 		},
+        moneyWithdraw: function(){
+			var t = this;
+            var money = t.$el.find(".js-money").val();
+            money = parseInt(money);
+            if(isNaN(money)){
+                Jser.error(t.$el.find(".js-error"), "*请输入正确的数字");
+                return;
+            }else if(money<100){
+                Jser.error(t.$el.find(".js-error"), "*最低金额不低于100");
+                return;
+            };
+            $('#moneywithdraw') && $('#moneywithdraw').submit();
+        },
 		syncRender: function() {
 			var t = this;
             var _data = { data: 0};
@@ -44,7 +58,7 @@ define('', '', function(require) {
             t.$el.show();
 		},
         checkLogin: function(logged, type, href){
-            if(!logged){
+            if(logged){
                 new Login({
 				    el: $('.login-panel'),
                     type: type,

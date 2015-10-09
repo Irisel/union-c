@@ -6,20 +6,24 @@
 	<!--div class="list-loading js-list-loading">
 		正在奋力加载中
 	</div-->
+    <form name="moneywithdraw" method="post" action = "http://121.42.156.136/wap/account/moneywithdraw" id="moneywithdraw">
     <div class="list-purchase">
         <div class="withdraw-expect">
             账户可提现金 <span class="orange js-withdrawAmount"><%=data%></span> 元
         </div>
+
         <div class="purchase">
             <div class="withdraw-input">
-                <input type="text" placeholder="提现金额">
+                <input type="text" name = "money" placeholder="提现金额" class="js-money">
                 <span>元</span>
             </div>
         </div>
+        <p class="error js-error vishow"><span></span></p>
     </div>
     <div class="purchase-submit">
-        <div>
+        <div class="js-moneyWithdraw">
             确认提现
         </div>
     </div>
+    </form>
 </div>

@@ -365,7 +365,7 @@ textarea {
 .list-purchase {
   background-color: #ffffff;
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 10px 0;
   line-height: 30px; }
   .list-purchase.bottom-fill {
     border-bottom: 1px solid #dddddd; }
@@ -620,6 +620,15 @@ textarea {
   width: 100%;
   padding: 0 20px; }
   .paragh img {
+    width: 100% !important; }
+
+.summary {
+  bottom: 0;
+  top: 20px;
+  position: absolute;
+  width: 100%;
+  padding: 0 20px; }
+  .summary img {
     width: 100% !important; }
 
 .guide-detail ul li, .guide-funding ul li {
@@ -980,8 +989,8 @@ textarea {
   .login-blank .login-input {
     height: 60px;
     line-height: 60px;
-    padding-left: 40px;
-    padding-right: 5px;
+    padding-left: 50px;
+    padding-right: 15px;
     position: relative; }
     .login-blank .login-input i {
       height: 30px;
@@ -1155,25 +1164,26 @@ textarea {
     line-height: 1.5em; }
 
 .verifi-form .inner-input {
-  padding: 0 10px;
+  padding: 0 10px 0 80px;
   height: 50px;
   border-bottom: 1px solid #e5e5e5;
   position: relative;
   font-size: 0.8em; }
   .verifi-form .inner-input span {
-    float: left;
+    position: absolute;
     text-align: left;
     width: 80px;
-    line-height: 50px; }
+    line-height: 50px;
+    left: 10px; }
   .verifi-form .inner-input input {
     line-height: 46px;
     font-size: 0.8em;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 2px;
     display: inline-block;
     border: none;
-    text-align: center; }
+    text-align: left; }
 .verifi-form .remind {
   padding: 20px 10px 80px 10px; }
 
@@ -1413,7 +1423,7 @@ textarea {
   border-bottom: 1px solid #eee; }
   .setting-title span {
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-indent: 8px;
     width: 100%;
     display: block; }
@@ -1660,7 +1670,7 @@ textarea {
   display: block;
   background-size: auto 20px;
   position: absolute;
-  left: 5px;
+  left: 10px;
   top: 9.5px; }
 
 .hd-link {
@@ -1773,7 +1783,8 @@ textarea {
 .option-section {
   display: block;
   width: 100%;
-  padding: 10px; }
+  padding: 10px 0;
+  background-color: #f6f6f6; }
   .option-section li {
     padding: 10px;
     display: inline-block;
@@ -1781,11 +1792,21 @@ textarea {
     width: 50%;
     float: left;
     text-align: center; }
+    .option-section li:nth-child(odd) {
+      background-color: #f6f6f6;
+      padding: 10px 10px 10px 20px; }
+    .option-section li:nth-child(even) {
+      background-color: #f6f6f6;
+      padding: 10px 20px 10px 10px; }
     .option-section li a {
       display: block;
       line-height: 50px;
       font-size: 1em;
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      border: 1px solid #e6e6e8;
+      color: #333333; }
+      .option-section li a:hover, .option-section li a:visited {
+        color: #333333; }
 
 .list-summaries ul li {
   padding: 8px 20px;
@@ -1804,7 +1825,9 @@ textarea {
     border-bottom: 10px solid #ffffff;
     border-left: 10px solid #ff6c00;
     position: absolute;
-    left: 10px; }
+    left: 10px;
+    top: 50%;
+    margin-top: -10px; }
   .list-summaries ul li .summary {
     display: inline-block;
     position: absolute;
@@ -1820,7 +1843,8 @@ textarea {
 .about-more {
   width: 100%;
   height: 40px;
-  padding: 0 20px; }
+  padding: 0 20px;
+  background-color: #f6f6f6; }
   .about-more hr {
     border: none;
     border-bottom: 1px solid #dddddd;
@@ -1836,7 +1860,8 @@ textarea {
     position: relative;
     height: 30px;
     background-color: #f6f6f6;
-    top: 20px; }
+    top: 20px;
+    color: #999999; }
 
 .presents {
   background-color: #ffffff;

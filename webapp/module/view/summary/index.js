@@ -3,9 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/summary/index.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/about/article'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,17 +13,31 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+                t.listenTo(t.model, "change:pars", function() {
+                    t.listenToOnce(t.model, "sync", function(){
+                        t.render();
+                    });
+                })
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
-			var html = _.template(t.template, data);
-			t.$el.show().html(html);
+				data = t.model.toJSON();
+			var html = _.template(t.template, {});
+			t.$el.html(html);
+            t.$el.find('.js-summary').html(data.data?data.data.type_content:'');
+            var title = t.$el.find('.js-summary h3');
+            if(title)t.$el.find('.header').html(title.html());
+            t.$el.find('.js-summary h3').hide();
+            t.$el.show();
 		},
+        syncRender: function(){
+            var t = this;
+            t.$el.show();
+        },
 		back: function(){
 			window.history.back();
 		},
@@ -41,9 +53,8 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                type_name: pars.type_name
 		    }
 		});
 		return new V({
