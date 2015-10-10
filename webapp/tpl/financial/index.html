@@ -1,5 +1,5 @@
 <div class="header index-header">
-    <a  class="hd-btn hd-back js-back"> <i class="icon-back icon"></i></a>
+    <a  href="#index/index" class="hd-btn hd-back"> <i class="icon-back icon"></i></a>
 	项目详情
 </div>
 <div class="list-wrapper scroll-wrapper">
@@ -32,7 +32,7 @@
             <tbody>
                 <tr>
                     <td><span>项目总额：</span><%=data.borrow_money%></td>
-                    <td><span>还款方式：</span><%=data.repayment%></td>
+                    <td><span>还款方式：</span><%=data.r_type%></td>
                 </tr>
                 <tr>
                     <td><span>增新机构：</span><%=data.danbao%></td>
@@ -52,11 +52,11 @@
         </div>
         <div class="purchase">
             <div class="invest-input">
-                <input type="text" placeholder="不低于100， 请写整数">
+                <input type="text" placeholder="不低于100， 请写整数" class="js-investamount">
                 <span>元</span>
             </div>
-            <div class="invest-button">
-                <a href="#financial/order">投资</a>
+            <div class="invest-button js-invest">
+                <a>投资</a>
             </div>
             <div class="invest-balance">
                 <i class="icon-notice"></i>

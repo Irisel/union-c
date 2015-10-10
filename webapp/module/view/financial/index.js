@@ -9,7 +9,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            "click .js-back": "back"
+            "click .js-back": "back",
+            "click .js-invest": "invest"
 		},
 		initialize: function() {
 			var t = this;
@@ -36,6 +37,19 @@ define('', '', function(require) {
             t.$el.find('.topic-period').css('bottom', (size.width * 199/3520) + 'px' );
             t.$el.show();
 		},
+        invest: function(){
+            console.log('invest');
+            var t = this, data = t.model.toJSON();
+            var id = data.pars.id;
+            var money = t.$el.find(".js-investamount").val();
+            money = parseInt(money);
+            if(isNaN(money)){
+                return;
+            }else if(money<100){
+                return;
+            }
+            window.location.href="#financial/order/id:" + id + "/money:" + money;
+        },
 		bindEvent: function() {
 
 		},

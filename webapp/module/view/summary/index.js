@@ -28,16 +28,17 @@ define('', '', function(require) {
 				data = t.model.toJSON();
 			var html = _.template(t.template, {});
 			t.$el.html(html);
-            t.$el.find('.js-summary').html(data.data?data.data.type_content:'');
-            var title = t.$el.find('.js-summary h3');
-            if(title)t.$el.find('.header').html(title.html());
-            t.$el.find('.js-summary h3').hide();
+            if(data.pars.type_name){
+                t.$el.find('.js-summary').html(data.data?data.data.type_content:'');
+                var title = t.$el.find('.js-summary h3');
+                if(title)t.$el.find('.header').html(title.html());
+                t.$el.find('.js-summary h3').hide();
+            }else if(data.pars.id && data.data && data.data.length){
+                t.$el.find('.js-summary').html(data.data[0].art_content);
+                t.$el.find('.header').html(data.data[0].title);
+            }
             t.$el.show();
 		},
-        syncRender: function(){
-            var t = this;
-            t.$el.show();
-        },
 		back: function(){
 			window.history.back();
 		},
@@ -46,17 +47,35 @@ define('', '', function(require) {
 		},
 		changePars: function(pars) {
 			var t = this;
-			var data = $.extend({}, t.model.get("pars"));
-			$.extend(data, pars);
+            var data = {};
+            if(pars.id){
+                t.model.set("action", '/about/mc');
+                data = {
+                    id: pars.id
+                }
+            }else{
+                t.model.set("action", '/about/article');
+                data = {
+                    type_name: pars.type_name
+                }
+            }
 			t.model.set("pars", data);
 		}
 	});
 	return function(pars) {
-		model.set({
+        var Pars = {
+            action: '/about/article',
             pars: {
                 type_name: pars.type_name
 		    }
-		});
+		};
+        if(pars.id){
+            Pars.action = '/about/mc';
+            Pars.pars = {
+                id: pars.id
+            }
+        }
+		model.set(Pars);
 		return new V({
 			el: $("#" + pars.model + "_" + pars.action)
 		});

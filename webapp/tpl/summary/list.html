@@ -8,13 +8,17 @@
 	</div-->
     <div class="list-summaries">
         <ul>
+            <%_.each(data.mc,function(item){%>
             <li>
-                <div class="triangle"></div>
-                <div class="summary">
-                    <span>新三板江湖地位等同a股</span>
-                    <span>2015-08-08</span>
-                </div>
+                <a href="#summary/index/id:<%=item.id%>">
+                    <div class="triangle"></div>
+                        <div class="summary">
+                        <span><%=item.title%></span>
+                        <span>2015-08-08</span>
+                    </div>
+                </a>
             </li>
+            <%})%>
         </ul>
     </div>
 </div>

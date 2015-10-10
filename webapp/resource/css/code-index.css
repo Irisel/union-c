@@ -220,6 +220,26 @@ textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 12px; }
+    .index-list li:nth-child(even) .side {
+      background-color: #84ccc9 !important; }
+      .index-list li:nth-child(even) .side .triangle {
+        border-left: 10px solid #84ccc9 !important; }
+    .index-list li:nth-child(even) .content .content-title {
+      color: #84ccc9 !important; }
+    .index-list li:nth-child(even) .more {
+      background-color: #d7efee !important; }
+      .index-list li:nth-child(even) .more span {
+        color: #84ccc9 !important; }
+    .index-list li:nth-child(3n + 0) .side {
+      background-color: #f29c9f !important; }
+      .index-list li:nth-child(3n + 0) .side .triangle {
+        border-left: 10px solid #f29c9f !important; }
+    .index-list li:nth-child(3n + 0) .content .content-title {
+      color: #f29c9f !important; }
+    .index-list li:nth-child(3n + 0) .more {
+      background-color: #fcdfe1 !important; }
+      .index-list li:nth-child(3n + 0) .more span {
+        color: #f29c9f !important; }
     .index-list li a {
       display: block;
       width: 100%;
@@ -230,13 +250,14 @@ textarea {
         position: relative;
         height: 100%;
         padding-left: 30px;
-        padding-right: 77px; }
+        padding-right: 77px;
+        background-color: #ffffff; }
         .index-list li a .index-inner .side {
           position: absolute;
           left: 0;
           height: 100%;
           width: 10px;
-          background-color: #f29c9f; }
+          background-color: #f8b551; }
           .index-list li a .index-inner .side .triangle {
             width: 0px;
             height: 0px;
@@ -244,11 +265,10 @@ textarea {
             overflow: hidden;
             margin-bottom: 10px;
             border-top: 10px solid #ffffff;
-            border-left: 10px solid #f29c9f;
+            border-left: 10px solid #f8b551;
             border-bottom: 10px solid #ffffff;
-            background: #f29c9f;
-            border-top: 10px solid #f6f6f6;
-            border-bottom: 10px solid #f6f6f6;
+            border-top: 10px solid #ffffff;
+            border-bottom: 10px solid #ffffff;
             right: -10px;
             top: 20px; }
         .index-list li a .index-inner .content {
@@ -258,7 +278,7 @@ textarea {
           .index-list li a .index-inner .content .content-title {
             height: 19px;
             width: 100%;
-            color: #f29c9f; }
+            color: #f8b551; }
           .index-list li a .index-inner .content .content-desc {
             width: 100%; }
             .index-list li a .index-inner .content .content-desc p {
@@ -274,11 +294,11 @@ textarea {
           top: 0;
           height: 100%;
           width: 67px;
-          background-color: #fbdfe0; }
+          background-color: #fde7c7; }
           .index-list li a .index-inner .more span {
             line-height: 100px;
             text-align: center;
-            color: #f29c9f;
+            color: #f8b551;
             font-size: 14px;
             width: 100%;
             display: block; }
@@ -467,8 +487,8 @@ textarea {
   margin: 20px;
   text-align: center;
   background-color: #ff7d21;
-  height: 52.8px;
-  line-height: 52.8px;
+  height: 45px;
+  line-height: 45px;
   border-radius: 6px;
   font-size: 1.2em; }
 
@@ -629,7 +649,7 @@ textarea {
   width: 100%;
   padding: 0 20px; }
   .summary img {
-    width: 100% !important; }
+    max-width: 100% !important; }
 
 .guide-detail ul li, .guide-funding ul li {
   display: inline-block;
@@ -1028,19 +1048,19 @@ textarea {
 
 .login-submit div, .purchase-submit div, .qianduoduo-submit div, .verifi-submit div, .verifi-group ul li div, .account .list-account .account-group ul li div {
   background-color: #ff7d21;
-  height: 40px;
+  height: 45px;
   width: 100%;
   border-radius: 8px;
   color: #ffffff;
-  line-height: 40px;
+  line-height: 45px;
   text-align: center;
   font-size: 18px; }
 
 .login-submit {
   margin: 0 20px; }
   .login-submit div {
-    height: 52.8px;
-    line-height: 52.8px;
+    height: 45px;
+    line-height: 45px;
     font-size: 1.2em; }
 
 .purchase-submit {
@@ -1048,8 +1068,8 @@ textarea {
 
 .qianduoduo-submit {
   margin: 30px 20px 0;
-  height: 40px;
-  line-height: 40px;
+  height: 45px;
+  line-height: 45px;
   font-size: 1em;
   text-align: center; }
   .qianduoduo-submit div {
@@ -1809,36 +1829,39 @@ textarea {
         color: #333333; }
 
 .list-summaries ul li {
-  padding: 8px 20px;
   border-bottom: 1px solid #eee;
-  height: 66px;
   line-height: 40px;
   position: relative; }
-  .list-summaries ul li .triangle {
-    width: 0px;
-    height: 0px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-    border-top: 10px solid #ffffff;
-    border-left: 10px solid #f29c9f;
-    border-bottom: 10px solid #ffffff;
-    border-left: 10px solid #ff6c00;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    margin-top: -10px; }
-  .list-summaries ul li .summary {
-    display: inline-block;
-    position: absolute;
-    left: 30px; }
-    .list-summaries ul li .summary span {
-      display: block;
-      height: 25px;
-      line-height: 25px;
-      width: 100%;
-      float: left;
-      font-size: 0.5em; }
+  .list-summaries ul li a {
+    padding: 10px;
+    display: block; }
+    .list-summaries ul li a:hover, .list-summaries ul li a:visited {
+      color: #333333; }
+    .list-summaries ul li a .triangle {
+      width: 0px;
+      height: 0px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border-top: 10px solid #ffffff;
+      border-left: 10px solid #f8b551;
+      border-bottom: 10px solid #ffffff;
+      border-left: 10px solid #ff6c00;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      margin-top: -10px; }
+    .list-summaries ul li a .summary {
+      display: inline-block;
+      position: relative;
+      left: 10px; }
+      .list-summaries ul li a .summary span {
+        display: block;
+        line-height: 25px;
+        width: 100%;
+        float: left;
+        color: #333333;
+        font-size: 0.5em; }
 
 .about-more {
   width: 100%;

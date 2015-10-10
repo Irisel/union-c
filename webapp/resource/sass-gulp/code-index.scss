@@ -94,7 +94,7 @@ textarea{
   overflow: hidden;
   margin-bottom: 10px;
   border-top: 10px solid #ffffff;
-  border-left: 10px solid #f29c9f;
+  border-left: 10px solid #f8b551;
   border-bottom: 10px solid #ffffff;
 }
 
@@ -265,6 +265,44 @@ textarea{
     height: 100px;
 
     margin-bottom: 12px;
+    &:nth-child(even){
+      .side{
+        background-color:#84ccc9 !important;
+        .triangle {
+          border-left: 10px solid #84ccc9 !important;
+        }
+      }
+      .content{
+        .content-title{
+           color: #84ccc9 !important;
+        }
+      }
+      .more{
+        background-color: #d7efee !important;
+        span{
+          color: #84ccc9 !important;
+        }
+      }
+    }
+    &:nth-child(3n + 0){
+      .side{
+        background-color:#f29c9f !important;
+        .triangle {
+          border-left: 10px solid #f29c9f !important;
+        }
+      }
+      .content{
+        .content-title{
+           color: #f29c9f !important;
+        }
+      }
+      .more{
+        background-color: #fcdfe1 !important;
+        span{
+          color: #f29c9f !important;
+        }
+      }
+    }
     a {
         display: block;
         width: 100%;
@@ -276,17 +314,17 @@ textarea{
           height:100%;
           padding-left:30px;
           padding-right: 77px;
+          background-color: #ffffff;
           .side{
             position:absolute;
             left:0;
             height:100%;
             width:10px;
-            background-color:#f29c9f;
+            background-color:#f8b551;
             .triangle{
               @include triangle();
-              background: #f29c9f;
-              border-top: 10px solid #f6f6f6;
-              border-bottom: 10px solid #f6f6f6;
+              border-top: 10px solid #ffffff;
+              border-bottom: 10px solid #ffffff;
               right: -10px;
               top: 20px;
           }
@@ -298,7 +336,7 @@ textarea{
             .content-title {
               height:19px;
               width:100%;
-              color: #f29c9f;
+              color: #f8b551;
             }
             .content-desc {
               width:100%;
@@ -318,11 +356,11 @@ textarea{
             top: 0;
             height:100%;
             width:67px;
-            background-color:#fbdfe0;
+            background-color:#fde7c7;
             span {
               line-height: 100px;
               text-align: center;
-              color: #f29c9f;
+              color: #f8b551;
               font-size: 14px;
               width: 100%;
               display: block;
@@ -573,8 +611,8 @@ textarea{
     margin: 20px;
     text-align: center;
     background-color: #ff7d21;
-    height: 52.8px;
-    line-height: 52.8px;
+    height: 45px;
+    line-height: 45px;
     border-radius: 6px;
     font-size: 1.2em;
     a {
@@ -782,7 +820,7 @@ textarea{
   width: 100%;
   padding: 0 20px;
   img{
-    width:100% !important;
+    max-width:100% !important;
   }
 }
 
@@ -1299,11 +1337,11 @@ textarea{
 
 %submit-button {
     background-color: #ff7d21;
-    height: 40px;
+    height: 45px;
     width: 100%;
     border-radius: 8px;
     color: #ffffff;
-    line-height: 40px;
+    line-height: 45px;
     text-align: center;
     font-size: 18px;
 }
@@ -1312,8 +1350,8 @@ textarea{
   margin: 0 20px;
   div{
     @extend %submit-button;
-    height: 52.8px;
-    line-height:52.8px;
+    height: 45px;
+    line-height:45px;
     font-size: 1.2em;
   }
 }
@@ -1327,8 +1365,8 @@ textarea{
 
 .qianduoduo-submit{
   margin: 30px 20px 0;
-  height: 40px;
-  line-height: 40px;
+  height: 45px;
+  line-height: 45px;
   font-size: 1em;
   text-align: center;
   div {
@@ -2309,30 +2347,35 @@ textarea{
 .list-summaries{
   ul{
     li{
-      padding: 8px 20px;
       border-bottom: 1px solid #eee;
-      height: 66px;
       line-height: 40px;
       position:relative;
-      .triangle{
-        @include triangle();
-        border-left: 10px solid #ff6c00;
-        position:absolute;
-        left:10px;
-        top: 50%;
-        margin-top: -10px;
-      }
-      .summary{
-        display: inline-block;
-        position: absolute;
-        left: 30px;
-        span{
-          display: block;
-          height: 25px;
-          line-height: 25px;
-          width: 100%;
-          float: left;
-          font-size:0.5em;
+      a{
+        &:hover, &:visited{
+          color: #333333;
+        }
+        padding: 10px;
+        display:block;
+        .triangle{
+          @include triangle();
+          border-left: 10px solid #ff6c00;
+          position:absolute;
+          left:10px;
+          top: 50%;
+          margin-top: -10px;
+        }
+        .summary{
+          display: inline-block;
+          position: relative;
+          left: 10px;
+          span{
+            display: block;
+            line-height: 25px;
+            width: 100%;
+            float: left;
+            color: #333333;
+            font-size:0.5em;
+          }
         }
       }
     }

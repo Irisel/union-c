@@ -3,9 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/summary/list.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/about/article'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -15,9 +13,14 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+                t.listenTo(t.model, "change:pars", function() {
+                    t.listenToOnce(t.model, "sync", function(){
+                        t.render();
+                    });
+                })
+			});
 		},
 		back: function(){
 			window.history.back();
@@ -25,10 +28,15 @@ define('', '', function(require) {
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
+        syncRender: function(){
+            var t = this;
+            t.$el.show();
+        },
 		bindEvent: function() {
 
 		},
@@ -41,9 +49,8 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                type_name: pars.type_name
 		    }
 		});
 		return new V({

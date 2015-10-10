@@ -8,45 +8,45 @@
 	</div-->
     <div class="order-detail">
         <div class="order-title">项目确认</div>
-        <div class="inner-name">项目名称：【金房惠利】按揭保理002期-2</div>
+        <div class="inner-name">项目名称：<%=data.product_name%></div>
         <div class="inner-normal">
-            <span>购买方</span><span>shuizhudan01</span>
+            <span>购买方</span><span><%=data.u_name%></span>
         </div>
         <div class="inner-normal">
-            <span>预计年化收益</span><span>10.5%</span>
+            <span>预计年化收益</span><span><%=data.rate%>%</span>
         </div>
         <div class="inner-normal">
-            <span>起息日</span><span>2015-08-02</span>
+            <span>起息日</span><span><%=data.i_date%></span>
         </div>
         <div class="inner-normal">
-            <span>还款日</span><span>2015-10-02</span>
+            <span>还款日</span><span><%=data.e_date%></span>
         </div>
         <div class="inner-normal">
-            <span>增信方</span><span>隆基泰和实业有限公司</span>
+            <span>增信方</span><span class="js-danbao" data-danbaodid="<%=data.danbaodi%>"><%=data.danbao%></span>
         </div>
         <div class="inner-normal">
-            <span>出让方</span><span>中国石油天然气集团公司</span>
+            <span>出让方</span><span><%=data.username%></span>
         </div>
         <div class="inner-normal">
-            <span>还款方式</span><span>按月付息，到期还本</span>
+            <span>还款方式</span><span><%=data.h_type%></span>
         </div>
         <div class="inner-normal">
-            <span>计息天数</span><span>90天</span>
+            <span>计息天数</span><span><%=data.dur%></span>
         </div>
     </div>
     <div class="order-detail">
         <div class="order-title">项目投资</div>
         <div class="inner-normal">
-            <span>投资金额</span><span class="orange">155元</span>
+            <span>投资金额</span><span class="orange"><%=data.money%>元</span>
         </div>
         <div class="inner-normal">
-            <span>到期总回款</span><span class="orange">159.07元</span>
+            <span>到期总回款</span><span class="orange"><%=data.b_money%>元</span>
         </div>
         <div class="inner-normal">
-            <span>净收益</span><span class="orange">4.07元</span>
+            <span>净收益</span><span class="orange"><%=data.s_money%>元</span>
         </div>
         <div class="inner-normal">
-            <span>积分回报</span><span>shuizhudan01</span>
+            <span>积分回报</span><span><%=data.jifen%></span>
         </div>
     </div>
     <div class="order-detail">
