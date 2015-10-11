@@ -78,6 +78,14 @@ textarea{
   padding:0;
 }
 
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
 @mixin icon(){
   position: absolute;
   left: 12px;
@@ -654,43 +662,53 @@ textarea{
 
 .products-list{
   width:100%;
-  li {
-    border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
-    .product-detail{
-      padding: 5px 100px 0 10px;
-      .detail-title{
-        width:100%;
-        span{
-          font-size: 0.8em;
-          text-align: left;
+    li {
+        a{
+          display:block;
+            &:hove, &:visited{
+            color: #666666;
+          }
+        }
+      border-top:1px solid #eee;
+      border-bottom:1px solid #eee;
+      .product-detail{
+        padding: 5px 100px 0 10px;
+        .detail-title{
+          width:100%;
+          span{
+            font-size: 0.8em;
+            text-align: left;
+            color: #666666;
+          }
+        }
+        .detail-table{
+          height:60px;
+          width:100%;
+          text-align: center;
+          font-size: 1.2em;
+          font-weight:bold;
+          td{
+            color: #666666;
+            &:first-child{
+              color: #ff7d21;
+            }
+          }
         }
       }
-      .detail-table{
-        height:60px;
-        width:100%;
-        text-align: center;
-        font-size: 1.2em;
-        font-weight:bold;
-        td:first-child{
-          color: #ff7d21;
-        }
+      .product-desc{
+        background-color: #f1f1f1;
+        color: #a6a6a6;
+        padding-left: 10px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .product-bottom{
+        height:10px;
+        background-color: #f1f1f1;
       }
     }
-    .product-desc{
-      background-color: #f1f1f1;
-      color: #a6a6a6;
-      padding-left: 10px;
-      height: 20px;
-      font-size: 14px;
-      line-height: 20px;
-      border-bottom: 1px solid #eee;
-    }
-    .product-bottom{
-      height:10px;
-      background-color: #f1f1f1;
-    }
-  }
 }
 
 %blank-inner{

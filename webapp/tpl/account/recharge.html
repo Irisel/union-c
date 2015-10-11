@@ -7,6 +7,7 @@
 	<!--div class="list-loading js-list-loading">
 		正在奋力加载中
 	</div-->
+    <form name="moneycharge" method="post" action = "/wap/account/moneyCharge" id="moneycharge">
     <div class="list-purchase">
         <div class="recharge-expect">
             <span>充值手续费由平台承担。</span>
@@ -14,28 +15,30 @@
         </div>
         <div class="purchase">
             <div class="withdraw-input">
-                <input type="text" placeholder="充值金额">
+                <input type="text" placeholder="充值金额" class="js-money" name = "money">
                 <span>元</span>
             </div>
         </div>
+        <p class="error js-error vishow"><span></span></p>
     </div>
+    </form>
     <div class="recharge-detail">
         <div class="recharge-title">请选择支付方式</div>
-        <div class="inner-normal on">
+        <div class="inner-normal on js-bankc">
             <span>网银充值</span>
-            <div class="circle">
+            <div class="circle js-chargetype" data-type="bankc">
                 <div></div>
             </div>
         </div>
-        <div class="inner-normal">
+        <div class="inner-normal js-shortcutc">
             <span>快捷方式</span>
-            <div class="circle">
+            <div class="circle js-chargetype" data-type="shortcutc">
                 <div></div>
             </div>
         </div>
     </div>
     <div class="purchase-submit">
-        <div>
+        <div class="js-moneyCharge">
             确认投资
         </div>
     </div>

@@ -13,16 +13,16 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-			t.listenToOnce(t.model, "sync", function() {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
-                t.listenTo(t.model, "change:pars", function() {
-                    t.listenToOnce(t.model, "sync", function(){
-                        t.render();
-                    });
-                })
 			});
 		},
 		//待优化
+        clearSelf: function(){
+            var t = this;
+            t.$el.find('.js-summary').empty();
+            t.$el.find('.header').empty();
+        },
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();

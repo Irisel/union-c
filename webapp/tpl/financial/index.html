@@ -1,5 +1,5 @@
 <div class="header index-header">
-    <a  href="#index/index" class="hd-btn hd-back"> <i class="icon-back icon"></i></a>
+    <a  class="hd-btn hd-back js-back"> <i class="icon-back icon"></i></a>
 	项目详情
 </div>
 <div class="list-wrapper scroll-wrapper">
@@ -72,10 +72,16 @@
             <a href="#financial/history">投资记录</a><i class="btn btn-forward"></i>
         </li>
         <li>
-            <a href="#">相关合同</a><i class="btn btn-forward"></i>
+            <a href="#summary/pacts/id:<%=data.borrow_id%>">相关合同</a><i class="btn btn-forward"></i>
         </li>
-        <li>
-            <a href="#index/list">查看更多项目</a><i class="btn btn-forward"></i>
-        </li>
+        <%if(pars.from){%>
+            <li>
+                <a href="#index/list/from:index/id:<%=pars.id%>">查看更多项目</a><i class="btn btn-forward"></i>
+            </li>
+        <%}else{%>
+            <li>
+                <a href="#index/list">查看更多项目</a><i class="btn btn-forward"></i>
+            </li>
+        <%}%>
     </ul>
 </div>

@@ -50,6 +50,14 @@ define('', '', function(require) {
             }
             window.location.href="#financial/order/id:" + id + "/money:" + money;
         },
+        back: function(){
+          var t = this,data = t.model.toJSON();
+          if(data.pars.from == 'index'){
+              window.location.href="#index/index"
+          }else{
+              window.location.href="#index/list";
+          }
+        },
 		bindEvent: function() {
 
 		},
@@ -61,7 +69,8 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                id: pars.id
+                id: pars.id,
+                from: pars.from
 		    }
 		});
 		return new V({

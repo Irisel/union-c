@@ -1,23 +1,25 @@
         <%_.each(data,function(item){%>
         <li>
-        <div class="product-detail">
-            <div class="detail-title">
-                <span>【<%=item.product_name%>】<%=item.borrow_name%></span>
-            </div>
-            <table class="detail-table">
-                <tbody>
-                    <tr>
-                        <td><span><%=item.product_name%></span></td>
-                        <td><%=item.borrow_duration%></td>
-                        <td><%=item.borrow_money%></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="product-desc">
-            <span>担保机构：<%=item.danbao%></span>
-            <span>收益方式：</span>
-        </div>
-        <div class="product-bottom"></div>
+            <a href="#financial/index/id:<%=item.id%>">
+                <div class="product-detail">
+                    <div class="detail-title">
+                        <span>【<%=item.product_name%>】<%=item.borrow_name%></span>
+                    </div>
+                    <table class="detail-table">
+                        <tbody>
+                            <tr>
+                                <td><span><%=item.borrow_interest_rate%>%</span></td>
+                                <td><%=item.borrow_duration%>月</td>
+                                <td><%=item.borrow_money%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="product-desc">
+                    <span>担保机构：<%=item.danbao%></span>
+                    <span>收益方式：</span>
+                </div>
+                <div class="product-bottom"></div>
+            </a>
         </li>
         <%})%>

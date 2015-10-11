@@ -4,9 +4,7 @@ define('', '', function(require) {
 	var H = require('text!../../../tpl/account/index.html');
     var Login = require("view/login/index");
 	var model = new M({
-		pars: {
-
-		}
+        action: '/account/user_data'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -18,24 +16,33 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		syncRender: function() {
             var t = this;
-            t.render();
+            var _data = { data: []};
+            Jser.getJSON(ST.PATH.ACTION + '/account/user_data', {}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.checkLogin(result.status == "0");
+                t.render(_data);
+			}, function() {
+
+			});
 		},
 		//待优化
-		render: function() {
+		render: function(rawdata) {
 			var t = this,
-				data = {};
+				data = rawdata || t.model.toJSON();
+            console.log(data);
             t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
         checkLogin: function(logged, type, href){
-            if(!logged){
+            if(logged){
                 new Login({
 				    el: $('.login-panel'),
                     type: type,
@@ -68,7 +75,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

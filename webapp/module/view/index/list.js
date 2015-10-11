@@ -38,7 +38,7 @@ define('', '', function(require) {
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -63,7 +63,9 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                name_id: 0
+                name_id: 0,
+                from: pars.from,
+                id: pars.id
 		    }
 		});
 		return new V({

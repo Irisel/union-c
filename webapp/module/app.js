@@ -100,6 +100,7 @@ define(function(require, exports) {
                     delete cj["model"];
                     delete cj["action"];
                     App.Views[view].cj = $.extend({}, cj);
+                    App.Views[view].clearSelf && App.Views[view].clearSelf();
                     App.Views[view].changePars && App.Views[view].changePars(cj);
                 } else {
                     App.Views[view].$el.show();

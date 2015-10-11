@@ -2,11 +2,10 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/withdrawhistory.html');
+    var list_tpl = require('text!../../../tpl/account/withdrawhistory/list.html');
     var Login = require("view/login/index");
 	var model = new M({
-		pars: {
-
-		}
+        action: '/account/withdrawlog'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -16,27 +15,32 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
-		render: function() {
-			var t = this,
-				data = {};
-            t.checkLogin(data.status == "0");
-			var html = _.template(t.template, data);
-			t.$el.show().html(html);
-		},
 		back: function(){
 			window.history.back();
 		},
-		syncRender: function() {
-            var t = this;
-            t.render();
+		render: function() {
+			var t = this,
+				data = t.model.toJSON();
+            console.log(data, data.status == "0");
+            t.checkLogin(data.status == "0");
+            if(!data.data)data.data = [];
+            $.each(data.data, function(i, item){
+                var time = item.time.split(' ');
+                if(time.length == 2){
+                   item.ymd = time[0];
+                    item.hms = time[1]
+                }
+            });
+			var html = _.template(t.template, data);
+			t.$el.show().html(html);
 		},
         checkLogin: function(logged, type, href){
-            if(!logged){
+            if(logged){
                 new Login({
 				    el: $('.login-panel'),
                     type: type,
@@ -44,6 +48,30 @@ define('', '', function(require) {
 			    });
             }
         },
+		syncRender: function() {
+            console.log('syncReader');
+			var t = this;
+            var _data = { data: []};
+            Jser.getJSON(ST.PATH.ACTION + '/account/withdrawlog', {}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.checkLogin(result.status == "0");
+                if(!_data.data)_data.data = [];
+                $.each(_data.data, function(i, item){
+                    var time = item.time.split(' ');
+                    if(time.length == 2){
+                    item.ymd = time[0];
+                        item.hms = time[1]
+                    }
+                });
+                var _html = _.template(list_tpl, _data);
+			    t.$el.find(".list-withdraw").html(_html);
+			}, function() {
+                var _html = _.template(list_tpl, _data);
+			    t.$el.find(".list-withdraw").html(_html);
+			});
+            t.$el.show();
+		},
 		bindEvent: function() {
 
 		},
@@ -56,7 +84,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

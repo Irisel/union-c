@@ -1,25 +1,3 @@
-<div class="header list-header">
-    <a class="hd-btn hd-backgray js-back"> <i class="icon-back icon"></i></a>
-	提现记录
-</div>
-<div class="list-wrapper scroll-wrapper">
-	<!--div class="list-loading js-list-loading">
-		正在奋力加载中
-	</div-->
-    <div class="label-group">
-        <ul>
-            <li>
-                <span>时间</span>
-            </li>
-            <li>
-                <span>类型</span>
-            </li>
-            <li>
-                <span>金额</span>
-            </li>
-        </ul>
-    </div>
-    <ul class="list-withdraw">
         <%if(data.length){%>
             <%_.each(data,function(item){%>
             <li>
@@ -44,5 +22,3 @@
 		        <p style="text-align:center;margin-top:50px;">还没有记录。</p>
 	        </li>
         <%}%>
-    </ul>
-</div>

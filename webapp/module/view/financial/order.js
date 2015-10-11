@@ -4,7 +4,8 @@ define('', '', function(require) {
 
 	var H = require('text!../../../tpl/financial/order.html');
 	var model = new M({
-        action: '/member/invest'
+        action: '/member/invest',
+        isInvesting: false
 	});
 	var V = B.View.extend({
 		model: model,
@@ -34,9 +35,29 @@ define('', '', function(require) {
 
 		},
         submit: function(){
-            Jser.alert("投资成功", function() {
-                    window.location.hash = "#account/invest";
-            });
+			var t = this,
+				data = t.model.toJSON();
+            if(t.model.isInvesting)return;
+            if(!(data.data && data.data.money && data.data.dur && data.pars.id))return;
+            console.log(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur});
+            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur}, function(result) {
+                t.model.isInvesting = false;
+                if(result.status == "1"){
+                    Jser.alert("投资成功", function() {
+
+                    })
+                }
+                else{
+                     Jser.alert("投资失败", function() {
+
+                    })
+                }
+			}, function() {
+                t.model.isInvesting = false;
+                Jser.alert("投资失败", function() {
+
+                });
+			}, 'post');
         },
 		changePars: function(pars) {
 			var t = this;

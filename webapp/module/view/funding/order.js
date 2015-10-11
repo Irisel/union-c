@@ -3,33 +3,71 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/funding/order.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/member/zinvest'
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
         order_number: 1,
+        order_money: null,
+        order_min:null,
+        order_max:null,
+        num_changing: false,
 		events: {
              "click .js-back": "back",
              "click .js-minus":"minus",
             "click .js-plus":"plus",
-            "input .js-num": "enter"
+            "input .js-num": "enter",
+            "click .js-submit": "submit"
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            if(!data.data)data.data = {};
+            console.log(data, '万'.indexOf(data.data.d_money));
+            if('万'.indexOf(data.data.d_money) != -1){
+                data.data.d_total = data.data.d_money.replace('万', '');
+                t.order_money = parseInt(data.data.d_total);
+                data.data.d_unit = '万';
+            }else{
+                data.data.d_total = data.data.d_money;
+                t.order_money = parseInt(data.data.d_total);
+            }
+            t.order_min = parseInt(data.data.min);
+            t.order_max = parseInt(data.data.max);
+            console.log(t.order_min, t.order_max);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
+        submit: function(){
+            var t = this, data = t.model.toJSON();;
+		    var _data = t.$el.find("#js-funding-form").serializeArray();
+			var name, val;
+			var _locData={};
+			$.each(_data, function(i, item) {
+				name = item.name;
+				val = $.trim(item.value);
+				_data[i].value = val;
+				_locData[name]=val;
+			});
+            $.extend(_locData, {
+                transfer_invest_num: t.order_number,
+                T_borrow_id: data.pars.id
+            });
+            console.log(_locData);
+            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
+                console.log(result);
+			}, function() {
+
+			}, 'post');
+        },
 		bindEvent: function() {
 
 		},
@@ -38,13 +76,24 @@ define('', '', function(require) {
 		},
         plus: function(){
             var t = this;
+            if(t.num_changing)return;
+            t.num_changing = true;
+            console.log(t.order_max, 'plus', t.order_number>= t.order_max, t.order_money);
+            if(!isNaN(t.order_max) && t.order_number>= t.order_max)return;
             t.order_number+=1;
+            if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
             t.$el.find('.js-num').val(t.order_number);
+            t.num_changing = false;
         },
         minus: function(){
             var t = this;
+            if(t.num_changing)return;
+            t.num_changing = true;
+            if(!isNaN(t.order_max) && t.order_number<= t.order_min)return;
             if(t.order_number)t.order_number-=1;
+            if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
             t.$el.find('.js-num').val(t.order_number);
+            t.num_changing = false;
         },
         enter: function(e){
             var t = this;
@@ -65,9 +114,8 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
-
+                id: pars.id
 		    }
 		});
 		return new V({

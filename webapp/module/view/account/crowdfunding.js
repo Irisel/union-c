@@ -34,7 +34,7 @@ define('', '', function(require) {
 			});
 		},
         checkLogin: function(logged, type, href){
-            if(!logged){
+            if(logged){
                 new Login({
 				    el: $('.login-panel'),
                     type: type,

@@ -7,18 +7,20 @@
 		正在奋力加载中
 	</div-->
     <div class="funding-order">
-        <div class="inner-input">
-            <input placeholder="收件人姓名:">
-        </div>
-        <div class="inner-input">
-            <input placeholder="联系电话:">
-        </div>
-        <div class="inner-input">
-            <input placeholder="快递地址:">
-        </div>
+        <form id="js-funding-form">
+            <div class="inner-input">
+                <input placeholder="收件人姓名:" name="upayeename">
+            </div>
+            <div class="inner-input">
+                <input placeholder="联系电话:" name="uphone">
+            </div>
+            <div class="inner-input">
+                <input placeholder="快递地址:" name="uaddress">
+            </div>
+        </form>
     </div>
     <div class="funding-order">
-        <div class="order-title">产品名称：【联合福利社】29元众筹哈密瓜2个</div>
+        <div class="order-title"><%=data.zc_name%></div>
         <div class="inner-option">
             <span class="option-title">认筹份额</span>
             <div class="option">
@@ -27,7 +29,7 @@
                         <i class="minus"></i>
                     </li>
                     <li>
-                        <input type="text" class="js-num" value=1>
+                        <input type="text" class="js-num" value="<%=data.min%>">
                     </li>
                     <li class="js-plus">
                         <i class="plus"></i>
@@ -36,7 +38,7 @@
             </div>
         </div>
         <div class="inner-normal">
-            <span>订单总计:</span><span class="orange">29元</span>
+            <span>订单总计:</span><span class="orange right"><%=data.d_unit%>元</span><span class="js-total orange"><%=data.d_total%></span>
         </div>
     </div>
     <div class="funding-order">
@@ -45,7 +47,7 @@
         </div>
     </div>
     <div class="order-submit">
-        <div>
+        <div class="js-submit">
             <a>确认投资</a>
         </div>
     </div>

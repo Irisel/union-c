@@ -5,7 +5,7 @@ define('', '', function(require) {
     var list_tpl = require('text!../../../tpl/account/chargehistory/list.html');
     var Login = require("view/login/index");
 	var model = new M({
-        action: '/account/history'
+        action: '/account/c_record'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -40,7 +40,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
 		},
         checkLogin: function(logged, type, href){
-            if(!logged){
+            if(logged){
                 new Login({
 				    el: $('.login-panel'),
                     type: type,
