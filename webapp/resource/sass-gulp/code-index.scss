@@ -57,6 +57,10 @@ a {
   }
 }
 
+span, i, img{
+  user-select: none;
+}
+
 em{font-style: normal;}
 img{
   border:none;
@@ -405,6 +409,7 @@ textarea{
   background-color: #f6f6f6;
   color: #000000;
   border-bottom: 1px solid #e5e5e5;
+  -webkit-user-select: none;
 }
 
 .list-topic{
@@ -1269,7 +1274,7 @@ textarea{
     border-bottom: 1px solid #e5e5e5;
     position: relative;
     @extend %blank-inner;
-    font-size: 0.8em;
+    font-size: 100%;
     span{
       position:absolute;
       left:10px;
@@ -1280,14 +1285,14 @@ textarea{
     }
     input{
       line-height: 46px;
-      font-size: 0.8em;
       width: 100%;
       top:2px;
       display: inline-block;
       border: none;
       text-align: left;
+      font-size: 0.8em;
       &::-webkit-input-placeholder{
-        font-size: 0.8em;
+        font-size: 1em;
       }
     }
   }
@@ -2032,6 +2037,12 @@ textarea{
         width:100%;
         border-top: 1px solid #838383;
         border-bottom: 1px solid #838383;
+        .toggle{
+            position: absolute;
+            height: 100%;
+            left: -20px;
+            right: -20px;
+        }
       }
       .circle{
         position: absolute;
@@ -2062,6 +2073,12 @@ textarea{
         border: none;
         .body{
           border:none;
+          .toggle{
+            position: absolute;
+            height: 100%;
+            left: -20px;
+            right: -20px;
+          }
         }
         .circle{
           &:first-child{
@@ -2201,6 +2218,14 @@ textarea{
   position: absolute;
   left: 10px;
   top: 9.5px;
+  a{
+    position: absolute;
+    top: -10px;
+    height: 40px;
+    width: 30px;
+    left: -10px;
+    display: block;
+  }
 }
 
 .hd-link{

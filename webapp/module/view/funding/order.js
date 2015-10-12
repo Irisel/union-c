@@ -48,7 +48,7 @@ define('', '', function(require) {
 		},
         submit: function(){
             var t = this, data = t.model.toJSON();;
-		    var _data = t.$el.find("#js-funding-form").serializeArray();
+		    var _data = t.$el.find("#fundingOrder").serializeArray();
 			var name, val;
 			var _locData={};
 			$.each(_data, function(i, item) {
@@ -62,11 +62,12 @@ define('', '', function(require) {
                 T_borrow_id: data.pars.id
             });
             console.log(_locData);
-            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
-                console.log(result);
-			}, function() {
-
-			}, 'post');
+            $('#fundingOrder') && $('#fundingOrder').submit();
+//            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
+//                console.log(result);
+//			}, function() {
+//
+//			}, 'post');
         },
 		bindEvent: function() {
 
@@ -79,7 +80,10 @@ define('', '', function(require) {
             if(t.num_changing)return;
             t.num_changing = true;
             console.log(t.order_max, 'plus', t.order_number>= t.order_max, t.order_money);
-            if(!isNaN(t.order_max) && t.order_number>= t.order_max)return;
+            if(!isNaN(t.order_max) && t.order_number>= t.order_max){
+                t.num_changing = false;
+                return;
+            }
             t.order_number+=1;
             if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
             t.$el.find('.js-num').val(t.order_number);
@@ -89,7 +93,11 @@ define('', '', function(require) {
             var t = this;
             if(t.num_changing)return;
             t.num_changing = true;
-            if(!isNaN(t.order_max) && t.order_number<= t.order_min)return;
+            console.log(t.order_min, 'minus', t.order_number<= t.order_min, t.order_money);
+            if(!isNaN(t.order_min) && t.order_number<= t.order_min && t.order_number<=1){
+                t.num_changing = false;
+                return;
+            }
             if(t.order_number)t.order_number-=1;
             if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
             t.$el.find('.js-num').val(t.order_number);
@@ -99,8 +107,13 @@ define('', '', function(require) {
             var t = this;
             var inputNum = $(e.currentTarget).val();
             if(!isNaN(inputNum)){
-                if(inputNum)
-                t.order_number = inputNum;
+                if(inputNum){
+                    if(parseInt(inputNum)> t.order_max)inputNum = t.order_max;
+                    if(parseInt(inputNum)< t.order_min)inputNum = t.order_min;
+                    t.order_number = parseInt(inputNum);
+                    $(e.currentTarget).val(t.order_number);
+                }
+
             }else{
                 $(e.currentTarget).val(t.order_number);
             }

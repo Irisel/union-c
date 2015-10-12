@@ -1,5 +1,5 @@
 <div class="header list-header">
-    <a class="hd-btn hd-backgray js-back"> <i class="icon-back icon"></i></a>
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
 	资金托管
 </div>
 <div class="index-wrapper scroll-wrapper">
@@ -17,25 +17,37 @@
     <div class="deposit-notice">
         <span>请将以下授权设置为开启状态，并牢记您的支付密码</span>
     </div>
-    <div class="deposit-detail">
+    <div class="deposit-detail  js-invest">
+        <%if(data.invest_auth){%>
+        <div class="inner-normal on js-invest">
+        <%}else{%>
         <div class="inner-normal">
+        <%}%>
             <div>
             <span>钱多多转账授权</span>
             <span class="addition">开启后方可对融资人投资对账</span>
             <div class="circle-toggle">
                 <div class="circle"></div>
-                <div class="body"></div>
+                <div class="body">
+                    <div class="toggle js-toggle" data-type="invest"></div>
+                </div>
                 <div class="circle"></div>
             </div>
             </div>
         </div>
-        <div class="inner-normal on">
+        <%if(data.secondary_percent){%>
+        <div class="inner-normal on js-secondary">
+        <%}else{%>
+        <div class="inner-normal js-secondary">
+        <%}%>
             <div class="circle-group">
                 <span>钱多多二次分配授权</span>
                 <span class="addition">开启后方可授权联合金融向融资人收取保障金和服务费</span>
                 <div class="circle-toggle">
                     <div class="circle"></div>
-                    <div class="body"></div>
+                    <div class="body">
+                        <div class="toggle js-toggle" data-type="secondary"></div>
+                    </div>
                     <div class="circle"></div>
                 </div>
             </div>

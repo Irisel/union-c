@@ -3,26 +3,35 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/settings/deposit.html');
 	var model = new M({
-		pars: {
-
-		}
+        action: '/account/shouquan'
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
 		events: {
-            "click .js-back": "back"
+            "click .js-back": "back",
+            "click .js-toggle": "deposit"
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
+        deposit: function(e){
+            var t = this;
+            var deposit = t.$el.find('.js-'+ $(e.currentTarget).data('type'));
+            if(deposit.hasClass('on')){
+                deposit.removeClass('on');
+            }else{
+                deposit.addClass('on');
+            }
+        },
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
+            console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -41,7 +50,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

@@ -1,5 +1,5 @@
 <div class="header list-header">
-    <a class="hd-btn hd-backgray js-back"> <i class="icon-back icon"></i></a>
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
 	实名验证
 </div>
 <div class="index-wrapper scroll-wrapper">
@@ -19,18 +19,20 @@
         </div>
     </div>
     <div class="verifi-form">
+        <form name="verifiIdcard"  id="verifiIdcard">
         <div class="inner-input">
             <span>姓名</span>
-            <input>
+            <input type="text" name="real_name" value="<%=data.realname%>">
         </div>
         <div class="inner-input">
             <span>有效证件:</span>
-            <input>
+            <input type="text" name="idcard" value="<%=data.idcard%>">
         </div>
         <div class="inner-input">
             <span>证件号</span>
-            <input>
+            <input type="text" name="hidcard" value="<%=data.hidcard%>">
         </div>
+        </form>
         <div class="remind">
             <p>温馨提示</p>
             <p>1.温馨提示字段</p>
@@ -39,7 +41,7 @@
         </div>
     </div>
     <div class="verifi-submit">
-        <div>
+        <div class="js-submit">
             提交验证
         </div>
     </div>

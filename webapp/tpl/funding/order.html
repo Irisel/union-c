@@ -1,13 +1,13 @@
 <div class="header list-header">
-    <a class="hd-btn hd-backgray js-back"> <i class="icon-back icon"></i></a>
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
 	订单确认
 </div>
 <div class="index-wrapper scroll-wrapper">
 	<!--div class="list-loading js-list-loading">
 		正在奋力加载中
 	</div-->
+    <form id="fundingOrder" method="post" action = "/wap/account/investmoney">
     <div class="funding-order">
-        <form id="js-funding-form">
             <div class="inner-input">
                 <input placeholder="收件人姓名:" name="upayeename">
             </div>
@@ -17,7 +17,9 @@
             <div class="inner-input">
                 <input placeholder="快递地址:" name="uaddress">
             </div>
-        </form>
+            <div class="inner-input vishide">
+                <input  name="T_borrow_id" value="<%=pars.id%>">
+            </div>
     </div>
     <div class="funding-order">
         <div class="order-title"><%=data.zc_name%></div>
@@ -29,7 +31,7 @@
                         <i class="minus"></i>
                     </li>
                     <li>
-                        <input type="text" class="js-num" value="<%=data.min%>">
+                        <input name="transfer_invest_num" type="text" class="js-num" value="<%=data.min%>">
                     </li>
                     <li class="js-plus">
                         <i class="plus"></i>
@@ -41,9 +43,10 @@
             <span>订单总计:</span><span class="orange right"><%=data.d_unit%>元</span><span class="js-total orange"><%=data.d_total%></span>
         </div>
     </div>
+    </form>
     <div class="funding-order">
         <div class="inner-normal">
-            <span>账户余额</span><span class="orange">159.07元</span>
+            <span>账户余额</span><span class="orange"><%=data.y_money%>元</span>
         </div>
     </div>
     <div class="order-submit">
