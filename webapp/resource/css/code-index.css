@@ -1026,14 +1026,14 @@ textarea {
   .login-blank .login-input {
     height: 60px;
     line-height: 60px;
-    padding-left: 50px;
+    padding-left: 60px;
     padding-right: 15px;
     position: relative; }
     .login-blank .login-input i {
       height: 30px;
       width: 30px;
       position: absolute;
-      left: 5px;
+      left: 15px;
       top: 15px; }
     .login-blank .login-input input {
       width: 100%;
@@ -1042,7 +1042,7 @@ textarea {
       height: 40px;
       line-height: 40px;
       border: none;
-      font-size: 1.2em;
+      font-size: 1em;
       text-indent: 5px; }
     .login-blank .login-input.width-bottom {
       border-bottom: 1px solid #e5e5e5; }
@@ -1140,7 +1140,7 @@ textarea {
     display: block;
     margin-top: 10px;
     text-align: center;
-    font-size: 1em; }
+    font-size: 1.5em; }
 
 .qianduoduo-box {
   position: absolute;
@@ -1155,11 +1155,15 @@ textarea {
     width: 280px; }
     .qianduoduo-box .qianduoduo-logo .qianduoduo-blank {
       width: 100%;
-      height: 100px; }
+      height: 100px;
+      padding: 0 10px; }
       .qianduoduo-box .qianduoduo-logo .qianduoduo-blank .qianduoduo-inner {
         width: 50%;
         height: 100%;
         float: left; }
+        .qianduoduo-box .qianduoduo-logo .qianduoduo-blank .qianduoduo-inner.inner-logo {
+          background: url(../images/minify/qianduoduo.png) center center no-repeat;
+          background-size: contain; }
         .qianduoduo-box .qianduoduo-logo .qianduoduo-blank .qianduoduo-inner.inner-span span {
           line-height: 100px;
           height: 100%;
@@ -1170,11 +1174,11 @@ textarea {
       margin-top: 10px;
       width: 100%;
       text-align: left;
-      font-size: 1em; }
+      font-size: 1em;
+      color: #999999; }
   .qianduoduo-box span {
     width: 100%;
     display: block;
-    margin-top: 10px;
     text-align: center;
     font-size: 1em; }
   .qianduoduo-box p {
@@ -2064,3 +2068,45 @@ textarea {
   background-size: contain;
   position: relative;
   top: 4px; }
+
+.list-buy {
+  width: 100%;
+  height: 70px;
+  line-height: 2.6em;
+  text-align: center;
+  position: absolute;
+  padding: 10px 80px 10px 20px;
+  bottom: 0;
+  border-top: 1px solid #dddddd; }
+  .list-buy p {
+    display: block;
+    height: 50%;
+    line-height: 25px;
+    font-size: 1em;
+    text-align: left; }
+    .list-buy p span {
+      color: #ff6c00;
+      font-size: 1.2em; }
+      .list-buy p span.min {
+        font-size: 1em;
+        margin-right: 5px; }
+  .list-buy a.buy-button {
+    font-size: 1.2em;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    padding: 0 15px;
+    background-color: #ff6c00;
+    color: #ffffff;
+    right: 20px; }
+
+#verifi_bank .progress-bar .in-bar {
+  width: 90%; }
+
+#verifi_transfer .progress-bar .in-bar {
+  width: 50%; }
+
+#verifi_allocation .progress-bar .in-bar {
+  width: 90%; }

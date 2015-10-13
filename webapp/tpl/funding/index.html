@@ -40,8 +40,10 @@
                 <a href="#funding/detail/id:<%=data.id%>">详细信息</a><i class="btn btn-forward"></i>
             </li>
         </ul>
-        <div class="list-more">
-            <a href="#funding/order/id:<%=pars.id%>">立即参与</a>
+        <div class="list-buy">
+            <p><span class="min">¥</span><span><%=data.money%></span></p>
+            <p>每人限购<%=data.max%>份</p>
+            <a class="buy-button" href="#funding/order/id:<%=pars.id%>">立即参与</a>
         </div>
         </div>
     </div>

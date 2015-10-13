@@ -7,11 +7,18 @@
 		正在奋力加载中
 	</div-->
     <div class="progress-bar">
+        <%if(data.bank){%>
         <ul class="three-steps">
             <li>实名验证</li>
             <li>转账授权</li>
             <li>二次分配授权</li>
         </ul>
+        <%}else{%>
+        <ul class="two-steps">
+            <li>实名验证</li>
+            <li>绑定银行卡</li>
+        </ul>
+        <%}%>
         <div class="out-bar">
             <div class="in-bar">
                 <div class="circle-bar"></div>

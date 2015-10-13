@@ -1,4 +1,4 @@
-define('', '', function(require) {
+  define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/account/message.html');

@@ -24,6 +24,7 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = {};
+            t.invite = Jser.getUrlParam('invite');
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             var t1 = t.$el.find(".js-tel");
@@ -97,6 +98,7 @@ define('', '', function(require) {
 					_data[i].value = val;
 					_locData[name]=val;
 				});
+                if(t.invite)_locData['invite'] = t.invite;
 				Jser.getJSON(ST.PATH.ACTION + "/member/registor", _locData, function(result) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){

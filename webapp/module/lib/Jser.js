@@ -11,7 +11,6 @@ window.Jser = {
         lazy.each(function(i) {
             loadImg.apply(this, [size]);
         });
-
         function loadImg(size) {
             var t = this;
             var source = t.getAttribute("data-src");
@@ -29,6 +28,11 @@ window.Jser = {
                 t.setAttribute("src", "resource/images/loadbanner.png")
             }
         }
+    },
+    getUrlParam: function(name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
     },
     timestamp_format: function(timestmap){
         var  newTime = new Date(parseInt(timestmap) * 1000);
