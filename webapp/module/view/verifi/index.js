@@ -31,7 +31,7 @@ define('', '', function(require) {
 		},
         submit: function(){
             var t = this;
-		    var _data = t.$el.find("#verifiIdcard").serializeArray();
+		    var _data = t.$el.find("#js-bank-form").serializeArray();
 			var name, val;
 			var _locData={};
 			$.each(_data, function(i, item) {
@@ -60,7 +60,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars:{
-
+                next: pars.next
             }
 		});
 		return new V({

@@ -3,21 +3,20 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/verifi/allocation.html');
 	var model = new M({
-		pars: {
-
-		}
+        action:'/account/shouquan'
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
 		events: {
-            "click .js-back": "back"
+            "click .js-back": "back",
+            "click .js-submit": "submit"
 		},
 		initialize: function() {
 			var t = this;
-//			t.listenToOnce(t.model, "change:data", function() {
+			t.listenToOnce(t.model, "sync", function() {
 				t.render();
-//			});
+			});
 		},
 		back: function(){
 			window.history.back();
@@ -25,13 +24,17 @@ define('', '', function(require) {
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
 		bindEvent: function() {
 
 		},
+        submit: function(){
+            var t = this;
+            t.$el.find('#js-allocation-form') && t.$el.find('#js-allocation-form').submit();
+        },
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));

@@ -1866,12 +1866,25 @@ textarea{
   margin-bottom:0px;
   color: #666666;
   padding-left: 20px;
+  &.submit{
+    padding:0;
+    .inner-normal {
+      height:45px;
+      line-height:45px;
+      text-align:center;
+    }
+
+   }
   .inner-normal {
     @extend %blank-inner;
     @extend %white-link;
     color: #000000;
     display:block;
     border-bottom: 1px solid #eee;
+    position: relative;
+    .btn-forward{
+      top: 9.5px;
+    }
     span{
       text-align:center;
       &:first-child{

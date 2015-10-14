@@ -17,18 +17,19 @@
             </div>
         </div>
     </div>
+    <form id="js-bank-form" method="post">
     <div class="bank-form">
         <div class="inner-input lg">
             <span>卡号:</span>
-            <input>
+            <input type="text" name="account">
         </div>
         <div class="inner-input lg">
             <span>银行:</span>
-            <input>
+            <input type="text" name="bankname">
         </div>
         <div class="inner-input lg">
             <span>姓名:</span>
-            <input>
+            <input type="text">
         </div>
     </div>
     <div class="warning-info">
@@ -37,27 +38,28 @@
     <div class="bank-form">
         <div class="inner-input lg">
             <span>新卡号:</span>
-            <input>
+            <input type="text" name="account">
         </div>
         <div class="inner-input lg">
             <span>新卡号:</span>
-            <input>
+            <input type="text" name="account">
         </div>
     </div>
     <div class="bank-form">
         <div class="inner-input sg">
             <span>开户行所在省份:</span>
-            <input>
+            <input type="text" name="province">
         </div>
         <div class="inner-input sg">
             <span>开户行所在市:</span>
-            <input>
+            <input type="text" name="city">
         </div>
         <div class="inner-input sg">
             <span>开户行支行名称:</span>
-            <input>
+            <input type="text" name="bankaddres">
         </div>
     </div>
+    </form>
     <div class="warning-info">
         <span class="orange">入不确定,请拨打开户行的客户热线咨询。</span>
     </div>
@@ -68,7 +70,7 @@
         </div>
     </div>
     <div class="verifi-submit">
-        <div>
+        <div class="js-submit">
             提交，并开通托管账户
         </div>
     </div>

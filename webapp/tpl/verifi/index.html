@@ -7,16 +7,16 @@
 		正在奋力加载中
 	</div-->
     <div class="progress-bar">
-        <%if(data.bank){%>
+        <%if(pars.next=='bank'){%>
+        <ul class="two-steps">
+            <li>实名验证</li>
+            <li>绑定银行卡</li>
+        </ul>
+        <%}else{%>
         <ul class="three-steps">
             <li>实名验证</li>
             <li>转账授权</li>
             <li>二次分配授权</li>
-        </ul>
-        <%}else{%>
-        <ul class="two-steps">
-            <li>实名验证</li>
-            <li>绑定银行卡</li>
         </ul>
         <%}%>
         <div class="out-bar">
@@ -29,15 +29,27 @@
         <form name="verifiIdcard"  id="verifiIdcard">
         <div class="inner-input">
             <span>姓名</span>
+            <%if(data.id_status=='0'){%>
             <input type="text" name="real_name" value="<%=data.realname%>">
+            <%}else{%>
+            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
+            <%}%>
         </div>
         <div class="inner-input">
             <span>有效证件:</span>
+            <%if(data.id_status=='0'){%>
             <input type="text" name="idcard" value="<%=data.idcard%>">
+            <%}else{%>
+            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
+            <%}%>
         </div>
         <div class="inner-input">
             <span>证件号</span>
+            <%if(data.id_status=='0'){%>
             <input type="text" name="hidcard" value="<%=data.hidcard%>">
+            <%}else{%>
+            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
+            <%}%>
         </div>
         </form>
         <div class="remind">
@@ -47,9 +59,11 @@
             <p>3.温馨提示字段</p>
         </div>
     </div>
+    <%if(data.id_status=='0'){%>
     <div class="verifi-submit">
         <div class="js-submit">
             提交验证
         </div>
     </div>
+    <%}%>
 </div>

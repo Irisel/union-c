@@ -4,7 +4,7 @@ define('', '', function(require) {
 
 	var H = require('text!../../../tpl/financial/order.html');
 	var model = new M({
-        action: '/member/invest',
+        action: '/account/invest',
         isInvesting: false
 	});
 	var V = B.View.extend({

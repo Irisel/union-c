@@ -1446,10 +1446,19 @@ textarea {
   margin-bottom: 0px;
   color: #666666;
   padding-left: 20px; }
+  .setting-detail.submit {
+    padding: 0; }
+    .setting-detail.submit .inner-normal {
+      height: 45px;
+      line-height: 45px;
+      text-align: center; }
   .setting-detail .inner-normal {
     color: #000000;
     display: block;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #eee;
+    position: relative; }
+    .setting-detail .inner-normal .btn-forward {
+      top: 9.5px; }
     .setting-detail .inner-normal span {
       text-align: center; }
       .setting-detail .inner-normal span:first-child {

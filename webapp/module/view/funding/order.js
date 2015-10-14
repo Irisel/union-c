@@ -3,7 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/funding/order.html');
 	var model = new M({
-        action: '/member/zinvest'
+        action: '/account/zinvest'
 	});
 	var V = B.View.extend({
 		model: model,
