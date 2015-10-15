@@ -2,15 +2,19 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/verifi/bank.html');
+    var Banks = require("view/verifi/bank/option");
 	var model = new M({
         action:'/account/shouquan'
 	});
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        account: '',
+        account_show: '',
 		events: {
             "click .js-back": "back",
-            "click .js-submit": "submit"
+            "click .js-submit": "submit",
+            "input .js-account-show": "fill"
 		},
 		initialize: function() {
 			var t = this;
@@ -18,6 +22,35 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+        fill: function(e){
+            var t = this;
+            var input = $(e.currentTarget).val();
+            var input_new, account_new = t.account;
+            if(input && input.length){
+                if(input.length > t.account.length){
+                    account_new+= input.substring(t.account.length);
+                }else{
+                    account_new = t.account.substring(0, input.length);
+                }
+                var m = input.substring(0, 13).replace(/./g, "*");
+                input_new =  m + input.substr(13, input.length);
+            }else{
+                account_new = '';
+            }
+            if((!isNaN(parseInt(account_new)) || !account_new)){
+                t.account = parseInt(account_new).toString();
+                console.log(t.account, input_new);
+                if(t.account.length != input_new.length){
+                    $(e.currentTarget).val(t.account_show);
+                }else{
+                    t.account_show = input_new;
+                    $(e.currentTarget).val(t.account_show);
+                }
+            }else{
+                $(e.currentTarget).val(t.account_show);
+            }
+            t.$el.find('.js-account').val(t.account);
+        },
 		back: function(){
 			window.history.back();
 		},
@@ -26,7 +59,11 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
 			var html = _.template(t.template, data);
-			t.$el.show().html(html);
+			t.$el.html(html);
+			new Banks({
+				el: t.$el.find(".select-bank")
+			});
+            t.$el.show();
 		},
         submit: function(){
             var t = this;

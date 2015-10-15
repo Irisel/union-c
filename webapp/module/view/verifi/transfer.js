@@ -18,6 +18,9 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+        fill: function(){
+
+        },
 		back: function(){
 			window.history.back();
 		},

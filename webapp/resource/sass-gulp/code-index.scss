@@ -1691,15 +1691,30 @@ textarea{
       position: absolute;
       left: 10px;
     }
+    select{
+      width: 100%;
+      height: 46px;
+      top: 2px;
+      position: relative;
+      border: none;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      font-size:1em;
+      background: url(../images/minify/select-btn.png) no-repeat scroll right center transparent;
+    }
     input{
       line-height: 46px;
-      font-size: 0.8em;
+      font-size: 1em;
       position: relative;
       width: 100%;
       top: 2px;
       display: inline-block;
       border: none;
       text-align: left;
+      &.vishide{
+        display:none;
+      }
     }
   }
 }
