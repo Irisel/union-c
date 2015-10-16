@@ -67,7 +67,7 @@ window.Jser = {
         return window.localStorage.getItem(key) || "";
     },
     getJSON: function(url, data, sfn, errfn, method, datatype, isload){
-        var t = this,
+        var t = this,traditional = false,
             _data = "";
         data = data || {};
         if (typeof data == "string") {
@@ -75,6 +75,10 @@ window.Jser = {
         } else {
             _data = data;
         }
+        console.log(_data);
+        $.each(_data, function(i, item){
+            if(Object.prototype.toString.call(item) === '[object Array]')traditional = true;
+        });
         isload && $("#js-loading").show();
 
         $("body").queue(function() {
@@ -82,6 +86,7 @@ window.Jser = {
                 type: method || "get",
                 dataType: datatype || 'json',
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                traditional: traditional ,
                 url: url,
                 data: _data || "",
                 error: function(e, xhr, opt) {

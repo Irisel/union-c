@@ -1693,15 +1693,16 @@ textarea{
     }
     select{
       width: 100%;
-      height: 46px;
+      height: 44px;
       top: 2px;
       position: relative;
       border: none;
       appearance: none;
       -moz-appearance: none;
       -webkit-appearance: none;
-      font-size:1em;
+      font-size: 1em;
       background: url(../images/minify/select-btn.png) no-repeat scroll right center transparent;
+      background-size: 14px auto;
     }
     input{
       line-height: 46px;
@@ -2239,6 +2240,7 @@ textarea{
 .scroll-wrapper{
   top: 40px !important;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .hd-btn {
   background: url(../images/minify/icon-btn.png) 0 center no-repeat;
@@ -2485,8 +2487,8 @@ textarea{
   background-color: #ffffff;
   width:100%;
   color: #666666;
-  padding:1px;
   position:relative;
+  padding-bottom: 50px;
   .inner-normal{
     position: relative;
     display: block;
@@ -2501,7 +2503,12 @@ textarea{
       top: 0;
       bottom: 0;
       border-right: 1px solid #e5e5e5;
-      background: url(../images/minify/presentu.png) 0 0 no-repeat;
+      &.unused{
+        background: url(../images/minify/presentu.png) 0 0 no-repeat;
+      }
+      &.used{
+        background: url(../images/minify/presentc.png) 0 0 no-repeat;
+      }
       background-size:100% auto;
       span{
         font-size: 3em;
@@ -2528,11 +2535,17 @@ textarea{
         font-size: 1em;
         text-indent: 10px;
         margin-top: 0.4em;
+        &.used{
+          color: #c0c0c0;
+        }
       }
       .present-info{
         line-height: 1.5em;
         font-size: 1em;
         padding-left:10px;
+        &.used{
+          color: #c0c0c0;
+        }
       }
       .present-title{
         height: 2em;
@@ -2540,6 +2553,9 @@ textarea{
         font-size: 1.6em;
         color: #ff6c00;
         text-indent: 10px;
+        &.used{
+          color: #c0c0c0;
+        }
       }
     }
   }

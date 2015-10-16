@@ -195,9 +195,16 @@
 		},
 		doRemove: function(e) {
 			var t = this;
-			var $elem = $(e.currentTarget);
+			var id = $(e.currentTarget).data('id');
+            var ids = new Array();
+            ids.push(id);
 			Jser.confirm("确定要删除此信息么？", function() {
+				Jser.getJSON(ST.PATH.ACTION + "/account/delmsg", {'idarr' :ids}, function(result) {
+                    console.log(result);
+                    t.syncRender();
+				}, function() {
 
+				}, "post");
 			}, function(){
 
             });
