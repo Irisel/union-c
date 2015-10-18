@@ -22,6 +22,18 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
+            data.data.sort(function(a, b){
+                if(a.status != b.status){
+                    if(a.status=='1')return false;
+                }
+                if(a.expired_day != b.expired_day){
+                    if(parseInt(a.expired_day) > parseInt(b.expired_day))return false;
+                }
+                if(a.money != b.money){
+                    if(parseInt(a.money) > parseInt(b.money))return false;
+                }
+                return true;
+            });
             console.log(data);
             t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);

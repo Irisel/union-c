@@ -31,13 +31,17 @@ define('', '', function(require) {
 			t.$el.show().html(html);
 		},
         chargetype: function(e){
+            var t = this;
             var chargetype = $(e.currentTarget);
             if(chargetype.data('type') == 'bankc'){
-                $('.js-shortcutc').removeClass('on');
+                t.$el.find('.js-shortcutc').removeClass('on');
+                t.$el.find('.js-rechargeType').val('');
             }else if (chargetype.data('type') == 'shortcutc'){
-                $('.js-bankc').removeClass('on');
+                t.$el.find('.js-bankc').removeClass('on');
+                t.$el.find('.js-rechargeType').val('2');
+                console.log(t.$el.find('.js-rechargeType').val());
             }
-            $('.js-' + chargetype.data('type')).addClass('on');
+            t.$el.find('.js-' + chargetype.data('type')).addClass('on');
         },
 		syncRender: function() {
 			var t = this;

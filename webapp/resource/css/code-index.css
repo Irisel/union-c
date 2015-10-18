@@ -188,7 +188,8 @@ textarea {
       .wrap #js-wrap section .index-wrapper {
         overflow-y: scroll; }
       .wrap #js-wrap section .list-wrapper {
-        background-color: #ffffff; }
+        background-color: #ffffff;
+        padding-bottom: 50px; }
 
 .slider-box {
   height: 120px;
@@ -322,9 +323,9 @@ textarea {
   overflow: hidden;
   font-size: 1.2em; }
 
-.list-purchase .purchase .invest-button a, .list-link li a, .list-more a, .order-submit div a, .setting-detail .inner-normal, .list-invest .invest .invest-button a, .hd-link, .hd-linkgray {
+.list-purchase .purchase .invest-button a, .list-link li a, .list-more a, .order-submit div a, .ensure-submit div a, .setting-detail .inner-normal, .list-invest .invest .invest-button a, .hd-link, .hd-linkgray {
   color: #ffffff; }
-  .list-purchase .purchase .invest-button a:active, .list-link li a:active, .list-more a:active, .order-submit div a:active, .setting-detail .inner-normal:active, .list-invest .invest .invest-button a:active, .hd-link:active, .hd-linkgray:active, .list-purchase .purchase .invest-button a:hover, .list-link li a:hover, .list-more a:hover, .order-submit div a:hover, .setting-detail .inner-normal:hover, .list-invest .invest .invest-button a:hover, .hd-link:hover, .hd-linkgray:hover {
+  .list-purchase .purchase .invest-button a:active, .list-link li a:active, .list-more a:active, .order-submit div a:active, .ensure-submit div a:active, .setting-detail .inner-normal:active, .list-invest .invest .invest-button a:active, .hd-link:active, .hd-linkgray:active, .list-purchase .purchase .invest-button a:hover, .list-link li a:hover, .list-more a:hover, .order-submit div a:hover, .ensure-submit div a:hover, .setting-detail .inner-normal:hover, .list-invest .invest .invest-button a:hover, .hd-link:hover, .hd-linkgray:hover {
     outline: 0; }
 
 .list-header {
@@ -501,6 +502,19 @@ textarea {
   line-height: 45px;
   border-radius: 6px;
   font-size: 1.2em; }
+
+.ensure-submit {
+  position: fixed;
+  width: 100%;
+  bottom: 0; }
+  .ensure-submit div {
+    margin: 20px;
+    text-align: center;
+    background-color: #ff7d21;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 6px;
+    font-size: 1.2em; }
 
 .index-products {
   height: 40px;
@@ -1238,7 +1252,7 @@ textarea {
     height: 16px; }
     .progress-bar ul li {
       display: inline-block;
-      font-size: 0.5em;
+      font-size: 0.8em;
       float: left;
       line-height: 16px;
       height: 100%; }
@@ -1313,7 +1327,7 @@ textarea {
     left: 10px; }
   .bank-form .inner-input select {
     width: 100%;
-    height: 44px;
+    height: 46px;
     top: 2px;
     position: relative;
     border: none;
@@ -1638,9 +1652,11 @@ textarea {
         border: none; }
         .deposit-detail .inner-normal.on .circle-toggle .body .toggle {
           position: absolute;
-          height: 100%;
-          left: -20px;
-          right: -20px; }
+          height: 60px;
+          left: -40px;
+          right: -40px;
+          top: -10px;
+          z-index: 100; }
       .deposit-detail .inner-normal.on .circle-toggle .circle:first-child {
         left: -20px;
         border: none;
@@ -1736,7 +1752,8 @@ textarea {
 
 .scroll-wrapper {
   top: 40px !important;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .hd-btn {
   background: url(../images/minify/icon-btn.png) 0 center no-repeat;
@@ -1922,7 +1939,9 @@ textarea {
         width: 100%;
         float: left;
         color: #333333;
-        font-size: 0.5em; }
+        font-size: 12px; }
+        .list-summaries ul li a .summary span:first-child {
+          font-size: 16px; }
 
 .about-more {
   width: 100%;
@@ -1960,7 +1979,18 @@ textarea {
     line-height: 30px;
     font-size: 0.9em;
     margin: 10px 10px;
-    border: 1px solid #eee; }
+    border: 1px solid #eee;
+    min-height: 108px; }
+    .presents .inner-normal.chosen {
+      border: 1px solid #32b16c; }
+      .presents .inner-normal.chosen .present-mark {
+        background: url(../images/minify/present_mark.png) 0 0 no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px; }
     .presents .inner-normal .present-img {
       width: 40%;
       position: absolute;
@@ -1969,9 +1999,11 @@ textarea {
       border-right: 1px solid #e5e5e5;
       background-size: 100% auto; }
       .presents .inner-normal .present-img.unused {
-        background: url(../images/minify/presentu.png) 0 0 no-repeat; }
+        background: url(../images/minify/presentu.png) 0 0 no-repeat;
+        background-size: 100% auto; }
       .presents .inner-normal .present-img.used {
-        background: url(../images/minify/presentc.png) 0 0 no-repeat; }
+        background: url(../images/minify/presentc.png) 0 0 no-repeat;
+        background-size: 100% auto; }
       .presents .inner-normal .present-img span {
         font-size: 3em;
         width: 100%;

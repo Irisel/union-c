@@ -1,0 +1,24 @@
+        <%if(data.length){%>
+            <%_.each(data,function(item){%>
+            <li>
+                <div class="detail-group">
+                    <ul>
+                        <li>
+                            <span class="tip"><%=item.ymd%></span>
+                            <span class="tip"><%=item.hms%></span>
+                        </li>
+                        <li class="single">
+                            <span><%=item.type%></span>
+                        </li>
+                        <li class="single">
+                            <span class="orange"><%=item.money%></span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <%})%>
+        <%}else{%>
+	        <li class="notice">
+		        <p style="text-align:center;margin-top:50px;">还没有记录。</p>
+	        </li>
+        <%}%>

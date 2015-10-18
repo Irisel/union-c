@@ -1,0 +1,48 @@
+<div class="header list-header">
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
+	    明细
+</div>
+<div class="list-wrapper scroll-wrapper">
+	<!--div class="list-loading js-list-loading">
+		正在奋力加载中
+	</div-->
+    <div class="label-group">
+        <ul>
+            <li>
+                <span>时间</span>
+            </li>
+            <li>
+                <span>类型</span>
+            </li>
+            <li>
+                <span>金额</span>
+            </li>
+        </ul>
+    </div>
+    <ul class="list-charge">
+        <%if(data.length){%>
+            <%_.each(data,function(item){%>
+            <li>
+                <div class="detail-group">
+                    <ul>
+                        <li>
+                            <span class="tip"><%=item.ymd%></span>
+                            <span class="tip"><%=item.hms%></span>
+                        </li>
+                        <li class="single">
+                            <span><%=item.type%></span>
+                        </li>
+                        <li class="single">
+                            <span class="orange"><%=item.money%></span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <%})%>
+        <%}else{%>
+	        <li class="notice">
+		        <p style="text-align:center;margin-top:50px;">还没有记录。</p>
+	        </li>
+        <%}%>
+    </ul>
+</div>

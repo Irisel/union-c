@@ -25,7 +25,7 @@ window.Jser = {
                 }
             };
             img.onerror = function() {
-                t.setAttribute("src", "resource/images/loadbanner.png")
+                t.setAttribute("src", "resource/images/minify/loadbanner.png")
             }
         }
     },

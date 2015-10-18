@@ -11,7 +11,8 @@ define('', '', function(require) {
 		model: model,
 		template: H,
 		events: {
-            "click .js-back": "back"
+            "click .js-back": "back",
+            'click .js-logout': "logout"
 		},
 		initialize: function() {
 			var t = this;
@@ -35,6 +36,16 @@ define('', '', function(require) {
 			$.extend(data, pars);
 			t.model.set("pars", data);
 		},
+        logout: function(){
+            Jser.getJSON(ST.PATH.ACTION + '/account/actlogout', {}, function(result) {
+                console.log(result);
+                Jser.alert(result.info, function(){
+                    window.location.href="#index/index"
+                });
+			}, function() {
+                Jser.alert('登出失败！');
+			}, 'post');
+        },
 		back: function(){
 			window.history.back();
 		}

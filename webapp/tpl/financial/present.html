@@ -1,0 +1,49 @@
+<div class="header list-header">
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon" href="#financial/order/id:<%=pars.id%>/money:<%=pars.money%>"></a></i>
+	我的红包
+</div>
+<div class="list-wrapper scroll-wrapper">
+	<!--div class="list-loading js-list-loading">
+		正在奋力加载中
+	</div-->
+    <ul class="presents">
+        <%if(data.rewards.length){%>
+            <%_.each(data.rewards,function(item){%>
+                <%if(item.choosen){%>
+                    <li class="inner-normal chosen js-choose" data-id="<%=item.id%>">
+                        <div class="present-img unused">
+                            <span class="unused"><%=item.money%></span>
+                        </div>
+                        <div class="present">
+                            <div class="present-title"><span><%=item.type%></span></div>
+                            <div class="present-info"><span><%=item.info%></span></div>
+                            <div class="present-date"><span>有效期至<%=item.expired_day%></span></div>
+                        </div>
+                        <div class="present-mark"></div>
+                    </li>
+                <%}else{%>
+                    <li class="inner-normal js-choose" data-id="<%=item.id%>">
+                        <div class="present-img unused">
+                            <span class="unused"><%=item.money%></span>
+                        </div>
+                        <div class="present">
+                        <div class="present-title"><span><%=item.type%></span></div>
+                        <div class="present-info"><span><%=item.info%></span></div>
+                        <div class="present-date"><span>有效期至<%=item.expired_day%></span></div>
+                        </div>
+                        <div class="present-mark"></div>
+                    </li>
+                <%}%>
+            <%})%>
+        <%}else{%>
+	        <li>
+		        <p style="text-align:center;margin-top:50px;">还没有红包。</p>
+	        </li>
+        <%}%>
+    </ul>
+</div>
+<div class="ensure-submit">
+    <div>
+        <a class="js-ensure">确认</a>
+    </div>
+</div>

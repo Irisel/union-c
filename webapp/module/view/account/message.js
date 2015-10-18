@@ -31,9 +31,9 @@
                 t.checkLogin(result.status == "0");
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".message-detail").html(_html);
+                t.bindEvent();
 			}, function() {
-                var _html = _.template(list_tpl, _data);
-			    t.$el.find(".message-detail").html(_html);
+                Jser.alert('删除失败！');
 			});
             t.$el.show();
 		},

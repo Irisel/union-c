@@ -3,6 +3,7 @@ define('', '', function(require) {
 	var M = require('base/model');
 	var H = require('text!../../../tpl/verifi/bank.html');
     var Banks = require("view/verifi/bank/option");
+    var Locations = require("view/verifi/bank/location");
 	var model = new M({
         action:'/account/shouquan'
 	});
@@ -14,7 +15,7 @@ define('', '', function(require) {
 		events: {
             "click .js-back": "back",
             "click .js-submit": "submit",
-            "input .js-account-show": "fill"
+            "change .js-account-show": "fill"
 		},
 		initialize: function() {
 			var t = this;
@@ -63,11 +64,14 @@ define('', '', function(require) {
 			new Banks({
 				el: t.$el.find(".select-bank")
 			});
+			new Locations({
+				el: t.$el.find(".select-location")
+			});
             t.$el.show();
 		},
         submit: function(){
             var t = this;
-		    var _data = t.$el.find("#verifiIdcard").serializeArray();
+		    var _data = t.$el.find("#js-bank-form").serializeArray();
 			var name, val;
 			var _locData={};
 			$.each(_data, function(i, item) {

@@ -60,7 +60,7 @@ define('', '', function(require) {
 					_locData[name]=val;
 				});
 				Jser.getJSON(ST.PATH.ACTION + "/member/login", _locData, function(data) {
-                    if(data.status == 0)Jser.error(t.$el.find(".js-error"), "*用户名不存在!");
+                    if(data.status == 0)Jser.error(t.$el.find(".js-error"), "*用户名或密码错误!");
 					Jser.setItem("username", _locData["user_name"]);
 					Jser.setItem("password",_locData["pass"]);
                     if(data.status == 1){

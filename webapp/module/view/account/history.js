@@ -1,11 +1,11 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/account/chargehistory.html');
-    var list_tpl = require('text!../../../tpl/account/chargehistory/list.html');
+	var H = require('text!../../../tpl/account/history.html');
+    var list_tpl = require('text!../../../tpl/account/history/list.html');
     var Login = require("view/login/index");
 	var model = new M({
-        action: '/account/c_record'
+        action: '/account/history'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -52,7 +52,7 @@ define('', '', function(require) {
             console.log('syncReader');
 			var t = this;
             var _data = { data: []};
-            Jser.getJSON(ST.PATH.ACTION + '/account/c_record', {}, function(result) {
+            Jser.getJSON(ST.PATH.ACTION + '/account/history', {}, function(result) {
                 if(result.status == "1")
                 _data = result;
                 t.checkLogin(result.status == "0");
