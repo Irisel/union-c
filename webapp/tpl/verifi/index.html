@@ -1,5 +1,5 @@
 <div class="header list-header">
-    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon" href="#account/index"></a></i>
 	实名验证
 </div>
 <div class="index-wrapper scroll-wrapper">
@@ -29,37 +29,29 @@
         <form name="verifiIdcard"  id="verifiIdcard">
         <div class="inner-input">
             <span>姓名</span>
-            <%if(data.id_status=='0'){%>
+            <%if(data.id_status!='1'){%>
             <input type="text" name="real_name" value="<%=data.realname%>">
             <%}else{%>
-            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
+            <input type="text" value="<%=data.realname%>" disabled>
             <%}%>
         </div>
         <div class="inner-input">
-            <span>有效证件:</span>
-            <%if(data.id_status=='0'){%>
+            <span>身份证号:</span>
+            <%if(data.id_status!='1'){%>
             <input type="text" name="idcard" value="<%=data.idcard%>">
             <%}else{%>
-            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
-            <%}%>
-        </div>
-        <div class="inner-input">
-            <span>证件号</span>
-            <%if(data.id_status=='0'){%>
-            <input type="text" name="hidcard" value="<%=data.hidcard%>">
-            <%}else{%>
-            <input type="text" name="hidcard" value="<%=data.hidcard%>" disabled>
+            <input type="text" value="<%=data.hidcard%>" disabled>
             <%}%>
         </div>
         </form>
         <div class="remind">
             <p>温馨提示</p>
-            <p>1.温馨提示字段</p>
-            <p>2.温馨提示字段</p>
-            <p>3.温馨提示字段</p>
+            <p>1、我们将通过全国公民身份信息中心（NCIIC）系统对您提交的身份进行审核。</p>
+            <p>2、实名认证是您绑定银行卡和使用联合金融系统核心功能的必要条件,提现时的银行帐户名以您提交的认证信息为准。</p>
+            <p>3、如果您在验证过程中，出现任何问题，请联系网站客服。</p>
         </div>
     </div>
-    <%if(data.id_status=='0'){%>
+    <%if(data.id_status!='1'){%>
     <div class="verifi-submit">
         <div class="js-submit">
             提交验证

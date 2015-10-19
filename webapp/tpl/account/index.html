@@ -5,8 +5,8 @@
     <div class="account">
         <div class="header account-header">
             <i class="hd-btn hd-back"> <a class="icon-back icon js-back"></a></i>
-	        	我的账户
-	        <a class="hd-link" href="#account/detail">明细</a>
+	        	<%if(data.tel){%><%=data.tel%><%}else{%>我的账户<%}%>
+	        <a class="hd-link" href="#account/history">明细</a>
         </div>
         <div class="list-account">
             <div class="account-info">
@@ -21,19 +21,19 @@
                 <ul class="addition-info">
                     <li>
                         <span>资产总额</span>
-                        <span>¥<%=data.total_money%></span>
+                        <span>¥<%if(!parseInt(data.total_money)>0){%>0.00<%}else{%><%=data.total_money%><%}%></span>
                     </li>
                     <li>
                         <span>可用余额</span>
-                        <span>¥<%=data.h_minfo%></span>
+                        <span>¥<%if(!parseInt(data.h_minfo)>0){%>0.00<%}else{%><%=data.h_minfo%><%}%></span>
                     </li>
                     <li>
                         <span>代售本息</span>
-                        <span>¥<%=data.t_minfo%></span>
+                        <span>¥<%if(!parseInt(data.t_minfo)>0){%>0.00<%}else{%><%=data.t_minfo%><%}%></span>
                     </li>
                     <li>
                         <span>冻结余额</span>
-                        <span>¥<%=data.c_minfo%></span>
+                        <span>¥<%if(!parseInt(data.c_minfo)>0){%>0.00<%}else{%><%=data.c_minfo%><%}%></span>
                     </li>
                 </ul>
             </div>

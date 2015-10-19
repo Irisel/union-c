@@ -51,6 +51,10 @@ define('', '', function(require) {
             Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {
                 if(result.status == "1")
                 _data = result;
+                if(_data.data && _data.data.id_status!="1"){
+                    window.location.href="#verifi/index";
+                    return;
+                }
                 t.$el.find('.js-withdrawAmount').html(_data.data);
 			}, function() {
                 t.$el.find('.js-withdrawAmount').html(_data.data);

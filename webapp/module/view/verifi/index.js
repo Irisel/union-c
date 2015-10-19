@@ -25,13 +25,14 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
+            if(!data.data)data.data = {};
             console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
         submit: function(){
             var t = this;
-		    var _data = t.$el.find("#js-bank-form").serializeArray();
+		    var _data = t.$el.find("#verifiIdcard").serializeArray();
 			var name, val;
 			var _locData={};
 			$.each(_data, function(i, item) {
@@ -41,8 +42,8 @@ define('', '', function(require) {
 				_locData[name]=val;
 			});
             console.log(_locData);
-            Jser.getJSON(ST.PATH.ACTION + '/account/idcard', _locData, function(result) {
-                console.log(result);
+            Jser.getJSON(ST.PATH.ACTION + '/account/saveid', _locData, function(result) {
+                window.location.href="#verifi/transfer";
 			}, function() {
 
 			}, 'post');

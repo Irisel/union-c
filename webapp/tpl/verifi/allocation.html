@@ -1,5 +1,5 @@
 <div class="header list-header">
-    <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
+    <i class="hd-btn hd-backgray"> <a class="icon-back icon" href="#account/index"></a></i>
 	二次分配授权
 </div>
 <div class="index-wrapper scroll-wrapper">
@@ -18,6 +18,7 @@
             </div>
         </div>
     </div>
+    <%if(data.secondary_percent!='1'){%>
     <div class="qianduoduo-box">
         <div class="qianduoduo-logo logo">
             <div class="qianduoduo-blank">
@@ -39,4 +40,5 @@
             </div>
         </div>
     </div>
+    <%}%>
 </div>

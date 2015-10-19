@@ -22,6 +22,7 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
+            if(!(Object.prototype.toString.call(data.data) === '[object Array]'))data.data = [];
             data.data.sort(function(a, b){
                 if(a.status != b.status){
                     if(a.status=='1')return false;

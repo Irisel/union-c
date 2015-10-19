@@ -70,6 +70,7 @@ define(function(require, exports) {
             //动态生成容器;
             if (!el.length) B.$("<section />").attr("id", md + "_" + ac).appendTo($("#js-wrap"));
             B.$("#js-wrap").children("section").hide();
+            $(".js-wrapper .pop").hide();
             //加载model目录下对应的模块
 
             var view = md + ac;

@@ -190,6 +190,8 @@ textarea {
       .wrap #js-wrap section .list-wrapper {
         background-color: #ffffff;
         padding-bottom: 50px; }
+        .wrap #js-wrap section .list-wrapper.selection {
+          padding-bottom: 85px; }
 
 .slider-box {
   height: 120px;
@@ -506,7 +508,8 @@ textarea {
 .ensure-submit {
   position: fixed;
   width: 100%;
-  bottom: 0; }
+  bottom: 0;
+  background-color: #ffffff; }
   .ensure-submit div {
     margin: 20px;
     text-align: center;
@@ -1971,11 +1974,12 @@ textarea {
   width: 100%;
   color: #666666;
   position: relative;
-  padding-bottom: 50px; }
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
   .presents .inner-normal {
     position: relative;
     display: block;
-    height: 100%;
     line-height: 30px;
     font-size: 0.9em;
     margin: 10px 10px;

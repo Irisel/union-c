@@ -224,6 +224,9 @@ textarea{
         @extend %wrapper;
         background-color: #ffffff;
         padding-bottom:50px;
+        &.selection{
+          padding-bottom:85px;
+        }
       }
     }
   }
@@ -639,6 +642,7 @@ textarea{
   position: fixed;
   width: 100%;
   bottom: 0;
+  background-color: #ffffff;
   div {
     margin: 20px;
     text-align: center;
@@ -2512,7 +2516,9 @@ textarea{
   width:100%;
   color: #666666;
   position:relative;
-  padding-bottom: 50px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   .inner-normal{
     &.chosen{
       border:1px solid #32b16c;
@@ -2528,7 +2534,6 @@ textarea{
     }
     position: relative;
     display: block;
-    height: 100%;
     line-height: 30px;
     font-size: 0.9em;
     margin: 10px 10px;
