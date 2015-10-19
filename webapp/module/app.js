@@ -51,7 +51,20 @@ define(function(require, exports) {
             this.loadmodel('index', 'index');
         },
         //按照module/action(/conditions) 格式
-        loadmodel: function(md, ac, con) {
+        loadmodel: function(_md, _ac, con) {
+            var md = _md, ac = _ac;
+            if(Jser.getUrlParam('views') && Jser.getUrlParam('action') && !window.location.hash){
+                md = Jser.getUrlParam('views');
+                ac = Jser.getUrlParam('action');
+                var path = window.location.pathname + '#' + Jser.getUrlParam('views') + '/' + Jser.getUrlParam('action');
+                if (typeof history.replaceState === 'undefined') {
+                    window.location.href = window.location.host + path;
+                    return;
+                }else{
+                    window.history.replaceState(null, null, path);
+                    console.log('replace');
+                }
+            }
             var t = this;
             t.nav.initNav(md);
             if (!ac) ac = "index";

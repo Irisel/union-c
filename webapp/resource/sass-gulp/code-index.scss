@@ -223,7 +223,9 @@ textarea{
       .list-wrapper {
         @extend %wrapper;
         background-color: #ffffff;
-        padding-bottom:50px;
+        &.single{
+          padding-bottom:50px;
+        }
         &.selection{
           padding-bottom:85px;
         }
@@ -662,7 +664,7 @@ textarea{
   background-color: #f6f6f6;
   line-height: 40px;
   padding: 0 10px;
-  font-size: 0.5em;
+  font-size: 0.8em;
   .label{
     display:inline-block;
     float:left;
@@ -2768,7 +2770,15 @@ textarea{
 #verifi_transfer{
   .progress-bar{
     .in-bar{
-        width: 50%;
+        width: 63%;
+    }
+  }
+}
+
+#verifi_access{
+  .progress-bar{
+    .in-bar{
+        width: 38%;
     }
   }
 }

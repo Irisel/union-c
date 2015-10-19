@@ -188,8 +188,9 @@ textarea {
       .wrap #js-wrap section .index-wrapper {
         overflow-y: scroll; }
       .wrap #js-wrap section .list-wrapper {
-        background-color: #ffffff;
-        padding-bottom: 50px; }
+        background-color: #ffffff; }
+        .wrap #js-wrap section .list-wrapper.single {
+          padding-bottom: 50px; }
         .wrap #js-wrap section .list-wrapper.selection {
           padding-bottom: 85px; }
 
@@ -524,7 +525,7 @@ textarea {
   background-color: #f6f6f6;
   line-height: 40px;
   padding: 0 10px;
-  font-size: 0.5em; }
+  font-size: 0.8em; }
   .index-products .label {
     display: inline-block;
     float: left; }
@@ -2174,7 +2175,10 @@ textarea {
   width: 90%; }
 
 #verifi_transfer .progress-bar .in-bar {
-  width: 50%; }
+  width: 63%; }
+
+#verifi_access .progress-bar .in-bar {
+  width: 38%; }
 
 #verifi_allocation .progress-bar .in-bar {
   width: 90%; }
