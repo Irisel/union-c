@@ -22,28 +22,35 @@ define('', '', function(require) {
 			});
 		},
 		//待优化
+        ifaccess: function(data){
+            if(data.data.id_status!="1"){
+                Jser.alert("请先实名认证!", function() {
+                    window.location.href="#verifi/index";
+                });
+                return true;
+            }
+            if(data.data.invest_auth!="1"){
+                Jser.alert("请先开通转账授权!", function() {
+                   window.location.href="#verifi/transfer";
+                });
+                return true;
+            }
+            if(data.data.secondary_percent!="1"){
+                Jser.alert("请先开通二次分配授权!", function() {
+                   window.location.href="#verifi/allocation";
+                });
+                return true;
+            }
+            return false;
+        },
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
             console.log(data);
             if(!(t.checkLogin(data.status == "0")) && data.data){
-                if(data.data.id_status!="1"){
-                    Jser.alert("请先实名认证!", function() {
-                        window.location.href="#verifi/index";
-                    });
-                    return;
-                }
-                if(data.data.invest_auth!="1"){
-                    Jser.alert("请先开通转账授权!", function() {
-                        window.location.href="#verifi/transfer";
-                    });
-                    return;
-                }
-                if(data.data.secondary_percent!="1"){
-                    Jser.alert("请先开通二次分配授权!", function() {
-                        window.location.href="#verifi/allocation";
-                    });
-                }
+                if(t.ifaccess(data))return;
+            }else{
+                return
             }
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
@@ -68,23 +75,7 @@ define('', '', function(require) {
                 if(result.status == "1")
                 _data = result;
                 if(!(t.checkLogin(_data.status == "0")) && _data.data){
-                    if(_data.data.id_status!="1"){
-                        Jser.alert("请先实名认证!", function() {
-                            window.location.href="#verifi/index";
-                        });
-                        return;
-                    }
-                    if(_data.data.invest_auth!="1"){
-                        Jser.alert("请先开通转账授权!", function() {
-                            window.location.href="#verifi/transfer";
-                        });
-                        return;
-                    }
-                    if(_data.data.secondary_percent!="1"){
-                        Jser.alert("请先开通二次分配授权!", function() {
-                            window.location.href="#verifi/allocation";
-                        });
-                    }
+                    if(t.ifaccess(_data))return;
                 }
 			}, function() {
 
@@ -112,11 +103,17 @@ define('', '', function(require) {
             if(t.model.isCharging)return;
             var money = t.$el.find(".js-money").val();
             money = parseInt(money);
+            var re = /^((\d+)|(\d+\.\d{1,2}))$/ ;
+            console.log(money);
             if(isNaN(money)){
-                Jser.error(t.$el.find(".js-error"), "*请输入正确的数字");
+                Jser.error(t.$el.find(".js-error"), "*请输入正确的金额！");
                 return;
-            }else if (money<=0){
-                Jser.error(t.$el.find(".js-error"), "*请输入正确的数字");
+            }else if (!re.test(money)){
+                Jser.error(t.$el.find(".js-error"), "*请输入正确的金额, 允许保留两位小数！");
+                return
+            }else if(parseInt(money)<1){
+			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额,最低充值金额为1元！" +
+                    "");
                 return;
             }
             t.model.isCharging = true;

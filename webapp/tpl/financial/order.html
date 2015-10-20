@@ -55,6 +55,12 @@
         <div class="inner-normal js-present"><span class="reward_text"><%=data.reward_choose.order%></span><i class="btn btn-forward"></i></div>
     </div>
     <%}%>
+    <form class="vishide" method="post" action="/wap/account/tinvestmoney" id="js-tinvest-form">
+        <input name="T_borrow_id" type="text" value="<%=pars.id%>">
+        <input name="transfer_invest_num" type="text" value="<%=data.money%>">
+        <input name="transfer_invest_month" type="text" value="<%=data.dur%>">
+        <input class="reward_id" name="reward_id" type="text" value="">
+    </form>
     <div class="order-submit">
         <div class="js-submit">
             <a>确认投资</a>

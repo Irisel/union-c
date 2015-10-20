@@ -31,7 +31,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
 		},
         submit: function(){
-            var t = this;
+            var t = this,data = t.model.toJSON();
 		    var _data = t.$el.find("#verifiIdcard").serializeArray();
 			var name, val;
 			var _locData={};
@@ -43,7 +43,11 @@ define('', '', function(require) {
 			});
             console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/saveid', _locData, function(result) {
-                window.location.href="#verifi/transfer";
+                if(data.pars.next == 'bank'){
+                    window.location.href="#verifi/bank";
+                }else{
+                    window.location.href="#verifi/access";
+                }
 			}, function() {
 
 			}, 'post');

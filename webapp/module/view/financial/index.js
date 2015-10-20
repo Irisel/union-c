@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/financial/index.html');
+    var Login = require("view/login/index");
 	var model = new M({
         action: '/financial/index'
 	});
@@ -18,12 +19,35 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+        ifaccess: function(data){
+            if(data.data.id_status!="1"){
+                Jser.alert("请先实名认证!", function() {
+                    window.location.href="#verifi/index";
+                });
+                return true;
+            }
+            if(data.data.invest_auth!="1"){
+                Jser.alert("请先开通转账授权!", function() {
+                   window.location.href="#verifi/transfer";
+                });
+                return true;
+            }
+            if(data.data.secondary_percent!="1"){
+                Jser.alert("请先开通二次分配授权!", function() {
+                   window.location.href="#verifi/allocation";
+                });
+                return true;
+            }
+            return false;
+        },
 		//待优化
 		render: function() {
             var size = windowSize();
 			var t = this,
 				data = t.model.toJSON();
             console.log(data);
+            if(!data.data)data.data = {};
+            if(!data.data.have_money)data.data.have_money = 0;
 			var html = _.template(t.template, data);
 			t.$el.html(html);
             if(data.data && !isNaN((parseInt(data.data.b_m))) && !isNaN((parseInt(data.data.money_dec)))){
@@ -37,15 +61,50 @@ define('', '', function(require) {
             t.$el.find('.topic-period').css('bottom', (size.width * 199/3520) + 'px' );
             t.$el.show();
 		},
+        checkLogin: function(logged, type, href){
+            if(logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+            return logged;
+        },
         invest: function(){
             console.log('invest');
             var t = this, data = t.model.toJSON();
+//            if(!(t.checkLogin(data.status == "0")) && data.data){
+//                if(t.ifaccess(data))return;
+//            }else{
+//                return
+//            }
             var id = data.pars.id;
             var money = t.$el.find(".js-investamount").val();
-            money = parseInt(money);
+            var re = /^\d+$/ ;
+            console.log(money);
             if(isNaN(money)){
+			    Jser.alert("请输入正确的金额！", function() {
+                    t.$el.find(".js-investamount").val('');
+			    });
                 return;
-            }else if(money<100){
+            }else if (!re.test(money)){
+			    Jser.alert("请输入正确的金额！", function() {
+                    t.$el.find(".js-investamount").val('');
+			    });
+                console.log('re');
+                return
+            }else if(parseInt(money)<100){
+			    Jser.alert("请输入正确的金额！", function() {
+                    t.$el.find(".js-investamount").val('');
+			    });
+                return;
+            }else if(parseInt(money)>parseInt(data.data.have_money)){
+			    Jser.confirm("余额不够，请充值!", function() {
+                    window.location.href = '#account/recharge/';
+			    }, function(){
+
+                });
                 return;
             }
             window.location.href="#financial/order/id:" + id + "/money:" + money;

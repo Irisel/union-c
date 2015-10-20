@@ -10,9 +10,8 @@
     <form name="moneywithdraw" method="post" action = "/wap/account/moneywithdraw" id="moneywithdraw">
     <div class="list-purchase">
         <div class="withdraw-expect">
-            账户可提现金 <span class="orange js-withdrawAmount"><%=data%></span> 元
+            账户可提现金 <span class="orange js-withdrawAmount"><%if(data.balance){%><%=data.balance%><%}else{%>0.00<%}%></span> 元
         </div>
-
         <div class="purchase">
             <div class="withdraw-input">
                 <input type="text" name = "money" placeholder="提现金额" class="js-money">
@@ -24,6 +23,15 @@
     <div class="purchase-submit">
         <div class="js-moneyWithdraw">
             确认提现
+        </div>
+    </div>
+    <div class="list-purchase notice">
+        <div class="recharge-expect">
+            <span>1.最低提现额100元，提现手续费由平台承担</span>
+            <span>2.工作日9:00-16:00内单笔提现限额为500万且2小时左右到账</span>
+            <span>工作日16:00-23:30和非工作日9:00-23:30内提现金额单笔低于5万的2小时左右到账</span>
+            <span>5万-500万的顺延至下一工作日</span>
+            <span>23:30-次日9:00不处理提现申请</span>
         </div>
     </div>
     </form>

@@ -20,11 +20,26 @@ define('', '', function(require) {
 			});
 		},
 		//待优化
+        ifaccess: function(data){
+            if(data.data.id_status!="1"){
+                Jser.alert("请先实名认证!", function() {
+                    window.location.href="#verifi/index/next:bank";
+                });
+                return true;
+            }
+            return false;
+        },
 		render: function(syncData) {
 			var t = this,
 				data = syncData || t.model.toJSON();
             console.log(data, data.status == "0");
-            t.checkLogin(data.status == "0");
+            if(!data.data)data.data = {};
+            if(!data.data.have_money)data.data.balance = 0;
+            if(!(t.checkLogin(data.status == "0")) && data.data){
+                if(t.ifaccess(data))return;
+            }else{
+                return
+            }
             if(!data.data)data.data = 0;
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
@@ -33,16 +48,24 @@ define('', '', function(require) {
 			window.history.back();
 		},
         moneyWithdraw: function(){
-			var t = this;
+			var t = this,data = t.model.toJSON();
             var money = t.$el.find(".js-money").val();
-            money = parseInt(money);
+            var re = /^((\d+)|(\d+\.\d{1,2}))$/ ;
+            console.log(money);
             if(isNaN(money)){
-                Jser.error(t.$el.find(".js-error"), "*请输入正确的数字");
+			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额！");
                 return;
-            }else if(money<100){
-                Jser.error(t.$el.find(".js-error"), "*最低金额不低于100");
+            }else if (!re.test(money)){
+			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额, 允许保留两位小数！");
+                console.log('re');
+                return
+            }else if(parseInt(money)<100){
+			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额, 最低金额为100！");
                 return;
-            };
+            }else if(parseInt(money)>parseInt(data.data.balance)){
+			    Jser.error(t.$el.find(".js-error"), "*提现金额不可超过账户余额！");
+                return;
+            }
             $('#moneywithdraw') && $('#moneywithdraw').submit();
         },
 		syncRender: function() {
@@ -51,13 +74,12 @@ define('', '', function(require) {
             Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {
                 if(result.status == "1")
                 _data = result;
-                if(_data.data && _data.data.id_status!="1"){
-                    window.location.href="#verifi/index";
-                    return;
+                if(!(t.checkLogin(_data.status == "0")) && _data.data){
+                    if(t.ifaccess(_data))return;
                 }
                 t.$el.find('.js-withdrawAmount').html(_data.data);
 			}, function() {
-                t.$el.find('.js-withdrawAmount').html(_data.data);
+
 			});
             t.$el.show();
 		},

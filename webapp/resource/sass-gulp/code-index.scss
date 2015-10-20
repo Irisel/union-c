@@ -120,6 +120,9 @@ textarea{
   bottom: 0;
   background-color: #f6f6f6;
   width: 100%;
+  &.single{
+    padding-bottom:50px;
+  }
 }
 
 .nav {
@@ -223,9 +226,6 @@ textarea{
       .list-wrapper {
         @extend %wrapper;
         background-color: #ffffff;
-        &.single{
-          padding-bottom:50px;
-        }
         &.selection{
           padding-bottom:85px;
         }
@@ -501,6 +501,9 @@ textarea{
   width:100%;
   padding: 20px 10px 0;
   line-height:30px;
+  &.notice{
+    background:none;
+  }
   &.bottom-fill{
     border-bottom: 1px solid #dddddd;
   }
@@ -510,7 +513,7 @@ textarea{
     span{
       display:block;
       width:100%;
-      line-height: 1.4em;
+      line-height: 1.7em;
       font-size: 1em;
     }
   }

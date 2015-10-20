@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/funding/order.html');
+    var Login = require("view/login/index");
 	var model = new M({
         action: '/account/zinvest'
 	});
@@ -26,10 +27,49 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+        checkLogin: function(logged, type, href){
+            if(logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
+        ifaccess: function(data){
+            if(data.data.id_status!="1"){
+                Jser.alert("请先实名认证!", function() {
+                    window.location.href="#verifi/index";
+                });
+                return true;
+            }
+            if(data.data.invest_auth!="1"){
+                Jser.alert("请先开通转账授权!", function() {
+                   window.location.href="#verifi/transfer";
+                });
+                return true;
+            }
+            if(data.data.secondary_percent!="1"){
+                Jser.alert("请先开通二次分配授权!", function() {
+                   window.location.href="#verifi/allocation";
+                });
+                return true;
+            }
+            return false;
+        },
 		//待优化
+        syncRender: function(){
+            var t = this;
+            t.render();
+        },
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
+            if(!(t.checkLogin(data.status == "0")) && data.data){
+                if(t.ifaccess(data))return;
+            }else{
+                return
+            }
             if(!data.data)data.data = {};
             console.log(data, '万'.indexOf(data.data.d_money));
             if('万'.indexOf(data.data.d_money) != -1){

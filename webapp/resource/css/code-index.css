@@ -96,6 +96,8 @@ textarea {
   bottom: 0;
   background-color: #f6f6f6;
   width: 100%; }
+  .wrap #js-wrap section .single.index-wrapper, .wrap #js-wrap section .single.list-wrapper {
+    padding-bottom: 50px; }
 
 .nav {
   display: none;
@@ -189,8 +191,6 @@ textarea {
         overflow-y: scroll; }
       .wrap #js-wrap section .list-wrapper {
         background-color: #ffffff; }
-        .wrap #js-wrap section .list-wrapper.single {
-          padding-bottom: 50px; }
         .wrap #js-wrap section .list-wrapper.selection {
           padding-bottom: 85px; }
 
@@ -401,6 +401,8 @@ textarea {
   width: 100%;
   padding: 20px 10px 0;
   line-height: 30px; }
+  .list-purchase.notice {
+    background: none; }
   .list-purchase.bottom-fill {
     border-bottom: 1px solid #dddddd; }
   .list-purchase .recharge-expect {
@@ -409,7 +411,7 @@ textarea {
     .list-purchase .recharge-expect span {
       display: block;
       width: 100%;
-      line-height: 1.4em;
+      line-height: 1.7em;
       font-size: 1em; }
   .list-purchase .withdraw-expect {
     padding-left: 5px; }
