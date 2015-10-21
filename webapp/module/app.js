@@ -94,7 +94,7 @@ define(function(require, exports) {
                         App.Views[view] = cb(cj);
                         App.Views[view].cj = $.extend({}, cj);
                     } else {
-                        // location.hash="404";
+                        location.hash="#account/error";
                     }
                 })
             }

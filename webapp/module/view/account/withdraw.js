@@ -34,7 +34,7 @@ define('', '', function(require) {
 				data = syncData || t.model.toJSON();
             console.log(data, data.status == "0");
             if(!data.data)data.data = {};
-            if(!data.data.have_money)data.data.balance = 0;
+            if(isNaN(data.data.balance))data.data.balance = 0;
             if(!(t.checkLogin(data.status == "0")) && data.data){
                 if(t.ifaccess(data))return;
             }else{
@@ -70,14 +70,15 @@ define('', '', function(require) {
         },
 		syncRender: function() {
 			var t = this;
-            var _data = { data: 0};
+            var _data = { data:{balance:0.00}};
             Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {
                 if(result.status == "1")
                 _data = result;
                 if(!(t.checkLogin(_data.status == "0")) && _data.data){
                     if(t.ifaccess(_data))return;
                 }
-                t.$el.find('.js-withdrawAmount').html(_data.data);
+                if(isNaN(_data.data.balance))_data.data.balance = 0;
+                t.$el.find('.js-withdrawAmount').html(_data.data.balance);
 			}, function() {
 
 			});

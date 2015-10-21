@@ -17,11 +17,21 @@
     <div class="deposit-notice">
         <span>请将以下授权设置为开启状态，并牢记您的支付密码</span>
     </div>
-    <div class="deposit-detail  js-invest">
-        <%if(data.invest_auth){%>
-        <div class="inner-normal on js-invest">
+    <div class="deposit-detail  js-transfer">
+        <%if(data.invest_auth=="1"){%>
+        <div class="inner-normal on js-transfer">
+                <form method="post" action="/wap/account/authorize/" id="js-transfer-form" class="vishide">
+                    <input type="text" name="authK" value="0">
+                    <input type="text" name="authV" value="1">
+                    <input type="text" name="setting" value="1">
+                </form>
         <%}else{%>
         <div class="inner-normal">
+                <form method="post" action="/wap/account/authorize/" id="js-transfer-form" class="vishide">
+                    <input type="text" name="authK" value="1">
+                    <input type="text" name="authV" value="1">
+                    <input type="text" name="setting" value="1">
+                </form>
         <%}%>
             <div>
             <span>钱多多转账授权</span>
@@ -29,16 +39,26 @@
             <div class="circle-toggle">
                 <div class="circle"></div>
                 <div class="body">
-                    <div class="toggle js-toggle" data-type="invest"></div>
+                    <div class="toggle js-toggle" data-type="transfer"></div>
                 </div>
                 <div class="circle"></div>
             </div>
             </div>
         </div>
-        <%if(data.secondary_percent){%>
-        <div class="inner-normal on js-secondary">
+        <%if(data.secondary_percent=="1"){%>
+        <div class="inner-normal on js-allocation">
+                <form method="post" action="/wap/account/authorize/" id="js-allocation-form" class="vishide">
+                    <input type="text" name="authK" value="0">
+                    <input type="text" name="authV" value="3">
+                    <input type="text" name="setting" value="1">
+                </form>
         <%}else{%>
-        <div class="inner-normal js-secondary">
+        <div class="inner-normal js-allocation">
+                <form method="post" action="/wap/account/authorize/" id="js-allocation-form" class="vishide">
+                    <input type="text" name="authK" value="1">
+                    <input type="text" name="authV" value="3">
+                    <input type="text" name="setting" value="1">
+                </form>
         <%}%>
             <div class="circle-group">
                 <span>钱多多二次分配授权</span>
@@ -46,7 +66,7 @@
                 <div class="circle-toggle">
                     <div class="circle"></div>
                     <div class="body">
-                        <div class="toggle js-toggle" data-type="secondary"></div>
+                        <div class="toggle js-toggle" data-type="allocation"></div>
                     </div>
                     <div class="circle"></div>
                 </div>

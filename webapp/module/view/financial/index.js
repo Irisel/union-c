@@ -19,6 +19,17 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+		syncRender: function() {
+            var t = this;
+            var _data = t.model.toJSON();
+            Jser.getJSON(ST.PATH.ACTION + '/financial/index', {id: _data.pars.id, from: _data.pars.from}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.render(_data);
+			}, function() {
+
+			});
+		},
         ifaccess: function(data){
             if(data.data.id_status!="1"){
                 Jser.alert("请先实名认证!", function() {
@@ -41,13 +52,17 @@ define('', '', function(require) {
             return false;
         },
 		//待优化
-		render: function() {
-            var size = windowSize();
+		render: function(rawdata) {
 			var t = this,
-				data = t.model.toJSON();
-            console.log(data);
+				data = rawdata || t.model.toJSON();
+            var size = windowSize();
             if(!data.data)data.data = {};
-            if(!data.data.have_money)data.data.have_money = 0;
+            if(!data.data.have_money){
+                data.data.have_money = '0';
+            }else{
+                data.data.have_money = data.data.have_money.substring(1);
+            }
+            console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.html(html);
             if(data.data && !isNaN((parseInt(data.data.b_m))) && !isNaN((parseInt(data.data.money_dec)))){
@@ -74,11 +89,11 @@ define('', '', function(require) {
         invest: function(){
             console.log('invest');
             var t = this, data = t.model.toJSON();
-//            if(!(t.checkLogin(data.status == "0")) && data.data){
-//                if(t.ifaccess(data))return;
-//            }else{
-//                return
-//            }
+            if(!(t.checkLogin(data.status == "2")) && data.data){
+                if(t.ifaccess(data))return;
+            }else{
+                return
+            }
             var id = data.pars.id;
             var money = t.$el.find(".js-investamount").val();
             var re = /^\d+$/ ;

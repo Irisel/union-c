@@ -75,7 +75,7 @@ define('', '', function(require) {
                 if(result.status == "1")
                 _data = result;
                 if(!(t.checkLogin(_data.status == "0")) && _data.data){
-                    if(t.ifaccess(_data))return;
+                    t.ifaccess(_data);
                 }
 			}, function() {
 
