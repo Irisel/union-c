@@ -150,25 +150,25 @@ define('', '', function(require) {
             if(t.model.isInvesting)return;
             if(!(data.data && data.data.money && data.data.dur && data.pars.id))return;
             console.log(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id});
-//            t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
-            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id}, function(result) {
-                t.model.isInvesting = false;
-                if(result.status == "1"){
-                    Jser.alert("投资成功", function() {
-
-                    })
-                }
-                else{
-                     Jser.alert("投资失败", function() {
-
-                    })
-                }
-			}, function() {
-                t.model.isInvesting = false;
-                Jser.alert("投资失败", function() {
-
-                });
-			}, 'post');
+            t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
+//            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id}, function(result) {
+//                t.model.isInvesting = false;
+//                if(result.status == "1"){
+//                    Jser.alert("投资成功", function() {
+//
+//                    })
+//                }
+//                else{
+//                     Jser.alert("投资失败", function() {
+//
+//                    })
+//                }
+//			}, function() {
+//                t.model.isInvesting = false;
+//                Jser.alert("投资失败", function() {
+//
+//                });
+//			}, 'post');
         },
 		changePars: function(pars) {
 			var t = this;

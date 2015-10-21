@@ -553,11 +553,13 @@ textarea {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee; }
     .products-list li a {
-      display: block; }
+      display: block;
+      position: relative; }
       .products-list li a:hove, .products-list li a:visited {
         color: #666666; }
     .products-list li .product-detail {
-      padding: 5px 100px 0 10px; }
+      padding: 5px 100px 0 10px;
+      background-color: #ffffff; }
       .products-list li .product-detail .detail-title {
         width: 100%; }
         .products-list li .product-detail .detail-title span {
@@ -574,17 +576,56 @@ textarea {
           color: #666666; }
           .products-list li .product-detail .detail-table td:first-child {
             color: #ff7d21; }
+    .products-list li .circle {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -40px;
+      border-radius: 50%;
+      background: #80c269; }
+      .products-list li .circle .mask {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        line-height: 40px;
+        font-size: 12px;
+        color: #638c0b;
+        top: 5px;
+        left: 5px;
+        background-color: #ffffff; }
+      .products-list li .circle .inner-left, .products-list li .circle .inner-right {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .products-list li .circle .pie_left, .products-list li .circle .pie_right {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 0px;
+        background: #bfe0b4; }
+      .products-list li .circle .pie_right, .products-list li .circle .inner-right {
+        clip: rect(0, auto, auto, 25px); }
+      .products-list li .circle .pie_left, .products-list li .circle .inner-left {
+        clip: rect(0, 25px, auto, 0); }
     .products-list li .product-desc {
-      background-color: #f1f1f1;
       color: #a6a6a6;
       padding-left: 10px;
       height: 20px;
       font-size: 14px;
       line-height: 20px;
-      border-bottom: 1px solid #eee; }
+      border-bottom: 1px solid #eee;
+      background-color: #f6f6f6; }
     .products-list li .product-bottom {
       height: 10px;
-      background-color: #f1f1f1; }
+      background-color: #f6f6f6; }
 
 .order-detail .inner-name, .order-detail .inner-normal, .funding-index .funding-index-detail .inner-name, .funding-order .inner-normal, .funding-order .inner-option, .funding-order .inner-input, .verifi-form .inner-input, .bank-form .inner-input, .setting-detail .inner-normal {
   height: 40px;
