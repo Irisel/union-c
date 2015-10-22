@@ -27,6 +27,12 @@ define('', '', function(require) {
                 });
                 return true;
             }
+            if(data.data.bank.toString() !="1"){
+                Jser.alert("请先绑定银行卡!", function() {
+                    window.location.href="#verifi/bank";
+                });
+                return true;
+            }
             return false;
         },
 		render: function(syncData) {

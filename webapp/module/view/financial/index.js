@@ -9,6 +9,7 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        have_money: 0,
 		events: {
             "click .js-back": "back",
             "click .js-invest": "invest"
@@ -24,7 +25,8 @@ define('', '', function(require) {
             var _data = t.model.toJSON();
             Jser.getJSON(ST.PATH.ACTION + '/financial/index', {id: _data.pars.id, from: _data.pars.from}, function(result) {
                 if(result.status == "1")
-                _data = result;
+                _data = $.extend(_data, result);
+                t.have_money = _data.data.have_money.replace(',', '');
                 t.render(_data);
 			}, function() {
 
@@ -34,6 +36,12 @@ define('', '', function(require) {
             if(data.data.id_status!="1"){
                 Jser.alert("请先实名认证!", function() {
                     window.location.href="#verifi/index";
+                });
+                return true;
+            }
+            if(data.data.bang_qian!="1"){
+                Jser.alert("请先绑定钱多多!", function() {
+                   window.location.href="#verifi/access";
                 });
                 return true;
             }
@@ -62,6 +70,7 @@ define('', '', function(require) {
             }else{
                 data.data.have_money = data.data.have_money.substring(1);
             }
+            t.have_money = data.data.have_money.replace(',', '');
             console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.html(html);
@@ -114,7 +123,8 @@ define('', '', function(require) {
                     t.$el.find(".js-investamount").val('');
 			    });
                 return;
-            }else if(parseInt(money)>parseInt(data.data.have_money)){
+            }else if(parseInt(money)>parseInt(t.have_money)){
+                console.log(money, t.have_money);
 			    Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';
 			    }, function(){

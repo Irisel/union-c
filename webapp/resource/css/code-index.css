@@ -617,15 +617,14 @@ textarea {
         clip: rect(0, 25px, auto, 0); }
     .products-list li .product-desc {
       color: #a6a6a6;
-      padding-left: 10px;
-      height: 20px;
-      font-size: 14px;
+      padding: 5px 0px 5px 10px;
+      font-size: 12px;
       line-height: 20px;
       border-bottom: 1px solid #eee;
-      background-color: #f6f6f6; }
+      background-color: #fbfbfb; }
     .products-list li .product-bottom {
       height: 10px;
-      background-color: #f6f6f6; }
+      background-color: #fbfbfb; }
 
 .order-detail .inner-name, .order-detail .inner-normal, .funding-index .funding-index-detail .inner-name, .funding-order .inner-normal, .funding-order .inner-option, .funding-order .inner-input, .verifi-form .inner-input, .bank-form .inner-input, .setting-detail .inner-normal {
   height: 40px;
@@ -2242,3 +2241,38 @@ textarea {
     color: #fff;
     padding-top: 50%;
     font-size: 1em; }
+
+.error-pop {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  .error-pop .error-png {
+    padding: 0 20px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #dddddd;
+    padding-top: 10%;
+    font-size: 2em;
+    word-wrap: break-word; }
+    .error-pop .error-png img {
+      vertical-align: middle;
+      width: 100%;
+      height: auto; }
+    .error-pop .error-png span {
+      padding: 10px 0 20px;
+      width: 100%;
+      display: inline-block; }
+    .error-pop .error-png div a {
+      text-align: center;
+      height: 45px;
+      line-height: 45px;
+      border: 1px dashed #dddddd;
+      color: #dddddd;
+      width: 100%;
+      display: block; }

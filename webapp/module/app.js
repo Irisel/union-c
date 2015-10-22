@@ -12,10 +12,10 @@ define(function(require, exports) {
             var t = this;
             t.navs = this.$el.find("li");
         },
-        initNav: function(m) {
+        initNav: function(m, a) {
             var t = this;
             var idx = t.map[m];
-            if(idx!=undefined){
+            if(idx!=undefined && a!='error'){
                 t.navs.each(function(i, v) {
                     $(this).toggleClass("on", i == idx);
                 });
@@ -56,7 +56,11 @@ define(function(require, exports) {
             if(Jser.getUrlParam('views') && Jser.getUrlParam('action') && !window.location.hash){
                 md = Jser.getUrlParam('views');
                 ac = Jser.getUrlParam('action');
-                var path = window.location.pathname + '#' + Jser.getUrlParam('views') + '/' + Jser.getUrlParam('action');
+                var path = window.location.pathname + '#' + md + '/' + ac;
+                if(md == 'account' && ac == 'error'){
+                    path+= '/message:' + Jser.getUrlParam('message');
+                    con = 'message:' + Jser.getUrlParam('message');
+                }
                 if (typeof history.replaceState === 'undefined') {
                     window.location.href = window.location.host + path;
                     return;
@@ -66,7 +70,7 @@ define(function(require, exports) {
                 }
             }
             var t = this;
-            t.nav.initNav(md);
+            t.nav.initNav(md, ac);
             if (!ac) ac = "index";
             //动态创建元素
             var el = B.$("#" + md + "_" + ac),

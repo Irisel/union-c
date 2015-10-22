@@ -26,6 +26,7 @@ define('', '', function(require) {
 				data = {};
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            $("#js-loading").hide();
 		},
 		bindEvent: function() {
 
@@ -39,7 +40,7 @@ define('', '', function(require) {
         logout: function(){
             Jser.getJSON(ST.PATH.ACTION + '/account/actlogout', {}, function(result) {
                 console.log(result);
-                Jser.alert(result.info, function(){
+                Jser.alert('登出成功！', function(){
                     window.location.href="#index/index"
                 });
 			}, function() {
@@ -52,7 +53,6 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '',
             pars: {
 
 		    }

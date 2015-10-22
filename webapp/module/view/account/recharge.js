@@ -29,6 +29,12 @@ define('', '', function(require) {
                 });
                 return true;
             }
+            if(data.data.account.toString()!="1"){
+                Jser.alert("请先绑定钱多多!", function() {
+                   window.location.href="#verifi/access";
+                });
+                return true;
+            }
             if(data.data.invest_auth!="1"){
                 Jser.alert("请先开通转账授权!", function() {
                    window.location.href="#verifi/transfer";

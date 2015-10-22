@@ -92,7 +92,10 @@ define('', '', function(require) {
             console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
-            t.$el.find('.reward_id').val(data.data.reward_choose.id);
+            if(data.data.reward_choose){
+                t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                t.$el.find('.reward_id').val(data.data.reward_choose.id);
+            }
 		},
         back: function(){
           window.location.href="#financial/index";
@@ -137,8 +140,10 @@ define('', '', function(require) {
             }else if(data.data.reward_choose){
                 Jser.setItem(data.pars.id + '_funding_reward', data.data.reward_choose.id);
             }
-            t.$el.find('.reward_text').html(data.data.reward_choose.order);
-            t.$el.find('.reward_id').val(data.data.reward_choose.id);
+            if(data.data.reward_choose){
+                t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                t.$el.find('.reward_id').val(data.data.reward_choose.id);
+            }
         },
         present: function(){
             var t = this, data= t.model.toJSON();
@@ -149,7 +154,6 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             if(t.model.isInvesting)return;
             if(!(data.data && data.data.money && data.data.dur && data.pars.id))return;
-            console.log(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id});
             t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
 //            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id}, function(result) {
 //                t.model.isInvesting = false;

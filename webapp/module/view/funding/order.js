@@ -87,7 +87,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
 		},
         submit: function(){
-            var t = this, data = t.model.toJSON();;
+            var t = this, data = t.model.toJSON();
 		    var _data = t.$el.find("#fundingOrder").serializeArray();
 			var name, val;
 			var _locData={};
@@ -102,6 +102,14 @@ define('', '', function(require) {
                 T_borrow_id: data.pars.id
             });
             console.log(_locData);
+            if(data.data.y_money < t.order_money * t.order_number){
+			    Jser.confirm("余额不够，请充值!", function() {
+                    window.location.href = '#account/recharge/';
+			    }, function(){
+
+                });
+                return;
+            }
             $('#fundingOrder') && $('#fundingOrder').submit();
 //            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
 //                console.log(result);
@@ -152,10 +160,12 @@ define('', '', function(require) {
                     if(parseInt(inputNum)< t.order_min)inputNum = t.order_min;
                     t.order_number = parseInt(inputNum);
                     $(e.currentTarget).val(t.order_number);
+                    if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
                 }
 
             }else{
                 $(e.currentTarget).val(t.order_number);
+                if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
             }
         },
 		changePars: function(pars) {

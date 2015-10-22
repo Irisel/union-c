@@ -777,16 +777,15 @@ textarea{
       }
       .product-desc{
         color: #a6a6a6;
-        padding-left: 10px;
-        height: 20px;
-        font-size: 14px;
+        padding: 5px 0px 5px 10px;
+        font-size: 12px;
         line-height: 20px;
         border-bottom: 1px solid #eee;
-        background-color:#f6f6f6;
+        background-color: #fbfbfb;
       }
       .product-bottom{
         height:10px;
-        background-color:#f6f6f6;
+        background-color:#fbfbfb;
       }
     }
 }
@@ -2857,5 +2856,47 @@ textarea{
     color: #fff;
     padding-top: 50%;
     font-size: 1em;
+  }
+}
+
+.error-pop{
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .error-png{
+    padding: 0 20px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #dddddd;
+    padding-top: 10%;
+    font-size: 2em;
+    word-wrap: break-word;
+    img{
+      vertical-align: middle;
+      width: 100%;
+      height: auto;
+    }
+    span{
+      padding: 10px 0 20px;
+      width: 100%;
+      display: inline-block;
+    }
+    div{
+      a{
+        text-align: center;
+        height: 45px;
+        line-height: 45px;
+        border: 1px dashed #dddddd;
+        color: #dddddd;
+        width: 100%;
+        display: block;
+      }
+    }
   }
 }
