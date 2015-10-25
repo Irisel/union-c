@@ -81,6 +81,10 @@ textarea {
   -webkit-appearance: none;
   padding: 0; }
 
+input[type=button] {
+  -webkit-appearance: none;
+  outline: none; }
+
 .right {
   float: right; }
 
@@ -2276,3 +2280,76 @@ textarea {
       color: #dddddd;
       width: 100%;
       display: block; }
+
+.invite-ul {
+  display: block;
+  width: 100%; }
+  .invite-ul li {
+    position: relative;
+    width: 100%;
+    padding: 20px 0 0 20px;
+    min-height: 100px;
+    display: table;
+    border-bottom: 1px solid #eee; }
+    .invite-ul li .invite-flex {
+      display: table-cell;
+      height: 100%; }
+      .invite-ul li .invite-flex:nth-child(1) {
+        width: 60px;
+        min-height: 60px; }
+        .invite-ul li .invite-flex:nth-child(1).weixin {
+          background: url(../images/minify/weixin.png) left top no-repeat;
+          background-size: 50px auto; }
+        .invite-ul li .invite-flex:nth-child(1).yaoqingma {
+          background: url(../images/minify/yaoqingma.png) left top no-repeat;
+          background-size: 50px auto; }
+      .invite-ul li .invite-flex:nth-child(2) {
+        height: 100%;
+        left: 100px;
+        right: 20px; }
+        .invite-ul li .invite-flex:nth-child(2).erweimabg {
+          background: url(../images/minify/erweimabg.png) right bottom no-repeat;
+          background-size: 80px auto; }
+        .invite-ul li .invite-flex:nth-child(2).yaoqingmabg {
+          background: url(../images/minify/yaoqingmabg.png) right bottom no-repeat;
+          background-size: 80px auto; }
+        .invite-ul li .invite-flex:nth-child(2) div {
+          padding-bottom: 10px; }
+          .invite-ul li .invite-flex:nth-child(2) div span {
+            font-size: 16px;
+            line-height: 20px;
+            float: left; }
+          .invite-ul li .invite-flex:nth-child(2) div .alert {
+            color: #b31b06;
+            font-size: 12px;
+            line-height: 12px;
+            text-indent: 5px; }
+          .invite-ul li .invite-flex:nth-child(2) div p {
+            clear: left;
+            font-size: 12px;
+            line-height: 16px;
+            color: #535353; }
+          .invite-ul li .invite-flex:nth-child(2) div button {
+            margin-top: 10px;
+            height: 35px;
+            border-radius: 5px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid #ff6c00;
+            color: #ff6c00;
+            width: 100px;
+            background: none; }
+
+.invite-pop .invite-body {
+  background: url(../images/minify/markshare.png) top center no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: relative; }
+  .invite-pop .invite-body img {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    height: 200px;
+    margin-left: -100px;
+    left: 50%; }

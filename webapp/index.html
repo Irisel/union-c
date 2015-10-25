@@ -91,7 +91,11 @@
             $("#js-loading").hide();
         }, 300);
     };
-
+    function jsCopy(){
+        var e=document.getElementById("js-content");//对象是content
+        e.select(); //选择对象
+        document.execCommand("Copy"); //执行浏览器复制命令
+    }
     function scrollTop() {
         setTimeout(function() {
             window.scrollTo(0, 0);

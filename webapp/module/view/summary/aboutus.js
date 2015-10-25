@@ -27,6 +27,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
             var $img = t.$el.find(".content");
 			Jser.loadimages($img);
+            $("#js-loading").hide();
 		},
 		bindEvent: function() {
 

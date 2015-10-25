@@ -8,6 +8,10 @@ define(function(require, exports) {
             "crowdfunding": 1,
             "account": 2
         },
+        action: {
+            "error": true,
+            "invite": true
+        },
         initialize: function() {
             var t = this;
             t.navs = this.$el.find("li");
@@ -15,7 +19,7 @@ define(function(require, exports) {
         initNav: function(m, a) {
             var t = this;
             var idx = t.map[m];
-            if(idx!=undefined && a!='error'){
+            if(idx!=undefined && !t.action[a] ){
                 t.navs.each(function(i, v) {
                     $(this).toggleClass("on", i == idx);
                 });

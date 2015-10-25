@@ -33,6 +33,7 @@ define('', '', function(require) {
             t1.val('');
             t2.val('');
             t3.val('');
+            $("#js-loading").hide();
 		},
 		bindEvent: function() {
 

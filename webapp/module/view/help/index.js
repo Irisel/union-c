@@ -25,6 +25,7 @@ define('', '', function(require) {
 				data = {};
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            $("#js-loading").hide();
 		},
 		bindEvent: function() {
 
