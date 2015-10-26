@@ -360,7 +360,8 @@ input[type=button] {
     left: 62.5%;
     text-align: center; }
     .list-topic .topic-period span {
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      display: inline-block; }
   .list-topic .label span {
     font-size: 1em; }
 
@@ -2314,7 +2315,8 @@ input[type=button] {
           background: url(../images/minify/yaoqingmabg.png) right bottom no-repeat;
           background-size: 80px auto; }
         .invite-ul li .invite-flex:nth-child(2) div {
-          padding-bottom: 10px; }
+          padding-bottom: 10px;
+          padding-right: 20px; }
           .invite-ul li .invite-flex:nth-child(2) div span {
             font-size: 16px;
             line-height: 20px;
@@ -2323,12 +2325,25 @@ input[type=button] {
             color: #b31b06;
             font-size: 12px;
             line-height: 12px;
-            text-indent: 5px; }
+            text-indent: 5px;
+            float: left; }
+          .invite-ul li .invite-flex:nth-child(2) div .textarea {
+            clear: left;
+            font-size: 12px;
+            line-height: 16px;
+            color: #535353;
+            word-break: break-all;
+            -webkit-user-select: auto;
+            width: 100%;
+            overflow-x: visible;
+            overflow-y: scroll; }
           .invite-ul li .invite-flex:nth-child(2) div p {
             clear: left;
             font-size: 12px;
             line-height: 16px;
-            color: #535353; }
+            color: #535353;
+            word-break: break-all;
+            -webkit-user-select: auto; }
           .invite-ul li .invite-flex:nth-child(2) div button {
             margin-top: 10px;
             height: 35px;

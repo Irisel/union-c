@@ -69,7 +69,7 @@ define(function(require, exports) {
                     window.location.href = window.location.host + path;
                     return;
                 }else{
-                    window.history.replaceState(null, null, path);
+//                    window.history.replaceState(null, null, path);
                     console.log('replace');
                 }
             }

@@ -5,7 +5,6 @@ var WeiXinShare = {
 	lineLink: global_lineLink, //同样，必须是绝对路径  
 	shareTitle: document.title, //分享title
 	descContent: document.title, //分享给朋友或朋友圈时的文字简介
-	appid: "", //apiID，可留空
 	img_width: "300",
 	img_height: "300"
 };
@@ -86,6 +85,7 @@ function weixin6bySet() {
 	// });
 	// 2. 分享接口
 	// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+    console.log(WeiXinShare);
 	wx.onMenuShareAppMessage({
 		title: WeiXinShare.descContent,
 		desc: WeiXinShare.shareTitle,

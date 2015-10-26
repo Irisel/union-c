@@ -31,9 +31,9 @@
             </div>
             <div class="invite-flex yaoqingmabg">
                <div>
-                    <span>专属邀请码</span><span class="alert" id="js-content">w1234567</span>
-                    <p>快将您的专属邀请码（即您的注册名）广而告之，好友在网站注册时在“邀请人”处填写您的用户名，您就等着拿奖吧</p>
-                   <button type=button>复制邀请码</button>
+                    <span>专属邀请码</span><span class="alert"><%=data.invite%></span>
+                    <textarea rows="1" onscroll="this.rows++;" id="js-content" class="textarea" readonly>一起赚钱吧，100元起投，8%-12%年化收益，注册就送50元！联合金融，专注于上市公司供应链金融，安全高收益，开启工资理财新时代，快来注册吧！邀请码：<%=data.invite%> 注册链接<%=data.url%></textarea>
+                    <button type=button class="js-copy">复制邀请码</button>
                </div>
             </div>
         </li>

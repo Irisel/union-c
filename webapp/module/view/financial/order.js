@@ -142,6 +142,7 @@ define('', '', function(require) {
             }
             if(data.data.reward_choose){
                 t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                console.log(data.data.reward_choose, t.$el.find('.reward_id').val());
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
             }
         },
@@ -154,7 +155,19 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             if(t.model.isInvesting)return;
             if(!(data.data && data.data.money && data.data.dur && data.pars.id))return;
-            t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
+            var _data = t.$el.find("#js-tinvest-form").serializeArray();
+				var name, val;
+				var _locData={};
+				$.each(_data, function(i, item) {
+					name = item.name;
+					val = $.trim(item.value);
+					_data[i].value = val;
+					_locData[name]=val;
+				});
+            console.log(_locData);
+            Jser.alert('are u sure?',function(){
+                t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
+            });
 //            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id}, function(result) {
 //                t.model.isInvesting = false;
 //                if(result.status == "1"){

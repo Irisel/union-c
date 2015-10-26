@@ -445,6 +445,7 @@ input[type=button]{
     text-align: center;
     span{
       font-size:1.5em;
+      display:inline-block;
     }
   }
   .label{
@@ -2948,6 +2949,7 @@ input[type=button]{
         }
         div{
           padding-bottom:10px;
+          padding-right:20px;
           span{
             font-size:16px;
             line-height:20px;
@@ -2958,12 +2960,26 @@ input[type=button]{
               font-size:12px;
               line-height:12px;
               text-indent: 5px;
+              float: left;
            }
+          .textarea{
+            clear:left;
+            font-size:12px;
+            line-height:16px;
+            color: #535353;
+            word-break: break-all;
+            -webkit-user-select: auto;
+            width:100%;
+            overflow-x:visible;
+            overflow-y:scroll;
+          }
           p{
             clear:left;
             font-size:12px;
             line-height:16px;
             color: #535353;
+            word-break: break-all;
+            -webkit-user-select: auto;
           }
           button{
             margin-top: 10px;

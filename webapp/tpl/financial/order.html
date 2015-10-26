@@ -58,8 +58,8 @@
     <form class="vishide" method="post" action="/wap/account/tinvestmoney" id="js-tinvest-form">
         <input name="T_borrow_id" type="text" value="<%=pars.id%>">
         <input name="transfer_invest_num" type="text" value="<%=data.money%>">
-        <input name="transfer_invest_month" type="text" value="<%=data.dur%>">
-        <input class="reward_id" name="reward_id" type="text" value="">
+        <input name="transfer_invest_month" type="text" value="<%=data.transfer_invest_month%>">
+        <input class="reward_id" name="reward_id" type="text" value="<%=data.reward_choose?data.reward_choose.id:''%>">
     </form>
     <div class="order-submit">
         <div class="js-submit">

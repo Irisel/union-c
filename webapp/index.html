@@ -27,9 +27,9 @@
     });
     var ST = {
         PATH:{
-            ACTION:"http://121.42.156.136/wap",
+            ACTION:"http://ceshi.lianhejinrong.cn/wap",
             ROOT:"/api",
-            IMAGE:"http://121.42.156.136/",
+            IMAGE:"http://ceshi.lianhejinrong.cn/",
             UPLOAD:"",
             SHARE:"",
             AJAXIMG:""
@@ -115,6 +115,57 @@
         var m = dd.getMonth() + 1; //获取当前月份的日期
         var d = dd.getDate();
         return y + "-" + m + "-" + d;
+    }
+    function loadwxconfig(callback) {
+        //http://www.lamakeji.com/mamago/index.php/weixin/getAuth
+        Jser.getJSON(ST.PATH.ACTION + '/Index/signature',{url: 'http://ceshi.lianhejinrong.cn/Public/Wapapp/index.html'}, function(result) {
+            console.log(result.data);
+            setwxconfig(result.data);
+            console.log(callback);
+            callback();
+            // alert(JSON.stringify(data))
+        }, function(data) {
+            // alert(JSON.stringify(data))
+            setwxconfig(data);
+        }, "get", "json", true)
+    };
+    function setwxconfig(data){
+        if (window.wx) {
+                // wx.config(data);
+                console.log({
+                 debug: true,
+                 appId: data.appid,
+                 timestamp: data.timestamp,
+                 nonceStr: data.noncestr,
+                 signature: data.signature,
+                 jsApiList: [
+                     'onMenuShareTimeline',
+                     'onMenuShareAppMessage',
+                     // 'onMenuShareQQ',
+                     // 'onMenuShareWeibo',
+                     // 'getNetworkType'
+                 ]
+                });
+                wx.config({
+                 debug: false,
+                 appId: data.appid,
+                 timestamp: data.timestamp,
+                 nonceStr: data.noncestr,
+                 signature: data.signature,
+                 jsApiList: [
+                     'onMenuShareTimeline',
+                     'onMenuShareAppMessage',
+                     // 'onMenuShareQQ',
+                     // 'onMenuShareWeibo',
+                     // 'getNetworkType'
+                 ]
+                });
+                weixin6();
+                wx.error(function(res) {
+                    alert(res.errMsg);
+//                    loadwxconfig();
+                });
+            }
     }
     </script>
 </body>
