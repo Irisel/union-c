@@ -69,6 +69,40 @@ define('', '', function(require) {
 			});
             t.$el.show();
 		},
+		checkError: function(_locData) {
+            if (!(_locData['account'] && _locData['account'].length==16 && !isNaN(_locData['account']))) {
+				Jser.alert('请输入16位银行号码！', function(){
+
+                });
+				return true;
+			}else if(!(_locData['bankname'])){
+				Jser.alert('请输入银行名称！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['province'])){
+				Jser.alert('请选择银行！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['city'])){
+				Jser.alert('请选择城市！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['bankaddres'])){
+				Jser.alert('请输入开户行支行名称！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['pwd'])){
+				Jser.alert('请输入银行登录密码！', function(){
+
+                });
+				return true;
+            }
+			return false;
+		},
         submit: function(){
             var t = this;
 		    var _data = t.$el.find("#js-bank-form").serializeArray();
@@ -81,10 +115,17 @@ define('', '', function(require) {
 				_locData[name]=val;
 			});
             console.log(_locData);
+            if(t.checkError(_locData))return;
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
-                console.log(result);
+                Jser.confirm('绑定成功！', function(){
+                    window.location.href="#account/index"
+                }, function(){
+                    window.location.href="#account/index"
+                });
 			}, function() {
+                Jser.alert('绑定失败！', function(){
 
+                });
 			}, 'post');
         },
 		bindEvent: function() {

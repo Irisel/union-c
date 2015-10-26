@@ -22,6 +22,20 @@ define('', '', function(require) {
 			window.history.back();
 		},
 		//待优化
+		checkError: function(_locData) {
+			if (!(_locData['real_name'] && _locData['real_name'].length!=0)) {
+				Jser.alert('请输入姓名！', function(){
+
+                });
+				return true;
+			} else if (!(_locData['idcard'] && _locData['idcard'].length==18 && !isNaN(_locData['idcard']))) {
+				Jser.alert('请输入18位身份证号码！', function(){
+
+                });
+				return true;
+			}
+			return false;
+		},
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
@@ -41,6 +55,7 @@ define('', '', function(require) {
 				_data[i].value = val;
 				_locData[name]=val;
 			});
+            if(t.checkError(_locData))return;
             console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/saveid', _locData, function(result) {
                 if(data.pars.next == 'bank'){
