@@ -43,7 +43,11 @@
         <div class="list-buy">
             <p><span class="min">¥</span><span><%=data.zc_unit%></span></p>
             <p>每人限购<%=data.max%>份</p>
-            <a class="buy-button" href="#funding/order/id:<%=pars.id%>">立即参与</a>
+            <%if(parseInt(data.day) && parseInt(data.pro)<100){%>
+                <a class="buy-button" href="#funding/order/id:<%=pars.id%>">立即参与</a>
+            <%}else{%>
+                <a class="buy-button disabled">已结束</a>
+            <%}%>
         </div>
         </div>
     </div>

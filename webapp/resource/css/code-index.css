@@ -2336,7 +2336,7 @@ input[type=button] {
             -webkit-user-select: auto;
             width: 100%;
             overflow-x: visible;
-            overflow-y: scroll; }
+            overflow-y: visible; }
           .invite-ul li .invite-flex:nth-child(2) div p {
             clear: left;
             font-size: 12px;
@@ -2368,3 +2368,41 @@ input[type=button] {
     height: 200px;
     margin-left: -100px;
     left: 50%; }
+
+.qr .qrbody {
+  width: 100%;
+  height: auto; }
+.qr .qrcode {
+  background: url(../images/minify/qrpresent.png) top center no-repeat;
+  background-size: contain;
+  position: absolute;
+  padding: 30px 70px 0;
+  top: 10%;
+  width: 280px;
+  height: 310px;
+  left: 50%;
+  margin-left: -140px; }
+  .qr .qrcode span {
+    position: absolute;
+    color: #c81128;
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    width: 140px;
+    bottom: 20px;
+    left: 70px; }
+.qr .notice {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  margin-top: 20px; }
+  .qr .notice span {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: #ffffff; }
+
+.disabled {
+  background-color: #bbbbbb !important; }

@@ -48,16 +48,22 @@
     </div>
     <div class="list-purchase bottom-fill">
         <div class="invest-expect">
-            预期收益 <span>0</span> 元
+            预期收益 <span class="js-expect">0</span> 元
         </div>
         <div class="purchase">
             <div class="invest-input">
                 <input type="text" placeholder="不低于100， 请写整数" class="js-investamount">
                 <span>元</span>
             </div>
-            <div class="invest-button js-invest">
-                <a>投资</a>
-            </div>
+            <%if(parseInt(data.money_dec)>0){%>
+                <div class="invest-button js-invest">
+                    <a>投资</a>
+                </div>
+            <%}else{%>
+                <div class="invest-button js-invest">
+                    <a class="disabled">投资</a>
+                </div>
+            <%}%>
             <div class="invest-balance">
                 <i class="icon-notice"></i>
                 账户余额<%=data.have_money%>元， <a href="#account/recharge">去充值</a>

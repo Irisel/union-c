@@ -25,6 +25,7 @@ define('', '', function(require) {
 			var t = this,
 				data = {};
             t.invite = Jser.getUrlParam('invite');
+            data['invite'] = t.invite;
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             var t1 = t.$el.find(".js-tel");
@@ -104,7 +105,7 @@ define('', '', function(require) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){
                         Jser.alert(result.info, function(){
-                            window.history.back();
+                            window.location.href="#account/index"
                         })
                     }
 				}, function() {

@@ -10,9 +10,12 @@ define('', '', function(require) {
 		model: model,
 		template: H,
         have_money: 0,
+        transfer_invest_month: 0,
+        rate: 0,
 		events: {
             "click .js-back": "back",
-            "click .js-invest": "invest"
+            "click .js-invest": "invest",
+            "input .js-investamount": "expect"
 		},
 		initialize: function() {
 			var t = this;
@@ -20,6 +23,15 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
+        expect: function(e){
+            var t = this;
+            var input = $(e.currentTarget).val();
+            if(!isNaN(parseInt(input))){
+                t.$el.find('.js-expect').html((t.rate || 0 ) * (t.transfer_invest_month || 0) * parseInt(input));
+            }else{
+                t.$el.find('.js-expect').html(0);
+            }
+        },
 		syncRender: function() {
             var t = this;
             var _data = t.model.toJSON();
@@ -63,6 +75,8 @@ define('', '', function(require) {
 		render: function(rawdata) {
 			var t = this,
 				data = rawdata || t.model.toJSON();
+            t.rate = data.data.rate;
+            t.transfer_invest_month = data.data.transfer_invest_month;
             var size = windowSize();
             if(!data.data)data.data = {};
             if(!data.data.have_money){

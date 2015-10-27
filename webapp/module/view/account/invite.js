@@ -10,6 +10,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
         text: '',
+        invite: '',
 		events: {
             "click .js-back": "back",
             "click .js-share": "share",
@@ -81,7 +82,7 @@ define('', '', function(require) {
 			// alert("fid:"+fid+",name:"+Jser.getItem("fid" + fid));
 			var descContent = "联合金融";
 //			var url = 'http://www.lamakeji.com/mamago/index.php/weixin/productShare?fid=' + fid + '&shareUserId=' + Jser.getItem("user_id") + '&tpid=4&topic=' + shareTitle + '&ftitle=' + descContent + '&from=singlemessage&isappinstalled=1';
-            var url = 'http://http://ceshi.lianhejinrong.cn/Public/Wapapp/index.html';
+            var url = window.location.host + window.location.pathname + '?views=account&action=qrcode&message=' + t.invite;
 			Jser.setshare({
 				imgUrl: "",
 				lineLink: url,
@@ -95,7 +96,8 @@ define('', '', function(require) {
 				data = rawdata || t.model.toJSON();
             console.log(data, data.status == "0");
             t.checkLogin(data.status == "0");
-            if(!data.data)data.data = [];
+            if(!data.data)data.data = {};
+            t.invite = data.data.invite;
 			var html = _.template(t.template, data);
 			t.$el.html(html);
             t.$el.show();

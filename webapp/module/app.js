@@ -1,6 +1,10 @@
 define(function(require, exports) {
     var B = require('backbone');
     //导航菜单视图
+    var extras = {
+        'error': true,
+        'qrcode': true
+    };
     var navView = B.View.extend({
         el: $("#js-navs"),
         map: {
@@ -10,7 +14,8 @@ define(function(require, exports) {
         },
         action: {
             "error": true,
-            "invite": true
+            "invite": true,
+            "qrcode": true
         },
         initialize: function() {
             var t = this;
@@ -61,7 +66,7 @@ define(function(require, exports) {
                 md = Jser.getUrlParam('views');
                 ac = Jser.getUrlParam('action');
                 var path = window.location.pathname + '#' + md + '/' + ac;
-                if(md == 'account' && ac == 'error'){
+                if(md == 'account' && extras[ac]){
                     path+= '/message:' + Jser.getUrlParam('message');
                     con = 'message:' + Jser.getUrlParam('message');
                 }
@@ -69,8 +74,7 @@ define(function(require, exports) {
                     window.location.href = window.location.host + path;
                     return;
                 }else{
-//                    window.history.replaceState(null, null, path);
-                    console.log('replace');
+                    window.history.replaceState(null, null, path);
                 }
             }
             var t = this;
@@ -93,7 +97,6 @@ define(function(require, exports) {
             B.$("#js-wrap").children("section").hide();
             $(".js-wrapper .pop").hide();
             //加载model目录下对应的模块
-
             var view = md + ac;
             if (!App.Views[view]) {
                 $("#js-loading").show();
