@@ -8,13 +8,10 @@
 </div>
 <div class="inner-input sg">
     <span>开户行所在市:</span>
-    <select type="text" name="city" class="select-bank select-city">
-        <%_.each(options_c,function(item){%>
-            <option value="<%=item.value%>"><%=item.name%></option>
-        <%})%>
+    <select type="text" name="city" class="select-bank select-city" value="">
     </select>
 </div>
 <div class="inner-input sg">
     <span>开户行支行名称:</span>
-    <input type="text" name="bankaddres">
+    <input type="text" name="bankaddres" value="<%=bank_address%>">
 </div>

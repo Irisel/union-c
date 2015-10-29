@@ -27,12 +27,6 @@ define('', '', function(require) {
 				});
 			});
 		},
-        syncRender: function(){
-            console.log('syncReader');
-			var t = this,
-				data = t.model.toJSON();
-            console.log(data);
-        },
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();

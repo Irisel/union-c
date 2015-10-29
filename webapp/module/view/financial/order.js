@@ -57,7 +57,7 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             if(!(t.checkLogin(data.status == "0")) && data.data){
-                if(t.ifaccess(data))return;
+                t.ifaccess(data);
             }
             if(data.data && data.data.rewards){
                 data.data.rewards.sort(function(a, b){

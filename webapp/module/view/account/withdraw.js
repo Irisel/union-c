@@ -39,16 +39,15 @@ define('', '', function(require) {
 			var t = this,
 				data = syncData || t.model.toJSON();
             console.log(data, data.status == "0");
-            if(!data.data)data.data = {};
+            if(!data.data)data.data = {balance:0.00};
+			var html = _.template(t.template, data);
+			t.$el.show().html(html);
             if(isNaN(data.data.balance))data.data.balance = 0;
             if(!(t.checkLogin(data.status == "0")) && data.data){
                 if(t.ifaccess(data))return;
             }else{
                 return
             }
-            if(!data.data)data.data = 0;
-			var html = _.template(t.template, data);
-			t.$el.show().html(html);
 		},
 		back: function(){
 			window.history.back();
@@ -75,6 +74,7 @@ define('', '', function(require) {
             $('#moneywithdraw') && $('#moneywithdraw').submit();
         },
 		syncRender: function() {
+            console.log('syncRender');
 			var t = this;
             var _data = { data:{balance:0.00}};
             Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {

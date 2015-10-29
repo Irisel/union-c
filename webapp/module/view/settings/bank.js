@@ -5,7 +5,7 @@ define('', '', function(require) {
     var Banks = require("view/verifi/bank/option");
     var Locations = require("view/verifi/bank/location");
 	var model = new M({
-        action:'/account/shouquan'
+        action:'/account/bank_info'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -14,8 +14,9 @@ define('', '', function(require) {
         account_show: '',
 		events: {
             "click .js-back": "back",
-            "click .js-submit": "submit",
-            "change .js-account-show": "fill"
+            "click .js-submit": "submit"
+//            ,
+//            "change .js-account-show": "fill"
 		},
 		initialize: function() {
 			var t = this;
@@ -55,17 +56,35 @@ define('', '', function(require) {
 		back: function(){
 			window.history.back();
 		},
+		syncRender: function() {
+            var t = this;
+            var _data = { data: {}};
+            Jser.getJSON(ST.PATH.ACTION + '/account/bank_info', {}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                t.render(_data);
+			}, function() {
+
+			});
+		},
 		//待优化
-		render: function() {
+		render: function(rawdata) {
 			var t = this,
-				data = t.model.toJSON();
-			var html = _.template(t.template, data);
+				data = rawdata || t.model.toJSON();
+            if(data.data["0"]){
+                data.data = data.data["0"]
+            }else{
+                data.data = {};
+            }
+            var html = _.template(t.template, data);
 			t.$el.html(html);
 			new Banks({
-				el: t.$el.find(".select-bank")
+				el: t.$el.find(".select-bank"),
+                raw_data: data.data
 			});
 			new Locations({
-				el: t.$el.find(".select-location")
+				el: t.$el.find(".select-location"),
+                raw_data: data.data
 			});
             t.$el.show();
 		},
@@ -82,7 +101,13 @@ define('', '', function(require) {
 			});
             console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
-                console.log(result);
+                var info = result.status=="1"?'更新成功!':('更新失败：'+ result.data);
+                Jser.confirm(info, function(){
+                    if(result.status=="1")
+                    window.location.href="#account/index"
+                }, function(){
+
+                });
 			}, function() {
 
 			}, 'post');

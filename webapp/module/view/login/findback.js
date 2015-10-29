@@ -31,6 +31,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
             t.$el.find('.form1').show();
             t.$el.find('.form2').hide();
+            $("#js-loading").hide();
 		},
 		back: function(){
 			window.history.back();

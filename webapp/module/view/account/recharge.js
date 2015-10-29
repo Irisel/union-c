@@ -53,13 +53,13 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             console.log(data);
+			var html = _.template(t.template, data);
+			t.$el.show().html(html);
             if(!(t.checkLogin(data.status == "0")) && data.data){
                 if(t.ifaccess(data))return;
             }else{
                 return
             }
-			var html = _.template(t.template, data);
-			t.$el.show().html(html);
 		},
         chargetype: function(e){
             var t = this;

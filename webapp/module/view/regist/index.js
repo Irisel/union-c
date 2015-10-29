@@ -98,7 +98,7 @@ define('', '', function(require) {
 					name = item.name;
 					val = $.trim(item.value);
 					_data[i].value = val;
-					_locData[name]=val;
+					if(val)_locData[name]=val;
 				});
                 if(t.invite)_locData['invite'] = t.invite;
 				Jser.getJSON(ST.PATH.ACTION + "/member/registor", _locData, function(result) {

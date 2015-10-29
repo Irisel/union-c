@@ -117,11 +117,19 @@ define('', '', function(require) {
             console.log(_locData);
             if(t.checkError(_locData))return;
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
-                Jser.confirm('绑定成功！', function(){
-                    window.location.href="#account/index"
-                }, function(){
-                    window.location.href="#account/index"
-                });
+                var info = result.status=="1"?'绑定成功!':('绑定失败：'+ result.data);
+                if(result.status == 1){
+                    Jser.confirm(info, function(){
+                        window.location.href="#account/index"
+                    }, function(){
+
+                    });
+                }else{
+                    Jser.alert(info, function(){
+
+                    })
+                }
+
 			}, function() {
                 Jser.alert('绑定失败！', function(){
 

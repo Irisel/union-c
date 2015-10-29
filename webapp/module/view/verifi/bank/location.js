@@ -35,25 +35,36 @@ define('', '', function(require) {
             $.each(data.data, function(i, item){
                 options+='<option value="' + item.id + '">'+ item.cityname +'</option>';
             });
-            t.$el.find('.select-city').val(data.data.id);
+            if(data.raw_data){
+                t.$el.find('.select-city').val(data.raw_data?data.raw_data.bank_city:'');
+            }else{
+                t.$el.find('.select-city').val(data.data[0].id);
+            }
             t.$el.find('.select-city').html(options);
 		},
 		//待优化
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            var options = {options_p: [], options_c:[], p_rid:''};
+            var options = {options_p: [], p_rid:''};
             $.each(data.data, function(i, item){
                 options.options_p.push({
                    name: item.cityname,
                     value: item.id
                 });
             });
-            options.p_rid = options.options_p[0].value;
+            if(data.raw_data){
+                options.p_rid = data.raw_data?data.raw_data.bank_province:'';
+                options.bank_address = data.raw_data?data.raw_data.bank_address:'';
+            }else{
+                options.p_rid = options.options_p[0].value;
+                options.bank_address = '';
+            }
+
 			var html = _.template(t.template, options);
 			t.$el.html(html);
             t.changePars({
-                rid: options.options_p[0].value
+                rid: options.p_rid
             });
             t.$el.show();
 		},
@@ -69,6 +80,9 @@ define('', '', function(require) {
             pars: {
                 rid: 0
             }
+		});
+        if(pars.raw_data)model.set({
+            raw_data: pars.raw_data
 		});
 		return new V({
 			el: pars.el

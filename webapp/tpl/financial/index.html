@@ -55,13 +55,13 @@
                 <input type="text" placeholder="不低于100， 请写整数" class="js-investamount">
                 <span>元</span>
             </div>
-            <%if(parseInt(data.money_dec)>0){%>
+            <%if(data.status=="2"){%>
                 <div class="invest-button js-invest">
                     <a>投资</a>
                 </div>
             <%}else{%>
-                <div class="invest-button js-invest">
-                    <a class="disabled">投资</a>
+                <div class="invest-button js-invest disabled">
+                    <a>还款中</a>
                 </div>
             <%}%>
             <div class="invest-balance">

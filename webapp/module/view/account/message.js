@@ -25,7 +25,9 @@
             console.log('syncReader');
 			var t = this;
             var _data = { data: []};
+            $("#js-loading").show();
             Jser.getJSON(ST.PATH.ACTION + '/account/msg', {}, function(result) {
+                $("#js-loading").hide();
                 if(result.status == "1")
                 _data = result;
                 t.checkLogin(result.status == "0");
@@ -33,7 +35,7 @@
 			    t.$el.find(".message-detail").html(_html);
                 t.bindEvent();
 			}, function() {
-                Jser.alert('删除失败！');
+                $("#js-loading").hide();
 			});
             t.$el.show();
 		},
@@ -206,7 +208,7 @@
 
 				}, "post");
 			}, function(){
-
+                Jser.alert('删除失败！');
             });
 			return false;
 		},

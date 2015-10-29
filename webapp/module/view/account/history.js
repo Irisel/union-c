@@ -52,13 +52,16 @@ define('', '', function(require) {
             console.log('syncReader');
 			var t = this;
             var _data = { data: []};
+            $("#js-loading").show();
             Jser.getJSON(ST.PATH.ACTION + '/account/history', {}, function(result) {
+                $("#js-loading").hide();
                 if(result.status == "1")
                 _data = result;
                 t.checkLogin(result.status == "0");
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-charge").html(_html);
 			}, function() {
+                $("#js-loading").hide();
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-charge").html(_html);
 			});

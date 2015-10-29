@@ -78,9 +78,9 @@ define('', '', function(require) {
 				data = rawdata || t.model.toJSON();
             console.log(data);
             if(!(t.checkLogin(data.status == "0")) && data.data){
-                if(t.ifaccess(data))return;
+                t.ifaccess(data);
             }else{
-                return
+
             }
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);

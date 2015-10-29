@@ -84,7 +84,7 @@ define('', '', function(require) {
 //			var url = 'http://www.lamakeji.com/mamago/index.php/weixin/productShare?fid=' + fid + '&shareUserId=' + Jser.getItem("user_id") + '&tpid=4&topic=' + shareTitle + '&ftitle=' + descContent + '&from=singlemessage&isappinstalled=1';
             var url = window.location.host + window.location.pathname + '?views=account&action=qrcode&message=' + t.invite;
 			Jser.setshare({
-				imgUrl: "",
+				imgUrl: "http://ceshi.lianhejinrong.cn/Public/Wapapp/resource/images/minify/hbshare.png",
 				lineLink: url,
 				shareTitle: shareTitle, //"妈咪口袋" + Jser.getItem("fid" + fid),
 				descContent: descContent

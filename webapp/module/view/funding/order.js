@@ -66,9 +66,9 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             if(!(t.checkLogin(data.status == "0")) && data.data){
-                if(t.ifaccess(data))return;
+                t.ifaccess(data);
             }else{
-                return
+
             }
             if(!data.data)data.data = {};
             console.log(data, '万'.indexOf(data.data.d_money));

@@ -26,8 +26,9 @@ define('', '', function(require) {
         expect: function(e){
             var t = this;
             var input = $(e.currentTarget).val();
-            if(!isNaN(parseInt(input))){
-                t.$el.find('.js-expect').html((t.rate || 0 ) * (t.transfer_invest_month || 0) * parseInt(input));
+            if(!isNaN(parseFloat(input))){
+                var caculate = (t.rate || 0 ) * (t.transfer_invest_month || 0) * parseFloat(input) * 0.01/12;
+                t.$el.find('.js-expect').html(caculate.toFixed(2));
             }else{
                 t.$el.find('.js-expect').html(0);
             }
@@ -113,7 +114,7 @@ define('', '', function(require) {
             console.log('invest');
             var t = this, data = t.model.toJSON();
             if(!(t.checkLogin(data.status == "2")) && data.data){
-                if(t.ifaccess(data))return;
+                t.ifaccess(data);
             }else{
                 return
             }
@@ -137,7 +138,7 @@ define('', '', function(require) {
                     t.$el.find(".js-investamount").val('');
 			    });
                 return;
-            }else if(parseInt(money)>parseInt(t.have_money)){
+            }else if(parseInt(money)>parseInt(t.have_money.replace(',', ''))){
                 console.log(money, t.have_money);
 			    Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';

@@ -56,7 +56,9 @@ define('', '', function(require) {
 			var t = this;
             if(t.syncloading)return;
             var _data = { data: []};
+            $("#js-loading").show();
             Jser.getJSON(ST.PATH.ACTION + t.syncaction[t.model.get("pars")["type"]], {}, function(result) {
+                $("#js-loading").hide();
                 if(result.status == "1")
                 _data = result;
                 t.checkLogin(result.status == "0");
@@ -64,6 +66,7 @@ define('', '', function(require) {
 			    t.$el.find(".list-history").html(_html);
                 t.syncloading = false;
 			}, function() {
+                $("#js-loading").hide();
                 var _html = _.template(list_tpl, _data);
 			    t.$el.find(".list-history").html(_html);
                 t.syncloading = false;

@@ -23,13 +23,15 @@ define('', '', function(require) {
 		syncRender: function() {
             var t = this;
             var _data = { data: []};
+            $("#js-loading").show();
             Jser.getJSON(ST.PATH.ACTION + '/account/user_data', {}, function(result) {
+                $("#js-loading").hide();
                 if(result.status == "1")
                 _data = result;
                 t.checkLogin(result.status == "0");
                 t.render(_data);
 			}, function() {
-
+                $("#js-loading").hide();
 			});
 		},
 		//待优化
