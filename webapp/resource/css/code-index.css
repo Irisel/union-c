@@ -669,7 +669,8 @@ input[type=button] {
       .order-detail .inner-normal span:first-child {
         float: left; }
       .order-detail .inner-normal span:last-child {
-        float: right; }
+        float: right;
+        margin-right: 30px; }
     .order-detail .inner-normal .orange {
       color: #ff7d21; }
 
@@ -1552,7 +1553,7 @@ input[type=button] {
     border-bottom: 1px solid #eee;
     position: relative; }
     .setting-detail .inner-normal .btn-forward {
-      top: 9.5px; }
+      top: 9px; }
     .setting-detail .inner-normal span {
       text-align: center; }
       .setting-detail .inner-normal span:first-child {
@@ -1864,7 +1865,7 @@ input[type=button] {
   display: block;
   position: absolute;
   right: 10px;
-  top: 14.5px;
+  top: 9px;
   background-size: auto 30px; }
 
 .hd-backgray {
@@ -1934,17 +1935,23 @@ input[type=button] {
 
 .icon-username {
   background: url(../images/minify/account.png) 0 0 no-repeat;
-  background-size: auto 30px; }
+  background-size: auto 30px;
+  background-position: -36px 0; }
 
 .icon-passwd {
   background: url(../images/minify/account.png) 0 0 no-repeat;
   background-size: auto 30px;
-  background-position: -30px 0; }
+  background-position: -71px 0; }
+
+.icon-invite {
+  background: url(../images/minify/account.png) 0 0 no-repeat;
+  background-size: auto 30px; }
 
 .icon-verity {
   background: url(../images/minify/account.png) 0 0 no-repeat;
   background-size: auto 30px;
-  background-position: -60px 0; }
+  background-position: -105px 0;
+  width: 31px !important; }
 
 .option-section {
   display: block;
@@ -2089,25 +2096,28 @@ input[type=button] {
       left: 40%;
       position: relative; }
       .presents .inner-normal .present .present-date {
-        height: 1.5em;
-        line-height: 1.5em;
+        line-height: 1em;
         font-size: 1em;
         text-indent: 10px;
-        margin-top: 0.4em; }
+        margin-top: 10px;
+        min-height: 1em; }
         .presents .inner-normal .present .present-date.used {
           color: #c0c0c0; }
       .presents .inner-normal .present .present-info {
         line-height: 1.5em;
         font-size: 1em;
-        padding-left: 10px; }
+        padding-left: 10px;
+        min-height: 1.5em; }
         .presents .inner-normal .present .present-info.used {
           color: #c0c0c0; }
       .presents .inner-normal .present .present-title {
-        height: 2em;
-        line-height: 2em;
-        font-size: 1.6em;
+        line-height: 1.4em;
+        font-size: 1.4em;
+        min-height: 1.4em;
         color: #ff6c00;
-        text-indent: 10px; }
+        text-indent: 5px;
+        word-break: break-all;
+        padding: 0 5px; }
         .presents .inner-normal .present .present-title.used {
           color: #c0c0c0; }
 

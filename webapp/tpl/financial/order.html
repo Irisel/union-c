@@ -52,7 +52,7 @@
     <%if(data.rewards){%>
     <div class="order-detail">
         <div class="order-title">使用红包</div>
-        <div class="inner-normal js-present"><span class="reward_text"><%=data.reward_choose.order%></span><i class="btn btn-forward"></i></div>
+        <div class="inner-normal js-present"><span class="reward_text"><%=data.reward_choose.order%></span><i class="btn btn-forward"></i><span class="reward_money"><%=data.reward_choose.money%></span></div>
     </div>
     <%}%>
     <form class="vishide" method="post" action="/wap/account/tinvestmoney" id="js-tinvest-form">

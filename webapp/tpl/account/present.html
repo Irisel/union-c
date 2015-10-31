@@ -9,7 +9,7 @@
     <ul class="presents">
         <%if(data.length){%>
             <%_.each(data,function(item){%>
-                <%if(item.status=="1"){%>
+                <%if(item.status=="1" && (item.expired_day=="0")){%>
                     <li class="inner-normal">
                         <div class="present-img unused">
                             <span class="unused"><%=item.money%></span>
@@ -17,7 +17,7 @@
                         <div class="present">
                             <div class="present-title"><span><%=item.type%></span></div>
                             <div class="present-info"><span><%=item.info%></span></div>
-                            <div class="present-date"><span>有效期至<%=item.expired_day%></span></div>
+                            <div class="present-date"><span>有效期至<%=item.expired_time%></span></div>
                         </div>
                     </li>
                 <%}else{%>
@@ -28,7 +28,7 @@
                         <div class="present">
                         <div class="present-title used"><span><%=item.type%></span></div>
                         <div class="present-info used"><span><%=item.info%></span></div>
-                        <div class="present-date used"><span>有效期至<%=item.expired_day%></span></div>
+                        <div class="present-date used"><span>有效期至<%=item.expired_time%></span></div>
                         </div>
                     </li>
                 <%}%>

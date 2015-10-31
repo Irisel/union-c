@@ -17,11 +17,11 @@
                         <div class="present">
                             <div class="present-title"><span><%=item.type%></span></div>
                             <div class="present-info"><span><%=item.info%></span></div>
-                            <div class="present-date"><span>有效期至<%=item.expired_day%></span></div>
+                            <div class="present-date"><span>有效期至<%=item.expired_time%></span></div>
                         </div>
                         <div class="present-mark"></div>
                     </li>
-                <%}else{%>
+                <%}else if(item.status=="1" && (item.expired_day=="0")){%>
                     <li class="inner-normal js-choose" data-id="<%=item.id%>">
                         <div class="present-img unused">
                             <span class="unused"><%=item.money%></span>
@@ -29,7 +29,7 @@
                         <div class="present">
                         <div class="present-title"><span><%=item.type%></span></div>
                         <div class="present-info"><span><%=item.info%></span></div>
-                        <div class="present-date"><span>有效期至<%=item.expired_day%></span></div>
+                        <div class="present-date"><span>有效期至<%=item.expired_time%></span></div>
                         </div>
                         <div class="present-mark"></div>
                     </li>

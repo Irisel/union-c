@@ -95,6 +95,7 @@ define('', '', function(require) {
             if(data.data.reward_choose){
                 t.$el.find('.reward_text').html(data.data.reward_choose.type);
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
+                t.$el.find('.reward_money').html(data.data.reward_choose.money);
             }
 		},
         back: function(){
@@ -142,6 +143,7 @@ define('', '', function(require) {
             }
             if(data.data.reward_choose){
                 t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                t.$el.find('.reward_money').html(data.data.reward_choose.money);
                 console.log(data.data.reward_choose, t.$el.find('.reward_id').val());
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
             }
