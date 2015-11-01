@@ -536,26 +536,34 @@ input[type=button] {
   background-color: #f6f6f6;
   line-height: 40px;
   padding: 0 10px;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  overflow: hidden;
+  position: relative; }
   .index-products .label {
     display: inline-block;
-    float: left; }
-  .index-products .index-products-list {
-    display: inline-block;
-    height: 40px;
-    font-size: 0.8em; }
-    .index-products .index-products-list li {
+    float: left;
+    width: 80px; }
+  .index-products .product-scroll {
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    left: 80px; }
+    .index-products .product-scroll .index-products-list {
       display: inline-block;
-      float: left;
-      padding: 0 10px;
-      border-radius: 13px;
-      height: 20px;
-      margin-right: 10px;
-      margin-top: 10px;
-      line-height: 20px; }
-      .index-products .index-products-list li.on {
-        background-color: #ff7d21;
-        color: #ffffff; }
+      height: 40px;
+      font-size: 0.8em; }
+      .index-products .product-scroll .index-products-list li {
+        display: inline-block;
+        float: left;
+        padding: 0 10px;
+        border-radius: 13px;
+        height: 20px;
+        margin-right: 10px;
+        margin-top: 10px;
+        line-height: 20px; }
+        .index-products .product-scroll .index-products-list li.on {
+          background-color: #ff7d21;
+          color: #ffffff; }
 
 .products-list {
   width: 100%; }

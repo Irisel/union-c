@@ -678,30 +678,39 @@ input[type=button]{
   line-height: 40px;
   padding: 0 10px;
   font-size: 0.8em;
+  overflow: hidden;
+  position: relative;
   .label{
     display:inline-block;
     float:left;
+    width:80px;
   }
-  .index-products-list{
-    display: inline-block;
-    height: 40px;
-    font-size:0.8em;
-    li{
+  .product-scroll{
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    left: 80px;
+    .index-products-list{
       display: inline-block;
-      float: left;
-      padding: 0 10px;
-      border-radius: 13px;
-
-      &.on {
-        background-color: #ff7d21;
-        color: #ffffff;
+      height: 40px;
+      font-size:0.8em;
+      li{
+        display: inline-block;
+        float: left;
+        padding: 0 10px;
+        border-radius: 13px;
+        &.on {
+          background-color: #ff7d21;
+          color: #ffffff;
+        }
+        height: 20px;
+        margin-right: 10px;
+        margin-top: 10px;
+        line-height: 20px;
       }
-      height: 20px;
-      margin-right: 10px;
-      margin-top: 10px;
-      line-height: 20px;
     }
   }
+
 }
 
 .products-list{

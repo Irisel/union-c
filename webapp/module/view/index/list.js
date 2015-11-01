@@ -25,6 +25,21 @@ define('', '', function(require) {
                 })
 			});
 		},
+        sliderProducts: function(ele){
+            var inners = $(ele).find('.index-products-list li');
+            var ulw = 0;
+            $.each(inners, function(key, inner){
+                var w = ($(inner).width())||0;
+                var pl = $(inner).css('padding-left').replace('px', '') ||0;
+                var pr = $(inner).css('padding-left').replace('px', '')||0;
+                var ml = $(inner).css('margin-left').replace('px', '')||0;
+                var mr = $(inner).css('margin-right').replace('px', '')||0;
+                ulw+= w + parseInt(pl) + parseInt(pr) + parseInt(ml) + parseInt(mr);
+            });
+            $(ele).find('.index-products-list').width(ulw);
+            var label_width = $(ele).find('.label').width() || 0;
+            $(ele).find('.product-scroll').width($(ele).width() - label_width);
+        },
 		syncRender: function() {
 			var t = this,
 				data = t.model.toJSON();
@@ -41,6 +56,7 @@ define('', '', function(require) {
 				data = t.model.toJSON();
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            t.sliderProducts('.index-products');
 		},
 		bindEvent: function() {
 
