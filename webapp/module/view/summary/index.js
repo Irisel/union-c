@@ -31,11 +31,11 @@ define('', '', function(require) {
             if(data.pars.type_name){
                 t.$el.find('.js-summary').html(data.data?data.data.type_content:'');
                 var title = t.$el.find('.js-summary h3');
-                if(title)t.$el.find('.header').html(title.html());
+                if(title)t.$el.find('.header').append(title.html());
                 t.$el.find('.js-summary h3').hide();
             }else if(data.pars.id && data.data && data.data.length){
                 t.$el.find('.js-summary').html(data.data[0].art_content);
-                t.$el.find('.header').html(data.data[0].title);
+                t.$el.find('.header').append(data.data[0].title);
             }
             t.$el.show();
 		},

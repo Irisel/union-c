@@ -30,16 +30,14 @@ define('', '', function(require) {
                         if(a.status=='1')return false;
                     }
                     if(a.expired_day != b.expired_day){
-                        if(parseInt(a.expired_day) > parseInt(b.expired_day))return false;
+                        if(a.expired_day=='0')return true;
+                        if(b.expired_day=='0')return false;
+                    }
+                    if(a.expired_time != b.expired_time){
+                        if(parseInt(a.expired_time) < parseInt(b.expired_time))return false;
                     }
                     if(a.money != b.money){
                         if(parseInt(a.money) > parseInt(b.money))return false;
-                    }
-                    if(a.add_time != b.add_time){
-                        if(parseInt(b.add_time) > parseInt(a.add_time))return false;
-                    }
-                    if(a.id != b.id){
-                        if(parseInt(b.id) > parseInt(a.id))return false;
                     }
                     return true;
                 });

@@ -44,7 +44,7 @@ define('', '', function(require) {
             var list = {list: data.list};
 			var _html = _.template(list_tpl, list);
 			var $list = t.$el.find(".js-index-list");
-			$list.append(_html);
+			$list.html(_html);
 			Jser.loadimages($list);
 
 		},

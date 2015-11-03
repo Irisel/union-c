@@ -9,7 +9,7 @@
     <ul class="presents">
         <%if(data.length){%>
             <%_.each(data,function(item){%>
-                <%if(item.status=="1" && (item.expired_day=="0")){%>
+                <%if(item.status=="1" && (item.expired_day=="0" || (new Date()).valueOf() > parseInt(item.expired_time))){%>
                     <li class="inner-normal">
                         <div class="present-img unused">
                             <span class="unused"><%=item.money%></span>
@@ -17,7 +17,11 @@
                         <div class="present">
                             <div class="present-title"><span><%=item.type%></span></div>
                             <div class="present-info"><span><%=item.info%></span></div>
-                            <div class="present-date"><span>有效期至<%=item.expired_time%></span></div>
+                            <%if(item.expired_day=="0"){%>
+                                <div class="present-date"><span>有效期至永久</span></div>
+                            <%}else{%>
+                                <div class="present-date"><span>有效期至<%=new Date(parseInt(item.expired_time) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ')%></span></div>
+                            <%}%>
                         </div>
                     </li>
                 <%}else{%>
@@ -28,7 +32,11 @@
                         <div class="present">
                         <div class="present-title used"><span><%=item.type%></span></div>
                         <div class="present-info used"><span><%=item.info%></span></div>
-                        <div class="present-date used"><span>有效期至<%=item.expired_time%></span></div>
+                            <%if(item.expired_day=="0"){%>
+                                <div class="present-date"><span>有效期至永久</span></div>
+                            <%}else{%>
+                                <div class="present-date"><span>有效期至<%=new Date(parseInt(item.expired_time) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ')%></span></div>
+                            <%}%>
                         </div>
                     </li>
                 <%}%>

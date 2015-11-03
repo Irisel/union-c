@@ -61,22 +61,20 @@ define('', '', function(require) {
             }
             if(data.data && data.data.rewards){
                 data.data.rewards.sort(function(a, b){
-                    if(a.status != b.status){
-                        if(a.status=='1')return false;
-                    }
-                    if(a.expired_day != b.expired_day){
-                        if(parseInt(a.expired_day) > parseInt(b.expired_day))return false;
-                    }
-                    if(a.money != b.money){
-                        if(parseInt(a.money) > parseInt(b.money))return false;
-                    }
-                    if(a.add_time != b.add_time){
-                        if(parseInt(b.add_time) > parseInt(a.add_time))return false;
-                    }
-                    if(a.id != b.id){
-                        if(parseInt(b.id) > parseInt(a.id))return false;
-                    }
-                    return true;
+                if(a.status != b.status){
+                    if(a.status=='1')return false;
+                }
+                if(a.expired_day != b.expired_day){
+                    if(a.expired_day=='0')return true;
+                    if(b.expired_day=='0')return false;
+                }
+                if(a.expired_time != b.expired_time){
+                    if(parseInt(a.expired_time) < parseInt(b.expired_time))return false;
+                }
+                if(a.money != b.money){
+                    if(parseInt(a.money) > parseInt(b.money))return false;
+                }
+                return true;
                 });
                 data.data.reward_choose = data.data.rewards[0];
             }
@@ -93,7 +91,7 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             if(data.data.reward_choose){
-                t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                t.$el.find('.reward_text').html(data.data.reward_choose.name);
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
                 t.$el.find('.reward_money').html(data.data.reward_choose.money);
             }
@@ -114,22 +112,20 @@ define('', '', function(require) {
             }
             if(data.data && data.data.rewards){
                 data.data.rewards.sort(function(a, b){
-                    if(a.status != b.status){
-                        if(a.status=='1')return false;
-                    }
-                    if(a.expired_day != b.expired_day){
-                        if(parseInt(a.expired_day) > parseInt(b.expired_day))return false;
-                    }
-                    if(a.money != b.money){
-                        if(parseInt(a.money) > parseInt(b.money))return false;
-                    }
-                    if(a.add_time != b.add_time){
-                        if(parseInt(b.add_time) > parseInt(a.add_time))return false;
-                    }
-                    if(a.id != b.id){
-                        if(parseInt(b.id) > parseInt(a.id))return false;
-                    }
-                    return true;
+                if(a.status != b.status){
+                    if(a.status=='1')return false;
+                }
+                if(a.expired_day != b.expired_day){
+                    if(a.expired_day=='0')return true;
+                    if(b.expired_day=='0')return false;
+                }
+                if(a.expired_time != b.expired_time){
+                    if(parseInt(a.expired_time) < parseInt(b.expired_time))return false;
+                }
+                if(a.money != b.money){
+                    if(parseInt(a.money) > parseInt(b.money))return false;
+                }
+                return true;
                 });
                 data.data.reward_choose = data.data.rewards[0];
             }
@@ -142,7 +138,7 @@ define('', '', function(require) {
                 Jser.setItem(data.pars.id + '_funding_reward', data.data.reward_choose.id);
             }
             if(data.data.reward_choose){
-                t.$el.find('.reward_text').html(data.data.reward_choose.type);
+                t.$el.find('.reward_text').html(data.data.reward_choose.name);
                 t.$el.find('.reward_money').html(data.data.reward_choose.money);
                 console.log(data.data.reward_choose, t.$el.find('.reward_id').val());
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
