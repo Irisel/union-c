@@ -33,7 +33,7 @@ define('', '', function(require) {
             t.$el.find('.slider-box').height(size.width * 7/20);
             t.$el.show();
 			t.doSlider();
-//			Jser.loadimages(t.$el, size);
+			Jser.loadimages(t.$el, size);
 		},
 		doSlider: function() {
 			var t=this;

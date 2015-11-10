@@ -63,7 +63,9 @@ define('', '', function(require) {
 		},
         chargetype: function(e){
             var t = this;
+            t.model.isCharging = true;
             var chargetype = $(e.currentTarget);
+            $('#moneycharge') && $('#moneycharge').attr("action", chargetype.data('action'));
             if(chargetype.data('type') == 'bankc'){
                 t.$el.find('.js-shortcutc').removeClass('on');
                 t.$el.find('.js-rechargeType').val('');
@@ -73,6 +75,7 @@ define('', '', function(require) {
                 console.log(t.$el.find('.js-rechargeType').val());
             }
             t.$el.find('.js-' + chargetype.data('type')).addClass('on');
+            t.model.isCharging = false;
         },
 		syncRender: function() {
 			var t = this;

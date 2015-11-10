@@ -68,7 +68,11 @@ define(function(require, exports) {
                 var path = window.location.pathname + '#' + md + '/' + ac;
                 if(md == 'account' && extras[ac]){
                     path+= '/message:' + Jser.getUrlParam('message');
-                    con = 'message:' + Jser.getUrlParam('message');
+                    var message = Jser.getUrlParam('message');
+                    con = 'message:' + message;
+                    if(ac=='error' && message){
+                        Jser.setItem('message-error', message);
+                    }
                 }
                 if (typeof history.replaceState === 'undefined') {
                     window.location.href = window.location.host + path;

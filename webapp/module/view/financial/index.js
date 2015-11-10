@@ -138,13 +138,18 @@ define('', '', function(require) {
                     t.$el.find(".js-investamount").val('');
 			    });
                 return;
-            }else if(parseInt(money)>parseInt(t.have_money.replace(',', ''))){
-                console.log(money, t.have_money);
+            }else if(parseInt(money)>parseInt(t.have_money.replace(',', '').replace('，',''))){
+                console.log(money, parseInt(t.have_money.replace(',', '').replace('，','')));
 			    Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';
 			    }, function(){
 
                 });
+                return;
+            }else if(parseInt(money)>parseInt(data.data.money_dec)){
+			    Jser.alert("项目金额不足， 请输入正确的金额！", function() {
+                    t.$el.find(".js-investamount").val(data.data.money_dec);
+			    });
                 return;
             }
             window.location.href="#financial/order/id:" + id + "/money:" + money;

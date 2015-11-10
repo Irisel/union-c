@@ -32,7 +32,7 @@ window.Jser = {
     getUrlParam: function(name){
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]); return null;
+        if (r != null) return decodeURI(r[2]); return null;
     },
     timestamp_format: function(timestmap){
         var  newTime = new Date(parseInt(timestmap) * 1000);

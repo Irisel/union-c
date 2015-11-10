@@ -1072,6 +1072,9 @@ input[type=button]{
                 font-size: 14px;
               }
             }
+            &.done{
+              background-color: #bbbbbb;
+            }
           }
         }
         .detail-crowd{
@@ -1148,7 +1151,7 @@ input[type=button]{
   .booker{
     position:relative;
     min-height: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 90px;
   }
   bottom:0;
   background-color:#f6f6f6;
@@ -2005,9 +2008,6 @@ input[type=button]{
     display:block;
     border-bottom: 1px solid #eee;
     position: relative;
-    .btn-forward{top: 9px;
-
-    }
     span{
       text-align:center;
       &:first-child{
@@ -2402,8 +2402,9 @@ input[type=button]{
   display: block;
   position: absolute;
   right: 10px;
-  top: 12.5px;
+  top: 50%;
   background-size: auto 30px;
+  margin-top: -10.5px;
 }
 
 .hd-backgray{
