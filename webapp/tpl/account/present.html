@@ -24,6 +24,17 @@
                             <%}%>
                         </div>
                     </li>
+                <%}else if(item.status=="2"){%>
+                    <li class="inner-normal">
+                        <div class="present-img used">
+                            <span class="used"><%=item.money%></span>
+                        </div>
+                        <div class="present">
+                        <div class="present-title used"><span><%=item.type%></span></div>
+                        <div class="present-info used"><span><%=item.info%></span></div>
+                            <div class="present-date"><span>已使用</span></div>
+                        </div>
+                    </li>
                 <%}else{%>
                     <li class="inner-normal">
                         <div class="present-img used">

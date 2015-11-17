@@ -80,6 +80,7 @@ define('', '', function(require) {
             t.transfer_invest_month = data.data.transfer_invest_month;
             var size = windowSize();
             if(!data.data)data.data = {};
+            data.data.is_day = data.data.dur.indexOf('天') > -1;
             if(!data.data.have_money){
                 data.data.have_money = '0';
             }else{

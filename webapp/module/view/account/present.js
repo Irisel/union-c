@@ -25,6 +25,7 @@ define('', '', function(require) {
             if(!(Object.prototype.toString.call(data.data) === '[object Array]'))data.data = [];
             data.data.sort(function(a, b){
                 if(a.status != b.status){
+                    if(a.status=='2')return true;
                     if(a.status=='1')return false;
                 }
                 if(a.expired_day != b.expired_day){
