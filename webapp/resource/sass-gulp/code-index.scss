@@ -3134,6 +3134,8 @@ input[type=button]{
           float: left;
         }
       }
+      div{
+        padding: 0 10px;
       .history-table{
         display: table;
         text-align: center;
@@ -3154,6 +3156,7 @@ input[type=button]{
             }
           }
         }
+      }
       }
       .history-footer{
         width: 100%;

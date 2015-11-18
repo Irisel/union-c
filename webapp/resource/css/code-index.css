@@ -2464,18 +2464,20 @@ input[type=button] {
     font-weight: bold;
     font-size: 0.9em;
     float: left; }
-.list-history-detail ul li .history-table {
-  display: table;
-  text-align: center;
-  width: 100%;
-  padding: 10px 0 10px;
-  border-bottom: 1px solid #eee; }
-  .list-history-detail ul li .history-table tbody tr td span {
-    display: block;
-    line-height: 20px; }
-    .list-history-detail ul li .history-table tbody tr td span:last-child {
-      line-height: 30px;
-      color: #a6a6a6; }
+.list-history-detail ul li div {
+  padding: 0 10px; }
+  .list-history-detail ul li div .history-table {
+    display: table;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #eee; }
+    .list-history-detail ul li div .history-table tbody tr td span {
+      display: block;
+      line-height: 20px; }
+      .list-history-detail ul li div .history-table tbody tr td span:last-child {
+        line-height: 30px;
+        color: #a6a6a6; }
 .list-history-detail ul li .history-footer {
   width: 100%;
   min-height: 40px;
