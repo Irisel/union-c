@@ -56,6 +56,8 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
+            if(!data.data)data.data = {};
+            data.data.is_day = data.data.dur.indexOf('天') > -1;
             if(!(t.checkLogin(data.status == "0")) && data.data){
                 t.ifaccess(data);
             }

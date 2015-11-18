@@ -43,9 +43,10 @@ define('', '', function(require) {
 		syncRender: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data);
+            console.log(data, t.$el);
 			var _html = _.template(list_tpl, data);
-			t.$el.find(".products-list").html(_html);
+			t.$el.find(".products-list").html(_html)
+            t.$el.show();
 		},
 		back: function(){
 			window.history.back();

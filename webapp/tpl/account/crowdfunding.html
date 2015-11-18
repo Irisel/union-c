@@ -20,18 +20,24 @@
             </li>
         </ul>
     </div>
-    <div class="list-history">
+    <div class="list-history-detail">
         <ul>
             <%if(data.length){%>
+                <li>
+                    <div class="history-header">
+                        <span class="count">共<%=data.length%>笔记录</span>
+                    </div>
+                </li>
                 <%_.each(data,function(item){%>
-                    <li>
-                        <div class="history">
+                    <li class="normal">
+                        <div class="history-header">
                             <span><%=item.zc_name%></span>
+                            <span>投标中</span>
+                        </div>
+                        <div class="history-footer">
+                            <span>投资金额<a>¥<%=item.money%></a></span>
                             <span><%=item.zc_enddate%></span>
                         </div>
-                        <span class="orange amount">
-                            <%=item.money%>
-                        </span>
                     </li>
                 <%})%>
             <%}else{%>

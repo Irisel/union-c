@@ -2448,3 +2448,50 @@ input[type=button] {
 
 .disabled {
   background-color: #bbbbbb !important; }
+
+.list-history-detail ul li .history-header {
+  width: 100%;
+  min-height: 40px;
+  padding: 5px 10px;
+  font-size: 1em;
+  line-height: 30px;
+  background-color: #f6f6f6; }
+  .list-history-detail ul li .history-header span:first-child {
+    float: left; }
+  .list-history-detail ul li .history-header span:last-child {
+    float: right; }
+  .list-history-detail ul li .history-header span.count {
+    font-weight: bold;
+    font-size: 0.9em;
+    float: left; }
+.list-history-detail ul li .history-table {
+  display: table;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0 10px;
+  border-bottom: 1px solid #eee; }
+  .list-history-detail ul li .history-table tbody tr td span {
+    display: block;
+    line-height: 20px; }
+    .list-history-detail ul li .history-table tbody tr td span:last-child {
+      line-height: 30px;
+      color: #a6a6a6; }
+.list-history-detail ul li .history-footer {
+  width: 100%;
+  min-height: 40px;
+  padding: 5px 10px;
+  font-size: 1em;
+  line-height: 30px; }
+  .list-history-detail ul li .history-footer span:first-child {
+    float: left; }
+    .list-history-detail ul li .history-footer span:first-child a {
+      margin-left: 5px;
+      color: #f75577; }
+  .list-history-detail ul li .history-footer span:last-child {
+    float: right; }
+.list-history-detail ul li.normal:after {
+  content: '';
+  display: block;
+  background-color: #e6e5ea;
+  height: 10px;
+  width: 100%; }

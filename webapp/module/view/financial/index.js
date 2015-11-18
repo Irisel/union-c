@@ -25,9 +25,15 @@ define('', '', function(require) {
 		},
         expect: function(e){
             var t = this;
+            var caculate = null;
+            var _data = t.model.toJSON();
             var input = $(e.currentTarget).val();
             if(!isNaN(parseFloat(input))){
-                var caculate = (t.rate || 0 ) * (t.transfer_invest_month || 0) * parseFloat(input) * 0.01/12;
+                if(_data.data.is_day){
+                    caculate = (t.rate || 0 ) * (t.transfer_invest_month || 0) * parseFloat(input) * 0.01/365;
+                }else{
+                    caculate = (t.rate || 0 ) * (t.transfer_invest_month || 0) * parseFloat(input) * 0.01/12;
+                }
                 t.$el.find('.js-expect').html(caculate.toFixed(2));
             }else{
                 t.$el.find('.js-expect').html(0);

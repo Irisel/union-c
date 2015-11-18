@@ -14,6 +14,7 @@ define('', '', function(require) {
         order_min:null,
         order_max:null,
         num_changing: false,
+        fundingOrder: false,
 		events: {
              "click .js-back": "back",
              "click .js-minus":"minus",
@@ -85,7 +86,48 @@ define('', '', function(require) {
             console.log(t.order_min, t.order_max);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            t.fundingOrder = $('#fundingOrder');
 		},
+        checkLogin: function(formData){
+            var reg = /^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/;
+            if(!formData['upayeename'] ||formData['upayeename'].length==0){
+                Jser.confirm("请输入收件人姓名!", function() {
+
+			    }, function(){
+
+                });
+                return false;
+            }else if (!formData['uphone'] || formData['uphone'].length==0){
+                Jser.confirm("请输入手机号码!", function() {
+
+			    }, function(){
+
+                });
+                return false;
+            }else if (!reg.test(formData['uphone'])){
+                Jser.confirm("请输入正确的手机号码!", function() {
+                    $('#uphone').val('');
+			    }, function(){
+
+                });
+                return false;
+            }else if (!formData['uaddress'] ||formData['uaddress'].length==0){
+                Jser.confirm("请输入快递地址!", function() {
+
+			    }, function(){
+
+                });
+                return false;
+            }else if (!formData['transfer_invest_num'] ||formData['transfer_invest_num'].length==0 || parseFloat(formData['transfer_invest_num']) <=0){
+                Jser.confirm("众筹份额无效!", function() {
+
+			    }, function(){
+
+                });
+                return false;
+            }
+            return true;
+        },
         submit: function(){
             var t = this, data = t.model.toJSON();
 		    var _data = t.$el.find("#fundingOrder").serializeArray();
@@ -110,7 +152,7 @@ define('', '', function(require) {
                 });
                 return;
             }
-            $('#fundingOrder') && $('#fundingOrder').submit();
+            if(t.checkLogin(_locData))t.fundingOrder && t.fundingOrder.submit();
 //            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
 //                console.log(result);
 //			}, function() {

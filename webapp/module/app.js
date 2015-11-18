@@ -71,6 +71,7 @@ define(function(require, exports) {
                     var message = Jser.getUrlParam('message');
                     con = 'message:' + message;
                     if(ac=='error' && message){
+                        message = Jser.getUrlParam('data');
                         Jser.setItem('message-error', message);
                     }
                 }
