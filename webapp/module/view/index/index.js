@@ -4,12 +4,15 @@ define('', '', function(require) {
 
 	var H = require('text!../../../tpl/index/index.html');
     var Slider = require("view/index/view/slider");
-    var list_tpl = require('text!../../../tpl/index/view/list.html');
+    var News = require("view/index/view/news");
+    var Recommand = require("view/index/view/recommand");
+    var More = require("view/index/view/more");
+    //var list_tpl = require('text!../../../tpl/index/view/list.html');
 	var model = new M({
-		pars: {
-            limit: 5
-		},
-        type: 'post'
+//		pars: {
+//            limit: 5
+//		},
+//        type: 'post'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -35,17 +38,27 @@ define('', '', function(require) {
 			new Slider({
 				el: t.$el.find(".js-slider-box")
 			});
+            new News({
+				el: t.$el.find(".js-news-box")
+			});
+            new Recommand({
+                el: t.$el.find(".js-recommend-box")
+            });
+            new More({
+                el: t.$el.find(".js-more-box")
+            });
             t.$el.show()
 		},
 		syncRender: function() {
 			var t = this,
 				data = t.model.toJSON();
             data = data.data;
-            var list = {list: data.list};
-			var _html = _.template(list_tpl, list);
-			var $list = t.$el.find(".js-index-list");
-			$list.html(_html);
-			Jser.loadimages($list);
+            console.log(data);
+//            var list = {list: data.list};
+//			var _html = _.template(list_tpl, list);
+//			var $list = t.$el.find(".js-index-list");
+//			$list.html(_html);
+//			Jser.loadimages($list);
 
 		},
 		back: function(){
@@ -63,11 +76,11 @@ define('', '', function(require) {
 	});
 	return function(pars) {
 		model.set({
-			action: '/index/borrow',
-            pars: {
-                limit: 5
-		    },
-            type: 'post'
+			action: '/index/recommend_borrow'
+//            pars: {
+//                limit: 5
+//		    },
+//            type: 'post'
 		});
 		return new V({
 			el: $("#" + pars.model + "_" + pars.action)

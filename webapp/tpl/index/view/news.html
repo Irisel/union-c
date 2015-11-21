@@ -1,0 +1,21 @@
+<span class="title">公告</span>
+<ul>
+<%_.each(list,function(item){%>
+<li>
+	<a href="#summary/index/id:<%=item.id%>">
+        <span><%=item.title%></span>
+	</a>
+</li>
+<%})%>
+</ul>
+<div class="share">
+    <div class="icon">
+
+    </div>
+    <span class="text">
+        邀请好友
+    </span>
+    <span class="text">
+        赚红包
+    </span>
+</div>

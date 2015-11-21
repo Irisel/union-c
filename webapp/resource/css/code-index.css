@@ -101,7 +101,7 @@ input[type=button] {
   background-color: #f6f6f6;
   width: 100%; }
   .wrap #js-wrap section .single.index-wrapper, .wrap #js-wrap section .single.list-wrapper {
-    padding-bottom: 50px; }
+    padding-bottom: 60px; }
 
 .nav {
   display: none;
@@ -114,68 +114,84 @@ input[type=button] {
   right: 0;
   z-index: 10;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background: #ffffff;
   border-top: 1px solid #eee; }
   .nav li {
     display: inline-block;
-    width: 33.33%;
+    width: 25%;
     float: left;
     height: 100%;
     text-align: center; }
     .nav li a, .nav li a:visited, .nav li a:active {
-      color: #535353;
+      color: #999999;
       display: block;
       width: 100%;
       height: 100%;
       position: relative;
-      padding: 14px 14px;
-      border-right: 1px solid #eee; }
-      .nav li a i, .nav li a:visited i, .nav li a:active i {
-        background: url(../images/minify/icon.png) 0 center no-repeat;
-        position: absolute;
-        left: 12px;
-        top: 16px;
+      padding: 10px 0px; }
+      .nav li a span:first-child, .nav li a:visited span:first-child, .nav li a:active span:first-child {
+        position: relative;
+        height: 27px;
+        display: block; }
+        .nav li a span:first-child i, .nav li a:visited span:first-child i, .nav li a:active span:first-child i {
+          background: url(../images/minify/icon.png) 0 center no-repeat;
+          position: absolute;
+          left: 50%;
+          margin-left: -8px;
+          top: 0;
+          display: block;
+          height: 26px;
+          background-size: auto 26px; }
+        .nav li a span:first-child i.icon-index, .nav li a:visited span:first-child i.icon-index, .nav li a:active span:first-child i.icon-index {
+          width: 32px;
+          margin-left: -16px;
+          background-position: -26px 0; }
+        .nav li a span:first-child i.icon-invest, .nav li a:visited span:first-child i.icon-invest, .nav li a:active span:first-child i.icon-invest {
+          width: 32px;
+          margin-left: -16px;
+          background-position: -58px 0; }
+        .nav li a span:first-child i.icon-account, .nav li a:visited span:first-child i.icon-account, .nav li a:active span:first-child i.icon-account {
+          width: 24px;
+          margin-left: -12px;
+          background-position: 0px 0; }
+        .nav li a span:first-child i.icon-crowd, .nav li a:visited span:first-child i.icon-crowd, .nav li a:active span:first-child i.icon-crowd {
+          width: 36px;
+          margin-left: -18px;
+          background-position: -91px 0; }
+      .nav li a span:last-child, .nav li a:visited span:last-child, .nav li a:active span:last-child {
         display: block;
-        height: 16px;
-        background-size: auto 16px; }
-      .nav li a i.icon-index, .nav li a:visited i.icon-index, .nav li a:active i.icon-index {
-        width: 16px;
-        background-position: 0 0; }
-      .nav li a i.icon-account, .nav li a:visited i.icon-account, .nav li a:active i.icon-account {
-        width: 16px;
-        background-position: -20px 0; }
-      .nav li a i.icon-crowd, .nav li a:visited i.icon-crowd, .nav li a:active i.icon-crowd {
-        width: 18px;
-        background-position: -40px 0; }
-      .nav li a span, .nav li a:visited span, .nav li a:active span {
-        display: block;
-        float: right;
         font-size: 0.9em;
         line-height: 21px;
         width: 100%;
-        left: 5px;
         position: relative; }
   .nav li.on a {
     color: #ff6c00; }
-    .nav li.on a i {
+    .nav li.on a span i {
       background: url(../images/minify/icon-selected.png) 0 center no-repeat;
       position: absolute;
-      left: 12px;
-      top: 16px;
+      left: 50%;
+      margin-left: -8px;
+      top: 0;
       display: block;
-      height: 16px;
-      background-size: auto 16px; }
-    .nav li.on a i.icon-index {
-      width: 16px;
-      background-position: 0 0; }
-    .nav li.on a i.icon-crowd {
-      width: 18px;
-      background-position: -40px 0;
-      left: 14px; }
-    .nav li.on a i.icon-account {
-      width: 16px;
-      background-position: -20px 0; }
+      height: 26px;
+      background-size: auto 26px; }
+    .nav li.on a span i.icon-index {
+      width: 32px;
+      margin-left: -16px;
+      background-position: -26px 0; }
+    .nav li.on a span i.icon-invest {
+      width: 32px;
+      margin-left: -16px;
+      background-position: -58px 0; }
+    .nav li.on a span i.icon-account {
+      width: 24px;
+      margin-left: -12px;
+      background-position: 0px 0; }
+    .nav li.on a span i.icon-crowd {
+      width: 36px;
+      margin-left: -18px;
+      background-position: -91px 0; }
 
 .wrap {
   width: 100%;
@@ -2451,10 +2467,10 @@ input[type=button] {
 
 .list-history-detail ul li .history-header {
   width: 100%;
-  min-height: 40px;
+  min-height: 30px;
   padding: 5px 10px;
-  font-size: 1em;
-  line-height: 30px;
+  font-size: 0.8em;
+  line-height: 20px;
   background-color: #f6f6f6; }
   .list-history-detail ul li .history-header span:first-child {
     float: left; }
@@ -2470,30 +2486,244 @@ input[type=button] {
     display: table;
     text-align: center;
     width: 100%;
-    padding: 10px 0 10px;
+    padding: 5px 0 0;
     border-bottom: 1px solid #eee; }
     .list-history-detail ul li div .history-table tbody tr td span {
       display: block;
       line-height: 20px; }
       .list-history-detail ul li div .history-table tbody tr td span:last-child {
-        line-height: 30px;
+        line-height: 20px;
+        font-size: 0.6em;
         color: #a6a6a6; }
 .list-history-detail ul li .history-footer {
   width: 100%;
-  min-height: 40px;
+  min-height: 30px;
   padding: 5px 10px;
-  font-size: 1em;
-  line-height: 30px; }
+  line-height: 20px; }
   .list-history-detail ul li .history-footer span:first-child {
-    float: left; }
+    float: left;
+    font-size: 0.8em; }
     .list-history-detail ul li .history-footer span:first-child a {
       margin-left: 5px;
       color: #f75577; }
   .list-history-detail ul li .history-footer span:last-child {
-    float: right; }
+    float: right;
+    font-size: 0.6em;
+    color: #a6a6a6; }
 .list-history-detail ul li.normal:after {
   content: '';
   display: block;
   background-color: #e6e5ea;
   height: 10px;
   width: 100%; }
+
+.js-news-box {
+  height: 50px;
+  line-height: 50px;
+  background-color: #ffffff;
+  padding: 0 0 0 10px;
+  position: relative; }
+  .js-news-box span.title {
+    width: 50px;
+    float: left;
+    height: 50px;
+    color: #dc9450;
+    font-size: 1.1em; }
+  .js-news-box ul {
+    margin-left: 50px;
+    margin-right: 100px;
+    overflow: hidden;
+    height: inherit;
+    line-height: inherit; }
+    .js-news-box ul li {
+      height: 100%;
+      height: inherit;
+      line-height: inherit; }
+      .js-news-box ul li a {
+        height: inherit;
+        line-height: inherit;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle; }
+        .js-news-box ul li a span {
+          display: block;
+          line-height: inherit;
+          height: inherit;
+          font-size: 1em;
+          color: #000000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+  .js-news-box div.share {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px; }
+    .js-news-box div.share .icon {
+      background: url(../images/minify/hongbao.png) 0 center no-repeat;
+      background-size: contain;
+      width: 36px;
+      height: 100%;
+      float: left; }
+    .js-news-box div.share .text {
+      text-align: center;
+      line-height: 25px;
+      height: 20px;
+      display: block;
+      font-size: 12px;
+      color: #dc9450; }
+
+.project-box {
+  margin-top: 20px;
+  width: 100%;
+  border-top: 1px solid #67c6e1;
+  background-color: #ffffff; }
+  .project-box .project-header .project-title {
+    background: url(../images/minify/xiangmubg.png) 0 0 no-repeat;
+    background-size: auto 100%;
+    height: 30px;
+    line-height: 30px;
+    width: 107.5px;
+    text-align: center;
+    color: #ffffff; }
+  .project-box .project-header .project-inner {
+    padding: 12px; }
+    .project-box .project-header .project-inner .recommand-inner {
+      text-align: center;
+      padding: 15px 30px 15px;
+      background: url(../images/minify/recommand-bg.png) center center no-repeat;
+      background-size: auto 100%; }
+      .project-box .project-header .project-inner .recommand-inner .name {
+        width: 100%;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold; }
+      .project-box .project-header .project-inner .recommand-inner .rate {
+        color: #be0004;
+        height: 60px;
+        line-height: 60px;
+        font-size: 40px;
+        display: block; }
+      .project-box .project-header .project-inner .recommand-inner .rate-label {
+        color: #a6a6a6;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px; }
+      .project-box .project-header .project-inner .recommand-inner table {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold; }
+        .project-box .project-header .project-inner .recommand-inner table tr td span {
+          display: block;
+          margin: 5px 0; }
+          .project-box .project-header .project-inner .recommand-inner table tr td span:last-child {
+            font-size: 14px; }
+      .project-box .project-header .project-inner .recommand-inner .recommand-button {
+        margin-top: 10px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #ff6c00;
+        color: #ffffff;
+        border-radius: 5px;
+        font-size: 1.2em; }
+    .project-box .project-header .project-inner .more-project {
+      position: relative;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 12px; }
+      .project-box .project-header .project-inner .more-project img {
+        width: 100%;
+        height: auto; }
+      .project-box .project-header .project-inner .more-project div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        .project-box .project-header .project-inner .more-project div span {
+          color: #ffffff;
+          display: block; }
+          .project-box .project-header .project-inner .more-project div span:nth-child(1) {
+            height: 30px;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px; }
+          .project-box .project-header .project-inner .more-project div span:nth-child(2) {
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px; }
+          .project-box .project-header .project-inner .more-project div span:nth-child(3) {
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px; }
+          .project-box .project-header .project-inner .more-project div span:nth-child(4) {
+            line-height: 30px;
+            height: 30px;
+            font-size: 18px; }
+
+.index-footer {
+  width: 100%;
+  height: 1em;
+  font-size: 0.6em;
+  color: #999999;
+  margin: 10px 0 20px;
+  display: block;
+  text-align: center; }
+
+.index-guide {
+  width: 100%;
+  padding: 0 40px;
+  display: block;
+  height: 1em; }
+  .index-guide li {
+    width: 33%;
+    display: inline-block;
+    font-size: 0.8em;
+    text-align: center;
+    float: left; }
+    .index-guide li:nth-child(1) {
+      border-right: 1px solid #ff7d21; }
+    .index-guide li:nth-child(3) {
+      border-left: 1px solid #ff7d21; }
+
+.index-attributes {
+  width: 100%;
+  padding: 20px;
+  display: block; }
+  .index-attributes li {
+    width: 33%;
+    display: inline-block;
+    font-size: 0.8em;
+    text-align: center; }
+    .index-attributes li:nth-child(1) {
+      float: left; }
+    .index-attributes li:nth-child(3) {
+      float: right; }
+    .index-attributes li .mark {
+      height: 26px;
+      display: inline-block;
+      background: url(../images/minify/glyphicons-index.png) 0 center no-repeat;
+      background-size: auto 26px; }
+      .index-attributes li .mark.index-rmb {
+        width: 26px;
+        background-position: -28px 0; }
+      .index-attributes li .mark.index-deposit {
+        width: 28px;
+        background-position: -55px 0; }
+      .index-attributes li .mark.index-control {
+        width: 24px;
+        background-position: 0 0; }
+    .index-attributes li span {
+      color: #999999;
+      display: block;
+      text-align: center;
+      font-size: 1em;
+      line-height: 2em; }
+      .index-attributes li span:last-child {
+        font-size: 1em; }

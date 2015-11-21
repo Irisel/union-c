@@ -97,11 +97,12 @@ input[type=button]{
 
 @mixin icon(){
   position: absolute;
-  left: 12px;
-  top: 16px;
+  left: 50%;
+  margin-left: -8px;
+  top: 0;
   display: block;
-  height: 16px;
-  background-size: auto 16px;
+  height: 26px;
+  background-size: auto 26px;
 }
 
 @mixin triangle() {
@@ -126,7 +127,7 @@ input[type=button]{
   background-color: #f6f6f6;
   width: 100%;
   &.single{
-    padding-bottom:50px;
+    padding-bottom:60px;
   }
 }
 
@@ -141,46 +142,56 @@ input[type=button]{
   right: 0;
   z-index: 10;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background: #ffffff;
   border-top: 1px solid #eee;
   li {
     display: inline-block;
-    width: 33.33%;
+    width: 25%;
     float: left;
     height:100%;
     text-align: center;
     a, a:visited, a:active {
-      color: #535353;
+      color: #999999;
       display: block;
       width: 100%;
       height: 100%;
       position: relative;
-      padding: 14px 14px;
-      border-right: 1px solid #eee;
-      i {
-        background: url(../images/minify/icon.png) 0 center no-repeat;
-        @include icon();
-      }
-      i.icon-index{
-        width: 16px;
-        background-position: 0 0
-      }
-      i.icon-account{
-        width: 16px;
-        background-position: -20px 0
-      }
-      i.icon-crowd{
-        width: 18px;
-        background-position: -40px 0
-      }
-      span {
+      padding: 10px 0px;
+      span:first-child{
+        position: relative;
+        height: 27px;
         display: block;
-        float: right;
+        i {
+          background: url(../images/minify/icon.png) 0 center no-repeat;
+          @include icon();
+        }
+        i.icon-index{
+          width: 32px;
+          margin-left: -16px;
+          background-position: -26px 0;
+        }
+        i.icon-invest{
+          width: 32px;
+          margin-left: -16px;
+          background-position: -58px 0;
+        }
+        i.icon-account{
+          width: 24px;
+          margin-left: -12px;
+          background-position: 0px 0;
+        }
+        i.icon-crowd{
+          width: 36px;
+          margin-left: -18px;
+          background-position: -91px 0;
+        }
+      }
+      span:last-child{
+        display: block;
         font-size:0.9em;
         line-height:21px;
         width: 100%;
-        left: 5px;
         position: relative;
       }
     }
@@ -188,22 +199,31 @@ input[type=button]{
   li.on{
     a {
       color: #ff6c00;
-      i {
-        background: url(../images/minify/icon-selected.png) 0 center no-repeat;
-        @include icon();
-      }
-      i.icon-index{
-        width: 16px;
-        background-position: 0 0
-      }
-      i.icon-crowd{
-        width: 18px;
-        background-position: -40px 0;
-        left:14px;
-      }
-      i.icon-account{
-        width: 16px;
-        background-position: -20px 0
+      span{
+        i {
+          background: url(../images/minify/icon-selected.png) 0 center no-repeat;
+          @include icon();
+        }
+        i.icon-index{
+          width: 32px;
+          margin-left: -16px;
+          background-position: -26px 0;
+        }
+        i.icon-invest{
+          width: 32px;
+          margin-left: -16px;
+          background-position: -58px 0;
+        }
+        i.icon-account{
+          width: 24px;
+          margin-left: -12px;
+          background-position: 0px 0;
+        }
+        i.icon-crowd{
+          width: 36px;
+          margin-left: -18px;
+          background-position: -91px 0;
+        }
       }
     }
   }
@@ -3117,10 +3137,10 @@ input[type=button]{
     li{
       .history-header{
         width: 100%;
-        min-height: 40px;
+        min-height: 30px;
         padding: 5px 10px;
-        font-size: 1em;
-        line-height: 30px;
+        font-size: 0.8em;
+        line-height: 20px;
         background-color: #f6f6f6;
         span:first-child{
           float:left;
@@ -3140,7 +3160,7 @@ input[type=button]{
         display: table;
         text-align: center;
         width: 100%;
-        padding: 10px 0 10px;
+        padding: 5px 0 0;
         border-bottom: 1px solid #eee;
         tbody{
           tr{
@@ -3149,7 +3169,8 @@ input[type=button]{
                 display:block;
                 line-height:20px;
                 &:last-child{
-                  line-height:30px;
+                  line-height:20px;
+                  font-size:0.6em;
                   color: #a6a6a6;
                 }
               }
@@ -3160,12 +3181,12 @@ input[type=button]{
       }
       .history-footer{
         width: 100%;
-        min-height: 40px;
+        min-height: 30px;
         padding: 5px 10px;
-        font-size: 1em;
-        line-height: 30px;
+        line-height: 20px;
         span:first-child{
           float:left;
+          font-size: 0.8em;
           a{
             margin-left: 5px;
             color: #f75577;
@@ -3173,6 +3194,8 @@ input[type=button]{
         }
         span:last-child{
           float:right;
+          font-size: 0.6em;
+          color:#a6a6a6;
         }
       }
       &.normal:after{
@@ -3185,3 +3208,262 @@ input[type=button]{
     }
   }
 }
+
+.js-news-box{
+  height:50px;
+  line-height:50px;
+  background-color: #ffffff;
+  padding: 0 0 0 10px;
+  position:relative;
+  span.title{
+    width: 50px;
+    float: left;
+    height: 50px;
+    color: #dc9450;
+    font-size: 1.1em;
+  }
+  ul{
+    margin-left: 50px;
+    margin-right: 100px;
+    overflow:hidden;
+    height: inherit;
+    line-height:inherit;
+    li{
+      height:100%;
+      height: inherit;
+      line-height:inherit;
+      a{
+        height: inherit;
+        line-height:inherit;
+        display:inline-block;
+        width:100%;
+        vertical-align: middle;
+        span{
+          display:block;
+          line-height:inherit;
+          height: inherit;
+          font-size:1em;
+          color: #000000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  div.share{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding:5px;
+    .icon{
+      background: url(../images/minify/hongbao.png) 0 center no-repeat;
+      background-size:contain;
+      width: 36px;
+      height: 100%;
+      float: left;
+    }
+    .text{
+      text-align: center;
+      line-height: 25px;
+      height: 20px;
+      display: block;
+      font-size: 12px;
+      color: #dc9450;
+    }
+  }
+}
+
+.project-box{
+  margin-top:20px;
+  width:100%;
+  border-top:1px solid #67c6e1;
+  background-color: #ffffff;
+  .project-header{
+     .project-title{
+        background: url(../images/minify/xiangmubg.png) 0 0 no-repeat;
+        background-size: auto 100%;
+        height: 30px;
+        line-height: 30px;
+        width: 107.5px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .project-inner{
+        padding:12px;
+        .recommand-inner{
+          text-align: center;
+          padding: 15px 30px 15px;
+          background: url(../images/minify/recommand-bg.png) center center no-repeat;
+          background-size: auto 100%;
+          .name{
+            width: 100%;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .rate{
+            color: #be0004;
+            height: 60px;
+            line-height: 60px;
+            font-size: 40px;
+            display: block;
+          }
+          .rate-label{
+            color: #a6a6a6;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+          }
+          table{
+            margin-top: 10px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            tr{
+              td{
+                span{
+                  display: block;
+                  margin: 5px 0;
+                  &:last-child{
+                    font-size:14px;
+                  }
+                }
+              }
+            }
+          }
+          .recommand-button{
+              margin-top: 10px;
+              height: 50px;
+              line-height: 50px;
+              background-color: #ff6c00;
+              color: #ffffff;
+              border-radius: 5px;
+              font-size: 1.2em;
+          }
+        }
+        .more-project{
+          position:relative;
+          text-align:center;
+          border-radius:5px;
+          margin-bottom:12px;
+          img{
+            width:100%;
+            height:auto;
+          }
+          div{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            span{
+              color:#ffffff;
+              display: block;
+              &:nth-child(1){
+                height: 30px;
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 30px;
+              }
+              &:nth-child(2){
+                height: 20px;
+                line-height: 20px;
+                font-size: 16px;
+              }
+              &:nth-child(3){
+                height: 20px;
+                line-height: 20px;
+                font-size: 16px;
+              }
+              &:nth-child(4){
+                line-height: 30px;
+                height: 30px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+ .index-footer{
+   width:100%;
+   height: 1em;
+   font-size:0.6em;
+   color:#999999;
+   margin:10px 0 20px;
+   display:block;
+   text-align: center;
+ }
+  .index-guide{
+    width: 100%;
+    padding: 0 40px;
+    display: block;
+    height: 1em;
+    li{
+      width:33%;
+      display: inline-block;
+      font-size: 0.8em;
+      text-align: center;
+      float:left;
+      &:nth-child(1){
+        border-right:1px solid #ff7d21
+      }
+      &:nth-child(3){
+        border-left:1px solid #ff7d21
+      }
+    }
+  }
+
+  .index-attributes{
+    width:100%;
+    padding:20px;
+    display:block;
+    li{
+      width:33%;
+      display: inline-block;
+      font-size: 0.8em;
+      text-align: center;
+      &:nth-child(1){
+        float:left;
+      }
+      &:nth-child(3){
+        float:right;
+      }
+      .mark {
+        height:26px;
+        display: inline-block;
+        background: url(../images/minify/glyphicons-index.png) 0 center no-repeat;
+        background-size: auto 26px;
+        &.index-rmb{
+          width: 26px;
+          background-position: -28px 0;
+        }
+        &.index-deposit{
+          width: 28px;
+          background-position: -55px 0;
+        }
+        &.index-control{
+          width: 24px;
+          background-position: 0 0;
+        }
+      }
+      span{
+        color:#999999;
+        display:block;
+        text-align:center;
+        font-size:1em;
+        line-height: 2em;
+        &:last-child{
+          font-size:1em;
+        }
+      }
+    }
+  }

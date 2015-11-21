@@ -9,8 +9,8 @@ define(function(require, exports) {
         el: $("#js-navs"),
         map: {
             "index": 0,
-            "crowdfunding": 1,
-            "account": 2
+            "crowdfunding": 2,
+            "account": 3
         },
         action: {
             "error": true,
