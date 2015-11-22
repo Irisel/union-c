@@ -17,6 +17,9 @@ define(function(require, exports) {
             "invite": true,
             "qrcode": true
         },
+        direct: {
+            "index/list": 1
+        },
         initialize: function() {
             var t = this;
             t.navs = this.$el.find("li");
@@ -24,6 +27,7 @@ define(function(require, exports) {
         initNav: function(m, a) {
             var t = this;
             var idx = t.map[m];
+            idx = t.direct[m + '/' + a]?t.direct[m + '/' + a]:idx;
             if(idx!=undefined && !t.action[a] ){
                 t.navs.each(function(i, v) {
                     $(this).toggleClass("on", i == idx);
