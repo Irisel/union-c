@@ -16,6 +16,8 @@ define(function(require, exports) {
             "error": true,
             "invite": true,
             "qrcode": true
+//            ,
+//            "hongbao_invite": true
         },
         direct: {
             "index/list": 1

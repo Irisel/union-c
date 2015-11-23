@@ -1,30 +1,38 @@
-<div class="hongbao-wrapper single">
-    <div class="regist-topic"></div>
+<div class="hongbao-wrapper single step1">
+    <div class="regist-topic step2"></div>
+    <div class="receive-topic step1"></div>
     <div class="hongbao-form">
         <form>
             <div class="hongbao-input">
                 <div class="icon-box"><i></i></div>
-                <input placeholder="请输入您的手机号" type="text">
+                <input placeholder="请输入您的手机号" type="text" name="tel" class="js-tel">
             </div>
-            <div class="hongbao-input validate">
+            <button type="button" class="button-submit validate-button step1 js-doValidate">
+                马上领取
+            </button>
+            <div class="hongbao-input validate step2">
                 <div class="icon-box"><i></i></div>
-                <input placeholder="请输入验证码" type="text">
-                <div class="validate-button">
+                <input placeholder="请输入验证码" name="code" type="text" class="js-code">
+                <button type="button" class="validate-button js-vcode-btn">
                     获取验证码
-                </div>
+                </button>
             </div>
-            <div class="hongbao-input">
+            <div class="login-input width-bottom" style="display:none">
+                <i class="icon-invite"></i>
+                <input placeholder="邀请码(选填)" name="invite" type="password" class="js-invite" value="<%=invite%>">
+            </div>
+            <div class="hongbao-input step2">
                 <div class="icon-box"><i></i></div>
-                <input placeholder="设置6-16位密码" type="password">
+                <input placeholder="设置6-16位密码" name="pass" type="password" class="js-pass">
             </div>
-            <div class="hongbao-info">
+            <div class="hongbao-info step2">
                 <input type="checkbox" class="js-agreement">
                 <span>我已阅读并接受</span>
                 <a href="#summary/index/type_name:6" class="info">《注册服务协议》</a>
             </div>
-            <div class="button-submit">
+            <button type="button" class="button-submit step2 js-regist-btn">
                 注册
-            </div>
+            </button>
         </form>
     </div>
 </div>

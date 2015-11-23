@@ -1,10 +1,9 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-    var H = require('text!../../../../tpl/index/view/news.html');
-    var news = require('plusin/news');
+    var H = require('text!../../../../tpl/account/hongbao/friends.html');
 	var model = new M({
-        action: '/index/news'
+        action: '/account/invite_friends'
 	});
 	var V = B.View.extend({
 		model: model,
@@ -14,6 +13,7 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
+//            t.render();
 			if (t.model._loaded) {
 				t.render();
 			} else {
@@ -38,15 +38,9 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             data.data = data.data?data.data:{};
-            data.data.list = data.data.list?data.data.list:[];
             var html = _.template(t.template, data.data);
             console.log(data, t.$el);
             t.$el.html(html).show();
-            if(data.data.list.length)t.$el.News({
-                line: data.data.list.length,
-                speed: 500,
-                timer: 10000
-            })
 		},
 		bindEvent: function() {
 
@@ -61,8 +55,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                type_id: 2,
-                limit: 5
+                user_id: 11027
             }
 		});
 		return new V({

@@ -1,3 +1,7 @@
+<div class="pop invite-pop js-hide vishide">
+    <div class="invite-body">
+    </div>
+</div>
 <div class="hongbao-wrapper single">
     <div class="invite-topic"></div>
     <div class="hongbao-form">
@@ -10,9 +14,9 @@
         <p class="margin-min">
             <span class="alert">分享邀请链接，躺着也能赚钱</span>
         </p>
-        <div class="button-submit validate-button margin-min">
+        <button type="button" class="button-submit validate-button margin-min js-share">
             分享链接
-        </div>
+        </button>
         <p class="margin-lg">
             <span class="alert min">邀请方法二</span>
         </p>
@@ -20,46 +24,9 @@
             <span class="alert">面对面扫描二维码，直接邀请更方便。</span>
         </p>
         <div class="img-box">
-            <img src="resource/images/minify/hongbao-weixin.png">
+            <%=data.img%>
         </div>
     </div>
-        <div class="friends-box">
-            <p class="margin-min">
-                好友注册：<span class="alert lg">7人</span>      好友投资达标：<span class="alert lg">1人</span>
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                    <th>
-                        <p>用户名</p>
-                    </th>
-                    <th>
-                        <p>注册时间</p>
-                    </th>
-                    <th>
-                        <p>手机号</p>
-                    </th>
-                    <th>
-                        <p>是否投资达标</p>
-                    </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th cellspacing=0 cellpadding=0>
-                        <p>snb4582</p>
-                    </th>
-                    <th cellspacing=0 cellpadding=0>
-                        <p>2015-09-19</p>
-                    </th>
-                    <th cellspacing=0 cellpadding=0>
-                        <p>136***4582</p>
-                    </th>
-                    <th cellspacing=0 cellpadding=0>
-                        <p>否</p>
-                    </th>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="friends-box js-friends-box">
         </div>
 </div>

@@ -216,6 +216,10 @@ input[type=button] {
       .wrap #js-wrap section .hongbao-wrapper {
         background-color: #fee5c7;
         overflow-y: scroll; }
+        .wrap #js-wrap section .hongbao-wrapper.step1 .step2 {
+          display: none; }
+        .wrap #js-wrap section .hongbao-wrapper.step2 .step1 {
+          display: none; }
       .wrap #js-wrap section .list-wrapper {
         background-color: #ffffff; }
         .wrap #js-wrap section .list-wrapper.selection {
@@ -2525,7 +2529,8 @@ input[type=button] {
   line-height: 50px;
   background-color: #ffffff;
   padding: 0 0 0 10px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .js-news-box span.title {
     width: 50px;
     float: left;
@@ -2533,14 +2538,14 @@ input[type=button] {
     color: #dc9450;
     font-size: 1.1em; }
   .js-news-box ul {
-    margin-left: 50px;
-    margin-right: 100px;
+    left: 50px;
+    right: 100px;
     overflow: hidden;
-    height: inherit;
-    line-height: inherit; }
+    line-height: inherit;
+    position: absolute; }
     .js-news-box ul li {
       height: 100%;
-      height: inherit;
+      height: 50px;
       line-height: inherit; }
       .js-news-box ul li a {
         height: inherit;
@@ -2755,7 +2760,7 @@ input[type=button] {
     text-align: center;
     padding: 20px 40px; }
     .hongbao-form .img-box img {
-      width: 100px;
+      width: 200px;
       height: auto; }
   .hongbao-form .hongbao-input {
     height: 60px;
@@ -2818,7 +2823,8 @@ input[type=button] {
     color: #ffffff;
     text-align: center;
     font-size: 17px;
-    line-height: 55px; }
+    line-height: 55px;
+    border: none; }
   .hongbao-form .margin-lg {
     margin-top: 20px; }
   .hongbao-form .margin-min {
@@ -2840,22 +2846,38 @@ input[type=button] {
   border: 1px solid #d8b58b;
   background-color: #ffe6bc;
   border-radius: 5px; }
+  .friends-box .friends-topic {
+    line-height: 30px;
+    margin-left: 10px; }
+  .friends-box a {
+    float: right;
+    margin-right: 10px; }
   .friends-box .margin-lg {
     margin-top: 20px; }
   .friends-box .margin-min {
     margin-top: 10px; }
   .friends-box table {
-    width: 100%; }
+    width: 100%;
+    border-top: 1px solid #d8b58b; }
     .friends-box table tr {
-      border-top: 1px solid #d8b58b;
       height: 24px;
       width: 100%;
       margin: 0;
       padding: 0; }
+      .friends-box table tr.hr {
+        line-height: 1px;
+        height: auto;
+        position: relative; }
       .friends-box table tr td, .friends-box table tr th {
         border: none;
         margin: 0;
         padding: 0; }
+        .friends-box table tr td hr, .friends-box table tr th hr {
+          border: none;
+          border-top: 1px solid #d8b58b;
+          position: absolute;
+          left: 10px;
+          right: 10px; }
   .friends-box p {
     font-size: 1em;
     color: #c7a985;

@@ -256,6 +256,16 @@ input[type=button]{
         @extend %wrapper;
         background-color:#fee5c7;
         overflow-y: scroll;
+        &.step1{
+          .step2{
+            display:none;
+          }
+        }
+        &.step2{
+          .step1{
+            display:none;
+          }
+        }
       }
       .list-wrapper {
         @extend %wrapper;
@@ -3220,6 +3230,7 @@ input[type=button]{
   background-color: #ffffff;
   padding: 0 0 0 10px;
   position:relative;
+  overflow:hidden;
   span.title{
     width: 50px;
     float: left;
@@ -3228,14 +3239,14 @@ input[type=button]{
     font-size: 1.1em;
   }
   ul{
-    margin-left: 50px;
-    margin-right: 100px;
+    left: 50px;
+    right: 100px;
     overflow:hidden;
-    height: inherit;
     line-height:inherit;
+    position:absolute;
     li{
       height:100%;
-      height: inherit;
+      height: 50px;
       line-height:inherit;
       a{
         height: inherit;
@@ -3500,7 +3511,7 @@ input[type=button]{
     text-align:center;
     padding:20px 40px;
     img{
-      width:100px;
+      width:200px;
       height:auto;
     }
   }
@@ -3575,6 +3586,7 @@ input[type=button]{
       text-align: center;
       font-size: 17px;
       line-height: 55px;
+      border: none;
     }
   .margin-lg{
       margin-top:20px;
@@ -3604,6 +3616,14 @@ input[type=button]{
     border: 1px solid #d8b58b;
     background-color:#ffe6bc;
     border-radius: 5px;
+  .friends-topic{
+    line-height: 30px;
+    margin-left: 10px;
+  }
+  a{
+    float: right;
+    margin-right: 10px;
+  }
   .margin-lg{
       margin-top:20px;
   }
@@ -3612,16 +3632,28 @@ input[type=button]{
   }
   table{
     width:100%;
+    border-top: 1px solid #d8b58b;
     tr{
-      border-top: 1px solid #d8b58b;
       height: 24px;
       width: 100%;
       margin: 0;
       padding: 0;
+      &.hr{
+          line-height:1px;
+          height: auto;
+          position:relative;
+      }
       td,th{
         border: none;
         margin:0;
         padding:0;
+        hr{
+          border:none;
+          border-top: 1px solid #d8b58b;
+          position: absolute;
+          left: 10px;
+          right: 10px;
+        }
       }
     }
   }
