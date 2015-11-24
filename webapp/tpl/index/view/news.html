@@ -1,7 +1,7 @@
 <span class="title">公告</span>
 <ul id="scrollNews">
-<%if(list.length){%>
-<%_.each(list,function(item){%>
+<%if(list.list.length){%>
+<%_.each(list.list,function(item){%>
 <li>
 	<a href="#summary/index/id:<%=item.id%>">
         <span><%=item.title%></span>
@@ -16,7 +16,7 @@
 </li>
 <%}%>
 </ul>
-<div class="share">
+<div class="share js-share">
     <div class="icon">
 
     </div>

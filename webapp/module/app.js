@@ -14,8 +14,9 @@ define(function(require, exports) {
         },
         action: {
             "error": true,
-            "invite": true,
-            "qrcode": true
+//            "invite": true,
+            "qrcode": true,
+            "friends": true
 //            ,
 //            "hongbao_invite": true
         },
@@ -79,6 +80,9 @@ define(function(require, exports) {
                     if(ac=='error' && message){
                         message = Jser.getUrlParam('data');
                         Jser.setItem('message-error', message);
+                    }
+                    if(ac=='qrcode' && message){
+                        Jser.setItem('invite', message);
                     }
                 }
                 if (typeof history.replaceState === 'undefined') {

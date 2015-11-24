@@ -9,6 +9,7 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        loading: false,
 		events: {
             "click .js-product": "product",
             "click .js-back": "back"
@@ -43,6 +44,7 @@ define('', '', function(require) {
 		syncRender: function() {
 			var t = this,
 				data = t.model.toJSON();
+            t.loading = false;
             console.log(data, t.$el);
 			var _html = _.template(list_tpl, data);
 			t.$el.find(".products-list").html(_html)
@@ -64,6 +66,8 @@ define('', '', function(require) {
 		},
         product: function(e){
             var t = this;
+            if(t.loading)return;
+            t.loading = true;
             t.$el.find('.index-products-list li.on').removeClass('on');
             $(e.currentTarget).addClass('on');
             t.model.set("pars", {

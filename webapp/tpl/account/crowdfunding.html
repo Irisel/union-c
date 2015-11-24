@@ -32,10 +32,20 @@
                     <li class="normal">
                         <div class="history-header">
                             <span><%=item.zc_name%></span>
-                            <span>投标中</span>
+                            <span>
+                                <%if(item.borrow_status=='3' || item.borrow_status=='5'){%>
+                                流标
+                                <%}else if(item.borrow_status=='6'){%>
+                                还款中
+                                <%}else if(item.borrow_status=='7' || item.borrow_status=='10'){%>
+                                已完成
+                                <%}else if(item.borrow_status=='2' || item.borrow_status=='4' || item.borrow_status=='8'){%>
+                                投资中
+                                <%}%>
+                            </span>
                         </div>
                         <div class="history-footer">
-                            <span>投资金额<a>¥<%=item.money%></a></span>
+                            <span>投资金额<a><%=item.money%></a></span>
                             <span><%=item.zc_enddate%></span>
                         </div>
                     </li>

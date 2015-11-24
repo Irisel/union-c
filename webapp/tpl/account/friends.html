@@ -1,8 +1,19 @@
+<div class="friend-wrapper">
+	<!--div class="list-loading js-list-loading">
+		正在奋力加载中
+	</div-->
+    <div class="friend">
+        <div class="header friend-header">
+            <i class="hd-btn hd-back"> <a class="icon-back icon" href="#account/invite"></a></i>
+	        	邀请好友
+        </div>
+    </div>
+    <div class="friends-box js-friends-box">
             <p class="friends-topic margin-min">
-                您获得的邀请返现：<span class="alert lg"><%=data.reward_sum%>元</span><a href="#account/friends/user_id:<%=pars.user_id%>">查看更多>></a>
+                您获得的邀请返现：<span class="alert lg"><%=reward_sum%>元</span>
             </p>
             <p class="friends-topic">
-                好友注册：<span class="alert lg"><%=data.friends_count%>人</span>      好友投资达标：<span class="alert lg"><%=data.standard_count%>人</span>
+                好友注册：<span class="alert lg"><%=friends_count%>人</span>      好友投资达标：<span class="alert lg"><%=standard_count%>人</span>
             </p>
             <table>
                 <thead>
@@ -19,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%_.each(data.friend_list.slice(0,5),function(item){%>
+                    <%_.each(friend_list,function(item){%>
                     <tr class="hr">
                         <th colspan="3"><hr></th>
                     </tr>
@@ -41,3 +52,5 @@
                     <%})%>
                 </tbody>
             </table>
+    </div>
+</div>

@@ -1,7 +1,9 @@
+
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/account/invite.html');
+	var H = require('text!../../../tpl/account/hongbao/invite.html');
+    var Friends = require("view/account/hongbao/friends");
     var Login = require("view/login/index");
 	var model = new M({
         action: '/account/friend'
@@ -9,15 +11,9 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
-        text: '',
-        invite: '',
 		events: {
-            "click .js-back": "back",
             "click .js-share": "share",
-            "click .js-hide": "hide",
-            "click .js-copy": "copy",
-            "input #js-content": "prevent",
-            "blur #js-content": "disable"
+            "click .js-hide": "hide"
 		},
 		initialize: function() {
 			var t = this;
@@ -25,32 +21,10 @@ define('', '', function(require) {
 				t.render();
 			});
 		},
-        prevent: function(){
+		syncRender: function() {
             var t = this;
-            var obj = document.getElementById("js-content");
-            $(obj).val(t.text);
-            $(obj).attr("readonly",true);
-            $(obj).blur();
-        },
-        copy: function(){
-            var obj = document.getElementById("js-content");
-            $(obj).attr("readonly",false);
-            obj.setSelectionRange(0,obj.value.length);
-            obj.focus();
-        },
-        disable: function(){
-            var obj = document.getElementById("js-content");
-            $(obj).attr("readonly",true);
-        },
-        checkLogin: function(logged, type, href){
-            if(logged){
-                new Login({
-				    el: $('.login-panel'),
-                    type: type,
-                    href: href
-			    });
-            }
-        },
+            t.$el.show();
+		},
         hide: function(){
             var t = this;
             t.$el.find('.pop').hide();
@@ -62,64 +36,48 @@ define('', '', function(require) {
                 t.$el.find('.pop').show();
             });
         },
-		//待优化
-		syncRender: function() {
-            var t = this;
-            var _data = { data: []};
-            Jser.getJSON(ST.PATH.ACTION + '/account/friend', {}, function(result) {
-                if(result.status == "1")
-                _data = result;
-                t.checkLogin(result.status == "0");
-                t.render(_data);
-			}, function() {
-
-			});
-		},
 		setShare: function() {
 			var t = this;
-			// var url = ST.PATH.SHARE + "?fid=" + fid;
-			var shareTitle = '联合金融';
-			// alert("fid:"+fid+",name:"+Jser.getItem("fid" + fid));
-			var descContent = "联合金融";
-//			var url = 'http://www.lamakeji.com/mamago/index.php/weixin/productShare?fid=' + fid + '&shareUserId=' + Jser.getItem("user_id") + '&tpid=4&topic=' + shareTitle + '&ftitle=' + descContent + '&from=singlemessage&isappinstalled=1';
+			var shareTitle = '送你50元红包，来联合金融享受安全高收益的网络理财吧，猛戳此处领取！';
+			var descContent = "恭喜发财，快来领红包啦！";
             var url = window.location.host + window.location.pathname + '?views=account&action=qrcode&message=' + t.invite;
 			Jser.setshare({
 				imgUrl: "http://ceshi.lianhejinrong.cn/Public/Wapapp/resource/images/minify/hbshare.png",
 				lineLink: url,
-				shareTitle: shareTitle, //"妈咪口袋" + Jser.getItem("fid" + fid),
+				shareTitle: shareTitle,
 				descContent: descContent
 			});
 		},
 		//待优化
-		render: function(rawdata) {
+        checkLogin: function(logged, type, href){
+            if(logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
+		render: function() {
 			var t = this,
-				data = rawdata || t.model.toJSON();
-            console.log(data, data.status == "0");
+				data = t.model.toJSON();
+            var size = windowSize();
             t.checkLogin(data.status == "0");
             if(!data.data)data.data = {};
             t.invite = data.data.invite;
 			var html = _.template(t.template, data);
-			t.$el.html(html);
+            console.log(data);
+            t.$el.html(html);
+            t.$el.find('.invite-topic').height(size.width * 214/375);
             t.$el.show();
-            t.bindEvent();
-            t.syncloading = false;
-            var obj = document.getElementById("js-content");
-            if(obj){
-                t.text = $(obj).val();
-                $(obj).height(obj.scrollHeight);
-            }
-		},
-		back: function(){
-			window.history.back();
+            new Friends({
+                el: t.$el.find(".js-friends-box"),
+                user_id: t.invite
+            });
+            $("#js-loading").hide();
 		},
 		bindEvent: function() {
 
-		},
-		changePars: function(pars) {
-			var t = this;
-			var data = $.extend({}, t.model.get("pars"));
-			$.extend(data, pars);
-			t.model.set("pars", data);
 		}
 	});
 	return function(pars) {
@@ -132,4 +90,4 @@ define('', '', function(require) {
 			el: $("#" + pars.model + "_" + pars.action)
 		});
 	}
-});
+})

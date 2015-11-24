@@ -1,7 +1,7 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-    var H = require('text!../../../../tpl/account/hongbao/friends.html');
+    var H = require('text!../../../tpl/account/friends.html');
 	var model = new M({
         action: '/account/invite_friends',
         type: 'post'
@@ -14,22 +14,17 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-//            t.render();
-			if (t.model._loaded) {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
-			} else {
-				t.listenTo(t.model, "sync", function() {
-					t.render();
-				});
-			}
+			});
 		},
 		syncRender: function() {
-//			var t = this,
+			var t = this;
 //				data = t.model.toJSON();
 //            console.log(data, t.$el);
 //			var _html = _.template(list_tpl, data);
 //			t.$el.find(".products-list").html(_html)
-//            t.$el.show();
+            t.$el.show();
 		},
 		back: function(){
 			window.history.back();
@@ -39,12 +34,9 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             data.data = data.data?data.data:{};
-            var html = _.template(t.template, data);
-            if(data.data['friend_list']){
-                t.$el.html(html).show();
-            }else{
-                t.$el.hide();
-            }
+            var html = _.template(t.template, data.data);
+            console.log(data, t.$el);
+            t.$el.html(html).show();
 		},
 		bindEvent: function() {
 
@@ -63,7 +55,8 @@ define('', '', function(require) {
             }
 		});
 		return new V({
-			el: pars.el
+			el: $("#" + pars.model + "_" + pars.action)
 		});
 	}
 });
+

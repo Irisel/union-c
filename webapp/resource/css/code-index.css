@@ -216,6 +216,8 @@ input[type=button] {
       .wrap #js-wrap section .hongbao-wrapper {
         background-color: #fee5c7;
         overflow-y: scroll; }
+        .wrap #js-wrap section .hongbao-wrapper .error {
+          text-align: center; }
         .wrap #js-wrap section .hongbao-wrapper.step1 .step2 {
           display: none; }
         .wrap #js-wrap section .hongbao-wrapper.step2 .step1 {
@@ -1447,6 +1449,15 @@ input[type=button] {
     .bank-form .inner-input input.vishide {
       display: none; }
 
+.friend-wrapper {
+  background-color: #fee5c7;
+  min-height: 100%; }
+  .friend-wrapper .friend .friend-header {
+    background: none;
+    background-color: #d8b58b; }
+  .friend-wrapper .friends-box {
+    margin-top: 20px; }
+
 .account {
   background: url(../images/minify/account-bg.png) center center no-repeat;
   background-size: cover; }
@@ -2638,7 +2649,8 @@ input[type=button] {
         background-color: #ff6c00;
         color: #ffffff;
         border-radius: 5px;
-        font-size: 1.2em; }
+        font-size: 1.2em;
+        display: block; }
     .project-box .project-header .project-inner .more-project {
       position: relative;
       text-align: center;
@@ -2755,28 +2767,51 @@ input[type=button] {
   position: relative; }
 
 .hongbao-form {
-  padding: 20px 40px; }
+  padding: 0 20px 20px; }
+  .hongbao-form i {
+    background: url(../images/minify/accout-hongbao.png) 0 0 no-repeat;
+    background-size: auto 50px;
+    display: inline-block;
+    height: 50px;
+    width: 46px;
+    position: relative;
+    top: 5px; }
   .hongbao-form .img-box {
     text-align: center;
-    padding: 20px 40px; }
+    padding: 20px 0; }
     .hongbao-form .img-box img {
       width: 200px;
       height: auto; }
   .hongbao-form .hongbao-input {
     height: 60px;
     line-height: 60px;
-    padding-left: 50px;
+    padding-left: 40px;
     padding-right: 15px;
     position: relative;
     background-color: #f3d2ab;
     margin-bottom: 10px; }
     .hongbao-form .hongbao-input .icon-box {
       height: 30px;
-      width: 40px;
+      width: 30px;
       position: absolute;
-      left: 10px;
+      left: 5px;
       top: 15px;
-      border-right: 1px solid #f3d2ab; }
+      border-right: 1px solid #c7a985; }
+      .hongbao-form .hongbao-input .icon-box i {
+        background: url(../images/minify/accout-hongbao.png) 0 0 no-repeat;
+        background-size: auto 50px;
+        width: 20px;
+        height: 100%;
+        display: block; }
+        .hongbao-form .hongbao-input .icon-box i.account-phone {
+          width: 30px;
+          background-position: -42px 2px; }
+        .hongbao-form .hongbao-input .icon-box i.account-validate {
+          background-position: -97px 4px;
+          width: 30px; }
+        .hongbao-form .hongbao-input .icon-box i.account-password {
+          width: 30px;
+          background-position: -70px 2px; }
     .hongbao-form .hongbao-input.validate {
       margin-right: 130px; }
       .hongbao-form .hongbao-input.validate .validate-button {
@@ -2790,7 +2825,8 @@ input[type=button] {
         width: 120px;
         border-radius: 3px;
         top: 0;
-        line-height: 60px; }
+        line-height: 60px;
+        border: none; }
     .hongbao-form .hongbao-input input {
       width: 100%;
       position: relative;
@@ -2845,13 +2881,19 @@ input[type=button] {
   margin: 0 10px 40px;
   border: 1px solid #d8b58b;
   background-color: #ffe6bc;
-  border-radius: 5px; }
+  border-radius: 5px;
+  position: relative; }
   .friends-box .friends-topic {
     line-height: 30px;
     margin-left: 10px; }
   .friends-box a {
-    float: right;
-    margin-right: 10px; }
+    margin-right: 10px;
+    position: absolute;
+    font-size: 1em;
+    right: 0;
+    top: 10px;
+    color: #c7a985;
+    line-height: 30px; }
   .friends-box .margin-lg {
     margin-top: 20px; }
   .friends-box .margin-min {
@@ -2876,10 +2918,10 @@ input[type=button] {
           border: none;
           border-top: 1px solid #d8b58b;
           position: absolute;
-          left: 10px;
-          right: 10px; }
+          left: 0px;
+          right: 0px; }
   .friends-box p {
-    font-size: 1em;
+    font-size: 0.8em;
     color: #c7a985;
     line-height: 23px; }
     .friends-box p .lg {

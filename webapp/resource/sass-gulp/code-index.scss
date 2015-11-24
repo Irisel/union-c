@@ -256,6 +256,9 @@ input[type=button]{
         @extend %wrapper;
         background-color:#fee5c7;
         overflow-y: scroll;
+        .error{
+          text-align:center;
+        }
         &.step1{
           .step2{
             display:none;
@@ -1861,6 +1864,19 @@ input[type=button]{
     }
   }
 }
+.friend-wrapper{
+  background-color: #fee5c7;
+  min-height: 100%;
+  .friend{
+    .friend-header{
+      background: none;
+      background-color: #d8b58b;
+    }
+  }
+  .friends-box{
+    margin-top:20px;
+  }
+}
 
 .account{
   background: url(../images/minify/account-bg.png) center center no-repeat;
@@ -3360,6 +3376,7 @@ input[type=button]{
               color: #ffffff;
               border-radius: 5px;
               font-size: 1.2em;
+              display:block;
           }
         }
         .more-project{
@@ -3506,10 +3523,19 @@ input[type=button]{
 }
 
 .hongbao-form{
-  padding: 20px 40px;
+  padding: 0 20px 20px;
+  i{
+    background: url(../images/minify/accout-hongbao.png) 0 0 no-repeat;
+    background-size: auto 50px;
+    display: inline-block;
+    height: 50px;
+    width: 46px;
+    position: relative;
+    top: 5px;
+  }
   .img-box{
-    text-align:center;
-    padding:20px 40px;
+    text-align: center;
+    padding: 20px 0;
     img{
       width:200px;
       height:auto;
@@ -3518,18 +3544,37 @@ input[type=button]{
   .hongbao-input{
     height: 60px;
     line-height: 60px;
-    padding-left: 50px;
+    padding-left: 40px;
     padding-right: 15px;
     position: relative;
     background-color: #f3d2ab;
     margin-bottom: 10px;
     .icon-box{
       height: 30px;
-      width: 40px;
+      width: 30px;
       position: absolute;
-      left: 10px;
+      left: 5px;
       top: 15px;
-      border-right: 1px solid #f3d2ab;
+      border-right: 1px solid #c7a985;
+      i{
+        background: url(../images/minify/accout-hongbao.png) 0 0 no-repeat;
+        background-size: auto 50px;
+        width: 20px;
+        height: 100%;
+        display: block;
+        &.account-phone{
+          width: 30px;
+          background-position: -42px 2px;
+        }
+        &.account-validate{
+          background-position: -97px 4px;
+          width: 30px;
+        }
+        &.account-password{
+          width: 30px;
+          background-position: -70px 2px;
+        }
+      }
     }
     &.validate{
       margin-right: 130px;
@@ -3545,6 +3590,7 @@ input[type=button]{
         border-radius: 3px;
         top: 0;
         line-height: 60px;
+        border:none;
       }
     }
     input{
@@ -3616,13 +3662,19 @@ input[type=button]{
     border: 1px solid #d8b58b;
     background-color:#ffe6bc;
     border-radius: 5px;
+    position:relative;
   .friends-topic{
     line-height: 30px;
     margin-left: 10px;
   }
   a{
-    float: right;
     margin-right: 10px;
+    position: absolute;
+    font-size: 1em;
+    right: 0;
+    top: 10px;
+    color:#c7a985;
+    line-height: 30px;
   }
   .margin-lg{
       margin-top:20px;
@@ -3651,14 +3703,14 @@ input[type=button]{
           border:none;
           border-top: 1px solid #d8b58b;
           position: absolute;
-          left: 10px;
-          right: 10px;
+          left: 0px;
+          right: 0px;
         }
       }
     }
   }
   p{
-    font-size: 1em;
+    font-size: 0.8em;
     color:#c7a985;
     line-height: 23px;
     .lg{

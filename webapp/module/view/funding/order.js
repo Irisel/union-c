@@ -88,7 +88,7 @@ define('', '', function(require) {
 			t.$el.show().html(html);
             t.fundingOrder = $('#fundingOrder');
 		},
-        checkLogin: function(formData){
+        checkformData: function(formData){
             var reg = /^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/;
             if(!formData['upayeename'] ||formData['upayeename'].length==0){
                 Jser.confirm("请输入收件人姓名!", function() {
@@ -152,7 +152,7 @@ define('', '', function(require) {
                 });
                 return;
             }
-            if(t.checkLogin(_locData))t.fundingOrder && t.fundingOrder.submit();
+            if(t.checkformData(_locData))t.fundingOrder && t.fundingOrder.submit();
 //            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
 //                console.log(result);
 //			}, function() {

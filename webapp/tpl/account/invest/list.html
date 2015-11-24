@@ -9,30 +9,42 @@
                     <li class="normal">
                         <div class="history-header">
                             <span><%=item.name%></span>
-                            <span>投标中</span>
+                            <span>
+                                <%if(item.borrow_status=='3' || item.borrow_status=='5'){%>
+                                流标
+                                <%}else if(item.borrow_status=='6'){%>
+                                还款中
+                                <%}else if(item.borrow_status=='7' || item.borrow_status=='10'){%>
+                                已完成
+                                <%}else if(item.borrow_status=='2' || item.borrow_status=='4' || item.borrow_status=='8'){%>
+                                投资中
+                                <%}%>
+                            </span>
                         </div>
                         <div>
                         <table class="history-table">
                             <tbody>
                                 <tr>
                                     <td>
-                                        <span>8.5%</span>
+                                        <span><%=item.borrow_interest_rate%>%</span>
                                         <span>年化利率</span>
                                     </td>
                                     <td>
-                                        <span>¥198.25</span>
+                                        <span>¥<%=item.shouyi%></span>
                                         <span>利息收益</span>
                                     </td>
                                     <td>
-                                        <span>2015-09-11</span>
+                                        <%if(item.borrow_status=='6' || item.borrow_status=='7' || item.borrow_status=='10'){%>
+                                        <span><%=item.deadline%></span>
                                         <span>还款日</span>
+                                        <%}%>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         </div>
                         <div class="history-footer">
-                            <span>投资金额<a><%=item.money%></a></span>
+                            <span>投资金额<a>¥<%=item.investor_capital%></a></span>
                             <span><%=item.date%></span>
                         </div>
                     </li>

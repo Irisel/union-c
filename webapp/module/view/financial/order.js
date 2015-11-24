@@ -172,11 +172,12 @@ define('', '', function(require) {
                 });
                 return;
             }
-            Jser.confirm('确认提交吗?',function(){
-                t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
-            }, function(){
-                
-            });
+            t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
+//            Jser.confirm('确认提交吗?',function(){
+//                t.$el.find('#js-tinvest-form') && t.$el.find('#js-tinvest-form').submit();
+//            }, function(){
+//
+//            });
 //            Jser.getJSON(ST.PATH.ACTION + '/account/tinvestmoney', {T_borrow_id: data.pars.id, transfer_invest_num: data.data.money, transfer_invest_month: data.data.dur, reward_id: data.data.reward_choose.id}, function(result) {
 //                t.model.isInvesting = false;
 //                if(result.status == "1"){
