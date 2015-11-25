@@ -8,6 +8,12 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        lists: {
+            2: '平台公告',
+            64:'联合动态',
+            65:'联合资讯',
+            114: '财富课堂'
+        },
 		events: {
             "click .js-back": "back"
 		},
@@ -15,7 +21,9 @@ define('', '', function(require) {
 			var t = this;
 			t.listenToOnce(t.model, "sync", function() {
 				t.render();
+                $("#js-loading").show();
                 t.listenTo(t.model, "change:pars", function() {
+                    t.$el.hide();
                     t.listenToOnce(t.model, "sync", function(){
                         t.render();
                     });
@@ -29,13 +37,15 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data);
+            data.title = t.lists[data.pars.type_name];
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
+            $("#js-loading").hide();
 		},
         syncRender: function(){
             var t = this;
             t.$el.show();
+            $("#js-loading").hide();
         },
 		bindEvent: function() {
 

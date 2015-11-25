@@ -39,6 +39,9 @@ define('', '', function(require) {
             indexSelf = t;
             t.bindEvent();
 		},
+        syncRender: function(){ 
+
+        },
 		loadData: function() {
 			var t = this;
             var _pars = t.model.get("pars");

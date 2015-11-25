@@ -26,9 +26,14 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
-		back: function(){
-			window.history.back();
-		},
+        back: function(){
+          var t = this,data = t.model.toJSON();
+          if(data.pars.from == 'crowdfunding'){
+              window.location.href="#account/crowdfunding"
+          }else{
+              window.history.back();
+          }
+        },
 		bindEvent: function() {
 
 		},
@@ -40,7 +45,8 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                id: pars.id
+                id: pars.id,
+                from: pars.from
 		    }
 		});
 		return new V({

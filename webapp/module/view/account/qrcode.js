@@ -22,11 +22,14 @@ define('', '', function(require) {
             var t = this;
 			var t1 = t.$el.find(".js-tel");
             var v1 = $.trim(t1.val());
+            var reg = /^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/;
             console.log(v1, t.$el.find('.hongbao-wrapper'));
 			if (v1.length == 0) {
 				Jser.error(t.$el.find(".js-error"), "*请输入手机号码");
-			}else{
+			}else if (reg.test(v1)) {
                 t.$el.find('.hongbao-wrapper').removeClass('step1').addClass('step2');
+            }else{
+                Jser.error(t.$el.find(".js-error"), "请输入正确的手机号码");
             }
         },
 		checkLogin: function() {
@@ -121,6 +124,10 @@ define('', '', function(require) {
             t2.val('');
             t3.val('');
             $("#js-loading").hide();
+		},
+		syncRender: function() {
+            var t = this;
+            t.$el.show();
 		},
 		bindEvent: function() {
 

@@ -35,12 +35,13 @@ define('plusin/news', ['$'], function(require) {
 //                                }
                         });
                 };
+                setInterval("scrollUp()",timer);
                 //鼠标事件绑定
-                _this.hover(function(){
-                        clearInterval(timerID);
-                },function(){
-                        timerID=setInterval("scrollUp()",timer);
-                }).mouseout();
+//                _this.hover(function(){
+//                        clearInterval(timerID);
+//                },function(){
+//
+//                }).mouseout();
         }
         })
     }

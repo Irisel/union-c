@@ -1,6 +1,12 @@
 <div class="hongbao-wrapper single step1">
     <div class="regist-topic step2"></div>
-    <div class="receive-topic step1"></div>
+    <div class="receive-topic step1">
+        <p>
+            <i class="corner"></i>
+            您的朋友 <%=invite%> 在给您发红包
+            <i class="corner"></i>
+        </p>
+    </div>
     <p class="error js-error vishow"><span></span></p>
     <div class="hongbao-form">
         <form>
@@ -27,7 +33,7 @@
                 <input placeholder="设置6-16位密码" name="pass" type="password" class="js-pass">
             </div>
             <div class="hongbao-info step2">
-                <input type="checkbox" class="js-agreement">
+                <input type="checkbox" class="js-agreement" checked="checked"/>
                 <span>我已阅读并接受</span>
                 <a href="#summary/index/type_name:6" class="info">《注册服务协议》</a>
             </div>

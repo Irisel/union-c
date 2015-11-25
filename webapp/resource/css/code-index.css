@@ -1174,6 +1174,9 @@ input[type=button] {
         height: 40px;
         width: 80px; }
 
+#summary_index .header {
+  font-size: 0.8em; }
+
 .info {
   color: #2caaeb; }
 
@@ -2544,16 +2547,18 @@ input[type=button] {
   overflow: hidden; }
   .js-news-box span.title {
     width: 50px;
-    float: left;
     height: 50px;
     color: #dc9450;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    line-height: 50px;
+    vertical-align: middle; }
   .js-news-box ul {
     left: 50px;
     right: 100px;
     overflow: hidden;
     line-height: inherit;
-    position: absolute; }
+    position: absolute;
+    top: 0; }
     .js-news-box ul li {
       height: 100%;
       height: 50px;
@@ -2753,6 +2758,27 @@ input[type=button] {
   background: url(../images/minify/receive_topic.png) center top no-repeat;
   background-size: cover;
   position: relative; }
+  .receive-topic p {
+    position: relative;
+    top: 16%;
+    color: #b11632;
+    margin: 0 24px;
+    float: left;
+    height: 24px;
+    display: block;
+    line-height: 24px;
+    font-size: 1em; }
+    .receive-topic p .corner {
+      background: url(../images/minify/corner.png) center center no-repeat;
+      float: left;
+      width: 10px;
+      height: 10px;
+      background-size: 10px auto; }
+      .receive-topic p .corner:last-child {
+        float: right;
+        top: 14px;
+        -webkit-transform: rotate(180deg);
+        position: relative; }
 
 .regist-topic {
   width: 100%;
@@ -2785,16 +2811,16 @@ input[type=button] {
   .hongbao-form .hongbao-input {
     height: 60px;
     line-height: 60px;
-    padding-left: 40px;
+    padding-left: 45px;
     padding-right: 15px;
     position: relative;
     background-color: #f3d2ab;
     margin-bottom: 10px; }
     .hongbao-form .hongbao-input .icon-box {
       height: 30px;
-      width: 30px;
+      width: 35px;
       position: absolute;
-      left: 5px;
+      left: 10px;
       top: 15px;
       border-right: 1px solid #c7a985; }
       .hongbao-form .hongbao-input .icon-box i {
@@ -2802,7 +2828,8 @@ input[type=button] {
         background-size: auto 50px;
         width: 20px;
         height: 100%;
-        display: block; }
+        display: block;
+        top: 0; }
         .hongbao-form .hongbao-input .icon-box i.account-phone {
           width: 30px;
           background-position: -42px 2px; }
@@ -2830,10 +2857,10 @@ input[type=button] {
     .hongbao-form .hongbao-input input {
       width: 100%;
       position: relative;
-      height: 40px;
-      line-height: 40px;
+      height: 30px;
+      line-height: 30px;
       border: none;
-      color: #c7a985;
+      color: #9c7648;
       background-color: #f3d2ab;
       font-size: 1em;
       text-indent: 5px; }

@@ -40,11 +40,11 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             data.data = data.data?data.data:{};
             var html = _.template(t.template, data);
-            if(data.data['friend_list']){
+//            if(data.data['friend_list']){
                 t.$el.html(html).show();
-            }else{
-                t.$el.hide();
-            }
+//            }else{
+//                t.$el.hide();
+//            }
 		},
 		bindEvent: function() {
 

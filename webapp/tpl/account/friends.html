@@ -13,7 +13,7 @@
                 您获得的邀请返现：<span class="alert lg"><%=reward_sum%>元</span>
             </p>
             <p class="friends-topic">
-                好友注册：<span class="alert lg"><%=friends_count%>人</span>      好友投资达标：<span class="alert lg"><%=standard_count%>人</span>
+                好友注册：<span class="alert lg"><%=friends_count?friends_count:0%>人</span>      好友投资达标：<span class="alert lg"><%=standard_count?standard_count:0%>人</span>
             </p>
             <table>
                 <thead>
@@ -36,7 +36,11 @@
                     </tr>
                     <tr>
                     <th cellspacing=0 cellpadding=0>
-                        <p><%=item.user_name.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')%></p>
+                        <%if(item.user_name.length>=6){%>
+                            <p><%=item.user_name.slice(0, parseInt(item.user_name.length/2))+'****'+item.user_name.slice(parseInt(4 + item.user_name.length/2), item.user_name.length)%></p>
+                        <%}else{%>
+                            <p><%=item.user_name.replace(/(\w{1})(\w{0,})/, '$1****').slice(0, item.user_name.length)%></p>
+                        <%}%>
                     </th>
                     <th cellspacing=0 cellpadding=0>
                         <p><%=new Date(parseInt(item.reg_time) * 1000).Format('yyyy-MM-dd')%></p>

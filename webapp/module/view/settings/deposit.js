@@ -26,12 +26,12 @@ define('', '', function(require) {
             form && form.submit();
         },
         ifaccess: function(data){
-            if(data.data.id_status!="1"){
-                Jser.alert("请先实名认证!", function() {
-                    window.location.href="#verifi/index";
-                });
-                return true;
-            }
+//            if(data.data.invest_auth!="1"){
+//                Jser.alert("请先实名认证!", function() {
+//                    window.location.href="#verifi/index";
+//                });
+//                return true;
+//            }
             return false;
         },
         checkLogin: function(logged, type, href){

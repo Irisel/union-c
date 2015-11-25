@@ -17,6 +17,7 @@ define('', '', function(require) {
         },
 		events: {
             "click .js-crowdfunding": "crowdfunding",
+            "click .js-funding": "funding",
             "click .js-back": "back"
 		},
 		back: function(){
@@ -76,6 +77,13 @@ define('', '', function(require) {
 			});
             t.$el.show();
 		},
+        funding: function(event){
+            var target = $(event.currentTarget);
+            var zc_id = target.data('id')
+            if(zc_id){
+                window.location.href="#funding/index/id:" + zc_id +"/from:crowdfunding"
+            }
+        },
         crowdfunding: function(e){
             var t = this;
             t.$el.find('.tabs ul li.on').removeClass('on');

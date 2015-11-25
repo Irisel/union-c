@@ -120,6 +120,7 @@ define('', '', function(require) {
         invest: function(){
             console.log('invest');
             var t = this, data = t.model.toJSON();
+            if(data.data.status!="2")return;
             if(!(t.checkLogin(data.status == "2")) && data.data){
                 t.ifaccess(data);
             }else{
@@ -165,6 +166,8 @@ define('', '', function(require) {
           var t = this,data = t.model.toJSON();
           if(data.pars.from == 'index'){
               window.location.href="#index/index"
+          }else if (data.pars.from == 'invest'){
+              window.location.href="##account/invest"
           }else{
               window.location.href="#index/list";
           }

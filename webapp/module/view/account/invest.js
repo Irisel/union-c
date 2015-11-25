@@ -73,14 +73,21 @@ define('', '', function(require) {
 			});
             t.$el.show();
 		},
-        invest: function(e){
-            var t = this;
-            t.$el.find('.tabs ul li.on').removeClass('on');
-            $(e.currentTarget).addClass('on');
-            t.model.set("pars", {
-                type: $(e.currentTarget).data("invest")
-            });
+        invest: function(event){
+            var target = $(event.currentTarget);
+            var borrow_id = target.data('id');
+            if(borrow_id){
+                window.location.href="#financial/index/id:" + borrow_id +"/from:invest"
+            }
         },
+//        invest: function(e){
+//            var t = this;
+//            t.$el.find('.tabs ul li.on').removeClass('on');
+//            $(e.currentTarget).addClass('on');
+//            t.model.set("pars", {
+//                type: $(e.currentTarget).data("invest")
+//            });
+//        },
 		back: function(){
 			window.history.back();
 		},
