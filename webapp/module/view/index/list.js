@@ -20,6 +20,7 @@ define('', '', function(require) {
 				t.render();
                 t.syncRender();
                 t.listenTo(t.model, "change:pars", function() {
+                    $("#js-loading").show();
                     t.listenToOnce(t.model, "sync", function(){
                         t.syncRender();
                     });
@@ -28,7 +29,7 @@ define('', '', function(require) {
 		},
         sliderProducts: function(ele){
             var inners = $(ele).find('.index-products-list li');
-            var ulw = 0;
+            var ulw = 20;
             $.each(inners, function(key, inner){
                 var w = ($(inner).width())||0;
                 var pl = $(inner).css('padding-left').replace('px', '') ||0;
@@ -41,15 +42,26 @@ define('', '', function(require) {
             var label_width = $(ele).find('.label').width() || 0;
             $(ele).find('.product-scroll').width($(ele).width() - label_width);
         },
-		syncRender: function() {
+		ascRender: function() {
 			var t = this,
 				data = t.model.toJSON();
             t.loading = false;
-            console.log(data, t.$el);
+            console.log(t.model);
+            t.$el.find('.index-products-list li.on').removeClass('on');
+            t.$el.find('.index-products-list li:nth-child(' + (parseInt(data.pars.name_id)+1) + ')').addClass('on');
 			var _html = _.template(list_tpl, data);
-			t.$el.find(".products-list").html(_html)
-            t.$el.show();
+			t.$el.find(".products-list").html(_html);
+            $("#js-loading").hide();
 		},
+        syncRender: function(cj){
+            var t = this,
+            data = t.model.toJSON();
+            if(cj && cj.name_id!=data.pars.name_id){
+                t.changePars(cj);
+            }
+            t.$el.show();
+            t.ascRender();
+        },
 		back: function(){
 			window.history.back();
 		},
@@ -84,7 +96,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                name_id: 0,
+                name_id: !isNaN(pars.name_id)?pars.name_id:0,
                 from: pars.from,
                 id: pars.id
 		    }

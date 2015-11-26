@@ -202,13 +202,13 @@
             ids.push(id);
 			Jser.confirm("确定要删除此信息么？", function() {
 				Jser.getJSON(ST.PATH.ACTION + "/account/delmsg", {'idarr' :ids}, function(result) {
-                    console.log(result);
+                    if(result.status!="1")Jser.alert('删除失败！');
                     t.syncRender();
 				}, function() {
-
+                    Jser.alert('删除失败！');
 				}, "post");
 			}, function(){
-                Jser.alert('删除失败！');
+
             });
 			return false;
 		},

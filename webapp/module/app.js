@@ -145,7 +145,7 @@ define(function(require, exports) {
                 } else {
                     App.Views[view].$el.show();
                 }
-                App.Views[view].syncRender && App.Views[view].syncRender();
+                App.Views[view].syncRender && App.Views[view].syncRender(cj);
             }
         }
     });

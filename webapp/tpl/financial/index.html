@@ -51,15 +51,19 @@
             预期收益 <span class="js-expect">0</span> 元
         </div>
         <div class="purchase">
+            <%if(data.status=="2"){%>
             <div class="invest-input">
                 <input type="text" placeholder="不低于100， 请写整数" class="js-investamount">
                 <span>元</span>
             </div>
-            <%if(data.status=="2"){%>
                 <div class="invest-button js-invest">
                     <a>投资</a>
                 </div>
             <%}else{%>
+            <div class="invest-input">
+                <input type="text" placeholder="不低于100， 请写整数" class="js-investamount" disabled="disabled">
+                <span>元</span>
+            </div>
                 <div class="invest-button js-invest disabled">
                     <a>还款中</a>
                 </div>

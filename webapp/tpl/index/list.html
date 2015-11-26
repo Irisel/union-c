@@ -1,8 +1,12 @@
 <div class="header index-header">
     <%if(pars.from){%>
-        <i class="hd-btn hd-back"> <a href="#financial/index/id:<%=pars.id%>/from:index" class="icon-back icon"></a></i>
+        <%if(pars.from == 'index'){%>
+            <i class="hd-btn hd-back"> <a href="#index/index" class="icon-back icon"></a></i>
+        <%}else{%>
+            <i class="hd-btn hd-back"> <a href="#financial/index/id:<%=pars.id%>/from:index" class="icon-back icon"></a></i>
+        <%}%>
     <%}else{%>
-        <i class="hd-btn hd-back"> <a href="#financial/index/id:<%=pars.id%>" class="icon-back icon"></a></i>
+        <i class="hd-btn hd-back"> <a href="#index/index" class="icon-back icon"></a></i>
     <%}%>
 	联合理财
 </div>
@@ -14,9 +18,21 @@
         <span class="label">产品名称：</span>
         <div class="product-scroll">
         <ul class="index-products-list">
-            <li class="js-product on" data-name="0">联农乐牧</li>
-            <li class="js-product" data-name="1">金房惠利</li>
-            <li class="js-product" data-name="2">当当有礼</li>
+            <%if(pars.name_id==0){%>
+                <li class="js-product on" data-name="0">按揭宝</li>
+            <%}else{%>
+                <li class="js-product" data-name="0">按揭宝</li>
+            <%}%>
+            <%if(pars.name_id==1){%>
+                <li class="js-product on" data-name="1">供应链</li>
+            <%}else{%>
+                <li class="js-product" data-name="1">供应链</li>
+            <%}%>
+            <!--<%if(pars.name_id==2){%>-->
+                <!--<li class="js-product on" data-name="2">当当有礼</li>-->
+            <!--<%}else{%>-->
+                <!--<li class="js-product" data-name="2">当当有礼</li>-->
+            <!--<%}%>-->
         </ul>
         </div>
     </div>

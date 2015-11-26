@@ -11,7 +11,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <span><%=borrow_duration%></span>
+                            <span><%=borrow_duration%><%=repayment_type=='1'?'天':'月'%></span>
                             <span>融资期限</span>
                         </td>
                         <td>
@@ -19,7 +19,7 @@
                             <span>项目总额</span>
                         </td>
                         <td>
-                            <span><%=progress * 100%>%</span>
+                            <span><%=progress%>%</span>
                             <span>认购进度</span>
                         </td>
                     </tr>

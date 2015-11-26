@@ -63,7 +63,7 @@ define('', '', function(require) {
 		doRegist: function() {
 			var t = this;
 			if (t.checkLogin()) {
-				var _data = t.$el.find("#js-regist-form").serializeArray();
+				var _data = t.$el.find("#js-qrcode-form").serializeArray();
 				var name, val;
 				var _locData={};
 				$.each(_data, function(i, item) {

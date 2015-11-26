@@ -576,7 +576,7 @@ input[type=button] {
     .index-products .product-scroll .index-products-list {
       display: inline-block;
       height: 40px;
-      font-size: 0.8em; }
+      font-size: 1em; }
       .index-products .product-scroll .index-products-list li {
         display: inline-block;
         float: left;
@@ -604,7 +604,8 @@ input[type=button] {
       padding: 5px 100px 0 10px;
       background-color: #ffffff; }
       .products-list li .product-detail .detail-title {
-        width: 100%; }
+        width: 100%;
+        position: absolute; }
         .products-list li .product-detail .detail-title span {
           font-size: 0.8em;
           text-align: left;
@@ -614,7 +615,8 @@ input[type=button] {
         width: 100%;
         text-align: center;
         font-size: 1.2em;
-        font-weight: bold; }
+        font-weight: bold;
+        margin-top: 1em; }
         .products-list li .product-detail .detail-table td {
           color: #666666; }
           .products-list li .product-detail .detail-table td:first-child {
@@ -665,6 +667,8 @@ input[type=button] {
       line-height: 20px;
       border-bottom: 1px solid #eee;
       background-color: #fbfbfb; }
+      .products-list li .product-desc .origin {
+        color: #666666; }
     .products-list li .product-bottom {
       height: 10px;
       background-color: #fbfbfb; }
@@ -2661,6 +2665,8 @@ input[type=button] {
       text-align: center;
       border-radius: 5px;
       margin-bottom: 12px; }
+      .project-box .project-header .project-inner .more-project > a {
+        display: block; }
       .project-box .project-header .project-inner .more-project img {
         width: 100%;
         height: auto; }
@@ -2764,9 +2770,7 @@ input[type=button] {
     color: #b11632;
     margin: 0 24px;
     float: left;
-    height: 24px;
     display: block;
-    line-height: 24px;
     font-size: 1em; }
     .receive-topic p .corner {
       background: url(../images/minify/corner.png) center center no-repeat;
@@ -2776,9 +2780,11 @@ input[type=button] {
       background-size: 10px auto; }
       .receive-topic p .corner:last-child {
         float: right;
-        top: 14px;
+        top: 1em;
         -webkit-transform: rotate(180deg);
-        position: relative; }
+        position: absolute;
+        right: -10px;
+        top: 10px; }
 
 .regist-topic {
   width: 100%;
@@ -2872,10 +2878,28 @@ input[type=button] {
     font-size: 14px;
     line-height: 20px; }
     .hongbao-form .hongbao-info input[type=checkbox] {
-      height: 20px;
-      width: 20px;
-      float: left;
-      margin-right: 5px; }
+      height: 1em;
+      width: 1em;
+      margin-right: 5px;
+      position: relative; }
+      .hongbao-form .hongbao-info input[type=checkbox]:before {
+        content: '';
+        display: block;
+        background-color: #f3d2ab;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #9c7648;
+        position: absolute; }
+      .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+        content: '';
+        display: block;
+        background: url(../images/minify/right.png) 0 0 no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #9c7648;
+        position: absolute;
+        background-color: #f3d2ab; }
     .hongbao-form .hongbao-info .info {
       color: #2caaeb; }
   .hongbao-form .button-submit {

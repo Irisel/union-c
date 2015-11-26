@@ -15,6 +15,7 @@
             <p class="friends-topic">
                 好友注册：<span class="alert lg"><%=friends_count?friends_count:0%>人</span>      好友投资达标：<span class="alert lg"><%=standard_count?standard_count:0%>人</span>
             </p>
+            <%if(friend_list){%>
             <table>
                 <thead>
                     <tr>
@@ -36,10 +37,12 @@
                     </tr>
                     <tr>
                     <th cellspacing=0 cellpadding=0>
+                        <%if(item.user_name){%>
                         <%if(item.user_name.length>=6){%>
                             <p><%=item.user_name.slice(0, parseInt(item.user_name.length/2))+'****'+item.user_name.slice(parseInt(4 + item.user_name.length/2), item.user_name.length)%></p>
                         <%}else{%>
                             <p><%=item.user_name.replace(/(\w{1})(\w{0,})/, '$1****').slice(0, item.user_name.length)%></p>
+                        <%}%>
                         <%}%>
                     </th>
                     <th cellspacing=0 cellpadding=0>
@@ -56,5 +59,6 @@
                     <%})%>
                 </tbody>
             </table>
+            <%}%>
     </div>
 </div>

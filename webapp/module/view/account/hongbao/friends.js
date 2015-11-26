@@ -40,6 +40,7 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             data.data = data.data?data.data:{};
             var html = _.template(t.template, data);
+            console.log(data);
 //            if(data.data['friend_list']){
                 t.$el.html(html).show();
 //            }else{
