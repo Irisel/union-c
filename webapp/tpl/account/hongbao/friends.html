@@ -1,5 +1,5 @@
             <p class="friends-topic margin-min">
-                您获得的邀请返现：<span class="alert lg"><%=data.reward_sum%>元</span>
+                您获得的邀请返现：<span class="alert lg"><%=data.reward_sum?data.reward_sum:0%>%>元</span>
                 <%if(data.friends_count){%><a href="#account/friends/user_id:<%=pars.user_id%>">查看更多>></a><%}%>
             </p>
             <p class="friends-topic">

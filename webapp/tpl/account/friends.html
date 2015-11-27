@@ -10,7 +10,7 @@
     </div>
     <div class="friends-box js-friends-box">
             <p class="friends-topic margin-min">
-                您获得的邀请返现：<span class="alert lg"><%=reward_sum%>元</span>
+                您获得的邀请返现：<span class="alert lg"><%=reward_sum?reward_sum:0%>元</span>
             </p>
             <p class="friends-topic">
                 好友注册：<span class="alert lg"><%=friends_count?friends_count:0%>人</span>      好友投资达标：<span class="alert lg"><%=standard_count?standard_count:0%>人</span>
