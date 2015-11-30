@@ -39,7 +39,7 @@
                     <th cellspacing=0 cellpadding=0>
                         <%if(item.user_name){%>
                         <%if(item.user_name.length>=6){%>
-                            <p><%=item.user_name.slice(0, parseInt(item.user_name.length/2))+'****'+item.user_name.slice(parseInt(4 + item.user_name.length/2), item.user_name.length)%></p>
+                            <p><%=item.user_name.slice(0, parseInt(item.user_name.length/2 -2))+'****'+item.user_name.slice(parseInt(2 + item.user_name.length/2), item.user_name.length)%></p>
                         <%}else{%>
                             <p><%=item.user_name.replace(/(\w{1})(\w{0,})/, '$1****').slice(0, item.user_name.length)%></p>
                         <%}%>

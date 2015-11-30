@@ -72,7 +72,7 @@ define('', '', function(require) {
 					_data[i].value = val;
 					if(val)_locData[name]=val;
 				});
-                if(t.invite)_locData['invite'] = t.invite;
+                if(t.invite)_locData['invite'] = t.name;
 				Jser.getJSON(ST.PATH.ACTION + "/member/registor", _locData, function(result) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){
@@ -109,6 +109,8 @@ define('', '', function(require) {
 			var t = this,
 				data = {};
             t.invite = Jser.getItem('invite');
+            t.name = Jser.getItem('name');
+            data['name'] = t.name;
             data['invite'] = t.invite;
             console.log(data);
             var size = windowSize();

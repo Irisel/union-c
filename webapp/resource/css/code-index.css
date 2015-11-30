@@ -1339,7 +1339,7 @@ input[type=button] {
     left: 10px; }
   .verifi-form .inner-input input {
     line-height: 46px;
-    font-size: 0.8em;
+    font-size: 1em;
     position: relative;
     width: 100%;
     top: 2px;

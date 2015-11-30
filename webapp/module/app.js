@@ -68,6 +68,8 @@ define(function(require, exports) {
         },
         //按照module/action(/conditions) 格式
         loadmodel: function(_md, _ac, con) {
+            var invite = Jser.getUrlParam('invite');
+            var name =Jser.getUrlParam('name');
             var md = _md, ac = _ac;
             if(Jser.getUrlParam('views') && Jser.getUrlParam('action') && !window.location.hash){
                 md = Jser.getUrlParam('views');
@@ -81,9 +83,6 @@ define(function(require, exports) {
                         message = Jser.getUrlParam('data');
                         Jser.setItem('message-error', message);
                     }
-                    if(ac=='qrcode' && message){
-                        Jser.setItem('invite', message);
-                    }
                 }
                 if (typeof history.replaceState === 'undefined') {
                     window.location.href = window.location.host + path;
@@ -91,6 +90,10 @@ define(function(require, exports) {
                 }else{
                     window.history.replaceState(null, null, path);
                 }
+            }
+            if(ac=='qrcode'){
+                Jser.setItem('invite', invite);
+                Jser.setItem('name', name);
             }
             var t = this;
             t.nav.initNav(md, ac);

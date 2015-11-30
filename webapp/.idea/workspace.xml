@@ -47,7 +47,7 @@
     <file path="/update.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445105704642" ignored="false" />
     <file path="/slider.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446795518723" ignored="false" />
     <file path="/history.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445188954545" ignored="false" />
-    <file path="/app.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448382012676" ignored="false" />
+    <file path="/app.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448867112774" ignored="false" />
     <file path="/access.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445266905764" ignored="false" />
     <file path="/detail.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445319062365" ignored="false" />
     <file path="/history.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446114643213" ignored="false" />
@@ -56,7 +56,7 @@
     <file path="/model.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445506868845" ignored="false" />
     <file path="/error.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445510817585" ignored="false" />
     <file path="/invite.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448386420177" ignored="false" />
-    <file path="/invite.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448352048699" ignored="false" />
+    <file path="/invite.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448867005763" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Genesis/Genesis/django_angular/django_angular/templates/test.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445723738694" ignored="false" />
     <file path="/test.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445723737989" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Genesis/Genesis/django_angular/django_angular/templates/ZeroClipboard.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445722886053" ignored="false" />
@@ -100,13 +100,13 @@
     <file path="/notice.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448085803361" ignored="false" />
     <file path="/recommand.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448515217706" ignored="false" />
     <file path="/receive.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448204917452" ignored="false" />
-    <file path="/regist.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448526874889" ignored="false" />
+    <file path="/regist.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448868822953" ignored="false" />
     <file path="/news.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448463349237" ignored="false" />
     <file path="/news.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448364370216" ignored="false" />
     <file path="/hongbao_invite.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448297835612" ignored="false" />
     <file path="/friends.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448609326272" ignored="false" />
     <file path="/hongbao_regist.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448300412304" ignored="false" />
-    <file path="/qrcode.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448526823723" ignored="false" />
+    <file path="/qrcode.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448875763183" ignored="false" />
     <file path="/friends.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448519349049" ignored="false" />
     <file path="/ul-list.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448608565402" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,50 +128,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/index/list.js">
+      <file leaf-file-name="friends.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/friends.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="25" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1448553682704" expanded="true" signature="33:3517" placeholder="{...}" />
-                <marker date="1448553682704" expanded="true" signature="308:3244" placeholder="{&quot;loading&quot;: false...}" />
-                <marker date="1448553682704" expanded="true" signature="915:1724" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/account/message.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="10" selection-start="5741" selection-end="5741" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/index/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="22" selection-start="1072" selection-end="1072" vertical-scroll-proportion="-18.321428">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ul-list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/index/view/ul-list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="42" selection-start="2372" selection-end="2372" vertical-scroll-proportion="-20.785715">
+            <state line="30" column="57" selection-start="1329" selection-end="1329" vertical-scroll-proportion="-14.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="friends.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/friends.html">
+        <entry file="file://$PROJECT_DIR$/tpl/account/friends.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="734" selection-end="734" vertical-scroll-proportion="-9.5">
+            <state line="54" column="32" selection-start="2328" selection-end="2328" vertical-scroll-proportion="-21.464285">
               <folding />
             </state>
           </provider>
@@ -180,43 +149,70 @@
       <file leaf-file-name="invite.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/invite.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="10" selection-start="941" selection-end="941" vertical-scroll-proportion="-19.0">
+            <state line="6" column="30" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.071429">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tpl/account/friends.html">
+      <file leaf-file-name="qrcode.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/account/qrcode.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="881" selection-end="881" vertical-scroll-proportion="0.36670688">
+            <state line="5" column="64" selection-start="248" selection-end="248" vertical-scroll-proportion="-3.392857">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/index/index.html">
+      <file leaf-file-name="regist.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/regist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+            <state line="6" column="121" selection-start="320" selection-end="362" vertical-scroll-proportion="-4.071429">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="more.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/index/view/more.html">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/view/regist/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
+            <state line="45" column="59" selection-start="1128" selection-end="1165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aboutus.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/summary/aboutus.js">
+      <file leaf-file-name="hongbao_receive.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/view/account/hongbao_receive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="659" selection-end="683" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qrcode.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/view/account/qrcode.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="46" selection-start="2258" selection-end="2258" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="code-index.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1719" column="24" selection-start="32317" selection-end="32317" vertical-scroll-proportion="0.4510533">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="44" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -232,22 +228,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tpl/index/view/recommand.html" />
-        <option value="$PROJECT_DIR$/module/view/account/hongbao/friends.js" />
-        <option value="$PROJECT_DIR$/module/view/account/qrcode.js" />
-        <option value="$PROJECT_DIR$/tpl/account/hongbao/regist.html" />
         <option value="$PROJECT_DIR$/tpl/regist/index.html" />
         <option value="$PROJECT_DIR$/tpl/financial/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/module/app.js" />
-        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
         <option value="$PROJECT_DIR$/module/view/index/list.js" />
         <option value="$PROJECT_DIR$/module/view/account/message.js" />
         <option value="$PROJECT_DIR$/tpl/index/view/more.html" />
         <option value="$PROJECT_DIR$/tpl/index/list.html" />
         <option value="$PROJECT_DIR$/tpl/index/view/ul-list.html" />
-        <option value="$PROJECT_DIR$/tpl/account/friends.html" />
+        <option value="$PROJECT_DIR$/tpl/financial/order.html" />
+        <option value="$PROJECT_DIR$/module/view/account/invite.js" />
+        <option value="$PROJECT_DIR$/tpl/account/hongbao/regist.html" />
         <option value="$PROJECT_DIR$/tpl/account/hongbao/friends.html" />
+        <option value="$PROJECT_DIR$/tpl/account/friends.html" />
+        <option value="$PROJECT_DIR$/module/app.js" />
+        <option value="$PROJECT_DIR$/module/view/account/qrcode.js" />
+        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
       </list>
     </option>
   </component>
@@ -282,6 +278,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1106,7 +1103,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1197,7 +1193,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.257889" sideWeight="0.66364664" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26060936" sideWeight="0.66364664" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1273,22 +1269,84 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/view/index/index.js">
+    <entry file="file://$PROJECT_DIR$/tpl/index/view/ul-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="36" column="42" selection-start="2372" selection-end="2372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/login/findback.js">
+    <entry file="file://$PROJECT_DIR$/tpl/financial/order.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="46" column="14" selection-start="1799" selection-end="1799" vertical-scroll-proportion="-16.490566">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/settings/deposit.js">
+    <entry file="file://$PROJECT_DIR$/module/view/index/list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="68" column="28" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/settings/bank.js">
+    <entry file="file://$PROJECT_DIR$/module/view/financial/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/financial/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="13" selection-start="2754" selection-end="2754" vertical-scroll-proportion="-23.071428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/account/invite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="36" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/regist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="59" selection-start="1128" selection-end="1165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/invite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="30" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/regist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="121" selection-start="320" selection-end="362" vertical-scroll-proportion="-4.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/friends.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="57" selection-start="1329" selection-end="1329" vertical-scroll-proportion="-14.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/friends.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="32" selection-start="2328" selection-end="2328" vertical-scroll-proportion="-21.464285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/account/hongbao_receive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1297,88 +1355,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="40" selection-start="3901" selection-end="3901" vertical-scroll-proportion="0.0">
+        <state line="69" column="44" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/qrcode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="64" selection-start="248" selection-end="248" vertical-scroll-proportion="-3.392857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/account/qrcode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="46" selection-start="2258" selection-end="2258" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="732" column="19" selection-start="13178" selection-end="13178" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/index/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1448553682704" expanded="true" signature="33:3517" placeholder="{...}" />
-            <marker date="1448553682704" expanded="true" signature="308:3244" placeholder="{&quot;loading&quot;: false...}" />
-            <marker date="1448553682704" expanded="true" signature="915:1724" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/account/message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="10" selection-start="5741" selection-end="5741" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/view/more.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="1072" selection-end="1072" vertical-scroll-proportion="-18.321428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/summary/aboutus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="659" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/index/view/ul-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="42" selection-start="2372" selection-end="2372" vertical-scroll-proportion="-20.785715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/invite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="10" selection-start="941" selection-end="941" vertical-scroll-proportion="-19.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/friends.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="734" selection-end="734" vertical-scroll-proportion="-9.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/account/friends.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="881" selection-end="881" vertical-scroll-proportion="0.36670688">
+        <state line="1719" column="24" selection-start="32317" selection-end="32317" vertical-scroll-proportion="0.4510533">
           <folding />
         </state>
       </provider>

@@ -3,7 +3,11 @@
     <div class="receive-topic step1">
         <p>
             <i class="corner"></i>
-            您的朋友 <%=invite%> 在给您发红包
+            <%if(/^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/.test(name)){%>
+            您的朋友 <%=name.slice(0, parseInt(name.length/2 -2))+'****'+name.slice(parseInt(2 + name.length/2), name.length)%> 在给您发红包
+            <%}else{%>
+            您的朋友 <%=name%> 在给您发红包
+            <%}%>
             <i class="corner"></i>
         </p>
     </div>
@@ -26,7 +30,7 @@
             </div>
             <div class="login-input width-bottom" style="display:none">
                 <i class="icon-invite"></i>
-                <input placeholder="邀请码(选填)" name="invite" type="password" class="js-invite" value="<%=invite%>">
+                <input placeholder="邀请码(选填)" name="invite" type="password" class="js-invite" value="<%=name%>">
             </div>
             <div class="hongbao-input step2">
                 <div class="icon-box"><i class="account-password"></i></div>

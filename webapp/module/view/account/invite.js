@@ -40,7 +40,7 @@ define('', '', function(require) {
 			var t = this;
 			var shareTitle = '送你50元红包，来联合金融享受安全高收益的网络理财吧，猛戳此处领取！';
 			var descContent = "恭喜发财，快来领红包啦！";
-            var url = window.location.host + window.location.pathname + '?views=account&action=qrcode&message=' + t.invite;
+            var url = window.location.host + window.location.pathname + '?views=account&action=qrcode&invite=' + t.invite + '&name=' + t.name;
 			Jser.setshare({
 				imgUrl: "http://ceshi.lianhejinrong.cn/Public/Wapapp/resource/images/minify/hbshare.png",
 				lineLink: url,
@@ -65,6 +65,7 @@ define('', '', function(require) {
             t.checkLogin(data.status == "0");
             if(!data.data)data.data = {};
             t.invite = data.data.invite;
+            t.name = data.data.name;
 			var html = _.template(t.template, data);
             console.log(data);
             t.$el.html(html);
