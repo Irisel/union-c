@@ -1055,7 +1055,6 @@ input[type=button] {
       float: left;
       text-align: center; }
     .funding-order .inner-option .option {
-      width: 130px;
       height: 30px;
       position: absolute;
       right: 10px;
@@ -1086,19 +1085,43 @@ input[type=button] {
             background-size: contain; }
         .funding-order .inner-option .option ul li:nth-child(1) {
           width: 28px;
-          margin-right: 1px;
+          margin-right: 5px;
           float: left;
-          background-color: #eeeeee; }
+          background-color: #eeeeee;
+          border: 1px solid #eeeeee; }
+        .funding-order .inner-option .option ul li:nth-child(1).on {
+          width: 28px;
+          margin-right: 5px;
+          float: left;
+          background-color: #ffffff;
+          border: 1px solid #facd89; }
+          .funding-order .inner-option .option ul li:nth-child(1).on .minus {
+            background: url(../images/minify/minus-on.png) center center no-repeat;
+            background-size: contain; }
         .funding-order .inner-option .option ul li:nth-child(2) {
           width: 66px;
           border: 1px solid #facd89;
           float: left; }
         .funding-order .inner-option .option ul li:nth-child(3) {
           width: 28px;
-          border: 1px solid #facd89;
-          margin-left: 1px;
+          border: 1px solid #eeeeee;
+          background-color: #eeeeee;
+          margin-left: 5px;
           float: left;
           padding: 5px; }
+          .funding-order .inner-option .option ul li:nth-child(3) .plus {
+            background: url(../images/minify/plus-off.png) center center no-repeat;
+            background-size: contain; }
+        .funding-order .inner-option .option ul li:nth-child(3).on {
+          width: 28px;
+          background-color: #ffffff;
+          border: 1px solid #facd89;
+          margin-left: 5px;
+          float: left;
+          padding: 5px; }
+          .funding-order .inner-option .option ul li:nth-child(3).on .plus {
+            background: url(../images/minify/plus.png) center center no-repeat;
+            background-size: contain; }
   .funding-order .inner-input {
     padding: 0 10px 0 10px;
     height: 50px;
@@ -2876,7 +2899,10 @@ input[type=button] {
     color: #c7a985;
     margin: 10px 0;
     font-size: 14px;
-    line-height: 20px; }
+    line-height: 20px;
+    background-color: #fee5c7;
+    color: #fee5c7;
+    border: none; }
     .hongbao-form .hongbao-info input[type=checkbox] {
       height: 1em;
       width: 1em;

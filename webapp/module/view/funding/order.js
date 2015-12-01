@@ -15,6 +15,10 @@ define('', '', function(require) {
         order_max:null,
         num_changing: false,
         fundingOrder: false,
+        jq_total: false,
+        jq_num: false,
+        jq_minus: false,
+        jq_plus:false,
 		events: {
              "click .js-back": "back",
              "click .js-minus":"minus",
@@ -87,6 +91,11 @@ define('', '', function(require) {
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.fundingOrder = $('#fundingOrder');
+            t.jq_num = t.$el.find('.js-num');
+            t.jq_total = t.$el.find('.js-total');
+            t.jq_minus = t.$el.find('.js-minus');
+            t.jq_plus = t.$el.find('.js-plus');
+            t.check_limit();
 		},
         checkformData: function(formData){
             var reg = /^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/;
@@ -118,7 +127,7 @@ define('', '', function(require) {
 
                 });
                 return false;
-            }else if (!formData['transfer_invest_num'] ||formData['transfer_invest_num'].length==0 || parseFloat(formData['transfer_invest_num']) <=0){
+            }else if (!formData['transfer_invest_num'] || formData['transfer_invest_num'].length==0 || parseFloat(formData['transfer_invest_num']) <=0){
                 Jser.confirm("众筹份额无效!", function() {
 
 			    }, function(){
@@ -143,7 +152,6 @@ define('', '', function(require) {
                 transfer_invest_num: t.order_number,
                 T_borrow_id: data.pars.id
             });
-            console.log(_locData);
             if(data.data.y_money < t.order_money * t.order_number){
 			    Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';
@@ -175,8 +183,9 @@ define('', '', function(require) {
                 return;
             }
             t.order_number+=1;
-            if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
-            t.$el.find('.js-num').val(t.order_number);
+            if(!isNaN(t.order_money))t.jq_total.html(t.order_money * t.order_number);
+            t.jq_num.val(t.order_number);
+            t.check_limit();
             t.num_changing = false;
         },
         minus: function(){
@@ -189,20 +198,35 @@ define('', '', function(require) {
                 return;
             }
             if(t.order_number)t.order_number-=1;
-            if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
-            t.$el.find('.js-num').val(t.order_number);
+            if(!isNaN(t.order_money))t.jq_total.html(t.order_money * t.order_number);
+            t.jq_num.val(t.order_number);
+            t.check_limit();
             t.num_changing = false;
+        },
+        check_limit: function(){
+            var t = this;
+            if(t.order_number<= t.order_min){
+                t.jq_minus.removeClass('on');
+            }else{
+                t.jq_minus.addClass('on');
+            }
+            if(t.order_number>= t.order_max){
+                t.jq_plus.removeClass('on');
+            }else{
+                t.jq_plus.addClass('on');
+            }
+
         },
         enter: function(e){
             var t = this;
             var inputNum = $(e.currentTarget).val();
-            if(!isNaN(inputNum)){
+            if(inputNum && !isNaN(inputNum)){
                 if(inputNum){
                     if(parseInt(inputNum)> t.order_max)inputNum = t.order_max;
                     if(parseInt(inputNum)< t.order_min)inputNum = t.order_min;
                     t.order_number = parseInt(inputNum);
                     $(e.currentTarget).val(t.order_number);
-                    if(!isNaN(t.order_money))$('.js-total').html(t.order_money * t.order_number);
+                    if(!isNaN(t.order_money))t.jq_total.html(t.order_money * t.order_number);
                 }
 
             }else{

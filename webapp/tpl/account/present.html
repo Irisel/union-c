@@ -46,7 +46,7 @@
                             <%if(item.expired_day=="0"){%>
                                 <div class="present-date"><span>有效期至永久</span></div>
                             <%}else{%>
-                                <div class="present-date"><span>有效期至<%=new Date(parseInt(item.expired_time) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ')%></span></div>
+                                <div class="present-date"><span>有效期至<%=new Date(parseInt(item.expired_time) * 1000).Format('yyyy-MM-dd hh:mm:ss')%></span></div>
                             <%}%>
                         </div>
                     </li>

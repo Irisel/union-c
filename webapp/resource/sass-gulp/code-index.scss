@@ -1352,7 +1352,7 @@ input[type=button]{
       text-align:center;
     }
     .option{
-      width: 130px;
+      //width: 130px;
       height: 30px;
       position: absolute;
       right: 10px;
@@ -1389,9 +1389,21 @@ input[type=button]{
           }
           &:nth-child(1){
             width: 28px;
-            margin-right: 1px;
+            margin-right: 5px;
             float:left;
             background-color: #eeeeee;
+            border: 1px solid #eeeeee;
+          }
+          &:nth-child(1).on{
+            width: 28px;
+            margin-right: 5px;
+            float:left;
+            background-color: #ffffff;
+            border: 1px solid #facd89;
+            .minus{
+                background: url(../images/minify/minus-on.png) center center no-repeat;
+                background-size: contain;
+            }
           }
           &:nth-child(2){
             width:66px;
@@ -1400,10 +1412,27 @@ input[type=button]{
           }
           &:nth-child(3){
             width: 28px;
-            border: 1px solid #facd89;
-            margin-left: 1px;
+            border: 1px solid #eeeeee;
+            background-color: #eeeeee;
+            margin-left: 5px;
             float:left;
             padding: 5px;
+            .plus{
+                background: url(../images/minify/plus-off.png) center center no-repeat;
+                background-size: contain;
+            }
+          }
+          &:nth-child(3).on{
+            width: 28px;
+            background-color: #ffffff;
+            border: 1px solid #facd89;
+            margin-left: 5px;
+            float:left;
+            padding: 5px;
+            .plus{
+                background: url(../images/minify/plus.png) center center no-repeat;
+                background-size: contain;
+            }
           }
         }
       }
@@ -3655,6 +3684,9 @@ input[type=button]{
     margin: 10px 0;
     font-size: 14px;
     line-height: 20px;
+    background-color: #fee5c7;
+    color: #fee5c7;
+    border: none;
     input[type=checkbox]{
       height: 1em;
       width: 1em;
