@@ -232,7 +232,7 @@ input[type=button]{
 
 .wrap {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   position: relative;
@@ -244,13 +244,14 @@ input[type=button]{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    //overflow-y: scroll;
     section {
       height: 100%;
       position: relative;
       .index-wrapper {
         @extend %wrapper;
         overflow-y: scroll;
+        height: inherit;
       }
       .hongbao-wrapper{
         @extend %wrapper;

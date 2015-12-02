@@ -195,7 +195,7 @@ input[type=button] {
 
 .wrap {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   position: relative;
@@ -206,13 +206,13 @@ input[type=button] {
     bottom: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll; }
+    overflow-x: hidden; }
     .wrap #js-wrap section {
       height: 100%;
       position: relative; }
       .wrap #js-wrap section .index-wrapper {
-        overflow-y: scroll; }
+        overflow-y: scroll;
+        height: inherit; }
       .wrap #js-wrap section .hongbao-wrapper {
         background-color: #fee5c7;
         overflow-y: scroll; }
