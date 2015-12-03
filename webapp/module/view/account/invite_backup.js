@@ -94,7 +94,7 @@ define('', '', function(require) {
 		render: function(rawdata) {
 			var t = this,
 				data = rawdata || t.model.toJSON();
-            console.log(data, data.status == "0");
+            //console.log(data, data.status == "0");
             t.checkLogin(data.status == "0");
             if(!data.data)data.data = {};
             t.invite = data.data.invite;

@@ -48,18 +48,21 @@
                         <table class="history-table">
                             <tbody>
                                 <tr>
-                                    <td>
+                                    <td width="33%">
                                         <span><%=item.borrow_interest_rate%>%</span>
                                         <span>年化利率</span>
                                     </td>
-                                    <td>
+                                    <td width="33%">
                                         <span>¥<%=item.shouyi%></span>
                                         <span>利息收益</span>
                                     </td>
-                                    <td>
+                                    <td width="33%">
                                         <%if(item.borrow_status=='6' || item.borrow_status=='7' || item.borrow_status=='10'){%>
-                                        <span><%=item.deadline%></span>
+                                        <span><%=new Date(parseInt(item.deadline) * 1000).Format('yyyy-MM-dd')%></span>
                                         <span>还款日</span>
+                                        <%} else {%>
+                                            <span style="font-size:0.8em">满标审核后确定</span>
+                                            <span>还款日</span>
                                         <%}%>
                                     </td>
                                 </tr>

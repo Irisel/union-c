@@ -34,7 +34,7 @@ define('', '', function(require) {
 			var html = _.template(t.template, options);
 			t.$el.html(html);
             t.$el.show();
-            console.log(data.raw_data);
+            //console.log(data.raw_data);
             t.$el.val(data.raw_data?data.raw_data.bank_name:'');
 		}
 	});

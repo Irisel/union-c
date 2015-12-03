@@ -85,7 +85,7 @@ function weixin6bySet() {
 	// });
 	// 2. 分享接口
 	// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
-    console.log(WeiXinShare);
+    //console.log(WeiXinShare);
 	wx.onMenuShareAppMessage({
 		title: WeiXinShare.descContent,
 		desc: WeiXinShare.shareTitle,

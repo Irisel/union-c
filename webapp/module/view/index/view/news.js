@@ -28,7 +28,7 @@ define('', '', function(require) {
 		syncRender: function() {
 //			var t = this,
 //				data = t.model.toJSON();
-//            console.log(data, t.$el);
+//            //console.log(data, t.$el);
 //			var _html = _.template(list_tpl, data);
 //			t.$el.find(".products-list").html(_html)
 //            t.$el.show();
@@ -50,12 +50,12 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             data = data.news;
-            console.log(data);
+            //console.log(data);
             data.data = data.data?data.data:{};
             data.data.list = data.data.list?data.data.list:{};
             data.data.list.list = data.data.list.list?data.data.list.list:[];
             var html = _.template(t.template, data.data);
-            console.log(data);
+            //console.log(data);
             t.$el.html(html).show();
             if(data.data.list.list.length)t.$el.News({
                 line: data.data.list.list.length,

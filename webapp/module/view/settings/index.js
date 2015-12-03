@@ -39,7 +39,7 @@ define('', '', function(require) {
 		},
         logout: function(){
             Jser.getJSON(ST.PATH.ACTION + '/account/actlogout', {}, function(result) {
-                console.log(result);
+                //console.log(result);
                 Jser.alert('登出成功！', function(){
                     window.location.href="#index/index"
                 });

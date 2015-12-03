@@ -41,7 +41,7 @@ define('', '', function(require) {
             }
             if((!isNaN(parseInt(account_new)) || !account_new)){
                 t.account = parseInt(account_new).toString();
-                console.log(t.account, input_new);
+                //console.log(t.account, input_new);
                 if(t.account.length != input_new.length){
                     $(e.currentTarget).val(t.account_show);
                 }else{
@@ -99,7 +99,7 @@ define('', '', function(require) {
 				_data[i].value = val;
 				_locData[name]=val;
 			});
-            console.log(_locData);
+            //console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
                 var info = result.status=="1"?'更新成功!':('更新失败：'+ result.data);
                 Jser.confirm(info, function(){

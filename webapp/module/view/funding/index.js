@@ -22,7 +22,7 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},

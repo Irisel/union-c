@@ -26,7 +26,7 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data, data.status == "0");
+            //console.log(data, data.status == "0");
             t.checkLogin(data.status == "0");
             if(!data.data)data.data = [];
             $.each(data.data, function(i, item){
@@ -49,7 +49,7 @@ define('', '', function(require) {
             }
         },
 		syncRender: function() {
-            console.log('syncReader');
+            //console.log('syncReader');
 			var t = this;
             var _data = { data: []};
             $("#js-loading").show();

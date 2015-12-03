@@ -42,7 +42,7 @@ define('', '', function(require) {
 				_data[i].value = val;
 				_locData[name]=val;
 			});
-            console.log(_locData);
+            //console.log(_locData);
             t.$el.find('#js-allocation-form') && t.$el.find('#js-allocation-form').submit();
         },
 		changePars: function(pars) {

@@ -40,7 +40,7 @@ define('', '', function(require) {
                 }
                 return true;
             });
-            console.log(data);
+            //console.log(data);
             t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);

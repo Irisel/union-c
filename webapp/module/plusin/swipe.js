@@ -148,7 +148,7 @@ define('plusin/swipe', ['$'], function(require) {
                     }
 
                     var diff = Math.abs(index - to) - 1;
-                    // console.log("diff："+diff);
+                    // //console.log("diff："+diff);
                     // move all the slides between index and to in the right direction
                     while (diff--) move(circle((to > index ? to : index) - diff - 1), width * direction, 0);
 

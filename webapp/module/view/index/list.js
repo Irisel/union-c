@@ -46,7 +46,7 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             t.loading = false;
-            console.log(t.model);
+            //console.log(t.model);
             t.$el.find('.index-products-list li.on').removeClass('on');
             t.$el.find('.index-products-list li:nth-child(' + (parseInt(data.pars.name_id)+1) + ')').addClass('on');
 			var _html = _.template(list_tpl, data);

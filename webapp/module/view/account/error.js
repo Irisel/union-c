@@ -24,7 +24,6 @@ define('', '', function(require) {
 		//待优化
 		render: function() {
             var t = this, data = t.model.toJSON();
-            console.log(data);
             data.pars.message = Jser.getItem('message-error');
             var html = _.template(t.template, data);
 			t.$el.show().html(html);

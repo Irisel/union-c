@@ -38,7 +38,7 @@ define('', '', function(require) {
 		render: function(syncData) {
 			var t = this,
 				data = syncData || t.model.toJSON();
-            console.log(data, data.status == "0");
+            //console.log(data, data.status == "0");
             if(!data.data)data.data = {balance:0.00};
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
@@ -56,13 +56,13 @@ define('', '', function(require) {
 			var t = this,data = t.model.toJSON();
             var money = t.$el.find(".js-money").val();
             var re = /^((\d+)|(\d+\.\d{1,2}))$/ ;
-            console.log(money);
+            //console.log(money);
             if(isNaN(money)){
 			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额！");
                 return;
             }else if (!re.test(money)){
 			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额, 允许保留两位小数！");
-                console.log('re');
+                //console.log('re');
                 return
             }else if(parseInt(money)<100){
 			    Jser.error(t.$el.find(".js-error"), "*请输入正确的金额, 最低金额为100！");
@@ -74,7 +74,7 @@ define('', '', function(require) {
             $('#moneywithdraw') && $('#moneywithdraw').submit();
         },
 		syncRender: function() {
-            console.log('syncRender');
+            //console.log('syncRender');
 			var t = this;
             var _data = { data:{balance:0.00}};
             Jser.getJSON(ST.PATH.ACTION + '/account/withdrawal', {}, function(result) {

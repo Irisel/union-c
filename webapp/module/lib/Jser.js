@@ -58,7 +58,7 @@ window.Jser = {
         return Jser._guid++;
     },
     log: function(str) {
-//        window.console && window.console.log(str);
+//        window.//console && window.//console.log(str);
     },
     setItem: function(key, name) {
         window.localStorage.setItem(key, name);
@@ -75,7 +75,7 @@ window.Jser = {
         } else {
             _data = data;
         }
-        console.log(_data);
+        //console.log(_data);
         $.each(_data, function(i, item){
             if(Object.prototype.toString.call(item) === '[object Array]')traditional = true;
         });

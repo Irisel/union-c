@@ -1267,7 +1267,7 @@ $.fn.selected = function(select) {
 // expose debug var
 $.fn.ajaxSubmit.debug = false;
 
-// helper fn for console logging
+// helper fn for //console logging
 function log() {
     if (!$.fn.ajaxSubmit.debug) {
         return;

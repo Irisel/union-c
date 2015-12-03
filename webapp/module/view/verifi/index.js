@@ -40,7 +40,7 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             if(!data.data)data.data = {};
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},
@@ -56,7 +56,7 @@ define('', '', function(require) {
 				_locData[name]=val;
 			});
             if(t.checkError(_locData))return;
-            console.log(_locData);
+            //console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/saveid', _locData, function(result) {
                 if(data.pars.next == 'bank'){
                     window.location.href="#verifi/bank";

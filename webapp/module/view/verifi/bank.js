@@ -40,7 +40,7 @@ define('', '', function(require) {
             }
             if((!isNaN(parseInt(account_new)) || !account_new)){
                 t.account = parseInt(account_new).toString();
-                console.log(t.account, input_new);
+                //console.log(t.account, input_new);
                 if(t.account.length != input_new.length){
                     $(e.currentTarget).val(t.account_show);
                 }else{
@@ -114,7 +114,7 @@ define('', '', function(require) {
 				_data[i].value = val;
 				_locData[name]=val;
 			});
-            console.log(_locData);
+            //console.log(_locData);
             if(t.checkError(_locData))return;
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
                 var info = result.status=="1"?'绑定成功!':('绑定失败：'+ result.data);

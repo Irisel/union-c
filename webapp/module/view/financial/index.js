@@ -93,13 +93,13 @@ define('', '', function(require) {
                 data.data.have_money = data.data.have_money.substring(1);
             }
             t.have_money = data.data.have_money.replace(',', '');
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.html(html);
             if(data.data && !isNaN((parseInt(data.data.b_m))) && !isNaN((parseInt(data.data.money_dec)))){
                 var b_m = parseInt(data.data.b_m);
                 var money_dec = parseInt(data.data.money_dec);
-                console.log(b_m, money_dec, (b_m - money_dec) * 100 / b_m);
+                //console.log(b_m, money_dec, (b_m - money_dec) * 100 / b_m);
                 t.$el.find('.list-progress .progress').css('width', ((b_m - money_dec) * 100 / b_m) + '%');
             }
             t.$el.find('.list-topic').height(size.width * 199/320);
@@ -118,7 +118,7 @@ define('', '', function(require) {
             return logged;
         },
         invest: function(){
-            console.log('invest');
+            //console.log('invest');
             var t = this, data = t.model.toJSON();
             if(data.data.status!="2")return;
             if(!(t.checkLogin(data.status == "2")) && data.data){
@@ -129,7 +129,7 @@ define('', '', function(require) {
             var id = data.pars.id;
             var money = t.$el.find(".js-investamount").val();
             var re = /^\d+$/ ;
-            console.log(money);
+            //console.log(money);
             if(isNaN(money)){
 			    Jser.alert("请输入正确的金额！", function() {
                     t.$el.find(".js-investamount").val('');
@@ -139,7 +139,7 @@ define('', '', function(require) {
 			    Jser.alert("请输入正确的金额！", function() {
                     t.$el.find(".js-investamount").val('');
 			    });
-                console.log('re');
+                //console.log('re');
                 return
             }else if(parseInt(money)<100){
 			    Jser.alert("请输入正确的金额！", function() {
@@ -147,7 +147,7 @@ define('', '', function(require) {
 			    });
                 return;
             }else if(parseInt(money)>parseInt(t.have_money.replace(',', '').replace('，',''))){
-                console.log(money, parseInt(t.have_money.replace(',', '').replace('，','')));
+                //console.log(money, parseInt(t.have_money.replace(',', '').replace('，','')));
 			    Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';
 			    }, function(){

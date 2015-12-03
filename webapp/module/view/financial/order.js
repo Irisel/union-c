@@ -80,7 +80,7 @@ define('', '', function(require) {
                 });
                 data.data.reward_choose = data.data.rewards[0];
             }
-            console.log(Jser.getItem(data.pars.id + '_funding_reward'));
+            //console.log(Jser.getItem(data.pars.id + '_funding_reward'));
             if(Jser.getItem(data.pars.id + '_funding_reward') && data.data && data.data.rewards){
                 var reward_id = Jser.getItem(data.pars.id + '_funding_reward');
                 $.each(data.data.rewards, function(i, item){
@@ -89,7 +89,7 @@ define('', '', function(require) {
             }else if(data.data && data.data.reward_choose){
                 Jser.setItem(data.pars.id + '_funding_reward', data.data.reward_choose.id);
             }
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             if(data.data.reward_choose){
@@ -142,7 +142,7 @@ define('', '', function(require) {
             if(data.data.reward_choose){
                 t.$el.find('.reward_text').html(data.data.reward_choose.name);
                 t.$el.find('.reward_money').html(data.data.reward_choose.money);
-                console.log(data.data.reward_choose, t.$el.find('.reward_id').val());
+                //console.log(data.data.reward_choose, t.$el.find('.reward_id').val());
                 t.$el.find('.reward_id').val(data.data.reward_choose.id);
             }
         },

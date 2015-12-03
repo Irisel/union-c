@@ -66,7 +66,7 @@ define('', '', function(require) {
 					_locData[name]=val;
 				});
                 $.extend(t.form, _locData);
-                console.log(t.form, _locData);
+                //console.log(t.form, _locData);
                 t.$el.find('.form1').hide();
                 t.$el.find('.form2').show();
             }
@@ -116,7 +116,7 @@ define('', '', function(require) {
 			var t = this;
 			if (t.checkPass()) {
 				var _data = t.$el.find("#js-backpass-form").serializeArray();
-                console.log(_data);
+                //console.log(_data);
 				var name, val;
 				var _locData={};
 				$.each(_data, function(i, item) {

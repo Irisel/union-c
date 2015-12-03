@@ -32,7 +32,7 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             data = data.data;
             var list = {list: data.data};
-            console.log(list);
+            //console.log(list);
 			var html = _.template(t.template, list);
 			t.$el.show().html(html);
             Jser.loadimages(t.$el);
@@ -50,11 +50,11 @@ define('', '', function(require) {
 				page: ++_page
 			};
 		    t.isLoad = true;
-            console.log(pars);
+            //console.log(pars);
 			t.changePars(pars);
 		},
 		doScroll: function() {
-            console.log('doScroll');
+            //console.log('doScroll');
 			var t = indexSelf,
 				hash = window.location.hash;
 			if (!t.iTimer && !t.isLoad && (hash == "" || hash.indexOf("#crowdfunding/index") != -1)) {
@@ -85,14 +85,14 @@ define('', '', function(require) {
 		bindEvent: function() {
 			var t = this;
 			t.finishScroll();
-            console.log(t.$el.find(".crowd-list"));
+            //console.log(t.$el.find(".crowd-list"));
             t.$el.find(".crowd-list").on('scroll', t.doScroll);
 		},
 		changePars: function(pars) {
 			var t = this;
 			var data = $.extend({}, t.model.get("pars"));
 			$.extend(data, pars);
-            console.log(data, pars, 'data');
+            //console.log(data, pars, 'data');
 			t.model.set("pars", data);
 		}
 	});

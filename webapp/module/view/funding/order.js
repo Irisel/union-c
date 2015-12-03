@@ -76,7 +76,7 @@ define('', '', function(require) {
 
             }
             if(!data.data)data.data = {};
-            console.log(data, '万'.indexOf(data.data.d_money));
+            //console.log(data, '万'.indexOf(data.data.d_money));
             if('万'.indexOf(data.data.d_money) != -1){
                 data.data.d_total = data.data.d_money.replace('万', '');
                 t.order_money = parseInt(data.data.d_total);
@@ -87,7 +87,7 @@ define('', '', function(require) {
             }
             t.order_min = parseInt(data.data.min);
             t.order_max = parseInt(data.data.max);
-            console.log(t.order_min, t.order_max);
+            //console.log(t.order_min, t.order_max);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             t.fundingOrder = $('#fundingOrder');
@@ -162,7 +162,7 @@ define('', '', function(require) {
             }
             if(t.checkformData(_locData))t.fundingOrder && t.fundingOrder.submit();
 //            Jser.getJSON(ST.PATH.ACTION + '/account/investmoney', _locData, function(result) {
-//                console.log(result);
+//                //console.log(result);
 //			}, function() {
 //
 //			}, 'post');
@@ -177,7 +177,7 @@ define('', '', function(require) {
             var t = this;
             if(t.num_changing)return;
             t.num_changing = true;
-            console.log(t.order_max, 'plus', t.order_number>= t.order_max, t.order_money);
+            //console.log(t.order_max, 'plus', t.order_number>= t.order_max, t.order_money);
             if(!isNaN(t.order_max) && t.order_number>= t.order_max){
                 t.num_changing = false;
                 return;
@@ -192,7 +192,7 @@ define('', '', function(require) {
             var t = this;
             if(t.num_changing)return;
             t.num_changing = true;
-            console.log(t.order_min, 'minus', t.order_number<= t.order_min, t.order_money);
+            //console.log(t.order_min, 'minus', t.order_number<= t.order_min, t.order_money);
             if(!isNaN(t.order_min) && t.order_number<= t.order_min && t.order_number<=1){
                 t.num_changing = false;
                 return;

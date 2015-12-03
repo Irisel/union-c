@@ -21,7 +21,7 @@ define('', '', function(require) {
 		syncRender: function() {
 			var t = this;
 //				data = t.model.toJSON();
-//            console.log(data, t.$el);
+//            //console.log(data, t.$el);
 //			var _html = _.template(list_tpl, data);
 //			t.$el.find(".products-list").html(_html)
             t.$el.show();
@@ -35,7 +35,6 @@ define('', '', function(require) {
 				data = t.model.toJSON();
             data.data = data.data?data.data:{};
             var html = _.template(t.template, data.data);
-            console.log(data, t.$el);
             t.$el.html(html).show();
 		},
 		bindEvent: function() {

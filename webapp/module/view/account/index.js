@@ -38,7 +38,6 @@ define('', '', function(require) {
 		render: function(rawdata) {
 			var t = this,
 				data = rawdata || t.model.toJSON();
-            console.log(data);
             t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);

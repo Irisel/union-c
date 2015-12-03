@@ -52,7 +52,7 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
             if(!(t.checkLogin(data.status == "0")) && data.data){
@@ -72,7 +72,7 @@ define('', '', function(require) {
             }else if (chargetype.data('type') == 'shortcutc'){
                 t.$el.find('.js-bankc').removeClass('on');
                 t.$el.find('.js-rechargeType').val('2');
-                console.log(t.$el.find('.js-rechargeType').val());
+                //console.log(t.$el.find('.js-rechargeType').val());
             }
             t.$el.find('.js-' + chargetype.data('type')).addClass('on');
             t.model.isCharging = false;
@@ -113,7 +113,7 @@ define('', '', function(require) {
             var money = t.$el.find(".js-money").val();
             money = parseInt(money);
             var re = /^((\d+)|(\d+\.\d{1,2}))$/ ;
-            console.log(money);
+            //console.log(money);
             if(isNaN(money)){
                 Jser.error(t.$el.find(".js-error"), "*请输入正确的金额！");
                 return;

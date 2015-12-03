@@ -20,7 +20,7 @@ define('', '', function(require) {
 			});
 		},
         redirect: function(deposit){
-            console.log(deposit);
+            //console.log(deposit);
             var t = this;
             var form = t.$el.find('#js-' + deposit + '-form');
             form && form.submit();
@@ -76,7 +76,7 @@ define('', '', function(require) {
 		render: function(rawdata) {
 			var t = this,
 				data = rawdata || t.model.toJSON();
-            console.log(data);
+            //console.log(data);
             if(!(t.checkLogin(data.status == "0")) && data.data){
                 t.ifaccess(data);
             }else{

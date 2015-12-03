@@ -26,7 +26,7 @@ define('', '', function(require) {
 			var t = this,
 				data = t.model.toJSON();
             if(!data.data)data.data = [];
-            console.log(data);
+            //console.log(data);
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
 		},

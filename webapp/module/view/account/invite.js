@@ -67,7 +67,7 @@ define('', '', function(require) {
             t.invite = data.data.invite;
             t.name = data.data.name;
 			var html = _.template(t.template, data);
-            console.log(data);
+            //console.log(data);
             t.$el.html(html);
             t.$el.find('.invite-topic').height(size.width * 214/375);
             t.$el.show();

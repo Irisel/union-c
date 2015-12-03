@@ -38,7 +38,7 @@ define('base/model', '', function(require) {
                 success: function(rs) {
                     // t._loaded = true;
                     // t.set("data", rs.data);
-                    // window.console && console.log(t.get("data"));
+                    // window.//console && ////console.log(t.get("data"));
                 },
                 error: function(collection, rs) {
                     //alert("e");

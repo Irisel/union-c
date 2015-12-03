@@ -22,7 +22,7 @@
 		},
 		//待优化
 		syncRender: function() {
-            console.log('syncReader');
+            //console.log('syncReader');
 			var t = this;
             var _data = { data: []};
             $("#js-loading").show();
@@ -42,7 +42,7 @@
 		render: function(syncData) {
 			var t = this,
 				data = syncData || t.model.toJSON();
-            console.log(data, data.status == "0");
+            //console.log(data, data.status == "0");
             t.checkLogin(data.status == "0");
             if(!data.data)data.data = [];
 			var html = _.template(t.template, data);
@@ -137,13 +137,13 @@
 					// determine if scrolling test has run - one time test
 					if (!isScrolling) {
 						_x = Math.abs(delta.x);
-//						console.log(_x)
+//						//console.log(_x)
 						isScrolling = _x > 30 && _x > Math.abs(delta.y);
 					} else {
 //						event.preventDefault();
 						t.translate(event.currentTarget, delta.x + event.currentTarget.slidePos, 0);
 					}
-					// console.log(isScrolling);
+					// //console.log(isScrolling);
 					// if user is not trying to scroll vertically
 
 

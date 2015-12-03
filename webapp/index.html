@@ -144,9 +144,7 @@
     function loadwxconfig(callback) {
         //http://www.lamakeji.com/mamago/index.php/weixin/getAuth
         Jser.getJSON(ST.PATH.ACTION + '/Index/signature',{url: 'http://ceshi.lianhejinrong.cn/Public/Wapapp/index.html'}, function(result) {
-            console.log(result.data);
             setwxconfig(result.data);
-            console.log(callback);
             callback();
             // alert(JSON.stringify(data))
         }, function(data) {
@@ -157,20 +155,6 @@
     function setwxconfig(data){
         if (window.wx) {
                 // wx.config(data);
-                console.log({
-                 debug: true,
-                 appId: data.appid,
-                 timestamp: data.timestamp,
-                 nonceStr: data.noncestr,
-                 signature: data.signature,
-                 jsApiList: [
-                     'onMenuShareTimeline',
-                     'onMenuShareAppMessage',
-                     // 'onMenuShareQQ',
-                     // 'onMenuShareWeibo',
-                     // 'getNetworkType'
-                 ]
-                });
                 wx.config({
                  debug: false,
                  appId: data.appid,

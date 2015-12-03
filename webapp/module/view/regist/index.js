@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/regist/index.html');
+    var Login = require("view/login/index");
 	var model = new M({
 		pars: {
 
@@ -42,7 +43,7 @@ define('', '', function(require) {
 		doVcode: function() {
 			var t = this;
 			var v1 = $.trim(t.$el.find(".js-tel").val());
-            console.log(v1);
+            //console.log(v1);
 			var reg = /^(\d{1,4}\-)?(13|15|17|18){1}\d{9}$/;
 			if (reg.test(v1)) {
 				var _data = {
@@ -57,6 +58,23 @@ define('', '', function(require) {
 				Jser.error(t.$el.find(".js-error"), "请输入正确的手机号码");
 			}
 		},
+        autoLogin: function(username, password){
+               $("#js-loading").show();
+               var t = this;
+				Jser.getJSON(ST.PATH.ACTION + "/member/login", {
+                    user_name: username,
+                    pass: password
+                }, function(data) {
+                    $("#js-loading").hide();
+                    if(data.status == 0)t.Login(true, '0', '#index/index');
+                    if(data.status == 1){
+                        window.location.href = '#index/index';
+                    }
+				}, function() {
+                    $("#js-loading").hide();
+                    t.Login(true, '0', '#index/index');
+				}, "post");
+        },
 		checkLogin: function() {
 			var t = this;
 			var t1 = t.$el.find(".js-tel");
@@ -67,7 +85,7 @@ define('', '', function(require) {
 			var v2 = $.trim(t2.val());
             var v3 = $.trim(t3.val());
             var v4 = t4.is(':checked');
-            console.log(v4);
+            //console.log(v4);
 			if (v1.length == 0) {
 				Jser.error(t.$el.find(".js-error"), "*请输入手机号码");
 				return false;
@@ -88,6 +106,15 @@ define('', '', function(require) {
 		back: function(){
 			window.history.back();
 		},
+        Login: function(logged, type, href){
+            if(logged){
+                new Login({
+				    el: $('.login-panel'),
+                    type: type,
+                    href: href
+			    });
+            }
+        },
 		doRegist: function() {
 			var t = this;
 			if (t.checkLogin()) {
@@ -104,9 +131,11 @@ define('', '', function(require) {
 				Jser.getJSON(ST.PATH.ACTION + "/member/registor", _locData, function(result) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){
-                        Jser.alert(result.info, function(){
-                            window.location.href="#account/index"
-                        })
+                        console.log(_locData);
+                        t.autoLogin(_locData['tel'], _locData['pass']);
+//                        Jser.alert(result.info, function(){
+//                            t.Login(true, '0', '#index/index');
+//                        })
                     }
 				}, function() {
                     Jser.error(t.$el.find(".js-error"), "*注册失败!");

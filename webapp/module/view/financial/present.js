@@ -48,7 +48,7 @@ define('', '', function(require) {
                     item.choosen = (reward_id == item.id);
                 })
             }
-            console.log(data);
+            //console.log(data);
             t.checkLogin(data.status == "0");
 			var html = _.template(t.template, data);
 			t.$el.show().html(html);
@@ -63,7 +63,7 @@ define('', '', function(require) {
 		syncRender: function() {
             var t = this;
             t.render();
-            console.log('syncRender');
+            //console.log('syncRender');
 		},
 		bindEvent: function() {
 
