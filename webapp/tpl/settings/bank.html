@@ -38,7 +38,7 @@
     <div class="bank-form select-location">
     </div>
     <div class="warning-info">
-        <span class="orange">入不确定,请拨打开户行的客户热线咨询。</span>
+        <span class="orange">如不确定,请拨打开户行的客户热线咨询。</span>
     </div>
     <div class="bank-form">
         <div class="inner-input sl">
@@ -49,9 +49,15 @@
     </form>
     <div class="verifi-group">
         <ul>
+            <%if(unbind){%>
+            <li>
+                <div class="js-submit">绑定</div>
+            </li>
+            <%}else{%>
             <li>
                 <div class="js-submit">更新</div>
             </li>
+            <%}%>
             <li>
                 <div class="white">取消</div>
             </li>

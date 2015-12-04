@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449134696384" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/go/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176535058" ignored="false" />
-    <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449143232724" ignored="false" />
+    <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449219170969" ignored="false" />
     <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449143740072" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/go/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176495467" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/add/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440178940401" ignored="false" />
@@ -32,11 +32,11 @@
     <file path="/deposit.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445435349136" ignored="false" />
     <file path="/Jser.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446797120096" ignored="false" />
     <file path="/allocation.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1444844644800" ignored="false" />
-    <file path="/bank.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446015167087" ignored="false" />
+    <file path="/bank.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449219960494" ignored="false" />
     <file path="/allocation.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445434983713" ignored="false" />
     <file path="/transfer.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445264957721" ignored="false" />
     <file path="/transfer.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445248871088" ignored="false" />
-    <file path="/bank.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446125507066" ignored="false" />
+    <file path="/bank.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449220090088" ignored="false" />
     <file path="/options.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446011195271" ignored="false" />
     <file path="/option.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446098018222" ignored="false" />
     <file path="/present.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1447776277717" ignored="false" />
@@ -130,10 +130,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/view/regist/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="75" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.6339286">
+            <state line="89" column="64" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="code-index.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3684" column="19" selection-start="71016" selection-end="71016" vertical-scroll-proportion="-6.52">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bank.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/verifi/bank.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="29" selection-start="1637" selection-end="1638" vertical-scroll-proportion="-16.035715">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receive.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/receive.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="38" selection-start="260" selection-end="260" vertical-scroll-proportion="-4.071429">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bank.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/settings/bank.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="22" selection-start="1762" selection-end="1762" vertical-scroll-proportion="-12.214286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bank.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/view/settings/bank.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="19" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.74642855">
               <folding />
             </state>
           </provider>
@@ -142,7 +187,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/account/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="17" selection-start="3119" selection-end="3119" vertical-scroll-proportion="-17.642857">
+            <state line="88" column="17" selection-start="3119" selection-end="3119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,7 +196,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/view/account/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="-14.72">
+            <state line="37" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,57 +211,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/base/model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="18" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/login/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="39" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jser.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/lib/Jser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="39" selection-start="3401" selection-end="3401" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1449142579284" expanded="false" signature="8227:8242" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chargehistory.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/view/account/chargehistory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="52" column="36" selection-start="1447" selection-end="1471" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/account/error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="50" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="friends.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/view/account/friends.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="55" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -232,9 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
-        <option value="$PROJECT_DIR$/tpl/account/invest/list.html" />
-        <option value="$PROJECT_DIR$/tpl/account/invest.html" />
         <option value="$PROJECT_DIR$/tpl/financial/index.html" />
         <option value="$PROJECT_DIR$/module/view/account/invite.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -248,6 +243,9 @@
         <option value="$PROJECT_DIR$/tpl/account/index.html" />
         <option value="$PROJECT_DIR$/module/view/account/qrcode.js" />
         <option value="$PROJECT_DIR$/module/view/regist/index.js" />
+        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
+        <option value="$PROJECT_DIR$/tpl/settings/bank.html" />
+        <option value="$PROJECT_DIR$/module/view/settings/bank.js" />
       </list>
     </option>
   </component>
@@ -1198,7 +1196,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33635333" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26985854" sideWeight="0.66364664" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27312297" sideWeight="0.66364664" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1273,48 +1271,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tpl/account/invest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="52" selection-start="2882" selection-end="2882" vertical-scroll-proportion="-9.5">
-          <folding>
-            <element signature="n#style#0;n#span#2;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/financial/history.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tpl/financial/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="2" selection-start="2640" selection-end="2640" vertical-scroll-proportion="-8.071428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/account/invite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="18" selection-start="1472" selection-end="1482" vertical-scroll-proportion="2.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="35" selection-start="5831" selection-end="5831" vertical-scroll-proportion="-6.321429">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/view/account/crowdfunding.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="32" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="56" column="32" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/account/error.js">
@@ -1335,7 +1294,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="39" selection-start="3401" selection-end="3401" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1449142579284" expanded="false" signature="8227:8242" placeholder="..." />
+            <marker date="1449142579284" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1356,7 +1315,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/account/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="-14.72">
+        <state line="37" column="35" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1370,7 +1329,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/account/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="17" selection-start="3119" selection-end="3119" vertical-scroll-proportion="-17.642857">
+        <state line="88" column="17" selection-start="3119" selection-end="3119" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1384,7 +1343,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/regist/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="75" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.6339286">
+        <state line="89" column="64" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3684" column="19" selection-start="71016" selection-end="71016" vertical-scroll-proportion="-6.52">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/verifi/bank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="29" selection-start="1637" selection-end="1638" vertical-scroll-proportion="-16.035715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/account/hongbao/receive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="38" selection-start="260" selection-end="260" vertical-scroll-proportion="-4.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/settings/bank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="22" selection-start="1762" selection-end="1762" vertical-scroll-proportion="-12.214286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/settings/bank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="19" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.74642855">
           <folding />
         </state>
       </provider>

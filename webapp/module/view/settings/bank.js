@@ -76,6 +76,7 @@ define('', '', function(require) {
             }else{
                 data.data = {};
             }
+            data['unbind'] = !data.data.bank_num;
             var html = _.template(t.template, data);
 			t.$el.html(html);
 			new Banks({
@@ -102,11 +103,9 @@ define('', '', function(require) {
             //console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
                 var info = result.status=="1"?'更新成功!':('更新失败：'+ result.data);
-                Jser.confirm(info, function(){
+                Jser.alert(info, function(){
                     if(result.status=="1")
                     window.location.href="#account/index"
-                }, function(){
-
                 });
 			}, function() {
 
