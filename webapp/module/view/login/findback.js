@@ -55,7 +55,6 @@ define('', '', function(require) {
 		},
         doFindback: function(){
             var t = this;
-            if(t.checkCode()){
 				var _data = t.$el.find("#js-findback-form").serializeArray();
 				var name, val;
 				var _locData={};
@@ -65,10 +64,26 @@ define('', '', function(require) {
 					_data[i].value = val;
 					_locData[name]=val;
 				});
+            function extend_findback(){
                 $.extend(t.form, _locData);
-                //console.log(t.form, _locData);
                 t.$el.find('.form1').hide();
                 t.$el.find('.form2').show();
+            }
+            if(t.checkCode()){
+				Jser.getJSON(ST.PATH.ACTION + "/member/do_back", {code: _locData['code']}, function(result) {
+                    console.log(result.status, result.data, result.status == '!' && result.data);
+                    if(result.status == '1' && result.data){
+                        extend_findback()
+                    }else{
+                        Jser.alert(result.info, function(){
+                            t.$el.find('.js-code').val('');
+                        })
+                    }
+				}, function(result) {
+                        Jser.alert(result.info, function(){
+                            t.$el.find('.js-code').val('');
+                        })
+				}, "post");
             }
         },
 		checkCode: function() {

@@ -48,7 +48,7 @@ define('', '', function(require) {
             t.loading = false;
             //console.log(t.model);
             t.$el.find('.index-products-list li.on').removeClass('on');
-            t.$el.find('.index-products-list li:nth-child(' + (parseInt(data.pars.name_id)+1) + ')').addClass('on');
+            t.$el.find('.index-products-list li#' + parseInt(data.pars.name_id)).addClass('on');
 			var _html = _.template(list_tpl, data);
 			t.$el.find(".products-list").html(_html);
             $("#js-loading").hide();
@@ -96,7 +96,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                name_id: !isNaN(pars.name_id)?pars.name_id:0,
+                name_id: !isNaN(pars.name_id)?pars.name_id:1,
                 from: pars.from,
                 id: pars.id
 		    }

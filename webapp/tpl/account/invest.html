@@ -31,7 +31,7 @@
                 <%_.each(data,function(item){%>
                     <li class="normal js-invest" data-id="<%=item.borrow_id%>">
                         <div class="history-header">
-                            <span><%=item.name%></span>
+                            <span>【<%=item.name%>】<%=item.borrow_name%></span>
                             <span>
                                 <%if(item.borrow_status=='3' || item.borrow_status=='5'){%>
                                 流标
@@ -53,13 +53,16 @@
                                         <span>年化利率</span>
                                     </td>
                                     <td width="33%">
-                                        <span>¥<%=item.shouyi%></span>
+                                        <span>¥<%=item.investor_interest%></span>
                                         <span>利息收益</span>
                                     </td>
                                     <td width="33%">
-                                        <%if(item.borrow_status=='6' || item.borrow_status=='7' || item.borrow_status=='10'){%>
+                                        <%if(item.deadline && item.deadline.length>=10 && (item.borrow_status=='6' || item.borrow_status=='7' || item.borrow_status=='10')){%>
                                         <span><%=new Date(parseInt(item.deadline) * 1000).Format('yyyy-MM-dd')%></span>
                                         <span>还款日</span>
+                                        <%} else if(item.deadline && (item.borrow_status=='6' || item.borrow_status=='7' || item.borrow_status=='10')){%>
+                                            <span style="font-size:0.8em">- -</span>
+                                            <span>还款日</span>
                                         <%} else {%>
                                             <span style="font-size:0.8em">满标审核后确定</span>
                                             <span>还款日</span>
@@ -70,7 +73,7 @@
                         </table>
                         </div>
                         <div class="history-footer">
-                            <span>投资金额<a>¥<%=item.investor_capital%></a></span>
+                            <span>投资金额<a>¥<%=parseInt(item.investor_capital)%></a></span>
                             <span><%=item.date%></span>
                         </div>
                     </li>
