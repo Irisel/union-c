@@ -15,7 +15,7 @@ define('', '', function(require) {
 		},
 		initialize: function() {
 			var t = this;
-			t.listenToOnce(t.model, "sync", function() {
+			t.listenTo(t.model, "sync", function() {
 				t.render();
 			});
 		},
@@ -61,4 +61,4 @@ define('', '', function(require) {
 			el: $("#" + pars.model + "_" + pars.action)
 		});
 	}
-})
+});
