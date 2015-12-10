@@ -57,8 +57,9 @@ a {
   }
 }
 
-span, i, img{
+span, i, img, p{
   user-select: none;
+  -webkit-user-select:none;
 }
 
 em{font-style: normal;}
@@ -80,6 +81,7 @@ textarea{
   outline: 0;
   -webkit-appearance: none;
   padding:0;
+  -webkit-user-select:none;
 }
 
 input[type=button]{
@@ -273,6 +275,8 @@ input[type=button]{
       }
       .list-wrapper {
         @extend %wrapper;
+        overflow-y: scroll;
+        overflow-x: hidden;
         background-color: #ffffff;
         &.selection{
           padding-bottom:85px;
@@ -301,7 +305,7 @@ input[type=button]{
       width: 100%;
       height: 100%;
       float: left;
-      text-align: center;
+      text-align: left;
       position: relative;
       left: 0;
       top: 0;
@@ -2333,24 +2337,32 @@ input[type=button]{
   background-color: #ffffff;
   width:100%;
   color: #666666;
+  width: 100%;
+  overflow: hidden;
   .inner-normal{
     position: relative;
     display:block;
-    height: 80px;
+    //height: 80px;
     line-height: 30px;
     font-size: 0.9em;
     padding:10px 20px;
     border-bottom: 1px solid #eee;
     .message-date{
       width: 100%;
-      height: 30px;
+      //height: 30px;
       font-size:1em;
+      position: relative;
       span{
         &:first-child{
-          float:left;
+          width: 100%;
+          display: block;
+          padding-right:6em;
         }
         &:last-child{
           float:right;
+          position: absolute;
+          top:0;
+          right: 0px;
         }
       }
     }
@@ -2363,16 +2375,28 @@ input[type=button]{
       position: absolute;
       top: 0;
       right: -80px;
-      line-height: 80px;
       color: #ffffff;
+      p{
+        height: 66px;
+        width: 100%;
+        display: block;
+        top: 50%;
+        position: relative;
+        margin-top: -33px;
+        line-height: 66px;
+      }
     }
     .message-info{
-      height:30px;
       line-height: 16px;
       .addition{
         color: #838383;
         line-height: 16px;
         font-size:0.8em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
     }
   }
@@ -2541,7 +2565,7 @@ input[type=button]{
   left: 0;
   right: 0;
   border-top: 1px #B8B8B8 solid;
-  display: flex;
+  display:-webkit-box;
 }
 
 .pop-btn-box a {
@@ -3114,7 +3138,7 @@ input[type=button]{
             line-height:16px;
             color: #535353;
             word-break: break-all;
-            -webkit-user-select: auto;
+            //-webkit-user-select: auto;
           }
           button{
             margin-top: 10px;

@@ -12,7 +12,7 @@ define('', '', function(require) {
 		model: model,
 		template: H,
         pxy: 7/20,
-        ixy: 450/1900,
+        ixy: 0,
 		initialize: function() {
 			var t = this;
 			if (t.model._loaded) {
@@ -51,7 +51,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-
+                id: 24
             }
 		});		
 		return new V({

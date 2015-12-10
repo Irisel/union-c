@@ -42,12 +42,15 @@ define('', '', function(require) {
 		syncRender: function() {
             var t = this;
             var _data = t.model.toJSON();
+            $("#js-loading").show();
             Jser.getJSON(ST.PATH.ACTION + '/financial/index', {id: _data.pars.id, from: _data.pars.from}, function(result) {
-                if(result.status != "0")
-                _data = result;
+                if(result.status != "0"){
+                    result.pars = _data.pars;
+                    _data = result;
+                }
                 t.have_money = _data.data.have_money.replace(',', '');
                 t.render(_data);
-                console.log(_data)
+                $("#js-loading").hide();
 			}, function() {
 
 			});
@@ -168,7 +171,7 @@ define('', '', function(require) {
           if(data.pars.from == 'index'){
               window.location.href="#index/index"
           }else if (data.pars.from == 'invest'){
-              window.location.href="##account/invest"
+              window.location.href="#account/invest"
           }else{
               window.location.href="#index/list";
           }

@@ -73,7 +73,6 @@
             var timeout = undefined;
             var touchend = true;
 			var events = {
-
 				handleEvent: function(event) {
 
 					switch (event.type) {
@@ -91,7 +90,6 @@
 
 				},
 				start: function(event) {
-
 					var touches = event.touches[0];
 
 					// measure start values
@@ -120,7 +118,7 @@
 
 				},
 				move: function(event) {
-                    event.preventDefault();
+//                    event.preventDefault();
 					// ensure swiping with one touch and not pinching
 					if (event.touches.length > 1 || event.scale && event.scale !== 1) {
                         return;
@@ -135,12 +133,20 @@
 						y: touches.pageY - start.y
 					};
 					// determine if scrolling test has run - one time test
+//                    event.preventDefault();
+//                    t.translate(event.currentTarget, delta.x + event.currentTarget.slidePos, 0);
+                    if(window.mobileType.android() && Math.abs(delta.x) > Math.abs(delta.y)){
+                        if(delta.x>0){
+                            t.move(event.currentTarget, 0, 400);
+                        }else if(delta.x<0){
+                            t.move(event.currentTarget, -80, 400);
+                        }
+                        event.preventDefault();
+                    }
 					if (!isScrolling) {
 						_x = Math.abs(delta.x);
-//						//console.log(_x)
-						isScrolling = _x > 30 && _x > Math.abs(delta.y);
+                        isScrolling = _x > 30 && _x > Math.abs(delta.y);
 					} else {
-//						event.preventDefault();
 						t.translate(event.currentTarget, delta.x + event.currentTarget.slidePos, 0);
 					}
 					// //console.log(isScrolling);
@@ -156,7 +162,9 @@
 						} else {
 							t.move(event.currentTarget, 0, 400);
 						}
-					}
+					}else{
+
+                    }
 					event.currentTarget.removeEventListener('touchmove', events, false)
 					event.currentTarget.removeEventListener('touchend', events, false)
 

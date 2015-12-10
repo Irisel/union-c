@@ -164,7 +164,7 @@ define('', '', function(require) {
 					_data[i].value = val;
 					_locData[name]=val;
 				});
-            if(parseInt(_locData['transfer_invest_num']) + parseInt((data.data.reward_choose?data.data.reward_choose.money:0))> Math.abs(parseInt(data.data.h_money))){
+            if(parseInt(_locData['transfer_invest_num']) > Math.abs(parseInt(data.data.y_money))){
                 Jser.confirm("余额不够，请充值!", function() {
                     window.location.href = '#account/recharge/';
 			    }, function(){

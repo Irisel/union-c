@@ -152,6 +152,14 @@
             setwxconfig(data);
         }, "get", "json", true)
     };
+    window.mobileType = {
+          android: function() {
+            return navigator.userAgent.match(/Android/i) ? true : false;
+          },
+          ios: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+          }
+    };
     function setwxconfig(data){
         if (window.wx) {
                 // wx.config(data);
