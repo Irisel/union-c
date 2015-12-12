@@ -20,8 +20,8 @@ define('', '', function(require) {
 		initialize: function() {
 			var t = this;
 			t.listenToOnce(t.model, "sync", function() {
-				t.render();
                 $("#js-loading").show();
+				t.render();
                 t.listenTo(t.model, "change:pars", function() {
                     t.$el.hide();
                     t.listenToOnce(t.model, "sync", function(){

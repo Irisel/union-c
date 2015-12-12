@@ -277,6 +277,7 @@ input[type=button]{
         @extend %wrapper;
         overflow-y: scroll;
         overflow-x: hidden;
+        height: inherit;
         background-color: #ffffff;
         &.selection{
           padding-bottom:85px;
@@ -451,6 +452,8 @@ input[type=button]{
   color: #ffffff;
   overflow: hidden;
   font-size: 1.2em;
+  position: fixed;
+  z-index: 1000;
 }
 
 %white-link{
@@ -468,10 +471,14 @@ input[type=button]{
   color: #000000;
   border-bottom: 1px solid #e5e5e5;
   -webkit-user-select: none;
+  .share-btn{
+    position: absolute;
+    right: 10px;
+  }
 }
 
 .list-topic{
-  margin-top: -1px;
+  margin-top: 40px;
   width:100%;
   background: url(../images/minify/list-graph.png) center top no-repeat;
   background-size: cover;
@@ -907,7 +914,31 @@ input[type=button]{
     }
   }
 }
-
+.recharge-table{
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  color: #666666;
+  .table-title{
+    height:30px;
+    font-size:1em;
+    line-height:30px;
+  }
+  table{
+    width:100%;
+    border: 1px solid #ddd;
+    border-spacing: 0;
+    border-collapse: collapse;
+    line-height: 30px;
+    font-size: 14px;
+    text-align:center;
+    thead{
+      background-color: #f6f6f6;
+    }
+  }
+}
 .recharge-detail{
   background-color: #ffffff;
   width:100%;
@@ -971,7 +1002,7 @@ input[type=button]{
 .paragh{
   bottom: 0;
   position: absolute;
-  top: 80px;
+  top: 120px;
   width: 100%;
   padding: 0 20px;
   img{
@@ -981,7 +1012,7 @@ input[type=button]{
 
 .summary{
   bottom: 0;
-  top:20px;
+  top:60px;
   position: absolute;
   width: 100%;
   padding: 0 20px;
@@ -1219,6 +1250,23 @@ input[type=button]{
       @extend %blank-inner;
       text-align: left;
       color:#333333;
+      font-size:1em;
+      position:relative;
+      .btn-forward{
+        width: 12px;
+        right:0;
+        background-position: -44px 0;
+        display: block;
+        position: absolute;
+        top: 50%;
+        background-size: auto 30px;
+        margin-top: -10.5px;
+      }
+      a{
+        color:inherit;
+        width: 100%;
+        display: block;
+      }
       &.less{
         color: #999999;
         font-size: 0.8em;
@@ -2462,7 +2510,7 @@ input[type=button]{
 }
 
 .scroll-wrapper{
-  top: 40px !important;
+  padding-top: 40px !important;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -2677,6 +2725,7 @@ input[type=button]{
           display: inline-block;
           position: relative;
           left: 10px;
+          top:10px;
           span{
             display: block;
             line-height: 25px;

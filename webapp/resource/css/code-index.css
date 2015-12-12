@@ -226,6 +226,7 @@ input[type=button] {
       .wrap #js-wrap section .list-wrapper {
         overflow-y: scroll;
         overflow-x: hidden;
+        height: inherit;
         background-color: #ffffff; }
         .wrap #js-wrap section .list-wrapper.selection {
           padding-bottom: 85px; }
@@ -360,7 +361,9 @@ input[type=button] {
   line-height: 40px;
   color: #ffffff;
   overflow: hidden;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  position: fixed;
+  z-index: 1000; }
 
 .list-purchase .purchase .invest-button a, .list-link li a, .list-more a, .order-submit div a, .ensure-submit div a, .setting-detail .inner-normal, .list-invest .invest .invest-button a, .hd-link, .hd-linkgray {
   color: #ffffff; }
@@ -372,9 +375,12 @@ input[type=button] {
   color: #000000;
   border-bottom: 1px solid #e5e5e5;
   -webkit-user-select: none; }
+  .list-header .share-btn {
+    position: absolute;
+    right: 10px; }
 
 .list-topic {
-  margin-top: -1px;
+  margin-top: 40px;
   width: 100%;
   background: url(../images/minify/list-graph.png) center top no-repeat;
   background-size: cover;
@@ -714,6 +720,28 @@ input[type=button] {
     .order-detail .inner-normal .orange {
       color: #ff7d21; }
 
+.recharge-table {
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  color: #666666; }
+  .recharge-table .table-title {
+    height: 30px;
+    font-size: 1em;
+    line-height: 30px; }
+  .recharge-table table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-spacing: 0;
+    border-collapse: collapse;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center; }
+    .recharge-table table thead {
+      background-color: #f6f6f6; }
+
 .recharge-detail {
   background-color: #ffffff;
   width: 100%;
@@ -764,7 +792,7 @@ input[type=button] {
 .paragh {
   bottom: 0;
   position: absolute;
-  top: 80px;
+  top: 120px;
   width: 100%;
   padding: 0 20px; }
   .paragh img {
@@ -772,7 +800,7 @@ input[type=button] {
 
 .summary {
   bottom: 0;
-  top: 20px;
+  top: 60px;
   position: absolute;
   width: 100%;
   padding: 0 20px; }
@@ -955,7 +983,22 @@ input[type=button] {
     padding: 0 10px; }
     .funding-index .funding-index-detail .inner-name {
       text-align: left;
-      color: #333333; }
+      color: #333333;
+      font-size: 1em;
+      position: relative; }
+      .funding-index .funding-index-detail .inner-name .btn-forward {
+        width: 12px;
+        right: 0;
+        background-position: -44px 0;
+        display: block;
+        position: absolute;
+        top: 50%;
+        background-size: auto 30px;
+        margin-top: -10.5px; }
+      .funding-index .funding-index-detail .inner-name a {
+        color: inherit;
+        width: 100%;
+        display: block; }
       .funding-index .funding-index-detail .inner-name.less {
         color: #999999;
         font-size: 0.8em;
@@ -1910,7 +1953,7 @@ input[type=button] {
         color: #2caaeb; }
 
 .scroll-wrapper {
-  top: 40px !important;
+  padding-top: 40px !important;
   overflow-y: scroll;
   overflow-x: hidden; }
 
@@ -2100,7 +2143,8 @@ input[type=button] {
     .list-summaries ul li a .summary {
       display: inline-block;
       position: relative;
-      left: 10px; }
+      left: 10px;
+      top: 10px; }
       .list-summaries ul li a .summary span {
         display: block;
         line-height: 25px;

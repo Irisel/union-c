@@ -1,6 +1,9 @@
 <div class="header list-header">
     <i class="hd-btn hd-backgray"> <a class="icon-back icon js-back"></a></i>
 	众筹详情
+    <a class="share-btn">
+        分享
+    </a>
 </div>
 <div class="list-wrapper scroll-wrapper">
 	<!--div class="list-loading js-list-loading">
@@ -12,7 +15,7 @@
             <img data-src="<%=data.img%>">
         </div>
         <div class="funding-index-detail">
-            <div class="inner-name"><%=data.name%></div>
+            <div class="inner-name"><a href="#funding/detail/id:<%=data.id%>"><%=data.name%></a><i class="btn btn-forward"></i></div>
             <div class="inner-name less">此项目需在<%=data.mday%>前, 获得¥<%=data.mmoney%>金额才可成立</div>
         </div>
         <ul class="funding-attributes">
@@ -37,7 +40,7 @@
         </ul>
         <ul class="list-link">
             <li>
-                <a href="#funding/detail/id:<%=data.id%>">详细信息</a><i class="btn btn-forward"></i>
+                <a href="#funding/detail/id:<%=data.id%>">权益回报</a><i class="btn btn-forward"></i>
             </li>
         </ul>
         <div class="list-buy">
