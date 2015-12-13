@@ -2,6 +2,7 @@ define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
 	var H = require('text!../../../tpl/funding/index.html');
+    var Detail = require("view/funding/view/detail");
 	var model = new M({
         action: '/zhongchou/zhongchou'
 	});
@@ -22,9 +23,13 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            //console.log(data);
 			var html = _.template(t.template, data);
-			t.$el.show().html(html);
+            t.$el.html(html);
+            new Detail({
+                el: t.$el.find(".js-paragh"),
+                id: data.pars.id
+            });
+			t.$el.show();
 		},
         back: function(){
           var t = this,data = t.model.toJSON();

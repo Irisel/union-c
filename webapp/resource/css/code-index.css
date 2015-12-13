@@ -231,6 +231,10 @@ input[type=button] {
         .wrap #js-wrap section .list-wrapper.selection {
           padding-bottom: 85px; }
 
+.non-header {
+  top: 0 !important;
+  padding-top: 0 !important; }
+
 .slider-box {
   height: 120px;
   width: 100%;
@@ -813,7 +817,7 @@ input[type=button] {
   display: inline-block;
   float: left;
   line-height: 40px;
-  width: 25%;
+  width: 33.33%;
   text-align: center;
   border-top: 1px solid #ff7d21;
   border-bottom: 1px solid #ff7d21;
@@ -835,9 +839,7 @@ input[type=button] {
       border-left: 1px solid #ff7d21; }
     .guide-detail ul li:nth-child(2) {
       border-left: 1px solid #ff7d21; }
-    .guide-detail ul li:nth-child(3) {
-      border-left: 1px solid #ff7d21; }
-    .guide-detail ul li:nth-child(4) {
+    .guide-detail ul li:last-child {
       border-left: 1px solid #ff7d21;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
@@ -873,11 +875,9 @@ input[type=button] {
       font-size: 1.125em; }
 
 .crowd-list, .funding-index {
-  position: fixed;
-  top: 40px;
-  bottom: 50px;
-  width: 100%;
-  overflow-y: scroll; }
+  position: relative;
+  bottom: 60px;
+  width: 100%; }
 
 .crowd-list ul li {
   position: relative; }
@@ -981,6 +981,12 @@ input[type=button] {
       width: 100%;
       height: 100%;
       display: block; }
+  .funding-index .funding-paragh {
+    width: 100%;
+    padding: 0 20px; }
+    .funding-index .funding-paragh img {
+      width: 100%;
+      height: auto; }
   .funding-index .funding-index-detail {
     padding: 0 10px; }
     .funding-index .funding-index-detail .inner-name {
@@ -1907,7 +1913,6 @@ input[type=button] {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical; }
 
 .list-invest {
@@ -1955,7 +1960,7 @@ input[type=button] {
         color: #2caaeb; }
 
 .scroll-wrapper {
-  padding-top: 40px !important;
+  padding-top: 40px;
   overflow-y: scroll;
   overflow-x: hidden; }
 
@@ -2361,6 +2366,7 @@ input[type=button] {
   position: absolute;
   padding: 10px 80px 10px 20px;
   bottom: 0;
+  background-color: #ffffff;
   border-top: 1px solid #dddddd; }
   .list-buy p {
     display: block;

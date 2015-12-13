@@ -287,6 +287,10 @@ input[type=button]{
   }
 }
 
+.non-header{
+  top:0 !important;
+  padding-top:0 !important;
+}
 
 .slider-box{
   height: 120px;
@@ -1030,7 +1034,8 @@ input[type=button]{
   display:inline-block;
   float:left;
   line-height:40px;
-  width:25%;
+  //width:25%;
+  width:33.33%;
   text-align:center;
   border-top:1px solid #ff7d21;
   border-bottom:1px solid #ff7d21;
@@ -1058,10 +1063,10 @@ input[type=button]{
       &:nth-child(2){
         border-left:1px solid #ff7d21;
       }
-      &:nth-child(3){
-        border-left:1px solid #ff7d21;
-      }
-      &:nth-child(4){
+      //&:nth-child(3){
+      //  border-left:1px solid #ff7d21;
+      //}
+      &:last-child{
         border-left:1px solid #ff7d21;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -1111,11 +1116,11 @@ input[type=button]{
 }
 
 %scroll-list{
-  position: fixed;
-  top: 40px;
-  bottom: 50px;
+  position: relative;
+  //top: 40px;
+  bottom: 60px;
   width: 100%;
-  overflow-y: scroll;
+  //overflow-y: scroll;
 }
 
 .crowd-list{
@@ -1248,6 +1253,14 @@ input[type=button]{
         height:100%;
         display:block;
       }
+  }
+  .funding-paragh{
+    width: 100%;
+    padding: 0 20px;
+    img{
+      width:100%;
+      height:auto;
+    }
   }
   .funding-index-detail{
     padding:0 10px;
@@ -2448,7 +2461,7 @@ input[type=button]{
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        //-webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
     }
@@ -2515,7 +2528,7 @@ input[type=button]{
 }
 
 .scroll-wrapper{
-  padding-top: 40px !important;
+  padding-top: 40px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -2995,6 +3008,7 @@ input[type=button]{
   position: absolute;
   padding: 10px 80px 10px 20px;
   bottom: 0;
+  background-color:#ffffff;
   border-top: 1px solid #dddddd;
   p{
     display: block;
