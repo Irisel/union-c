@@ -876,7 +876,7 @@ input[type=button] {
 
 .crowd-list, .funding-index {
   position: relative;
-  bottom: 60px;
+  padding-bottom: 60px;
   width: 100%; }
 
 .crowd-list ul li {
@@ -967,6 +967,8 @@ input[type=button] {
       min-height: 116px; }
 
 .funding-index {
+  padding-bottom: 0;
+  bottom: 60px;
   bottom: 0;
   background-color: #f6f6f6; }
   .funding-index .booker {

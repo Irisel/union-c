@@ -1118,7 +1118,7 @@ input[type=button]{
 %scroll-list{
   position: relative;
   //top: 40px;
-  bottom: 60px;
+  padding-bottom: 60px;
   width: 100%;
   //overflow-y: scroll;
 }
@@ -1237,6 +1237,8 @@ input[type=button]{
 
 .funding-index{
   @extend %scroll-list;
+  padding-bottom:0;
+  bottom:60px;
   .booker{
     position:relative;
     min-height: 100%;
