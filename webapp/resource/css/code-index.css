@@ -363,7 +363,7 @@ input[type=button] {
   overflow: hidden;
   font-size: 1.2em;
   position: fixed;
-  z-index: 1000; }
+  z-index: 90; }
 
 .list-purchase .purchase .invest-button a, .list-link li a, .list-more a, .order-submit div a, .ensure-submit div a, .setting-detail .inner-normal, .list-invest .invest .invest-button a, .hd-link, .hd-linkgray {
   color: #ffffff; }
@@ -725,7 +725,7 @@ input[type=button] {
   width: 100%;
   margin-bottom: 10px;
   margin-top: 20px;
-  padding: 10px 10px 20px;
+  padding: 0px 10px 20px;
   color: #666666; }
   .recharge-table .table-title {
     height: 30px;
@@ -741,6 +741,8 @@ input[type=button] {
     text-align: center; }
     .recharge-table table thead {
       background-color: #f6f6f6; }
+    .recharge-table table tbody tr {
+      border-bottom: 1px solid #f6f6f6; }
 
 .recharge-detail {
   background-color: #ffffff;
