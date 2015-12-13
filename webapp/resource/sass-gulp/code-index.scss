@@ -1622,7 +1622,7 @@ input[type=button]{
 }
 
 .purchase-submit{
-  margin: 20px 20px 0;
+  margin: 20px;
   div{
     @extend %submit-button;
   }
