@@ -75,7 +75,15 @@ window.Jser = {
         } else {
             _data = data;
         }
-        //console.log(_data);
+        if(_data['url_pars']){
+            var url_pars = _data['url_pars'];
+            var additions = [];
+            delete _data['url_pars'];
+            $.each(url_pars, function(i, item){
+                additions.push(i + '=' + item);
+            });
+            if(additions.length)url+='?' + additions.join('&');
+        }
         $.each(_data, function(i, item){
             if(Object.prototype.toString.call(item) === '[object Array]')traditional = true;
         });

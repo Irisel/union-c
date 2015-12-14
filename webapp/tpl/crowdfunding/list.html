@@ -3,10 +3,21 @@
                 <a href="#funding/index/id:<%=item.id%>">
                     <div class="progress-block">
                         <div>
-                            <div class="progress-label">
-                                <span>已完成</span>
+                            <%if(item.pro==100 || item.day<=1){%>
+                            <div class="progress-label done">
+                                <span>
+                                    已结束
+                                </span>
                                 <span><%=item.pro%>%</span>
                             </div>
+                            <%}else{%>
+                            <div class="progress-label">
+                                <span>
+                                    进行中
+                                </span>
+                                <span><%=item.pro%>%</span>
+                            </div>
+                            <%}%>
                         </div>
                     </div>
                     <div class="detail-crowd">
@@ -46,7 +57,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img data-src="<%=item.img%>">
+                    <img src="resource/images/minify/loadbanner.png" data-src="<%=item.img%>">
                 </a>
             </li>
             <%})%>
