@@ -1125,6 +1125,8 @@ input[type=button]{
 
 .crowd-list{
   @extend %scroll-list;
+  overflow-y: scroll;
+  height:inherit;
   ul {
     li {
       &.crowd{

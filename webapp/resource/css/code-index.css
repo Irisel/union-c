@@ -879,92 +879,95 @@ input[type=button] {
   padding-bottom: 60px;
   width: 100%; }
 
-.crowd-list ul li {
-  position: relative; }
-  .crowd-list ul li.crowd {
-    max-height: 300px;
-    min-height: 200px; }
-  .crowd-list ul li a {
-    height: 100%;
-    display: block;
-    color: #000000;
-    padding-bottom: 84px; }
-    .crowd-list ul li a .progress-block {
-      position: absolute;
-      top: 0;
-      bottom: 84px; }
-      .crowd-list ul li a .progress-block div {
-        position: relative;
-        width: 100%;
-        height: 100%; }
-        .crowd-list ul li a .progress-block div .progress-label {
-          position: absolute;
-          top: 50%;
-          margin-top: -18px;
-          height: 36px;
-          width: 51px;
-          background-color: #00a0ea;
-          color: #ffffff; }
-          .crowd-list ul li a .progress-block div .progress-label span {
-            display: block;
-            height: 18px;
-            text-align: center;
-            line-height: 18px;
-            font-size: 14px; }
-        .crowd-list ul li a .progress-block div.done {
-          background-color: #bbbbbb; }
-    .crowd-list ul li a .detail-crowd {
-      background-color: #ffffff;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      font-size: 1em;
-      height: 84px; }
-      .crowd-list ul li a .detail-crowd .detail-title {
-        height: 31px;
-        width: 100%;
-        line-height: 31px; }
-        .crowd-list ul li a .detail-crowd .detail-title span {
-          text-indent: 20px;
-          width: 100%;
-          display: block;
-          font-size: 16px;
-          color: #333; }
-      .crowd-list ul li a .detail-crowd ul {
+.crowd-list {
+  overflow-y: scroll;
+  height: inherit; }
+  .crowd-list ul li {
+    position: relative; }
+    .crowd-list ul li.crowd {
+      max-height: 300px;
+      min-height: 200px; }
+    .crowd-list ul li a {
+      height: 100%;
+      display: block;
+      color: #000000;
+      padding-bottom: 84px; }
+      .crowd-list ul li a .progress-block {
         position: absolute;
-        top: 31px;
+        top: 0;
+        bottom: 84px; }
+        .crowd-list ul li a .progress-block div {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          .crowd-list ul li a .progress-block div .progress-label {
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+            height: 36px;
+            width: 51px;
+            background-color: #00a0ea;
+            color: #ffffff; }
+            .crowd-list ul li a .progress-block div .progress-label span {
+              display: block;
+              height: 18px;
+              text-align: center;
+              line-height: 18px;
+              font-size: 14px; }
+          .crowd-list ul li a .progress-block div.done {
+            background-color: #bbbbbb; }
+      .crowd-list ul li a .detail-crowd {
+        background-color: #ffffff;
+        position: absolute;
         bottom: 0;
-        width: 100%; }
-        .crowd-list ul li a .detail-crowd ul li {
-          width: 33%;
-          height: 100%;
-          display: inline-block;
-          padding-bottom: 10px;
-          float: left; }
-          .crowd-list ul li a .detail-crowd ul li .detail-attribute {
+        width: 100%;
+        font-size: 1em;
+        height: 84px; }
+        .crowd-list ul li a .detail-crowd .detail-title {
+          height: 31px;
+          width: 100%;
+          line-height: 31px; }
+          .crowd-list ul li a .detail-crowd .detail-title span {
+            text-indent: 20px;
             width: 100%;
+            display: block;
+            font-size: 16px;
+            color: #333; }
+        .crowd-list ul li a .detail-crowd ul {
+          position: absolute;
+          top: 31px;
+          bottom: 0;
+          width: 100%; }
+          .crowd-list ul li a .detail-crowd ul li {
+            width: 33%;
             height: 100%;
-            padding-left: 20px; }
-            .crowd-list ul li a .detail-crowd ul li .detail-attribute span {
-              height: 25px;
-              line-height: 25px;
+            display: inline-block;
+            padding-bottom: 10px;
+            float: left; }
+            .crowd-list ul li a .detail-crowd ul li .detail-attribute {
               width: 100%;
-              display: block; }
-              .crowd-list ul li a .detail-crowd ul li .detail-attribute span:first-child {
-                color: #333;
-                font-size: 20px; }
-              .crowd-list ul li a .detail-crowd ul li .detail-attribute span:last-child {
-                color: #999;
-                font-size: 11px; }
-          .crowd-list ul li a .detail-crowd ul li:nth-child(1) .detail-attribute {
-            border-right: 1px solid #eee; }
-          .crowd-list ul li a .detail-crowd ul li:nth-child(2) .detail-attribute {
-            border-right: 1px solid #eee; }
-    .crowd-list ul li a img {
-      width: 100%;
-      max-width: 480px;
-      max-height: 260px;
-      min-height: 116px; }
+              height: 100%;
+              padding-left: 20px; }
+              .crowd-list ul li a .detail-crowd ul li .detail-attribute span {
+                height: 25px;
+                line-height: 25px;
+                width: 100%;
+                display: block; }
+                .crowd-list ul li a .detail-crowd ul li .detail-attribute span:first-child {
+                  color: #333;
+                  font-size: 20px; }
+                .crowd-list ul li a .detail-crowd ul li .detail-attribute span:last-child {
+                  color: #999;
+                  font-size: 11px; }
+            .crowd-list ul li a .detail-crowd ul li:nth-child(1) .detail-attribute {
+              border-right: 1px solid #eee; }
+            .crowd-list ul li a .detail-crowd ul li:nth-child(2) .detail-attribute {
+              border-right: 1px solid #eee; }
+      .crowd-list ul li a img {
+        width: 100%;
+        max-width: 480px;
+        max-height: 260px;
+        min-height: 116px; }
 
 .funding-index {
   padding-bottom: 0;

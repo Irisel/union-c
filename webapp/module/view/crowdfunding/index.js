@@ -84,7 +84,7 @@ define('', '', function(require) {
 			if (!t.iTimer && !t.isLoad && (hash == "" || hash.indexOf("#crowdfunding/index") != -1)) {
 				t.iTimer = setTimeout(function() {
 					var size = Jser.documentSize();
-					if (size.fullHeight - t.$el.find('.crowd-list').scrollTop()< 80) {
+					if (t.$el.find('.ul-crowd-list').height() + t.$el.find('.ul-crowd-list').offset().top - size.fullHeight < 80) {
 						t.loadData();
 					}
 					t.clearTime();

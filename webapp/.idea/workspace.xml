@@ -7,7 +7,7 @@
     <file path="/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450011722631" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/go/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176535058" ignored="false" />
     <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450014235196" ignored="false" />
-    <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450097260629" ignored="false" />
+    <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450115375156" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/go/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176495467" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/add/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440178940401" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/add/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440179031775" ignored="false" />
@@ -16,7 +16,7 @@
     <file path="/withdraw.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1446129486175" ignored="false" />
     <file path="/chargehistory.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1445357070250" ignored="false" />
     <file path="/invest.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448441468996" ignored="false" />
-    <file path="/code-index.scss" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450026462603" ignored="false" />
+    <file path="/code-index.scss" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450112801440" ignored="false" />
     <file path="/crowdfunding.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448441564931" ignored="false" />
     <file path="/aboutus.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1444476335364" ignored="false" />
     <file path="/order.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1448972370748" ignored="false" />
@@ -137,7 +137,7 @@
       <file leaf-file-name="code-index.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1271" column="20" selection-start="24017" selection-end="24017" vertical-scroll-proportion="-24.32">
+            <state line="1128" column="17" selection-start="20720" selection-end="20720" vertical-scroll-proportion="-6.62">
               <folding />
             </state>
           </provider>
@@ -146,7 +146,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/view/crowdfunding/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="27" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.9599057">
+            <state line="97" column="13" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.72394043">
               <folding />
             </state>
           </provider>
@@ -155,7 +155,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="322" selection-end="3031" vertical-scroll-proportion="-6.785714">
+            <state line="10" column="0" selection-start="322" selection-end="3031" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,7 +164,7 @@
       <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/account/crowdfunding/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="13" selection-end="1545" vertical-scroll-proportion="-0.6785714">
+            <state line="1" column="0" selection-start="13" selection-end="1545" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +173,7 @@
       <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="29" selection-start="211" selection-end="211" vertical-scroll-proportion="-2.7142856">
+            <state line="4" column="29" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -246,11 +246,11 @@
         <option value="$PROJECT_DIR$/module/view/funding/view/detail.js" />
         <option value="$PROJECT_DIR$/tpl/funding/view/detail.html" />
         <option value="$PROJECT_DIR$/tpl/funding/detail.html" />
-        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
         <option value="$PROJECT_DIR$/module/base/model.js" />
         <option value="$PROJECT_DIR$/module/lib/Jser.js" />
         <option value="$PROJECT_DIR$/tpl/account/crowdfunding/view/list.html" />
         <option value="$PROJECT_DIR$/tpl/crowdfunding/list.html" />
+        <option value="$PROJECT_DIR$/resource/sass-gulp/code-index.scss" />
         <option value="$PROJECT_DIR$/module/view/crowdfunding/index.js" />
       </list>
     </option>
@@ -287,7 +287,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -856,6 +855,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -947,7 +947,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15848452" sideWeight="0.6640712" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16008538" sideWeight="0.6640712" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1025,44 +1025,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/module/view/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="33" column="25" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/funding/detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/funding/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="32" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="32" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/funding/view/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="32" selection-start="18" selection-end="32" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="0" column="32" selection-start="18" selection-end="32" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/funding/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="16" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/funding/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="12" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/login/findback.html">
@@ -1075,13 +1063,6 @@
     <entry file="file://$PROJECT_DIR$/module/view/index/view/more.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="23" selection-start="1135" selection-end="1146" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1271" column="20" selection-start="24017" selection-end="24017" vertical-scroll-proportion="-24.32">
           <folding />
         </state>
       </provider>
@@ -1102,21 +1083,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/account/crowdfunding/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="13" selection-end="1545" vertical-scroll-proportion="-0.6785714">
+        <state line="1" column="0" selection-start="13" selection-end="1545" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="322" selection-end="3031" vertical-scroll-proportion="-6.785714">
+        <state line="10" column="0" selection-start="322" selection-end="3031" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="29" selection-start="211" selection-end="211" vertical-scroll-proportion="-2.7142856">
+        <state line="4" column="29" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1130,9 +1111,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resource/sass-gulp/code-index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1128" column="17" selection-start="20720" selection-end="20720" vertical-scroll-proportion="-6.62">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/view/crowdfunding/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="27" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.9599057">
+        <state line="97" column="13" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.72394043">
           <folding />
         </state>
       </provider>
