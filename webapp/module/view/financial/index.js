@@ -48,7 +48,12 @@ define('', '', function(require) {
                     result.pars = _data.pars;
                     _data = result;
                 }
-                t.have_money = _data.data.have_money.replace(',', '');
+                if(!_data.data.have_money){
+                    _data.data.have_money = '0';
+                }else{
+                    t.have_money = _data.data.have_money.replace(',', '');
+                }
+
                 t.render(_data);
                 $("#js-loading").hide();
 			}, function() {

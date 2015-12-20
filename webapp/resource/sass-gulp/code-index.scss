@@ -1053,6 +1053,14 @@ input[type=button]{
   padding: 20px;
   ul {
     display:block;
+    &.four-details{
+      li{
+        width:25%;
+        &:nth-child(3){
+          border-left:1px solid #ff7d21;
+        }
+      }
+    }
     li{
       @extend %guide-li;
       &:nth-child(1){

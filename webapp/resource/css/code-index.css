@@ -833,6 +833,10 @@ input[type=button] {
   padding: 20px; }
   .guide-detail ul {
     display: block; }
+    .guide-detail ul.four-details li {
+      width: 25%; }
+      .guide-detail ul.four-details li:nth-child(3) {
+        border-left: 1px solid #ff7d21; }
     .guide-detail ul li:nth-child(1) {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
