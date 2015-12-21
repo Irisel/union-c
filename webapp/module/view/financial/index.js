@@ -68,7 +68,7 @@ define('', '', function(require) {
                 return true;
             }
             if(data.data.bang_qian!="1"){
-                Jser.alert("请先绑定钱多多!", function() {
+                Jser.alert("请先绑定乾多多!", function() {
                    window.location.href="#verifi/access";
                 });
                 return true;
