@@ -23,13 +23,14 @@ define('', '', function(require) {
 		},
 		//待优化
 		checkError: function(_locData) {
+            var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
 			if (!(_locData['real_name'] && _locData['real_name'].length!=0)) {
 				Jser.alert('请输入姓名！', function(){
 
                 });
 				return true;
-			} else if (!(_locData['idcard'] && _locData['idcard'].length==18 && !isNaN(_locData['idcard']))) {
-				Jser.alert('请输入18位身份证号码！', function(){
+			} else if (!(_locData['idcard']  && !reg.test(_locData['idcard']) === false)) {
+				Jser.alert('请输入正确的身份证号码！', function(){
 
                 });
 				return true;

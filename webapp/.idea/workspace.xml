@@ -6,8 +6,8 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450011722631" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/go/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176535058" ignored="false" />
-    <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450719694764" ignored="false" />
-    <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450622890361" ignored="false" />
+    <file path="/a.dummy" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1451887304713" ignored="false" />
+    <file path="/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1451887325511" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/go/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440176495467" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/module/view/add/index.js" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440178940401" ignored="false" />
     <file path="$PROJECT_DIR$/../../../lamakeji-live/webapp/tpl/add/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1440179031775" ignored="false" />
@@ -116,7 +116,6 @@
     <file path="/code-index.css" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1449738484498" ignored="false" />
     <file path="/detail.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450622648393" ignored="false" />
     <file path="$PROJECT_DIR$/tpl/verifi/allocation.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450719654100" ignored="false" />
-    <file path="$PROJECT_DIR$/tpl/verifi/index.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450719654100" ignored="false" />
     <file path="$PROJECT_DIR$/tpl/verifi/access.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450719654100" ignored="false" />
     <file path="$PROJECT_DIR$/tpl/verifi/transfer.html" changelist="d601f50d-5eb7-4c02-8e7c-b7f78166ce49" time="1450719654100" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -183,15 +182,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tpl/financial/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -204,25 +194,34 @@
       <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="59" selection-start="517" selection-end="517" vertical-scroll-proportion="-0.6785714">
+            <state line="10" column="59" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recharge.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="recharge.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/account/recharge.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="70" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.5609168">
+            <state line="94" column="70" selection-start="3444" selection-end="3444" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/tpl/verifi/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="37" selection-start="5237" selection-end="5237" vertical-scroll-proportion="0.0">
+            <state line="14" column="18" selection-start="430" selection-end="430" vertical-scroll-proportion="-7.678571">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/view/verifi/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="48" selection-start="752" selection-end="752" vertical-scroll-proportion="0.25823224">
               <folding />
             </state>
           </provider>
@@ -238,7 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/module/view/funding/view/detail.js" />
         <option value="$PROJECT_DIR$/tpl/funding/view/detail.html" />
         <option value="$PROJECT_DIR$/tpl/funding/detail.html" />
         <option value="$PROJECT_DIR$/module/base/model.js" />
@@ -254,14 +252,15 @@
         <option value="$PROJECT_DIR$/tpl/crowdfunding/index.html" />
         <option value="$PROJECT_DIR$/tpl/crowdfunding/list.html" />
         <option value="$PROJECT_DIR$/tpl/account/recharge.html" />
+        <option value="$PROJECT_DIR$/module/view/verifi/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="85" />
-    <option name="y" value="57" />
-    <option name="width" value="1900" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -289,6 +288,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -813,7 +813,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -898,14 +897,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="57" width="1900" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17301415" sideWeight="0.6640712" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17129135" sideWeight="0.67074525" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -914,7 +914,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3359288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -981,16 +980,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tpl/login/findback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/view/index/view/more.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="1135" selection-end="1146" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/view/funding/view/detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="15" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" />
@@ -1008,9 +997,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/view/crowdfunding/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="13" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="97" column="13" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -1071,14 +1058,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/crowdfunding/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="517" selection-end="517" vertical-scroll-proportion="-0.6785714">
+        <state line="10" column="59" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/account/recharge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="70" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.5609168">
+        <state line="94" column="70" selection-start="3444" selection-end="3444" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/verifi/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="430" selection-end="430" vertical-scroll-proportion="-7.678571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/view/verifi/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="48" selection-start="752" selection-end="752" vertical-scroll-proportion="0.25823224">
           <folding />
         </state>
       </provider>
