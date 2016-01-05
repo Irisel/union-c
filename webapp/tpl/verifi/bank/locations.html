@@ -1,6 +1,6 @@
 <div class="inner-input sg">
     <span>开户行所在省份:</span>
-    <select type="text" name="province" class="select-bank select-province" value="<%=p_rid%>">
+    <select type="text" name="province" class="select-bank select-province">
         <%_.each(options_p,function(item){%>
             <option value="<%=item.value%>"><%=item.name%></option>
         <%})%>
@@ -8,7 +8,7 @@
 </div>
 <div class="inner-input sg">
     <span>开户行所在市:</span>
-    <select type="text" name="city" class="select-bank select-city" value="">
+    <select type="text" name="city" class="select-bank select-city">
     </select>
 </div>
 <div class="inner-input sg">

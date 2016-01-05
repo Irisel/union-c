@@ -10,6 +10,7 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        options:'',
 		events: {
             "change .select-province": "getcity"
 		},
@@ -29,8 +30,9 @@ define('', '', function(require) {
                 rid: val
             });
         },
-		syncRender: function() {
-            var t = this, data = t.model.toJSON();
+		syncRender: function(rawdata) {
+			var t = this,
+				data = rawdata || t.model.toJSON();
             var options = '';
             $.each(data.data, function(i, item){
                 options+='<option value="' + item.id + '">'+ item.cityname +'</option>';
@@ -38,15 +40,38 @@ define('', '', function(require) {
             if(data.raw_data){
                 t.$el.find('.select-city').val(data.raw_data?data.raw_data.bank_city:'');
             }else{
-                t.$el.find('.select-city').val(data.data[0].id);
+                if(data.data && data.data.length)t.$el.find('.select-city').val(data.data[0].id);
             }
+            t.options = options;
             t.$el.find('.select-city').html(options);
 		},
+        renew: function(raw_data, less, rid){
+            var t = this;
+            var _data = {};
+            Jser.getJSON(ST.PATH.ACTION + '/member/getarea', {rid: rid || 0}, function(result) {
+                if(result.status == "1")
+                _data = result;
+                _data.raw_data = raw_data;
+                if(!less){
+                    var option_pro = t.render(_data);
+                    if(option_pro!=t.$el.find('.select-province').val()){
+                        t.renew(raw_data, true, option_pro);
+                    }else{
+                        t.$el.find('.select-city').html(t.options);
+                        t.$el.find('.select-city').val(raw_data?raw_data.bank_city:'');
+                    }
+                }else{
+                    t.syncRender(_data);
+                }
+			}, function() {
+
+			});
+        },
 		//待优化
-		render: function() {
+		render: function(rawdata) {
 			var t = this,
-				data = t.model.toJSON();
-            var options = {options_p: [], p_rid:''};
+				data = rawdata || t.model.toJSON();
+            var options = {options_p: [], p_rid:'', bank_city:''};
             $.each(data.data, function(i, item){
                 options.options_p.push({
                    name: item.cityname,
@@ -55,18 +80,22 @@ define('', '', function(require) {
             });
             if(data.raw_data){
                 options.p_rid = data.raw_data?data.raw_data.bank_province:'';
+                options.bank_city = data.raw_data?data.raw_data.bank_city:'';
                 options.bank_address = data.raw_data?data.raw_data.bank_address:'';
             }else{
-                options.p_rid = options.options_p[0].value;
+                if(options.options_p && options.options_p.length)options.p_rid = options.options_p[0].value;
+                options.bank_city = data.raw_data?data.raw_data.bank_city:'';
                 options.bank_address = '';
             }
 
 			var html = _.template(t.template, options);
 			t.$el.html(html);
+            t.$el.find('.select-province').val(options.p_rid);
             t.changePars({
                 rid: options.p_rid
             });
             t.$el.show();
+            return options.p_rid;
 		},
 		changePars: function(pars) {
 			var t = this;
@@ -88,4 +117,4 @@ define('', '', function(require) {
 			el: pars.el
 		});
 	}
-})
+});

@@ -12,6 +12,8 @@ define('', '', function(require) {
 		template: H,
         account: '',
         account_show: '',
+        banks: null,
+        locations: null,
 		events: {
             "click .js-back": "back",
             "click .js-submit": "submit"
@@ -68,26 +70,45 @@ define('', '', function(require) {
 			});
 		},
 		//待优化
-		render: function(rawdata) {
+        rerender: function(rawdata) {
 			var t = this,
 				data = rawdata || t.model.toJSON();
             if(data.data["0"]){
-                data.data = data.data["0"]
+                data.data = data.data["0"];
             }else{
                 data.data = {};
             }
             data['unbind'] = !data.data.bank_num;
             var html = _.template(t.template, data);
-			t.$el.html(html);
-			new Banks({
-				el: t.$el.find(".select-bank"),
-                raw_data: data.data
-			});
-			new Locations({
-				el: t.$el.find(".select-location"),
-                raw_data: data.data
-			});
+			if(!t.banks && !t.locations){
+                t.$el.html(html);
+            }else{
+                t.$el.find('.js-account-show').val(data.data?data.data.bank_num:'');
+                t.$el.find('.js-submit').html(data.unbind?'绑定':'更新')
+            }
+			if(!t.banks){
+                t.banks = new Banks({
+                    el: t.$el.find(".select-bank"),
+                    raw_data: data.data
+                });
+            }else{
+                t.banks.renew(data.data);
+            }
+			if(!t.locations){
+                t.locations =new Locations({
+                    el: t.$el.find(".select-location"),
+                    raw_data: data.data
+                });
+            }else{
+                t.locations.renew(data.data);
+            }
+            return data;
+		},
+		render: function(rawdata) {
+			var t = this;
+            t.rerender(rawdata);
             t.$el.show();
+
 		},
         submit: function(){
             var t = this;
@@ -131,4 +152,4 @@ define('', '', function(require) {
 			el: $("#" + pars.model + "_" + pars.action)
 		});
 	}
-})
+});
