@@ -3651,11 +3651,74 @@ input[type=button]{
     }
   }
 
-.receive-topic{
+.form-topic{
   width: 100%;
-  background: url(../images/minify/receive_topic.png) center top no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.regiest-form-1{
+  background-image:url(../images/minify/regiest-form-1.png);
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-color:#90bfc4 !important;
+  background-size: 100% auto;
+  height:100%;
+  background-attachment: scroll;
+  position:relative !important;
+  padding:0 !important;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#ffffff;
+        opacity:0.7;
+        .validate-button{
+          color:#007cb5;
+          background-color:#ffffff;
+        }
+        &.validate{
+          .validate-button{
+            color:#007cb5;
+            background-color:#ffffff;
+          }
+        }
+        input{
+          background-color:#ffffff;
+          &::-webkit-input-placeholder{
+            color:#007cb5;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #007cb5;
+        }
+      }
+    .hongbao-info{
+      color:#ffffff;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #ffffff;
+          border:1px solid #007cb5;
+        }
+        &:checked:before{
+          background-color: #7ddaff;
+          border:1px solid #007cb5;
+        }
+      }
+      .info{
+        color:#ffffff;
+      }
+    }
+    .button-submit{
+      background-color:#ffffff;
+      color:#007cb5;
+      opacity:0.7;
+    }
+    }
+}
+
+.receive-topic{
+  background: url(../images/minify/receive_topic.png) center top no-repeat;
+  @extend .form-topic;
   p{
     position: relative;
     top: 16%;

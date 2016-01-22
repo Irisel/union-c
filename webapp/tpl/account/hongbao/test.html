@@ -1,0 +1,35 @@
+<%if(form_style){%>
+<div class="hongbao-wrapper single step1 <%=form_style%>">
+<%}else{%>
+<div class="hongbao-wrapper single step1">
+<%}%>
+    <div class="form-topic"></div>
+    <p class="error js-error vishow"><span></span></p>
+        <div class="hongbao-form">
+        <form id="js-qrcode-form">
+            <div class="hongbao-input">
+                <div class="icon-box"><i class="account-phone"></i></div>
+                <input placeholder="请输入您的手机号" type="text" name="regist-tel" class="js-tel">
+            </div>
+            <div class="hongbao-input validate">
+                <div class="icon-box"><i class="account-validate"></i></div>
+                <input placeholder="请输入验证码" name="regist-code" type="text" class="js-code">
+                <button type="button" class="validate-button js-vcode-btn">
+                    获取验证码
+                </button>
+            </div>
+            <div class="hongbao-input">
+                <div class="icon-box"><i class="account-password"></i></div>
+                <input placeholder="设置6-16位密码" name="regist-pass" type="password" class="js-pass">
+            </div>
+            <div class="hongbao-info">
+                <input type="checkbox" class="js-agreement" checked="checked"/>
+                <span>我已阅读并接受</span>
+                <a href="#summary/index/type_name:6" class="info">《注册服务协议》</a>
+            </div>
+            <button type="button" class="button-submit js-regist-btn">
+                注册
+            </button>
+        </form>
+    </div>
+</div>

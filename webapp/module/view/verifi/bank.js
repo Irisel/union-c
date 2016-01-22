@@ -70,8 +70,8 @@ define('', '', function(require) {
             t.$el.show();
 		},
 		checkError: function(_locData) {
-            if (!(_locData['account'] && _locData['account'].length==16 && !isNaN(_locData['account']))) {
-				Jser.alert('请输入16位银行号码！', function(){
+            if (!(_locData['account'] && (_locData['account'].length>=16 && _locData['account'].length<=19) && !isNaN(_locData['account']))) {
+				Jser.alert('请输入16-19位银行号码！', function(){
 
                 });
 				return true;

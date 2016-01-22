@@ -121,6 +121,7 @@ define('', '', function(require) {
 				_data[i].value = val;
 				_locData[name]=val;
 			});
+            if(t.checkError(_locData))return;
             //console.log(_locData);
             Jser.getJSON(ST.PATH.ACTION + '/account/bindBank', _locData, function(result) {
                 var info = result.status=="1"?'更新成功!':('更新失败：'+ result.data);
@@ -132,6 +133,40 @@ define('', '', function(require) {
 
 			}, 'post');
         },
+		checkError: function(_locData) {
+            if (!(_locData['account'] && (_locData['account'].length>=16 && _locData['account'].length<=19) && !isNaN(_locData['account']))) {
+				Jser.alert('请输入16-19位银行号码！', function(){
+
+                });
+				return true;
+			}else if(!(_locData['bankname'])){
+				Jser.alert('请输入银行名称！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['province'])){
+				Jser.alert('请选择省份！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['city'])){
+				Jser.alert('请选择城市！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['bankaddres'])){
+				Jser.alert('请输入开户行支行名称！', function(){
+
+                });
+				return true;
+            }else if(!(_locData['pwd'])){
+				Jser.alert('请输入银行登录密码！', function(){
+
+                });
+				return true;
+            }
+			return false;
+		},
 		bindEvent: function() {
 
 		},
