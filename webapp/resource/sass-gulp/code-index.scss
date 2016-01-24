@@ -3656,9 +3656,7 @@ input[type=button]{
   background-size: cover;
   position: relative;
 }
-
-.regiest-form-1{
-  background-image:url(../images/minify/regiest-form-1.png);
+%regist-form{
   background-repeat:no-repeat;
   background-position:center top;
   background-color:#90bfc4 !important;
@@ -3667,6 +3665,11 @@ input[type=button]{
   background-attachment: scroll;
   position:relative !important;
   padding:0 !important;
+}
+
+.regiest-form-1{
+  background-image:url(../images/minify/regiest-form-1.png);
+  @extend %regist-form;
   .hongbao-form{
       .hongbao-input{
         background-color:#ffffff;
@@ -3712,6 +3715,378 @@ input[type=button]{
       background-color:#ffffff;
       color:#007cb5;
       opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-2{
+  background-image:url(../images/minify/regiest-form-2.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#cb1935;
+        opacity:0.7;
+        .validate-button{
+          color:#fee55a;
+          background-color:#cb1935;
+        }
+        &.validate{
+          .validate-button{
+            color:#fee55a;
+            background-color:#cb1935;
+          }
+        }
+        input{
+          background-color:#cb1935;
+          &::-webkit-input-placeholder{
+            color:#ffffff;
+          }
+          color:#ffffff;
+        }
+        .icon-box{
+          border-right: 1px solid #007cb5;
+        }
+      }
+    .hongbao-info{
+      color:#ffffff;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #cb1935;
+          border:1px solid #ffffff;
+        }
+        &:checked:before{
+          background-color: #ffffff;
+          border:1px solid #ffffff;
+        }
+      }
+      .info{
+        color:#ffffff;
+      }
+    }
+    .button-submit{
+      background-color:#9d0723;
+      color:#fee55a;
+      opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-3{
+  background-image:url(../images/minify/regiest-form-3.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        border:1px solid #f56423;
+        background-color:#f9f1cc;
+        opacity:0.7;
+        .validate-button{
+          color:#ffffff;
+          background-color:#f56423;
+        }
+        &.validate{
+          .validate-button{
+            color:#ffffff;
+            background-color:#f56423;
+          }
+        }
+        input{
+          background-color:#f9f1cc;
+          color:#f56423;
+          &::-webkit-input-placeholder{
+            color:#f56423;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #f56423;
+        }
+      }
+    .hongbao-info{
+      color:#f56423;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #f9f1cc;
+          border:1px solid #cc2820;
+        }
+        &:checked:before{
+          background-color: #f56423;
+          border:1px solid #cc2820;
+        }
+      }
+      .info{
+        color:#f56423;
+      }
+    }
+    .button-submit{
+      background-color:#f56423;
+      color:#ffffff;
+      opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-4{
+  background-image:url(../images/minify/regiest-form-4.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#c05e59;
+        opacity:0.7;
+        .validate-button{
+          color:#ffffff;
+          background-color:#c05e59;
+        }
+        &.validate{
+          .validate-button{
+            color:#ffffff;
+            background-color:#c05e59;
+          }
+        }
+        input{
+          background-color:#c05e59;
+          color:#ffffff;
+          &::-webkit-input-placeholder{
+            color:#ffffff;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #ffffff;
+        }
+      }
+    .hongbao-info{
+      color:#ffffff;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #c05e59;
+          border:1px solid #a01c1a;
+        }
+        &:checked:before{
+          background-color: #c05e59;
+          border:1px solid #a01c1a;
+        }
+      }
+      .info{
+        color:#ffffff;
+      }
+    }
+    .button-submit{
+      background-color:#e1a79c;
+      color:#c21132;
+      opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-5{
+  background-image:url(../images/minify/regiest-form-5.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#ffffff;
+        border:1px solid #77cedf;
+        opacity:0.7;
+        .validate-button{
+          color:#77cedf;
+          background-color:#ffffff;
+        }
+        &.validate{
+          .validate-button{
+            color:#77cedf;
+            background-color:#ffffff;
+            border:1px solid #77cedf;
+          }
+        }
+        input{
+          background-color:#ffffff;
+          color:#77cedf;
+          &::-webkit-input-placeholder{
+            color:#77cedf;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #77cedf;
+        }
+      }
+    .hongbao-info{
+      color:#77cedf;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #ffffff;
+          border:1px solid #77cedf;
+        }
+        &:checked:before{
+          background-color: #77cedf;
+          border:1px solid #77cedf;
+        }
+      }
+      .info{
+        color:#77cedf;
+      }
+    }
+    .button-submit{
+      background-color:#77cedf;
+      color:#ffffff;
+      opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-6{
+  background-image:url(../images/minify/regiest-form-6.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#fc8b34;
+        opacity:0.7;
+        .validate-button{
+          color:#ffffff;
+          background-color:#fc8b34;
+        }
+        &.validate{
+          .validate-button{
+            color:#ffffff;
+            background-color:#fc8b34;
+          }
+        }
+        input{
+          background-color:#fc8b34;
+          color:#ffffff;
+          &::-webkit-input-placeholder{
+            color:#ffffff;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #ffffff;
+        }
+      }
+    .hongbao-info{
+      color:#ffffff;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #fb7009;
+          border:1px solid #a43d03;
+        }
+        &:checked:before{
+          background-color: #fc8b34;
+          border:1px solid #a43d03;
+        }
+      }
+      .info{
+        color:#ffffff;
+      }
+    }
+    .button-submit{
+      background-color:#fc8b34;
+      color:#ffffff;
+      opacity:0.7;
+    }
+    }
+}
+
+.regiest-form-8{
+  background-image:url(../images/minify/regiest-form-8.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#568036;
+        opacity:0.7;
+        .validate-button{
+          color:#a7cf49;
+          background-color:#568036;
+        }
+        &.validate{
+          .validate-button{
+            color:#a7cf49;
+            background-color:#568036;
+          }
+        }
+        input{
+          background-color:#568036;
+          color:#a7cf49;
+          &::-webkit-input-placeholder{
+            color:#a7cf49;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #a7cf49;
+        }
+      }
+    .hongbao-info{
+      color:#a7cf49;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #568036;
+          border:1px solid #a43d03;
+        }
+        &:checked:before{
+          background-color: #a7cf49;
+          border:1px solid #a43d03;
+        }
+      }
+      .info{
+        color:#a7cf49;
+      }
+    }
+    .button-submit{
+      background-color:#a7cf49;
+      color:#568036;
+    }
+    }
+}
+
+.regiest-form-7{
+  background-image:url(../images/minify/regiest-form-7.png);
+  @extend %regist-form;
+  .hongbao-form{
+      .hongbao-input{
+        background-color:#1fb87f;
+        opacity:0.7;
+        .validate-button{
+          color:#ffffff;
+          background-color:#1fb87f;
+        }
+        &.validate{
+          .validate-button{
+            color:#ffffff;
+            background-color:#1fb87f;
+          }
+        }
+        input{
+          background-color:#1fb87f;
+          color:#ffffff;
+          &::-webkit-input-placeholder{
+            color:#ffffff;
+          }
+        }
+        .icon-box{
+          border-right: 1px solid #ffffff;
+        }
+      }
+    .hongbao-info{
+      color:#ffffff;
+      background:none;
+      input[type=checkbox]{
+        &:before{
+          background-color: #14a06c;
+          border:1px solid #ffffff;
+        }
+        &:checked:before{
+          background-color: #1fb87f;
+          border:1px solid #ffffff;
+        }
+      }
+      .info{
+        color:#ffffff;
+      }
+    }
+    .button-submit{
+      background-color:#1ee4a3;
+      color:#14a06c;
     }
     }
 }

@@ -2867,8 +2867,7 @@ input[type=button] {
   background-size: cover;
   position: relative; }
 
-.regiest-form-1 {
-  background-image: url(../images/minify/regiest-form-1.png);
+.regiest-form-1, .regiest-form-2, .regiest-form-3, .regiest-form-4, .regiest-form-5, .regiest-form-6, .regiest-form-8, .regiest-form-7 {
   background-repeat: no-repeat;
   background-position: center top;
   background-color: #90bfc4 !important;
@@ -2877,6 +2876,9 @@ input[type=button] {
   background-attachment: scroll;
   position: relative !important;
   padding: 0 !important; }
+
+.regiest-form-1 {
+  background-image: url(../images/minify/regiest-form-1.png); }
   .regiest-form-1 .hongbao-form .hongbao-input {
     background-color: #ffffff;
     opacity: 0.7; }
@@ -2907,6 +2909,245 @@ input[type=button] {
     background-color: #ffffff;
     color: #007cb5;
     opacity: 0.7; }
+
+.regiest-form-2 {
+  background-image: url(../images/minify/regiest-form-2.png); }
+  .regiest-form-2 .hongbao-form .hongbao-input {
+    background-color: #cb1935;
+    opacity: 0.7; }
+    .regiest-form-2 .hongbao-form .hongbao-input .validate-button {
+      color: #fee55a;
+      background-color: #cb1935; }
+    .regiest-form-2 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #fee55a;
+      background-color: #cb1935; }
+    .regiest-form-2 .hongbao-form .hongbao-input input {
+      background-color: #cb1935;
+      color: #ffffff; }
+      .regiest-form-2 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #ffffff; }
+    .regiest-form-2 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #007cb5; }
+  .regiest-form-2 .hongbao-form .hongbao-info {
+    color: #ffffff;
+    background: none; }
+    .regiest-form-2 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #cb1935;
+      border: 1px solid #ffffff; }
+    .regiest-form-2 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #ffffff;
+      border: 1px solid #ffffff; }
+    .regiest-form-2 .hongbao-form .hongbao-info .info {
+      color: #ffffff; }
+  .regiest-form-2 .hongbao-form .button-submit {
+    background-color: #9d0723;
+    color: #fee55a;
+    opacity: 0.7; }
+
+.regiest-form-3 {
+  background-image: url(../images/minify/regiest-form-3.png); }
+  .regiest-form-3 .hongbao-form .hongbao-input {
+    border: 1px solid #f56423;
+    background-color: #f9f1cc;
+    opacity: 0.7; }
+    .regiest-form-3 .hongbao-form .hongbao-input .validate-button {
+      color: #ffffff;
+      background-color: #f56423; }
+    .regiest-form-3 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #ffffff;
+      background-color: #f56423; }
+    .regiest-form-3 .hongbao-form .hongbao-input input {
+      background-color: #f9f1cc;
+      color: #f56423; }
+      .regiest-form-3 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #f56423; }
+    .regiest-form-3 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #f56423; }
+  .regiest-form-3 .hongbao-form .hongbao-info {
+    color: #f56423;
+    background: none; }
+    .regiest-form-3 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #f9f1cc;
+      border: 1px solid #cc2820; }
+    .regiest-form-3 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #f56423;
+      border: 1px solid #cc2820; }
+    .regiest-form-3 .hongbao-form .hongbao-info .info {
+      color: #f56423; }
+  .regiest-form-3 .hongbao-form .button-submit {
+    background-color: #f56423;
+    color: #ffffff;
+    opacity: 0.7; }
+
+.regiest-form-4 {
+  background-image: url(../images/minify/regiest-form-4.png); }
+  .regiest-form-4 .hongbao-form .hongbao-input {
+    background-color: #c05e59;
+    opacity: 0.7; }
+    .regiest-form-4 .hongbao-form .hongbao-input .validate-button {
+      color: #ffffff;
+      background-color: #c05e59; }
+    .regiest-form-4 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #ffffff;
+      background-color: #c05e59; }
+    .regiest-form-4 .hongbao-form .hongbao-input input {
+      background-color: #c05e59;
+      color: #ffffff; }
+      .regiest-form-4 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #ffffff; }
+    .regiest-form-4 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #ffffff; }
+  .regiest-form-4 .hongbao-form .hongbao-info {
+    color: #ffffff;
+    background: none; }
+    .regiest-form-4 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #c05e59;
+      border: 1px solid #a01c1a; }
+    .regiest-form-4 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #c05e59;
+      border: 1px solid #a01c1a; }
+    .regiest-form-4 .hongbao-form .hongbao-info .info {
+      color: #ffffff; }
+  .regiest-form-4 .hongbao-form .button-submit {
+    background-color: #e1a79c;
+    color: #c21132;
+    opacity: 0.7; }
+
+.regiest-form-5 {
+  background-image: url(../images/minify/regiest-form-5.png); }
+  .regiest-form-5 .hongbao-form .hongbao-input {
+    background-color: #ffffff;
+    border: 1px solid #77cedf;
+    opacity: 0.7; }
+    .regiest-form-5 .hongbao-form .hongbao-input .validate-button {
+      color: #77cedf;
+      background-color: #ffffff; }
+    .regiest-form-5 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #77cedf;
+      background-color: #ffffff;
+      border: 1px solid #77cedf; }
+    .regiest-form-5 .hongbao-form .hongbao-input input {
+      background-color: #ffffff;
+      color: #77cedf; }
+      .regiest-form-5 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #77cedf; }
+    .regiest-form-5 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #77cedf; }
+  .regiest-form-5 .hongbao-form .hongbao-info {
+    color: #77cedf;
+    background: none; }
+    .regiest-form-5 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #ffffff;
+      border: 1px solid #77cedf; }
+    .regiest-form-5 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #77cedf;
+      border: 1px solid #77cedf; }
+    .regiest-form-5 .hongbao-form .hongbao-info .info {
+      color: #77cedf; }
+  .regiest-form-5 .hongbao-form .button-submit {
+    background-color: #77cedf;
+    color: #ffffff;
+    opacity: 0.7; }
+
+.regiest-form-6 {
+  background-image: url(../images/minify/regiest-form-6.png); }
+  .regiest-form-6 .hongbao-form .hongbao-input {
+    background-color: #fc8b34;
+    opacity: 0.7; }
+    .regiest-form-6 .hongbao-form .hongbao-input .validate-button {
+      color: #ffffff;
+      background-color: #fc8b34; }
+    .regiest-form-6 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #ffffff;
+      background-color: #fc8b34; }
+    .regiest-form-6 .hongbao-form .hongbao-input input {
+      background-color: #fc8b34;
+      color: #ffffff; }
+      .regiest-form-6 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #ffffff; }
+    .regiest-form-6 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #ffffff; }
+  .regiest-form-6 .hongbao-form .hongbao-info {
+    color: #ffffff;
+    background: none; }
+    .regiest-form-6 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #fb7009;
+      border: 1px solid #a43d03; }
+    .regiest-form-6 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #fc8b34;
+      border: 1px solid #a43d03; }
+    .regiest-form-6 .hongbao-form .hongbao-info .info {
+      color: #ffffff; }
+  .regiest-form-6 .hongbao-form .button-submit {
+    background-color: #fc8b34;
+    color: #ffffff;
+    opacity: 0.7; }
+
+.regiest-form-8 {
+  background-image: url(../images/minify/regiest-form-8.png); }
+  .regiest-form-8 .hongbao-form .hongbao-input {
+    background-color: #568036;
+    opacity: 0.7; }
+    .regiest-form-8 .hongbao-form .hongbao-input .validate-button {
+      color: #a7cf49;
+      background-color: #568036; }
+    .regiest-form-8 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #a7cf49;
+      background-color: #568036; }
+    .regiest-form-8 .hongbao-form .hongbao-input input {
+      background-color: #568036;
+      color: #a7cf49; }
+      .regiest-form-8 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #a7cf49; }
+    .regiest-form-8 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #a7cf49; }
+  .regiest-form-8 .hongbao-form .hongbao-info {
+    color: #a7cf49;
+    background: none; }
+    .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #568036;
+      border: 1px solid #a43d03; }
+    .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #a7cf49;
+      border: 1px solid #a43d03; }
+    .regiest-form-8 .hongbao-form .hongbao-info .info {
+      color: #a7cf49; }
+  .regiest-form-8 .hongbao-form .button-submit {
+    background-color: #a7cf49;
+    color: #568036; }
+
+.regiest-form-7 {
+  background-image: url(../images/minify/regiest-form-7.png); }
+  .regiest-form-7 .hongbao-form .hongbao-input {
+    background-color: #1fb87f;
+    opacity: 0.7; }
+    .regiest-form-7 .hongbao-form .hongbao-input .validate-button {
+      color: #ffffff;
+      background-color: #1fb87f; }
+    .regiest-form-7 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #ffffff;
+      background-color: #1fb87f; }
+    .regiest-form-7 .hongbao-form .hongbao-input input {
+      background-color: #1fb87f;
+      color: #ffffff; }
+      .regiest-form-7 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #ffffff; }
+    .regiest-form-7 .hongbao-form .hongbao-input .icon-box {
+      border-right: 1px solid #ffffff; }
+  .regiest-form-7 .hongbao-form .hongbao-info {
+    color: #ffffff;
+    background: none; }
+    .regiest-form-7 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #14a06c;
+      border: 1px solid #ffffff; }
+    .regiest-form-7 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #1fb87f;
+      border: 1px solid #ffffff; }
+    .regiest-form-7 .hongbao-form .hongbao-info .info {
+      color: #ffffff; }
+  .regiest-form-7 .hongbao-form .button-submit {
+    background-color: #1ee4a3;
+    color: #14a06c; }
 
 .receive-topic {
   background: url(../images/minify/receive_topic.png) center top no-repeat; }

@@ -2,7 +2,7 @@
 define('', '', function(require) {
 	var B = require('backbone');
 	var M = require('base/model');
-	var H = require('text!../../../tpl/account/hongbao/test.html');
+	var H = require('text!../../../tpl/account/hongbao/regiform.html');
     var Login = require("view/login/index");
 	var model = new M({
 
@@ -120,10 +120,10 @@ define('', '', function(require) {
 		//待优化
 		render: function() {
 			var t = this,
-				data = {};
+				data = t.model.toJSON();
             t.invite = Jser.getItem('invite');
             t.name = Jser.getItem('name');
-            data['form_style'] = 'regiest-form-1';
+            data['form_style'] = 'regiest-form-' + data.pars.id;
             data['name'] = t.name;
             data['invite'] = t.invite;
             //console.log(data);
@@ -151,7 +151,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-
+                id: (!isNaN(pars.id))?(pars.id>8?8:parseInt(pars.id)):1
 		    }
 		});
 		return new V({

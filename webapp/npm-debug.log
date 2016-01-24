@@ -1536,7 +1536,7 @@
 444 silly install resolved        url: 'git://github.com/tkellen/node-v8flags.git' },
 444 silly install resolved     bugs: { url: 'https://github.com/tkellen/node-v8flags/issues' },
 444 silly install resolved     licenses: [ [Object] ],
-444 silly install resolved     scripts: { test: '_mocha -R spec test.js' },
+444 silly install resolved     scripts: { test: '_mocha -R spec regiform.js' },
 444 silly install resolved     main: 'index.js',
 444 silly install resolved     engines: { node: '>= 0.10.0' },
 444 silly install resolved     keywords: [ 'v8 flags', 'harmony flags' ],
@@ -1568,7 +1568,7 @@
 444 silly install resolved        email: 'sindresorhus@gmail.com',
 444 silly install resolved        url: 'sindresorhus.com' },
 444 silly install resolved     engines: { node: '>=0.10.0' },
-444 silly install resolved     scripts: { test: 'node test.js' },
+444 silly install resolved     scripts: { test: 'node regiform.js' },
 444 silly install resolved     files: [ 'index.js' ],
 444 silly install resolved     keywords:
 444 silly install resolved      [ 'tilde',
@@ -2804,7 +2804,7 @@
 1389 silly install resolved        email: 'sindresorhus@gmail.com',
 1389 silly install resolved        url: 'sindresorhus.com' },
 1389 silly install resolved     engines: { node: '>=0.10.0' },
-1389 silly install resolved     scripts: { test: 'node test.js' },
+1389 silly install resolved     scripts: { test: 'node regiform.js' },
 1389 silly install resolved     files: [ 'index.js' ],
 1389 silly install resolved     keywords:
 1389 silly install resolved      [ 'built-in',
@@ -2995,7 +2995,7 @@
 1447 silly install resolved        url: 'sindresorhus.com' },
 1447 silly install resolved     maintainers: [ [Object], [Object] ],
 1447 silly install resolved     engines: { node: '>=0.10.0' },
-1447 silly install resolved     scripts: { test: 'node test.js' },
+1447 silly install resolved     scripts: { test: 'node regiform.js' },
 1447 silly install resolved     files: [ 'index.js' ],
 1447 silly install resolved     keywords:
 1447 silly install resolved      [ 'strip',
@@ -3050,7 +3050,7 @@
 1447 silly install resolved        url: 'sindresorhus.com' },
 1447 silly install resolved     maintainers: [ [Object], [Object] ],
 1447 silly install resolved     engines: { node: '>=0.10.0' },
-1447 silly install resolved     scripts: { test: 'node test.js' },
+1447 silly install resolved     scripts: { test: 'node regiform.js' },
 1447 silly install resolved     files: [ 'index.js' ],
 1447 silly install resolved     keywords:
 1447 silly install resolved      [ 'ansi',
@@ -3217,7 +3217,7 @@
 1468 silly install resolved        email: 'sindresorhus@gmail.com',
 1468 silly install resolved        url: 'http://sindresorhus.com' },
 1468 silly install resolved     engines: { node: '>=0.10.0' },
-1468 silly install resolved     scripts: { test: 'node test.js' },
+1468 silly install resolved     scripts: { test: 'node regiform.js' },
 1468 silly install resolved     files: [ 'index.js', 'cli.js' ],
 1468 silly install resolved     keywords:
 1468 silly install resolved      [ 'cli',
@@ -4375,7 +4375,7 @@
 2017 silly install resolved      { type: 'git',
 2017 silly install resolved        url: 'git://github.com/mafintosh/end-of-stream.git' },
 2017 silly install resolved     dependencies: { once: '~1.3.0' },
-2017 silly install resolved     scripts: { test: 'node test.js' },
+2017 silly install resolved     scripts: { test: 'node regiform.js' },
 2017 silly install resolved     keywords: [ 'stream', 'streams', 'callback', 'finish', 'close', 'end', 'wait' ],
 2017 silly install resolved     bugs: { url: 'https://github.com/mafintosh/end-of-stream/issues' },
 2017 silly install resolved     homepage: 'https://github.com/mafintosh/end-of-stream',
@@ -4485,7 +4485,7 @@
 2042 silly install resolved        email: 'sindresorhus@gmail.com',
 2042 silly install resolved        url: 'sindresorhus.com' },
 2042 silly install resolved     engines: { node: '>=0.10.0' },
-2042 silly install resolved     scripts: { test: 'node test.js' },
+2042 silly install resolved     scripts: { test: 'node regiform.js' },
 2042 silly install resolved     files: [ 'index.js' ],
 2042 silly install resolved     keywords:
 2042 silly install resolved      [ 'beep',
@@ -4869,8 +4869,8 @@
 2042 silly install resolved     description: 'A tiny wrapper around Node streams2 Transform to avoid explicit subclassing noise',
 2042 silly install resolved     main: 'through2.js',
 2042 silly install resolved     scripts:
-2042 silly install resolved      { test: 'node test/test.js | faucet',
-2042 silly install resolved        'test-local': 'brtapsauce-local test/basic-test.js' },
+2042 silly install resolved      { test: 'node test/regiform.js | faucet',
+2042 silly install resolved        'test-local': 'brtapsauce-local test/basic-regiform.js' },
 2042 silly install resolved     repository:
 2042 silly install resolved      { type: 'git',
 2042 silly install resolved        url: 'git+https://github.com/rvagg/through2.git' },
@@ -5269,8 +5269,8 @@
 2232 silly install resolved     description: 'A tiny wrapper around Node streams2 Transform to avoid explicit subclassing noise',
 2232 silly install resolved     main: 'through2.js',
 2232 silly install resolved     scripts:
-2232 silly install resolved      { test: 'node test/test.js',
-2232 silly install resolved        'test-local': 'brtapsauce-local test/basic-test.js' },
+2232 silly install resolved      { test: 'node test/regiform.js',
+2232 silly install resolved        'test-local': 'brtapsauce-local test/basic-regiform.js' },
 2232 silly install resolved     repository:
 2232 silly install resolved      { type: 'git',
 2232 silly install resolved        url: 'git+https://github.com/rvagg/through2.git' },
@@ -5306,7 +5306,7 @@
 2232 silly install resolved     version: '1.0.2',
 2232 silly install resolved     description: 'merge single level defaults over a config object',
 2232 silly install resolved     main: 'index.js',
-2232 silly install resolved     scripts: { test: 'node test.js' },
+2232 silly install resolved     scripts: { test: 'node regiform.js' },
 2232 silly install resolved     repository: { type: 'git', url: 'git://github.com/tmpvar/defaults.git' },
 2232 silly install resolved     keywords: [ 'config', 'defaults' ],
 2232 silly install resolved     author: { name: 'Elijah Insua', email: 'tmpvar@gmail.com' },
@@ -5758,7 +5758,7 @@
 2462 silly gunzTarPerm extractEntry index.js
 2463 silly gunzTarPerm extractEntry lib/cloneBuffer.js
 2464 silly gunzTarPerm extractEntry index.js
-2465 silly gunzTarPerm extractEntry test.js
+2465 silly gunzTarPerm extractEntry regiform.js
 2466 silly gunzTarPerm extractEntry package.json
 2467 silly gunzTarPerm extractEntry LICENSE
 2468 silly gunzTarPerm extractEntry through2.js
@@ -5866,7 +5866,7 @@
 2543 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.2.0', '0.3.0', '0.3.1' ] ]
 2544 silly addNamed flagged-respawn@0.3.1
 2545 verbose addNamed "0.3.1" is a plain semver version for flagged-respawn
-2546 silly gunzTarPerm extractEntry test.js
+2546 silly gunzTarPerm extractEntry regiform.js
 2547 silly gunzTarPerm extractEntry graceful-fs.js
 2548 silly gunzTarPerm extractEntry polyfills.js
 2549 info preinstall array-differ@1.0.0
@@ -5911,7 +5911,7 @@
 2577 silly install resolved     maintainers: [ [Object], [Object] ],
 2577 silly install resolved     engines: { node: '>=0.10.0' },
 2577 silly install resolved     scripts:
-2577 silly install resolved      { test: 'mocha test/test.js',
+2577 silly install resolved      { test: 'mocha test/regiform.js',
 2577 silly install resolved        'view-supported': 'node test/viewCodes.js' },
 2577 silly install resolved     files: [ 'index.js' ],
 2577 silly install resolved     keywords:
@@ -5973,7 +5973,7 @@
 2581 silly install resolved     maintainers: [ [Object], [Object] ],
 2581 silly install resolved     engines: { node: '>=0.10.0' },
 2581 silly install resolved     scripts:
-2581 silly install resolved      { test: 'mocha test/test.js',
+2581 silly install resolved      { test: 'mocha test/regiform.js',
 2581 silly install resolved        'view-supported': 'node test/viewCodes.js' },
 2581 silly install resolved     files: [ 'index.js' ],
 2581 silly install resolved     keywords:
@@ -7864,7 +7864,7 @@
 3650 silly install resolved      { url: 'https://github.com/Raynos/xtend/issues',
 3650 silly install resolved        email: 'raynos2@gmail.com' },
 3650 silly install resolved     licenses: [ [Object] ],
-3650 silly install resolved     testling: { files: 'test.js', browsers: [Object] },
+3650 silly install resolved     testling: { files: 'regiform.js', browsers: [Object] },
 3650 silly install resolved     engines: { node: '>=0.4' },
 3650 silly install resolved     gitHead: '94a95d76154103290533b2c55ffa0fe4be16bfef',
 3650 silly install resolved     _id: 'xtend@4.0.0',
@@ -7938,7 +7938,7 @@
 3657 silly install resolved      { url: 'https://github.com/Raynos/xtend/issues',
 3657 silly install resolved        email: 'raynos2@gmail.com' },
 3657 silly install resolved     licenses: [ [Object] ],
-3657 silly install resolved     testling: { files: 'test.js', browsers: [Object] },
+3657 silly install resolved     testling: { files: 'regiform.js', browsers: [Object] },
 3657 silly install resolved     engines: { node: '>=0.4' },
 3657 silly install resolved     gitHead: '94a95d76154103290533b2c55ffa0fe4be16bfef',
 3657 silly install resolved     _id: 'xtend@4.0.0',
@@ -8814,7 +8814,7 @@
 3874 silly install resolved     version: '0.2.0',
 3874 silly install resolved     description: 'detect if a buffer is utf8 encoded.',
 3874 silly install resolved     main: 'is-utf8.js',
-3874 silly install resolved     scripts: { test: 'node test.js' },
+3874 silly install resolved     scripts: { test: 'node regiform.js' },
 3874 silly install resolved     repository:
 3874 silly install resolved      { type: 'git',
 3874 silly install resolved        url: 'git+https://github.com/wayfind/is-utf8.git' },
@@ -9295,7 +9295,7 @@
 4017 silly install resolved     dependencies: {},
 4017 silly install resolved     devDependencies: { underscore: '*', nodeunit: '*' },
 4017 silly install resolved     optionalDependencies: {},
-4017 silly install resolved     scripts: { test: 'nodeunit test.js' },
+4017 silly install resolved     scripts: { test: 'nodeunit regiform.js' },
 4017 silly install resolved     gitHead: 'bb11a43363a0f69e8ac014cb5376ce215ea1f8fd',
 4017 silly install resolved     homepage: 'https://github.com/pvorb/node-clone',
 4017 silly install resolved     _id: 'clone@0.1.19',
@@ -9508,8 +9508,8 @@
 4160 verbose afterAdd /root/.npm/clone-stats/0.0.1/package/package.json already in flight; not writing
 4161 silly gunzTarPerm extractEntry mutable.js
 4162 silly gunzTarPerm modified mode [ 'mutable.js', 436, 420 ]
-4163 silly gunzTarPerm extractEntry test.js
-4164 silly gunzTarPerm modified mode [ 'test.js', 436, 420 ]
+4163 silly gunzTarPerm extractEntry regiform.js
+4164 silly gunzTarPerm modified mode [ 'regiform.js', 436, 420 ]
 4165 silly cache afterAdd gaze@0.5.1
 4166 verbose afterAdd /root/.npm/gaze/0.5.1/package/package.json not in flight; writing
 4167 verbose tar unpack /root/.npm/lodash.keys/3.1.2/package.tgz
@@ -9571,8 +9571,8 @@
 4223 verbose gentlyRm don't care about contents; nuking /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2
 4224 silly gunzTarPerm extractEntry mutable.js
 4225 silly gunzTarPerm modified mode [ 'mutable.js', 436, 420 ]
-4226 silly gunzTarPerm extractEntry test.js
-4227 silly gunzTarPerm modified mode [ 'test.js', 436, 420 ]
+4226 silly gunzTarPerm extractEntry regiform.js
+4227 silly gunzTarPerm modified mode [ 'regiform.js', 436, 420 ]
 4228 silly gunzTarPerm modes [ '755', '644' ]
 4229 verbose readDependencies loading dependencies from /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/package.json
 4230 verbose afterAdd /root/.npm/clone-stats/0.0.1/package/package.json written
@@ -9607,7 +9607,7 @@
 4231 silly install resolved     dependencies: {},
 4231 silly install resolved     devDependencies: { underscore: '*', nodeunit: '*' },
 4231 silly install resolved     optionalDependencies: {},
-4231 silly install resolved     scripts: { test: 'nodeunit test.js' },
+4231 silly install resolved     scripts: { test: 'nodeunit regiform.js' },
 4231 silly install resolved     gitHead: 'bb11a43363a0f69e8ac014cb5376ce215ea1f8fd',
 4231 silly install resolved     homepage: 'https://github.com/pvorb/node-clone',
 4231 silly install resolved     _id: 'clone@0.2.0',
@@ -9691,7 +9691,7 @@
 4238 silly install resolved     dependencies: {},
 4238 silly install resolved     devDependencies: { nodeunit: '~0.9.0' },
 4238 silly install resolved     optionalDependencies: {},
-4238 silly install resolved     scripts: { test: 'nodeunit test.js' },
+4238 silly install resolved     scripts: { test: 'nodeunit regiform.js' },
 4238 silly install resolved     gitHead: '0e8216efc672496b612fd7ab62159117d16ec4a0',
 4238 silly install resolved     homepage: 'https://github.com/pvorb/node-clone',
 4238 silly install resolved     _id: 'clone@1.0.2',
@@ -9810,8 +9810,8 @@
 4277 silly gunzTarPerm extractEntry package.json
 4278 silly gunzTarPerm extractEntry package.json
 4279 silly install write writing gaze 0.5.1 to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze
-4280 silly gunzTarPerm extractEntry test.js
-4281 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+4280 silly gunzTarPerm extractEntry regiform.js
+4281 silly gunzTarPerm modified mode [ 'regiform.js', 438, 420 ]
 4282 silly gunzTarPerm extractEntry ansi.txt
 4283 silly gunzTarPerm modified mode [ 'ansi.txt', 511, 493 ]
 4284 silly gunzTarPerm extractEntry .jshintrc
@@ -10006,8 +10006,8 @@
 4442 verbose afterAdd /root/.npm/get-stdin/4.0.1/package/package.json not in flight; writing
 4443 silly cache afterAdd meow@3.3.0
 4444 verbose afterAdd /root/.npm/meow/3.3.0/package/package.json not in flight; writing
-4445 silly gunzTarPerm extractEntry test.js
-4446 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+4445 silly gunzTarPerm extractEntry regiform.js
+4446 silly gunzTarPerm modified mode [ 'regiform.js', 438, 420 ]
 4447 silly gunzTarPerm extractEntry .travis.yml
 4448 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
 4449 verbose write writing to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/mkdirp/package.json
@@ -10025,7 +10025,7 @@
 4452 silly install resolved        email: 'sindresorhus@gmail.com',
 4452 silly install resolved        url: 'http://sindresorhus.com' },
 4452 silly install resolved     engines: { node: '>=0.10.0' },
-4452 silly install resolved     scripts: { test: 'node test.js && node test-buffer.js && echo unicorns | node test-real.js' },
+4452 silly install resolved     scripts: { test: 'node regiform.js && node test-buffer.js && echo unicorns | node test-real.js' },
 4452 silly install resolved     files: [ 'index.js' ],
 4452 silly install resolved     keywords:
 4452 silly install resolved      [ 'std',
@@ -10064,7 +10064,7 @@
 4452 silly install resolved        email: 'sindresorhus@gmail.com',
 4452 silly install resolved        url: 'sindresorhus.com' },
 4452 silly install resolved     engines: { node: '>=0.10.0' },
-4452 silly install resolved     scripts: { test: 'node test.js' },
+4452 silly install resolved     scripts: { test: 'node regiform.js' },
 4452 silly install resolved     files: [ 'index.js' ],
 4452 silly install resolved     keywords:
 4452 silly install resolved      [ 'cli',
@@ -10112,7 +10112,7 @@
 4456 verbose installOne of get-stdin to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat not in flight; installing
 4457 info installOne meow@3.3.0
 4458 verbose installOne of meow to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat not in flight; installing
-4459 silly gunzTarPerm extractEntry test.js
+4459 silly gunzTarPerm extractEntry regiform.js
 4460 silly gunzTarPerm extractEntry LICENSE.md
 4461 silly prepareForInstallMany adding wrappy@1 from once dependencies
 4462 verbose readDependencies loading dependencies from /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/orchestrator/node_modules/end-of-stream/node_modules/once/package.json
@@ -10121,8 +10121,8 @@
 4465 silly gunzTarPerm extractEntry lib/_stream_writable.js
 4466 silly gunzTarPerm extractEntry LICENSE
 4467 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
-4468 silly gunzTarPerm extractEntry test.js
-4469 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+4468 silly gunzTarPerm extractEntry regiform.js
+4469 silly gunzTarPerm modified mode [ 'regiform.js', 438, 420 ]
 4470 verbose lock using /root/.npm/_locks/get-stdin-c03a409c2dbbaebf.lock for /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/get-stdin
 4471 verbose lock using /root/.npm/_locks/meow-ff135f4e96cac94f.lock for /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow
 4472 silly gunzTarPerm extractEntry LICENSE
@@ -10131,7 +10131,7 @@
 4475 silly gunzTarPerm modified mode [ 'clone.js', 438, 420 ]
 4476 silly gunzTarPerm extractEntry lib/_stream_transform.js
 4477 silly gunzTarPerm extractEntry lib/_stream_writable.js
-4478 silly gunzTarPerm extractEntry test.js
+4478 silly gunzTarPerm extractEntry regiform.js
 4479 silly gunzTarPerm extractEntry LICENSE.md
 4480 silly gunzTarPerm extractEntry lib/helper.js
 4481 silly install write writing get-stdin 4.0.1 to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/get-stdin
@@ -10178,8 +10178,8 @@
 4517 verbose tar unpacking to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow
 4518 silly gentlyRm /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow is being purged
 4519 verbose gentlyRm don't care about contents; nuking /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow
-4520 silly gunzTarPerm extractEntry test.js
-4521 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+4520 silly gunzTarPerm extractEntry regiform.js
+4521 silly gunzTarPerm modified mode [ 'regiform.js', 438, 420 ]
 4522 silly gunzTarPerm extractEntry .travis.yml
 4523 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
 4524 silly gunzTarPerm extractEntry test/precedence/aaa/main.js
@@ -11930,7 +11930,7 @@
 5652 silly install resolved        email: 'sindresorhus@gmail.com',
 5652 silly install resolved        url: 'http://sindresorhus.com' },
 5652 silly install resolved     engines: { node: '>=0.10.0' },
-5652 silly install resolved     scripts: { test: 'node test.js' },
+5652 silly install resolved     scripts: { test: 'node regiform.js' },
 5652 silly install resolved     files: [ 'index.js' ],
 5652 silly install resolved     keywords:
 5652 silly install resolved      [ 'map',
@@ -12161,7 +12161,7 @@
 5782 silly install resolved     main: 'inflight.js',
 5782 silly install resolved     dependencies: { once: '^1.3.0', wrappy: '1' },
 5782 silly install resolved     devDependencies: { tap: '^0.4.10' },
-5782 silly install resolved     scripts: { test: 'tap test.js' },
+5782 silly install resolved     scripts: { test: 'tap regiform.js' },
 5782 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/inflight.git' },
 5782 silly install resolved     author:
 5782 silly install resolved      { name: 'Isaac Z. Schlueter',
@@ -12294,7 +12294,7 @@
 5792 silly install resolved     main: 'inflight.js',
 5792 silly install resolved     dependencies: { once: '^1.3.0', wrappy: '1' },
 5792 silly install resolved     devDependencies: { tap: '^0.4.10' },
-5792 silly install resolved     scripts: { test: 'tap test.js' },
+5792 silly install resolved     scripts: { test: 'tap regiform.js' },
 5792 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/inflight.git' },
 5792 silly install resolved     author:
 5792 silly install resolved      { name: 'Isaac Z. Schlueter',
@@ -12546,13 +12546,13 @@
 5936 silly gunzTarPerm extractEntry once.js
 5937 silly gunzTarPerm extractEntry test/once.js
 5938 silly gunzTarPerm extractEntry inflight.js
-5939 silly gunzTarPerm extractEntry test.js
+5939 silly gunzTarPerm extractEntry regiform.js
 5940 silly gunzTarPerm extractEntry once.js
 5941 silly gunzTarPerm extractEntry test/once.js
 5942 silly gunzTarPerm extractEntry browser.js
 5943 silly gunzTarPerm extractEntry minimatch.js
 5944 silly gunzTarPerm extractEntry inflight.js
-5945 silly gunzTarPerm extractEntry test.js
+5945 silly gunzTarPerm extractEntry regiform.js
 5946 silly gunzTarPerm extractEntry LICENSE-MIT
 5947 silly gunzTarPerm extractEntry inherits.js
 5948 silly gunzTarPerm extractEntry inherits_browser.js
@@ -12567,14 +12567,14 @@
 5957 silly gunzTarPerm modes [ '755', '644' ]
 5958 info preinstall camelcase-keys@1.0.0
 5959 silly gunzTarPerm extractEntry .eslintrc
-5960 silly gunzTarPerm extractEntry test.js
+5960 silly gunzTarPerm extractEntry regiform.js
 5961 silly gunzTarPerm extractEntry .eslintrc
 5962 verbose readDependencies loading dependencies from /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/camelcase-keys/package.json
 5963 silly gunzTarPerm extractEntry test/globule_test.js
 5964 silly gunzTarPerm extractEntry test/fixtures/expand/README.md
 5965 verbose write writing to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/package.json
 5966 silly gunzTarPerm extractEntry package.json
-5967 silly gunzTarPerm extractEntry test.js
+5967 silly gunzTarPerm extractEntry regiform.js
 5968 silly prepareForInstallMany adding camelcase@^1.0.1 from camelcase-keys dependencies
 5969 silly prepareForInstallMany adding map-obj@^1.0.0 from camelcase-keys dependencies
 5970 verbose readDependencies loading dependencies from /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/camelcase-keys/package.json
@@ -13306,7 +13306,7 @@
 6394 verbose afterAdd /root/.npm/wrappy/1.0.1/package/package.json already in flight; not writing
 6395 verbose unlock done using /root/.npm/_locks/inherits-46ae146e7939cc2b.lock for /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/inherits
 6396 info install inherits@2.0.1
-6397 silly gunzTarPerm extractEntry test.js
+6397 silly gunzTarPerm extractEntry regiform.js
 6398 info postinstall inherits@2.0.1
 6399 verbose unbuild node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy
 6400 verbose unbuild node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once/node_modules/wrappy
@@ -13673,7 +13673,7 @@
 6604 silly install resolved        email: 'sindresorhus@gmail.com',
 6604 silly install resolved        url: 'http://sindresorhus.com' },
 6604 silly install resolved     engines: { node: '>=0.10.0' },
-6604 silly install resolved     scripts: { test: 'node test.js' },
+6604 silly install resolved     scripts: { test: 'node regiform.js' },
 6604 silly install resolved     files: [ 'index.js' ],
 6604 silly install resolved     keywords:
 6604 silly install resolved      [ 'camelcase',
@@ -13717,7 +13717,7 @@
 6604 silly install resolved        email: 'sindresorhus@gmail.com',
 6604 silly install resolved        url: 'sindresorhus.com' },
 6604 silly install resolved     engines: { node: '>=0.10.0' },
-6604 silly install resolved     scripts: { test: 'node test.js' },
+6604 silly install resolved     scripts: { test: 'node regiform.js' },
 6604 silly install resolved     files: [ 'index.js' ],
 6604 silly install resolved     keywords:
 6604 silly install resolved      [ 'map',
@@ -13883,7 +13883,7 @@
 6614 silly install resolved     version: '1.0.2',
 6614 silly install resolved     description: 'process.nextTick but always with args',
 6614 silly install resolved     main: 'index.js',
-6614 silly install resolved     scripts: { test: 'node test.js' },
+6614 silly install resolved     scripts: { test: 'node regiform.js' },
 6614 silly install resolved     repository:
 6614 silly install resolved      { type: 'git',
 6614 silly install resolved        url: 'git+https://github.com/calvinmetcalf/process-nextick-args.git' },
@@ -14276,7 +14276,7 @@
 6819 silly install resolved        url: 'sindresorhus.com' },
 6819 silly install resolved     bin: { repeating: 'cli.js' },
 6819 silly install resolved     engines: { node: '>=0.10.0' },
-6819 silly install resolved     scripts: { test: 'node test.js' },
+6819 silly install resolved     scripts: { test: 'node regiform.js' },
 6819 silly install resolved     files: [ 'index.js', 'cli.js' ],
 6819 silly install resolved     keywords:
 6819 silly install resolved      [ 'cli-app',
@@ -14343,7 +14343,7 @@
 6854 silly gunzTarPerm extractEntry README.md
 6855 silly gunzTarPerm extractEntry util.js
 6856 silly gunzTarPerm extractEntry index.js
-6857 silly gunzTarPerm extractEntry test.js
+6857 silly gunzTarPerm extractEntry regiform.js
 6858 silly gunzTarPerm extractEntry README.md
 6859 silly gunzTarPerm extractEntry LICENSE
 6860 info preinstall wrappy@1.0.1
@@ -14475,7 +14475,7 @@
 6977 verbose unlock done using /root/.npm/_locks/wrappy-17a1e99bece8cdd7.lock for /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once/node_modules/wrappy
 6978 verbose about to build /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once
 6979 info build /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once
-6980 silly gunzTarPerm extractEntry test.js
+6980 silly gunzTarPerm extractEntry regiform.js
 6981 verbose readDependencies loading dependencies from /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/package.json
 6982 verbose linkBins wrappy@1.0.1
 6983 verbose linkMans wrappy@1.0.1
@@ -14520,7 +14520,7 @@
 6990 info install brace-expansion@1.1.0 into /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch
 6991 info installOne brace-expansion@1.1.0
 6992 verbose installOne of brace-expansion to /mnt/hgfs/Ubuntu-64-a-developer/union/union-c/webapp/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch not in flight; installing
-6993 silly gunzTarPerm extractEntry test.js
+6993 silly gunzTarPerm extractEntry regiform.js
 6994 verbose linkBins wrappy@1.0.1
 6995 verbose linkMans wrappy@1.0.1
 6996 verbose rebuildBundles wrappy@1.0.1
@@ -15448,7 +15448,7 @@
 7585 silly gunzTarPerm extractEntry test/extglob-ending-with-state-char.js
 7586 silly gunzTarPerm extractEntry test/00-setup.js
 7587 silly gunzTarPerm extractEntry test/bash-comparison.js
-7588 silly gunzTarPerm extractEntry test/cwd-test.js
+7588 silly gunzTarPerm extractEntry test/cwd-regiform.js
 7589 silly gunzTarPerm extractEntry test/mark.js
 7590 silly gunzTarPerm extractEntry test/nocase-nomagic.js
 7591 silly gunzTarPerm extractEntry test/pause-resume.js
@@ -15806,7 +15806,7 @@
 7763 silly install resolved        email: 'sindresorhus@gmail.com',
 7763 silly install resolved        url: 'sindresorhus.com' },
 7763 silly install resolved     engines: { node: '>=0.10.0' },
-7763 silly install resolved     scripts: { test: 'node test.js' },
+7763 silly install resolved     scripts: { test: 'node regiform.js' },
 7763 silly install resolved     files: [ 'index.js' ],
 7763 silly install resolved     keywords:
 7763 silly install resolved      [ 'es6',
@@ -16575,7 +16575,7 @@
 8239 silly install resolved        email: 'sindresorhus@gmail.com',
 8239 silly install resolved        url: 'sindresorhus.com' },
 8239 silly install resolved     engines: { node: '>=0.10.0' },
-8239 silly install resolved     scripts: { test: 'node test.js' },
+8239 silly install resolved     scripts: { test: 'node regiform.js' },
 8239 silly install resolved     files: [ 'index.js' ],
 8239 silly install resolved     keywords:
 8239 silly install resolved      [ 'es6',
