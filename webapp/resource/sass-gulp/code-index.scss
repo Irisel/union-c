@@ -3674,13 +3674,25 @@ input[type=button]{
       .hongbao-input{
         background-color:#ffffff;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-1.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#007cb5;
           background-color:#ffffff;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#007cb5;
+            font-size: 16px;
             background-color:#ffffff;
           }
         }
@@ -3714,6 +3726,7 @@ input[type=button]{
     .button-submit{
       background-color:#ffffff;
       color:#007cb5;
+      font-size: 17px;
       opacity:0.7;
     }
     }
@@ -3726,13 +3739,25 @@ input[type=button]{
       .hongbao-input{
         background-color:#cb1935;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-2.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#fee55a;
+          font-size: 16px;
           background-color:#cb1935;
         }
         &.validate{
           .validate-button{
             color:#fee55a;
+            font-size: 16px;
             background-color:#cb1935;
           }
         }
@@ -3744,7 +3769,7 @@ input[type=button]{
           color:#ffffff;
         }
         .icon-box{
-          border-right: 1px solid #007cb5;
+          border-right: 1px solid #ffffff;
         }
       }
     .hongbao-info{
@@ -3767,6 +3792,7 @@ input[type=button]{
     .button-submit{
       background-color:#9d0723;
       color:#fee55a;
+      font-size: 17px;
       opacity:0.7;
     }
     }
@@ -3780,13 +3806,25 @@ input[type=button]{
         border:1px solid #f56423;
         background-color:#f9f1cc;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-3.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#ffffff;
           background-color:#f56423;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#ffffff;
+            font-size: 16px;
             background-color:#f56423;
           }
         }
@@ -3821,6 +3859,7 @@ input[type=button]{
     .button-submit{
       background-color:#f56423;
       color:#ffffff;
+      font-size: 17px;
       opacity:0.7;
     }
     }
@@ -3833,14 +3872,26 @@ input[type=button]{
       .hongbao-input{
         background-color:#c05e59;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-2.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#ffffff;
           background-color:#c05e59;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#ffffff;
             background-color:#c05e59;
+            font-size: 16px;
           }
         }
         input{
@@ -3875,6 +3926,7 @@ input[type=button]{
       background-color:#e1a79c;
       color:#c21132;
       opacity:0.7;
+      font-size: 17px;
     }
     }
 }
@@ -3887,15 +3939,27 @@ input[type=button]{
         background-color:#ffffff;
         border:1px solid #77cedf;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-5.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#77cedf;
           background-color:#ffffff;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#77cedf;
             background-color:#ffffff;
             border:1px solid #77cedf;
+            font-size: 16px;
           }
         }
         input{
@@ -3929,6 +3993,7 @@ input[type=button]{
     .button-submit{
       background-color:#77cedf;
       color:#ffffff;
+      font-size: 17px;
       opacity:0.7;
     }
     }
@@ -3941,14 +4006,26 @@ input[type=button]{
       .hongbao-input{
         background-color:#fc8b34;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-2.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#ffffff;
           background-color:#fc8b34;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#ffffff;
             background-color:#fc8b34;
+            font-size: 16px;
           }
         }
         input{
@@ -3983,6 +4060,7 @@ input[type=button]{
       background-color:#fc8b34;
       color:#ffffff;
       opacity:0.7;
+      font-size: 17px;
     }
     }
 }
@@ -3994,14 +4072,26 @@ input[type=button]{
       .hongbao-input{
         background-color:#568036;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-4.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#a7cf49;
           background-color:#568036;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#a7cf49;
             background-color:#568036;
+            font-size: 16px;
           }
         }
         input{
@@ -4035,6 +4125,7 @@ input[type=button]{
     .button-submit{
       background-color:#a7cf49;
       color:#568036;
+      font-size: 17px;
     }
     }
 }
@@ -4046,14 +4137,26 @@ input[type=button]{
       .hongbao-input{
         background-color:#1fb87f;
         opacity:0.7;
+        .icon-box{
+          i{
+            background: url(../images/minify/accout-hongbao-2.png) 0 0 no-repeat;
+            background-size: auto 50px;
+            width: 20px;
+            height: 100%;
+            display: block;
+            top:0;
+          }
+        }
         .validate-button{
           color:#ffffff;
           background-color:#1fb87f;
+          font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#ffffff;
             background-color:#1fb87f;
+            font-size: 16px;
           }
         }
         input{
@@ -4087,6 +4190,7 @@ input[type=button]{
     .button-submit{
       background-color:#1ee4a3;
       color:#14a06c;
+      font-size: 17px;
     }
     }
 }
@@ -4185,7 +4289,7 @@ input[type=button]{
         }
         &.account-password{
           width: 30px;
-          background-position: -70px 2px;
+          background-position: -69px 2px;
         }
       }
     }
