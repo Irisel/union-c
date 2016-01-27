@@ -3651,6 +3651,10 @@ input[type=button]{
     }
   }
 
+#account_regiform{
+   height:auto !important;
+}
+
 .form-topic{
   width: 100%;
   background-size: cover;
@@ -3659,7 +3663,6 @@ input[type=button]{
 %regist-form{
   background-repeat:no-repeat;
   background-position:center top;
-  background-color:#90bfc4 !important;
   background-size: 100% auto;
   height:100%;
   background-attachment: scroll;
@@ -3669,10 +3672,18 @@ input[type=button]{
 
 .regiest-form-1{
   background-image:url(../images/minify/regiest-form-1.png);
+  background-color:#90bfc4 !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#007cb5;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#ffffff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -3727,17 +3738,24 @@ input[type=button]{
       background-color:#ffffff;
       color:#007cb5;
       font-size: 17px;
-      opacity:0.7;
     }
     }
 }
 
 .regiest-form-2{
   background-image:url(../images/minify/regiest-form-2.png);
+  background-color:#f13743 !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#ffffff;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#cb1935;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -3800,11 +3818,19 @@ input[type=button]{
 
 .regiest-form-3{
   background-image:url(../images/minify/regiest-form-3.png);
+  background-color:#f9f1cc !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#f56423;
+  }
   .hongbao-form{
       .hongbao-input{
         border:1px solid #f56423;
         background-color:#f9f1cc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -3867,10 +3893,18 @@ input[type=button]{
 
 .regiest-form-4{
   background-image:url(../images/minify/regiest-form-4.png);
+  background-color:#a01c1a !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#ffffff;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#c05e59;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -3933,11 +3967,19 @@ input[type=button]{
 
 .regiest-form-5{
   background-image:url(../images/minify/regiest-form-5.png);
+  background-color:#ffffff !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#77cedf;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#ffffff;
         border:1px solid #77cedf;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -4001,10 +4043,18 @@ input[type=button]{
 
 .regiest-form-6{
   background-image:url(../images/minify/regiest-form-6.png);
+  background-color:#fb7009 !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#fc8b34;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#fc8b34;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -4067,10 +4117,18 @@ input[type=button]{
 
 .regiest-form-8{
   background-image:url(../images/minify/regiest-form-8.png);
+  background-color:#426c31 !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#a7cf49;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#568036;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         opacity:0.7;
         .icon-box{
           i{
@@ -4132,11 +4190,19 @@ input[type=button]{
 
 .regiest-form-7{
   background-image:url(../images/minify/regiest-form-7.png);
+  background-color:#14a06c !important;
+  overflow-y: auto;
   @extend %regist-form;
+  .error{
+    color:#ffffff;
+  }
   .hongbao-form{
       .hongbao-input{
         background-color:#1fb87f;
         opacity:0.7;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         .icon-box{
           i{
             background: url(../images/minify/accout-hongbao-2.png) 0 0 no-repeat;
@@ -4334,28 +4400,30 @@ input[type=button]{
     background-color: #fee5c7;
     border: none;
     input[type=checkbox]{
-      height: 1em;
-      width: 1em;
       margin-right: 5px;
       position:relative;
       &:before{
         content:'';
         display: block;
         background-color: #f3d2ab;
-        height: 100%;
-        width: 100%;
+        height: 110%;
+        width: 110%;
         border: 1px solid #9c7648;
         position: absolute;
+        top: -8%;
+        left:-8%;
       }
       &:checked:before{
         content:'';
         display: block;
         background: url(../images/minify/right.png) 0 0 no-repeat;
         background-size:contain;
-        height: 100%;
-        width: 100%;
+        height: 110%;
+        width: 110%;
         border: 1px solid #9c7648;
         position: absolute;
+        top: -8%;
+        left:-8%;
         background-color: #f3d2ab;
       }
     }
