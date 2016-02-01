@@ -132,6 +132,7 @@ define('', '', function(require) {
             t.$el.html(html);
             t.$el.show();
             t.$el.find('.form-topic').height(size.width * 11/15);
+            t.$el.find('.regiest-form-' + data.pars.id).css('min-height', size.height);
             var t1 = t.$el.find(".js-tel");
             var t2 = t.$el.find(".js-pass");
             var t3 = t.$el.find(".js-code");
@@ -151,7 +152,7 @@ define('', '', function(require) {
 	return function(pars) {
 		model.set({
             pars: {
-                id: (!isNaN(pars.id))?(pars.id>8?8:parseInt(pars.id)):1
+                id: (!isNaN(pars.id))?(pars.id>9?9:parseInt(pars.id)):1
 		    }
 		});
 		return new V({

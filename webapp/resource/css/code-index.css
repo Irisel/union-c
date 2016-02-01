@@ -2863,21 +2863,24 @@ input[type=button] {
         font-size: 1em; }
 
 #account_regiform {
-  height: auto !important; }
+  height: auto !important;
+  min-height: 100%; }
 
 .form-topic, .receive-topic {
   width: 100%;
   background-size: cover;
   position: relative; }
 
-.regiest-form-1, .regiest-form-2, .regiest-form-3, .regiest-form-4, .regiest-form-5, .regiest-form-6, .regiest-form-8, .regiest-form-7 {
+.regiest-form-1, .regiest-form-2, .regiest-form-3, .regiest-form-4, .regiest-form-5, .regiest-form-6, .regiest-form-8, .regiest-form-9, .regiest-form-7 {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
   height: 100%;
   background-attachment: scroll;
   position: relative !important;
-  padding: 0 !important; }
+  min-height: 100%;
+  padding: 0 !important;
+  overflow-y: visible !important; }
 
 .regiest-form-1 {
   background-image: url(../images/minify/regiest-form-1.png);
@@ -3188,53 +3191,127 @@ input[type=button] {
 
 .regiest-form-8 {
   background-image: url(../images/minify/regiest-form-8.png);
-  background-color: #426c31 !important;
-  overflow-y: auto; }
+  background-color: #ffc787 !important; }
   .regiest-form-8 .error {
-    color: #a7cf49; }
+    color: #da333f; }
   .regiest-form-8 .hongbao-form .hongbao-input {
-    background-color: #568036;
+    background-color: #deac72;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
     opacity: 0.7; }
     .regiest-form-8 .hongbao-form .hongbao-input .icon-box i {
-      background: url(../images/minify/accout-hongbao-4.png) 0 0 no-repeat;
+      background: url(../images/minify/accout-hongbao-8.png) 0 0 no-repeat;
       background-size: auto 50px;
       width: 20px;
       height: 100%;
       display: block;
       top: 0; }
     .regiest-form-8 .hongbao-form .hongbao-input .validate-button {
-      color: #a7cf49;
-      background-color: #568036;
-      font-size: 16px; }
+      color: #da333f;
+      background-color: #deac72;
+      font-size: 16px;
+      height: 45px;
+      line-height: 45px;
+      font-weight: bold; }
     .regiest-form-8 .hongbao-form .hongbao-input.validate .validate-button {
-      color: #a7cf49;
-      background-color: #568036;
-      font-size: 16px; }
+      color: #da333f;
+      background-color: #deac72;
+      font-size: 16px;
+      height: 45px;
+      line-height: 45px;
+      font-weight: bold; }
     .regiest-form-8 .hongbao-form .hongbao-input input {
-      background-color: #568036;
-      color: #a7cf49; }
+      background-color: #deac72;
+      color: #da333f;
+      font-weight: bold; }
       .regiest-form-8 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
-        color: #a7cf49; }
+        color: #da333f;
+        font-weight: bold; }
     .regiest-form-8 .hongbao-form .hongbao-input .icon-box {
-      border-right: 1px solid #a7cf49; }
+      top: 7.5px;
+      border-right: 1px solid #da333f; }
   .regiest-form-8 .hongbao-form .hongbao-info {
-    color: #a7cf49;
+    color: #da333f;
     background: none; }
     .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:before {
-      background-color: #568036;
-      border: 1px solid #a43d03; }
+      background-color: #ffc787;
+      border: 1px solid #ffc787; }
     .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
-      background-color: #a7cf49;
-      border: 1px solid #a43d03; }
+      background-color: #deac72;
+      border: 1px solid #ffc787; }
     .regiest-form-8 .hongbao-form .hongbao-info .info {
-      color: #a7cf49; }
+      color: #da333f; }
   .regiest-form-8 .hongbao-form .button-submit {
-    background-color: #a7cf49;
-    color: #568036;
-    font-size: 17px; }
+    background-color: #da333f;
+    color: #ffffff;
+    font-size: 17px;
+    height: 45px;
+    line-height: 45px; }
+
+.regiest-form-9 {
+  background-image: url(../images/minify/regiest-form-9.png);
+  background-color: #db0a0a !important; }
+  .regiest-form-9 .error {
+    color: #f5cccc; }
+  .regiest-form-9 .hongbao-form .hongbao-input {
+    background-color: #e44045;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    opacity: 0.7; }
+    .regiest-form-9 .hongbao-form .hongbao-input .icon-box i {
+      background: url(../images/minify/accout-hongbao-9.png) 0 0 no-repeat;
+      background-size: auto 50px;
+      width: 20px;
+      height: 100%;
+      display: block;
+      top: 0; }
+    .regiest-form-9 .hongbao-form .hongbao-input .validate-button {
+      color: #f5cccc;
+      background-color: #e44045;
+      font-size: 16px;
+      height: 45px;
+      line-height: 45px;
+      font-weight: bold; }
+    .regiest-form-9 .hongbao-form .hongbao-input.validate .validate-button {
+      color: #f5cccc;
+      background-color: #e44045;
+      font-size: 16px;
+      height: 45px;
+      line-height: 45px;
+      font-weight: bold; }
+    .regiest-form-9 .hongbao-form .hongbao-input input {
+      background-color: #e44045;
+      color: #f5cccc;
+      font-weight: bold; }
+      .regiest-form-9 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
+        color: #f5cccc;
+        font-weight: bold; }
+    .regiest-form-9 .hongbao-form .hongbao-input .icon-box {
+      top: 7.5px;
+      border-right: 1px solid #af1111; }
+  .regiest-form-9 .hongbao-form .hongbao-info {
+    color: #f5cccc;
+    background: none; }
+    .regiest-form-9 .hongbao-form .hongbao-info input[type=checkbox]:before {
+      background-color: #ffa6a9;
+      border: 1px solid #af1111; }
+    .regiest-form-9 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
+      background-color: #e44045;
+      border: 1px solid #af1111; }
+    .regiest-form-9 .hongbao-form .hongbao-info .info {
+      color: #f5cccc; }
+  .regiest-form-9 .hongbao-form .button-submit {
+    background-color: #ffa6a9;
+    color: #b70511;
+    font-size: 17px;
+    height: 45px;
+    line-height: 45px; }
 
 .regiest-form-7 {
   background-image: url(../images/minify/regiest-form-7.png);
