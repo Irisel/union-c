@@ -3683,6 +3683,8 @@ input[type=button]{
   }
   .hongbao-form{
       .hongbao-input{
+        height: 45px;
+        line-height: 45px;
         background-color:#ffffff;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -3700,24 +3702,30 @@ input[type=button]{
         }
         .validate-button{
           color:#007cb5;
+          height: 45px;
+          line-height: 45px;
           background-color:#ffffff;
           font-size: 16px;
         }
         &.validate{
           .validate-button{
             color:#007cb5;
+            height: 45px;
+            line-height: 45px;
             font-size: 16px;
             background-color:#ffffff;
           }
         }
         input{
           background-color:#ffffff;
+          color:#007cb5;
           &::-webkit-input-placeholder{
             color:#007cb5;
           }
         }
         .icon-box{
           border-right: 1px solid #007cb5;
+          top:7.5px;
         }
       }
     .hongbao-info{
@@ -3740,6 +3748,8 @@ input[type=button]{
     .button-submit{
       background-color:#ffffff;
       color:#007cb5;
+      height: 45px;
+      line-height: 45px;
       font-size: 17px;
     }
     }
@@ -4182,11 +4192,11 @@ input[type=button]{
       input[type=checkbox]{
         &:before{
           background-color: #ffc787;
-          border:1px solid #ffc787;
+          border:1px solid #da333f;
         }
         &:checked:before{
           background-color: #deac72;
-          border:1px solid #ffc787;
+          border:1px solid #da333f;
         }
       }
       .info{
@@ -4366,6 +4376,7 @@ input[type=button]{
 
 .receive-topic{
   background: url(../images/minify/receive_topic.png) center top no-repeat;
+  background-size: cover;
   @extend .form-topic;
   p{
     position: relative;

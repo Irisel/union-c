@@ -2889,6 +2889,8 @@ input[type=button] {
   .regiest-form-1 .error {
     color: #007cb5; }
   .regiest-form-1 .hongbao-form .hongbao-input {
+    height: 45px;
+    line-height: 45px;
     background-color: #ffffff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -2903,18 +2905,24 @@ input[type=button] {
       top: 0; }
     .regiest-form-1 .hongbao-form .hongbao-input .validate-button {
       color: #007cb5;
+      height: 45px;
+      line-height: 45px;
       background-color: #ffffff;
       font-size: 16px; }
     .regiest-form-1 .hongbao-form .hongbao-input.validate .validate-button {
       color: #007cb5;
+      height: 45px;
+      line-height: 45px;
       font-size: 16px;
       background-color: #ffffff; }
     .regiest-form-1 .hongbao-form .hongbao-input input {
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      color: #007cb5; }
       .regiest-form-1 .hongbao-form .hongbao-input input::-webkit-input-placeholder {
         color: #007cb5; }
     .regiest-form-1 .hongbao-form .hongbao-input .icon-box {
-      border-right: 1px solid #007cb5; }
+      border-right: 1px solid #007cb5;
+      top: 7.5px; }
   .regiest-form-1 .hongbao-form .hongbao-info {
     color: #ffffff;
     background: none; }
@@ -2929,6 +2937,8 @@ input[type=button] {
   .regiest-form-1 .hongbao-form .button-submit {
     background-color: #ffffff;
     color: #007cb5;
+    height: 45px;
+    line-height: 45px;
     font-size: 17px; }
 
 .regiest-form-2 {
@@ -3238,10 +3248,10 @@ input[type=button] {
     background: none; }
     .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:before {
       background-color: #ffc787;
-      border: 1px solid #ffc787; }
+      border: 1px solid #da333f; }
     .regiest-form-8 .hongbao-form .hongbao-info input[type=checkbox]:checked:before {
       background-color: #deac72;
-      border: 1px solid #ffc787; }
+      border: 1px solid #da333f; }
     .regiest-form-8 .hongbao-form .hongbao-info .info {
       color: #da333f; }
   .regiest-form-8 .hongbao-form .button-submit {
@@ -3364,7 +3374,8 @@ input[type=button] {
     font-size: 17px; }
 
 .receive-topic {
-  background: url(../images/minify/receive_topic.png) center top no-repeat; }
+  background: url(../images/minify/receive_topic.png) center top no-repeat;
+  background-size: cover; }
   .receive-topic p {
     position: relative;
     top: 16%;

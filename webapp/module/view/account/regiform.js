@@ -10,6 +10,7 @@ define('', '', function(require) {
 	var V = B.View.extend({
 		model: model,
 		template: H,
+        invite: 'shanghaijuwan',
 		events: {
             "click .js-regist-btn": "doRegist",
             "click .js-vcode-btn":"doVcode"
@@ -84,7 +85,7 @@ define('', '', function(require) {
 					_data[i].value = val;
 					if(val)_locData[name]=val;
 				});
-                if(t.invite)_locData['invite'] = t.name;
+                if(t.invite)_locData['invite'] = t.invite;
 				Jser.getJSON(ST.PATH.ACTION + "/member/registor", _locData, function(result) {
                     if(result.status == 0)Jser.error(t.$el.find(".js-error"), "*" + result.info);
                     if(result.status == 1){
@@ -121,7 +122,6 @@ define('', '', function(require) {
 		render: function() {
 			var t = this,
 				data = t.model.toJSON();
-            t.invite = Jser.getItem('invite');
             t.name = Jser.getItem('name');
             data['form_style'] = 'regiest-form-' + data.pars.id;
             data['name'] = t.name;
